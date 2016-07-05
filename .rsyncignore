@@ -13,4 +13,11 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 .grunt
+/build-assets
 /node_modules
+/.eslintrc
+/.gitignore
+/.rsyncignore
+/.nvmrc
+/Gruntfile.js
+/package.json
