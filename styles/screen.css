@@ -5,61 +5,50 @@
  *
  * ==|== monospaced ==========================================================
  */
- 
-@font-face {
-  font-family: 'Museo300Regular';
-    src: url('/fonts/Museo300-Regular-webfont.eot');
-    src: url('/fonts/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/Museo300-Regular-webfont.woff') format('woff'),
-         url('/fonts/Museo300-Regular-webfont.ttf') format('truetype'),
-         url('/fonts/Museo300-Regular-webfont.svg#Museo300Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+
+
 
 @font-face {
-  font-family: 'Museo500Regular'; 
-    src: url('/fonts/Museo500-Regular-webfont.eot');
-    src: url('/fonts/Museo500-Regular-webfont.eot?#iefix') format('embedded-opentype'), 
-         url('/fonts/Museo500-Regular-webfont.woff') format('woff'), 
-         url('/fonts/Museo500-Regular-webfont.ttf') format('truetype'), 
-         url('/fonts/Museo500-Regular-webfont.svg#Museo500Regular') format('svg'); 
-  font-weight: normal; 
-  font-style: normal; 
+  font-family: 'equiplight';
+  src: url('/fonts/equiplig-webfont.woff2') format('woff2'),
+       url('/fonts/equiplig-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* =white-space reset
 ----------------------------------------------- */
 body,
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-p, 
-ol, 
-ul, 
-li, 
-pre, 
-form { 
-  margin: 0; 
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ol,
+ul,
+li,
+pre,
+form {
+  margin: 0;
   padding: 0;
 }
 
 /* =skin
 ----------------------------------------------- */
 body {
-  text-shadow: 0 1px 0 #fff;
-  color: #15010d; 
+  color: grey;
   background: #fff;
-  background: -webkit-linear-gradient(left, #f5f4f1, #fff 50%, #f5f4f1); 
-  background:    -moz-linear-gradient(left, #f5f4f1, #fff 50%, #f5f4f1); 
-  background:     -ms-linear-gradient(left, #f5f4f1, #fff 50%, #f5f4f1); 
-  background:      -o-linear-gradient(left, #f5f4f1, #fff 50%, #f5f4f1); 
-  background:         linear-gradient(left, #f5f4f1, #fff 50%, #f5f4f1);
 }
 
+h2,
 h3,
+h4,
+strong,
+b {
+  color: black;
+}
+
 h1 strong {
   color: #ec118f;
 }
@@ -73,13 +62,13 @@ a:hover {
   color: #0b63a3;
 }
 
-h1 a:link, 
+h1 a:link,
 h1 a:visited {
   color: #15010d;
 }
 
-#content img, 
-#content form, 
+#content img,
+#content form,
 #content .vcard {
   border-color: #dedede;
 }
@@ -92,16 +81,16 @@ html {
 
 body {
   font-size: x-small;
-  font-family: Museo300Regular, arial, "helvetica neue", helvetica, sans-serif;
+  font-family: equiplight, arial, "helvetica neue", helvetica, sans-serif;
 }
 
-::-moz-selection { 
-  background: #fde5f3; 
+::-moz-selection {
+  background: #fde5f3;
   text-shadow: none;
 }
 
-::selection { 
-  background: #fde5f3; 
+::selection {
+  background: #fde5f3;
   text-shadow: none;
 }
 
@@ -109,16 +98,14 @@ body {
   font-weight: normal !important;
 }
 
-h1, 
-h2, 
-h3, 
-h4, 
+h1,
+h2,
+h3,
+h4,
 h5,
-label,
-.submit,
 strong,
 b {
-  font-family: Museo500Regular, arial, "helvetica neue", helvetica, sans-serif;
+  font-family: equiplight, arial, "helvetica neue", helvetica, sans-serif;
 }
 
 input, textarea {
@@ -129,12 +116,12 @@ code {
   font-family: consolas, "lucida console", monaco, monospace;
 }
 
-p, 
-ul, 
-ol, 
+p,
+ul,
+ol,
 pre {
   font-size: 130%; /* 13px */
-  line-height: 1.4615384; /* 19px */
+  line-height: 1.5; /* 19px */
 }
 
 abbr {
@@ -149,9 +136,9 @@ a {
           transition: color 250ms ease-in-out;
 }
 
-a:link, 
+a:link,
 a:visited {
-  text-decoration: none; 
+  text-decoration: none;
   font-weight: normal;
 }
 
@@ -162,62 +149,6 @@ a:focus {
 a:hover,
 a:active {
   outline: 0;
-}
-
-form br {
-  display: none;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.123em; 
-  cursor: pointer;
-}
-
-label em {
-  font-weight: normal;
-  font-style: normal;
-}
-
-textarea {
-  width: 78%;
-  overflow: auto;
-  -webkit-border-radius: 0;
-  -webkit-appearance: none;
-}
-
-input {
-  width: 78%;
-  -webkit-border-radius: 0;
-  -webkit-appearance: none;
-}
-
-p input, 
-p textarea {
-  padding: 5px;
-  border: 1px solid #dedede;
-  font-size: 100%;
-}
-
-.submit {
-  width: auto;
-  padding: 5px 10px; 
-  cursor: pointer;
-  color: #fff;
-  background: #ec118f;
-  -webkit-appearance: none;
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  box-shadow:         0 4px 8px rgba(0, 0, 0, 0.2);
-  -webkit-transition: -webkit-box-shadow 250ms ease-in-out;
-     -moz-transition: -moz-box-shadow 250ms ease-in-out;
-      -ms-transition: -ms-box-shadow 250ms ease-in-out;
-       -o-transition: -o-box-shadow 250ms ease-in-out;
-          transition: box-shadow 250ms ease-in-out;
-}
-
-.submit:hover {
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  box-shadow:         0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* =structure
@@ -243,9 +174,9 @@ p textarea {
 #content {
   position: absolute;
   top: 39px;
-  left: 13.4em; 
+  left: 13.4em;
   margin-left: 6.9em;
-  padding-top: 6.9em; 
+  padding-top: 6.9em;
   padding-bottom: 23px;
   width: 40.8em;
 }
@@ -258,13 +189,6 @@ p textarea {
 
 /* =headings
 ----------------------------------------------- */
-h1, 
-h2, 
-h3 {
-  line-height: 1.1481481; /* 31px */
-  font-size: 27px;  
-  font-weight: normal; 
-}
 
 h1 {
   position: absolute;
@@ -273,55 +197,67 @@ h1 {
   width: 7em;
   height: 50px;
   line-height: 0.8518518; /* 23px */
-}
-
-h1 strong {
-  position: absolute; 
-  top: .926em; 
-  left: 0; 
+  font-size: 27px;
   font-weight: normal;
 }
 
-h2 {
-  position: absolute; 
-  top: -3px; 
+h1 strong {
+  position: absolute;
+  top: .926em;
   left: 0;
-}
-
-h3 {
-  position: absolute; 
-  top: .815em; 
-  left: 0;
+  font-weight: normal;
 }
 
 /* =specifics
 ----------------------------------------------- */
+#logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+}
+
 #nav ul {
-  list-style: none; 
-  margin-bottom: 1.4615384em; 
-  line-height: 1.4615384; /* 19px */
+  list-style: none;
+  margin-bottom: 19px;
+  line-height: 1.5; /* 19px */
 }
 
 #nav li {
   margin:0;
 }
 
-#content h4, 
+#content h2 {
+  margin: 0 0 1em;
+  font-size: 190%;
+  line-height: 1; /* 19px */
+}
+
+#content h3 {
+  margin: 0;
+  font-size: 140%;
+  line-height: 1.4; /* 19px */
+}
+
+#content h4,
 #content h5 {
-  margin: 0 0 1.3571428em; 
-  font-size: 140%; 
-  line-height: 1.3571428; /* 19px */
+  margin: 0 0 1.3571428em;
+  font-size: 140%;
+  line-height: 1.4; /* 19px */
 }
 
 #content p {
-  margin-bottom: 1.4615384em;
-  line-height: 1.4615384; /* 19px */
+  margin-bottom: 19px;
+  line-height: 1.5; /* 19px */
 }
 
 #content ul {
-  list-style: square; 
-  margin-bottom: 1.4615384em;
-  line-height: 1.4615384; /* 19px */
+  list-style: square;
+  margin-bottom: 19px;
+  line-height: 1.5; /* 19px */
 }
 
 li {
@@ -329,9 +265,9 @@ li {
 }
 
 #content img {
-  margin-left: 1px; 
-  margin-top: 0.3em; 
-  border-width: 1px; 
+  margin-left: 1px;
+  margin-top: 0.3em;
+  border-width: 1px;
   border-style: solid;
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   box-shadow:         0 4px 8px rgba(0, 0, 0, 0.2);
@@ -357,134 +293,10 @@ li {
   font-size: 84.6%;
 }
 
-#content form {
-  position: relative; 
-  top: 3px; 
-  margin: 0 0 1.5em 1px; 
-  padding: 1.1em 0 0 14px; 
-  border-width: 1px; 
-  border-style: solid;
-  background: #fff;
-}
-
-#content form {
-  margin: 0 0 27px;
-  padding-bottom: .37em;
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  box-shadow:         0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-#content .vcard .fn, 
-#content .vcard .org {
-  display: none;
-}
-
-.vcard p, 
-form p {
-  margin-bottom: .83em;
-}
-
-#content .shout {
-  margin-top: 0; 
-  line-height: 1.23; 
-  font-size: 27px;
-}
-
-#je-hero {
-  position: relative; 
-  left: -10px; 
-  top: 4px; 
-  z-index: 1; 
-  color: #c00;
-}
-
-#je-hero img {
-  margin-top: 0; 
-  border: none; 
-  -webkit-box-shadow: none;
-  box-shadow:         none;
-}
-
-#je-hero a:hover img {
-  -webkit-box-shadow: none;
-  box-shadow:         none;
-}
-
-#je-shout {
-  display: block; 
-  position: relative; 
-  top: 0; 
-  left: 0; 
-  z-index: 2;
-}
-
-#je-shout a {
-  position: relative;
-}
-
-.doc {
-  padding: 1px 0 1px 17px; 
-  width: 20px; 
-  background: url(/i/doc.png) no-repeat right;
-}
-
-.feeds li {
-  list-style: none; 
-  margin: 0 0 .15em 0; 
-  padding-left: 16px; 
-  background: url(/i/feed-icon-12x12.gif) no-repeat 0% 50%;
-} 
-
-.readMore {
-  position: relative; 
-  top: 3px; 
-  left: 2px; 
-  background: none;
-}
-
-#content .validationerrors h4 {
-  visibility: visible; 
-  margin: 0 0 .844em; 
-  padding: 4px 0 4px 30px; 
-  background: url(/i/error-icon-24x24.gif) no-repeat 0% 50%;
-}
-
-#content .validationerrors ol {
-  list-style-position: inside; 
-  margin: .889em 0 1.23em; 
-  line-height: 1.3;
-}
-
-#content .validationerrors ol li {
-  color: #c33;
-}
-
-#content .validationerrors a {
-  color: #c33;
-}
-
-#content .validationerrors a:hover {
-  border-color: #c33;
-}
-
-#content a.submissionerror {
-  text-decoration: none; 
-  border: none; 
-  background: none;
-}
-
-#foot #validators {
-  line-height: 1.4;
-}
-
-.fdpoweredby {
-  display:none ! important;
-}
-
 /* =responsive
 ----------------------------------------------- */
 
-@media only screen and (max-width: 620px) {  
+@media only screen and (max-width: 620px) {
   body {
     padding: 0 36px;
   }
@@ -495,7 +307,8 @@ form p {
     height: 18px;
   }
   h1,
-  h1 strong {
+  h1 strong,
+  #logo {
     position: static;
   }
   #nav {
@@ -516,18 +329,10 @@ form p {
   h3 {
     position: static;
     line-height: 1.111111111; /* 20px */
-    font-size: 180%;  
+    font-size: 180%;
   }
   h3 {
     margin-bottom: 1em;
-  }
-  #content .shout {
-    margin: 0 0 18px;
-    line-height: 1.111111111; /* 20px */
-    font-size: 180%;  
-  }
-  #content .shout img {
-    max-width: 85%;
   }
 }
 
@@ -547,6 +352,4 @@ body {font-size: 10.5pt;}
 #content a:link:after, #content a:visited:after {content: " (" attr(href) ") "; font-size: 90%;}
 #content a[href^="/"]:after {content: " (http://scottboyle.co.uk" attr(href) ") ";}
 #content a[href^="mailto:"]:after {content: "";}
-#content .shout {white-space: normal;}
-#content .vcard .fn {display: block;}
 }
