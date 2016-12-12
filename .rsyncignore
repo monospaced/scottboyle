@@ -21,3 +21,4 @@ Thumbs.db
 /.nvmrc
 /Gruntfile.js
 /package.json
+.well-known
