@@ -8,7 +8,7 @@ import data from './data.js';
 const Routes = (
   <Route path="/" component={App} data={data} >
     <IndexRoute component={Index} />
-    {Object.keys(data.projects).map((key) => <Route path={key} component={Project} key={key} />)}
+    {Object.keys(data.projects).map((key) => <Route path={`${key}/`} component={Project} key={key} />)}
   </Route>
 );
 
