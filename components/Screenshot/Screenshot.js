@@ -9,7 +9,7 @@ const Screenshot = ({slug, project: {link, title}}) => {
       alt={title}
       width="400"
       height={`${(image.width > 398 ? image.height / 2 : image.height) + 2}`}
-      src={`/assets/${image.src}`}
+      src={`/assets/${slug}.png`}
     />
   );
   if (link) {
