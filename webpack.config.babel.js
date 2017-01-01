@@ -5,6 +5,8 @@ import ReactRouterToArray from 'react-router-to-array';
 require.extensions['.css'] = () => { return; };
 const routes = ReactRouterToArray(require('./scripts/routes'));
 
+console.log(routes);
+
 module.exports = {
   entry: './scripts/entry.js',
 
@@ -36,7 +38,7 @@ module.exports = {
         loader: 'url-loader?limit=100000&&mimetype=application/font-woff',
       },
       { test: /\.(png|jpg)$/,
-        loader: 'file-loader?name=/assets/[name].[ext]',
+        loader: 'image-size!file-loader?name=/assets/[name].[ext]',
       },
       { test: /\.ico$/,
         loader: 'file-loader?name=/[name].[ext]',

@@ -2,22 +2,28 @@ import React from 'react';
 import './Screenshot.css';
 
 const Screenshot = ({slug, project: {link, title}}) => {
-  const image = (
+
+  const image = require(`../../assets/${slug}.png`);
+
+  console.log(image);
+
+  const img = (
     <img
       className="Screenshot"
       alt={title}
       width="400"
-      src={require(`../../assets/${slug}.png`)}
+      height={`${(image.width > 398 ? image.height / 2 : image.height) + 2}`}
+      src={`/assets/${image.src}`}
     />
   );
   if (link) {
     return (
       <a href={link}>
-        {image}
+        {img}
       </a>
     );
   }
-  return image;
+  return img;
 };
 
 export default Screenshot;
