@@ -1,0 +1,15 @@
+@import url('../../theme/vars.css');
+
+.Logotype {
+  margin: 0;
+}
+
+.Logotype-link,
+.Logotype-link:visited {
+  color: color(var(--background-color) contrast(100%));
+}
+
+.Logotype-subtitle {
+  display: block;
+  color: var(--theme-color);
+}

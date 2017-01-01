@@ -12,5 +12,5 @@
 Thumbs.db
 *.sublime-project
 *.sublime-workspace
-.grunt
 /node_modules
+/build

@@ -1,0 +1,11 @@
+@import url('../../theme/vars.css');
+
+.Main {
+  max-width: 400px;
+}
+
+@media (min-width: 639px) {
+  .Main {
+    float: right;
+  }
+}

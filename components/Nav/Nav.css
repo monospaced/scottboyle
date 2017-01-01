@@ -1,0 +1,12 @@
+@import url('../../theme/vars.css');
+
+@media (min-width: 639px) {
+  .Nav {
+    float: left;
+  }
+}
+
+.Nav-list {
+  margin-left: 0;
+  list-style: none;
+}
