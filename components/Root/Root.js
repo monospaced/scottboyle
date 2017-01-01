@@ -10,6 +10,7 @@ class Root extends Component {
     return (
       <html lang="en-gb">
         <head>
+          <meta charset="utf-8" />
           {meta}
           <meta name="viewport" content="width=device-width" />
           <link rel="stylesheet" href="/styles.css" />
