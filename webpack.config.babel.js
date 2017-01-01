@@ -5,8 +5,6 @@ import ReactRouterToArray from 'react-router-to-array';
 require.extensions['.css'] = () => { return; };
 const routes = ReactRouterToArray(require('./scripts/routes'));
 
-console.log(routes);
-
 module.exports = {
   entry: './scripts/entry.js',
 
@@ -48,6 +46,6 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin('styles.css'),
-    new StaticSiteGeneratorPlugin('bundle.js', routes),
+    new StaticSiteGeneratorPlugin('bundle.js', routes.map(item => item === '/' ? item : item + '/')),
   ],
 };

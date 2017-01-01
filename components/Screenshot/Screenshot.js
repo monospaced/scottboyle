@@ -2,11 +2,7 @@ import React from 'react';
 import './Screenshot.css';
 
 const Screenshot = ({slug, project: {link, title}}) => {
-
   const image = require(`../../assets/${slug}.png`);
-
-  console.log(image);
-
   const img = (
     <img
       className="Screenshot"
