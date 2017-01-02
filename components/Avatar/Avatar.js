@@ -1,5 +1,6 @@
 import React from 'react';
 import './Avatar.css';
+import {version} from '../../package.json';
 
 const Avatar = () => {
   const image = require(`../../assets/avatar.png`);
@@ -9,7 +10,7 @@ const Avatar = () => {
         alt="About Scott"
         width="96"
         height="96"
-        src={`/assets/avatar.png`}
+        src={`/assets/avatar.png?v=${version}`}
       />
     </h2>
   );

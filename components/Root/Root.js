@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../../assets/favicon.ico';
+import {version} from '../../package.json';
 
 class Root extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class Root extends Component {
           <meta charSet="utf-8" />
           {meta}
           <meta name="viewport" content="width=device-width" />
-          <link rel="stylesheet" href="/styles.css" />
+          <link rel="stylesheet" href={`/styles.css?v=${version}`} />
         </head>
         <body>
           <div
@@ -21,7 +22,7 @@ class Root extends Component {
             className="App"
             dangerouslySetInnerHTML={app}
           />
-          <script src="/bundle.js"></script>
+          <script src={`/bundle.js?v=${version}`}></script>
         </body>
       </html>
     );

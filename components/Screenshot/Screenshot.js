@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Screenshot.css';
+import {version} from '../../package.json';
 
 class Screenshot extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Screenshot extends Component {
         alt={title}
         width="400"
         height={`${(image.width > 398 ? image.height / 2 : image.height) + 2}`}
-        src={`/assets/${slug}.png`}
+        src={`/assets/${slug}.png?v=${version}`}
       />
     );
     if (link) {
@@ -45,7 +46,7 @@ class Screenshot extends Component {
     img.onload = () => {
       this.setState({loaded: true});
     };
-    img.src = `/assets/${slug}.png`;
+    img.src = `/assets/${slug}.png?v=${version}`;
   }
 }
 
