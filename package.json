@@ -32,7 +32,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --progress --colors",
-    "build": "webpack --progress --colors",
+    "build": "webpack -p --progress --colors",
     "deploy": "npm run build && node scripts/rsync.js"
   }
 }

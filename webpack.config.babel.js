@@ -51,5 +51,15 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('styles.css'),
     new StaticSiteGeneratorPlugin('bundle.js', routes),
+    new webpack.DefinePlugin({
+      'process.env': {
+         NODE_ENV: JSON.stringify('production') ,
+       },
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+    }),
   ],
 };
