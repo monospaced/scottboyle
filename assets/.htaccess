@@ -662,6 +662,7 @@ RewriteRule ^(.*)$ https://scottboyle.co.uk$1 [R=301,L]
 Redirect 301 /about/ https://scottboyle.co.uk
 Redirect 301 /contact/ https://scottboyle.co.uk
 Redirect 301 /links/ https://scottboyle.co.uk
+Redirect 301 /scottboylecv.doc https://scottboyle.co.uk
 Redirect 301 /frfrm/ https://scottboyle.co.uk/freeform/
 Redirect 301 /social360/ https://scottboyle.co.uk/social-360/
 Redirect 301 /just_eat/ https://scottboyle.co.uk/just-eat/
