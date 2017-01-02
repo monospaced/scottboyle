@@ -9,6 +9,8 @@ html {
   color: color(var(--background-color) contrast(0%));
   background: var(--background-color);
   text-rendering: optimizeLegibilty;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 *,
@@ -17,11 +19,24 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  margin: 0;
+}
+
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
 a {
   transition: color .15s;
   text-decoration: none;
   color: var(--link-color);
   outline: 0;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
 }
 
 a:visited {
@@ -86,6 +101,7 @@ strong {
 }
 
 small {
+  font-size: 80%;
   color: color(var(--background-color) contrast(0%));
 }
 

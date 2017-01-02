@@ -60,6 +60,9 @@ module.exports = {
       compress: {
         warnings: false,
       },
+      output: {
+        comments: false,
+      },
     }),
   ],
 };
