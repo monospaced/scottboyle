@@ -8,7 +8,7 @@ const Avatar = () => {
       <img
         alt="About Scott"
         width={(image.width / 2) + 2}
-        height={(image.width / 2) + 2}
+        height={(image.height / 2) + 2}
         src={`/assets/${image.src}`}
       />
     </h2>
