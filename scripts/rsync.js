@@ -6,7 +6,6 @@ rsync({
   delete: true,
   dest: dest,
   exclude: [
-    '.htaccess',
     '.well-known',
   ],
   host: host,

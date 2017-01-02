@@ -7,5 +7,6 @@
 @media (min-width: 639px) {
   .Main {
     float: right;
+    width: 400px;
   }
 }

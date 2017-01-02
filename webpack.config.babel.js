@@ -39,7 +39,7 @@ module.exports = {
       { test: /\.(png|jpg)$/,
         loader: 'image-size?name=/assets/[name].[ext]',
       },
-      { test: /\.ico$/,
+      { test: /\.(ico|txt|htaccess)$/,
         loader: 'file?name=/[name].[ext]',
       },
       { test: /\.json$/,

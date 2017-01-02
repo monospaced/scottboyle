@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import '../../assets/favicon.ico';
+import '../../assets/robots.txt';
+import '../../assets/.htaccess';
 import {version} from '../../package.json';
 
 class Root extends Component {
