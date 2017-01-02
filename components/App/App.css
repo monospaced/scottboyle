@@ -107,6 +107,7 @@ small {
 
 img {
   display: block;
+  box-sizing: content-box;
   max-width: 100%;
   height: auto !important;
   transition: box-shadow .15s;

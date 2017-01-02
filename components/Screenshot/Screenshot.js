@@ -15,10 +15,10 @@ class Screenshot extends Component {
     const image = require(`../../assets/${slug}.png`);
     const img = (
       <img
-        className={`Screenshot${!this.state.loaded ? ' is-loading' : ''}`}
+        className={`Screenshot ${!this.state.loaded ? 'is-loading' : ''}`}
         alt={title}
-        width="400"
-        height={`${(image.width > 398 ? image.height / 2 : image.height) + 2}`}
+        width="398"
+        height={`${image.width === 796 ? image.height / 2 : image.height}`}
         src={`/assets/${slug}.png?v=${version}`}
       />
     );
