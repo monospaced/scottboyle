@@ -5,7 +5,8 @@
 }
 
 .Logotype-link,
-.Logotype-link:visited {
+.Logotype-link:visited,
+.Logotype-link:active {
   color: color(var(--background-color) contrast(100%));
 }
 
