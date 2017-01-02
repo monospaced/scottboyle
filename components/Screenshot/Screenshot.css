@@ -1,5 +1,14 @@
 @import url('../../theme/vars.css');
 
 .Screenshot {
+  visibility: visible;
   margin: 1.5rem 0;
+  transition: opacity .15s;
+  opacity: 1;
+}
+
+.Screenshot.is-loading {
+  visibility: hidden;
+  opacity: 0;
+  transition: none;
 }

@@ -18,7 +18,7 @@ html {
 }
 
 a {
-  transition: color .15s var(--cubic-in-out);
+  transition: color .15s;
   text-decoration: none;
   color: var(--link-color);
   outline: 0;
@@ -92,7 +92,7 @@ small {
 img {
   display: block;
   max-width: 100%;
-  transition: box-shadow .15s ease-in-out;
+  transition: box-shadow .15s;
   border: 1px solid color(var(--background-color) contrast(100%) lightness(85%));
   box-shadow: 0 4px 8px color(var(--background-color) contrast(100%) a(20%));
 }
