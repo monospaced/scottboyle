@@ -11,7 +11,7 @@ const Nav = ({projects, routes}) => {
           const title = projects[key].title;
           return (
             <li key={key}>
-              {key + '/' === path ? title : <Link to={`/${key}/`}>{title}</Link>}
+              {key === path ? title : <Link to={`/${key}`}>{title}</Link>}
             </li>
           );
         })}

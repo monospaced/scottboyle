@@ -11,8 +11,7 @@ class Project extends Component {
   }
   render() {
     const {data, route: {path}} = this.props;
-    const slug = path.slice(0, -1);
-    const project = data.projects[slug];
+    const project = data.projects[path];
     return (
       <main className="Main">
         <DocumentMeta
@@ -23,7 +22,7 @@ class Project extends Component {
           <div dangerouslySetInnerHTML={{__html: marked(project.description)}}/>
           {project.client && <Client client={project.client}/>}
           {project.link && <Visit project={project}/>}
-          <Screenshot slug={slug} project={project}/>
+          <Screenshot slug={path} project={project}/>
         </section>
       </main>
     );

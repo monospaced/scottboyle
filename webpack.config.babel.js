@@ -46,6 +46,6 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin('styles.css'),
-    new StaticSiteGeneratorPlugin('bundle.js', routes.map(item => item === '/' ? item : item + '/')),
+    new StaticSiteGeneratorPlugin('bundle.js', routes),
   ],
 };

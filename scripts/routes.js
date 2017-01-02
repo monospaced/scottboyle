@@ -6,10 +6,25 @@ import Project from '../components/Project/Project.js';
 import data from './data.js';
 
 const Routes = (
-  <Route path="/" component={App} data={data} >
-    <IndexRoute component={Index} />
-    {Object.keys(data.projects).map((key) => <Route path={`${key}/`} component={Project} key={key} />)}
+  <Route onEnter={forceTrailingSlash} onChange={forceTrailingSlashOnChange}>
+    <Route path="/" component={App} data={data}>
+      <IndexRoute component={Index} />
+      {Object.keys(data.projects).map((key) => <Route path={key} component={Project} key={key}/>)}
+    </Route>
   </Route>
 );
+
+function forceTrailingSlash(nextState, replace) {
+  const path = nextState.location.pathname;
+  if (path.slice(-1) !== '/') {
+    replace(Object.assign({}, nextState.location, {
+      pathname: path + '/',
+    }));
+  }
+}
+
+function forceTrailingSlashOnChange(prevState, nextState, replace) {
+  forceTrailingSlash(nextState, replace);
+}
 
 module.exports = Routes;
