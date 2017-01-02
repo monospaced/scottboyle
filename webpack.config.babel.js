@@ -36,7 +36,7 @@ module.exports = {
         loader: 'url-loader?limit=100000&&mimetype=application/font-woff',
       },
       { test: /\.(png|jpg)$/,
-        loader: 'image-size!file-loader?name=/assets/[name].[ext]',
+        loader: 'image-size?name=/assets/[name].[ext]',
       },
       { test: /\.ico$/,
         loader: 'file-loader?name=/[name].[ext]',
