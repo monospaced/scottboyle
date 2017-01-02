@@ -20,7 +20,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'babel',
         query: {
           presets: [
             'es2015',
@@ -34,16 +34,16 @@ module.exports = {
       },
       {
         test: /\.woff$/,
-        loader: 'url-loader?limit=100000&&mimetype=application/font-woff',
+        loader: 'url?limit=100000&&mimetype=application/font-woff',
       },
       { test: /\.(png|jpg)$/,
         loader: 'image-size?name=/assets/[name].[ext]',
       },
       { test: /\.ico$/,
-        loader: 'file-loader?name=/[name].[ext]',
+        loader: 'file?name=/[name].[ext]',
       },
       { test: /\.json$/,
-        loader: 'json-loader',
+        loader: 'json',
       },
     ],
   },
