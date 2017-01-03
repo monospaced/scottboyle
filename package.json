@@ -1,6 +1,6 @@
 {
   "name": "scottboyle.co.uk",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "private": true,
   "devDependencies": {
     "babel-core": "^6.18.2",
