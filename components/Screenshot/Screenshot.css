@@ -2,6 +2,8 @@
 
 .Screenshot {
   visibility: visible;
+  max-width: 100%;
+  height: auto !important;
   margin: 1.5rem 0;
   transition: opacity .15s;
   opacity: 1;
@@ -9,6 +11,6 @@
 
 .Screenshot.is-loading {
   visibility: hidden;
-  opacity: 0;
   transition: none;
+  opacity: 0;
 }
