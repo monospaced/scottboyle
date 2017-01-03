@@ -3,7 +3,6 @@
 
 html {
   font-family: theme-font, sans-serif;
-  font-size: 81.25%; /* 13px */
   line-height: 1.5;
   box-sizing: border-box;
   color: color(var(--background-color) contrast(0%));

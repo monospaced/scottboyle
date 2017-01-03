@@ -1,7 +1,5 @@
 :root {
-  --background-color: white;
-  --theme-color: #ec118f;
-  --link-color: #118feb;
+  font-size: 81.25%; /* 13px */
 
   --triple-canon: 25.629rem;
   --double-canon: 17.086rem;
@@ -12,4 +10,8 @@
   --great-primer: 2.25rem;
   --english: 1.5rem;
   --pica: 1rem;
+
+  --background-color: white;
+  --theme-color: #ec118f;
+  --link-color: #118feb;
 }
