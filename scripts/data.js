@@ -33,7 +33,7 @@ module.exports = {
       },
       description:
         'Lead developer for this subscription-based data service, from inception to launch.\n\n' +
-        'Technical specifications, complete Angular 1 frontend build, Stripe payments integration, CI and AWS infrastructure management, PCI compliance. Working closely with .NET API developers and the product team.',
+        'Technical specifications, complete Angular 1 frontend build, Stripe payments integration, CI and AWS infrastructure management, PCI compliance. Working closely with .NET API developers and the product&nbsp;team.',
     },
     'nhs': {
       title: 'NHS',
@@ -100,7 +100,7 @@ module.exports = {
         link: 'https://profitfromplay.com',
       },
       description:
-        'Consulting and advising on a site-wide design refresh. Created indicative templates and assisted with integration.',
+        'Consulting and advising on a site-wide design refresh. Created indicative templates and assisted with&nbsp;integration.',
     },
     'bladud-flies': {
       title: 'Bladud Flies!',
@@ -192,7 +192,7 @@ module.exports = {
       },
       description:
         '### Sharp Quattron\n\n' +
-        'Responsible for Google Maps API search and display functionality.',
+        'Responsible for Google Maps API search and display&nbsp;functionality.',
     },
     'travelmatch': {
       title: 'Travelmatch',
@@ -226,7 +226,7 @@ module.exports = {
         link: 'http://thegrandunion.com',
       },
       description:
-        'Part of a 5 person team building the frontend for Best Buy’s UK site, with a particular focus on performance, object oriented CSS, and asynchronous JavaScript loading.',
+        'Part of a 5 person team building the frontend for Best Buy’s UK site, with a particular focus on performance, object oriented CSS, and asynchronous JavaScript&nbsp;loading.',
     },
     'dow-jones': {
       title: 'Dow Jones',
@@ -282,7 +282,7 @@ module.exports = {
         link: 'https://profitfromplay.com',
       },
       description:
-        'Consulting and advising on the transition of this global site from legacy table-based layouts to a modern Web Standards frontend. Also responsible for coding static HTML / CSS templates for the redesigned editorial section.',
+        'Consulting and advising on the transition of this global site from legacy table-based layouts to a modern Web Standards frontend. Also responsible for coding static HTML / CSS templates for the redesigned editorial&nbsp;section.',
     },
     'house-of-fraser': {
       title: 'House of Fraser',
