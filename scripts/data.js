@@ -2,7 +2,7 @@ module.exports = {
   title: 'Scott Boyle',
   subtitle: 'Portfolio',
   about:
-    'Scott Boyle is a web professional specialising in modern frontend development. Scott currently lives in London UK and has a company called [Monospaced Ltd](https://monospaced.com), a freelance web development consultancy working with regular clients in the London&nbsp;area.\n\n' +
+    'Scott Boyle is a web professional specialising in modern front-end development. Scott currently lives in London UK and has a company called [Monospaced Ltd](https://monospaced.com), a freelance web development consultancy working with regular clients in the London&nbsp;area.\n\n' +
     '* [Flickr](https://www.flickr.com/photos/scottboyle/)\n' +
     '* [Github](https://github.com/monospaced)\n' +
     '* [Instagram](https://www.instagram.com/mono_spaced/)\n' +
@@ -21,7 +21,7 @@ module.exports = {
       },
       description:
         'Creative developer, part of 5 person product lab&nbsp;team.\n\n' +
-        'Building full stack prototypes and technical experiments utilising a variety of technologies; Node.js, Angular 1 & 2, Ionic, React, OpenCV, Leap Motion, Alexa Skills, Facebook Messenger API,&nbsp;etc.',
+        'Building full stack prototypes and technical experiments utilising a variety of technologies: Node.js, Angular 1 and 2, Ionic, React, OpenCV, Leap Motion, Alexa Skills, Facebook Messenger Platform,&nbsp;etc.',
     },
     'traq': {
       title: 'Traq',
@@ -33,7 +33,7 @@ module.exports = {
       },
       description:
         'Lead developer for this subscription-based data service, from inception to&nbsp;launch.\n\n' +
-        'Technical specifications, complete Angular 1 frontend build, Stripe payments integration, CI and AWS infrastructure management, PCI compliance. Working closely with .NET API developers and the product&nbsp;team.',
+        'Technical specifications, complete Angular 1 front-end build, Stripe payments integration, CI and AWS infrastructure management, PCI compliance. Working closely with .NET API developers and the product&nbsp;team.',
     },
     'nhs': {
       title: 'NHS',
@@ -56,7 +56,7 @@ module.exports = {
         link: 'https://monospaced.com',
       },
       description:
-        'Full website build, frontend and CMS&nbsp;(Perch).',
+        'Full website build, front end and CMS&nbsp;(Perch).',
     },
     'just-eat': {
       title: 'Just Eat',
@@ -67,7 +67,7 @@ module.exports = {
         link: 'https://profitfromplay.com',
       },
       description:
-        'Frontend template builds for responsive homepage project, mobile app prototypes, and website&nbsp;refresh.',
+        'Front-end template builds for responsive homepage project, mobile app prototypes, and website&nbsp;refresh.',
     },
     'find-my-past': {
       title: 'Find My Past',
@@ -78,7 +78,7 @@ module.exports = {
         link: 'https://profitfromplay.com',
       },
       description:
-        'Front end design and build for a family tree web app built in AngularJS. Complex diagram views built entirely in&nbsp;CSS.',
+        'Front-end design and build for a family tree web app built in AngularJS. Complex diagram views built entirely in&nbsp;CSS.',
     },
     'bilbary': {
       title: 'Bilbary',
@@ -111,7 +111,7 @@ module.exports = {
         link: 'https://monospaced.com',
       },
       description:
-        'Full website build from design composites; responsive frontend, customised WordPress&nbsp;CMS.',
+        'Full website build from design composites: responsive front end, customised WordPress&nbsp;CMS.',
     },
     'silu': {
       title: 'Silu',
@@ -122,7 +122,7 @@ module.exports = {
         link: 'https://profitfromplay.com',
       },
       description:
-        'Responsible for everything frontend for this portal site aimed at the global Chinese professional community. Working closely with Ruby on Rails developers and the product&nbsp;team.',
+        'Responsible for everything front-end for this portal site aimed at the global Chinese professional community. Working closely with Ruby on Rails developers and the product&nbsp;team.',
     },
     'stordis': {
       title: 'Stordis',
@@ -133,7 +133,7 @@ module.exports = {
         link: 'https://monospaced.com',
       },
       description:
-        'Requirements gathering, frontend development, back-end design and development (PHP/MySQL), bespoke CMS, search integration, deployment, search engine and performance&nbsp;optimisation.',
+        'Requirements gathering, front-end development, back-end design and development (PHP/MySQL), bespoke CMS, search integration, deployment, search engine and performance&nbsp;optimisation.',
     },
     'amberlight': {
       title: 'Amberlight',
@@ -144,7 +144,7 @@ module.exports = {
         link: 'https://profitfromplay.com',
       },
       description:
-        'End to end website build. Responsible for all aspects of site development, from static templates to form functionality, CMS integration, and site&nbsp;deployment.',
+        'Responsible for all aspects of site development, from static templates to form functionality, CMS integration, and site&nbsp;deployment.',
     },
     'cadbury': {
       title: 'Cadbury',
@@ -156,7 +156,7 @@ module.exports = {
       },
       description:
         '### Spots v Stripes\n\n' +
-        'Homepage JavaScript animations and data integration: counters, odometers, tickers and sound&nbsp;fx!',
+        'JavaScript animations and data integration: counters, odometers, tickers and sound&nbsp;fx!',
     },
     'lloyds': {
       title: 'Lloyds',
@@ -168,7 +168,7 @@ module.exports = {
       },
       description:
         '### British Weather Photographer of the Year\n\n' +
-        'Frontend templates for this competition microsite. Custom lightbox photo gallery, with social bookmarking and Google Maps integration.&nbsp;',
+        'Front-end templates for this competition microsite.',
     },
     'ogilvy': {
       title: 'Ogilvy',
@@ -215,7 +215,7 @@ module.exports = {
       },
       description:
         '### OneRiot\n\n' +
-        'Frontend templating for this successful redesign, taking OneRiot.com out of beta. Object oriented CSS and custom jQuery&nbsp;animations.',
+        'Front-end templating for this successful redesign, taking OneRiot out of beta. Object-oriented CSS and custom jQuery&nbsp;animations.',
     },
     'best-buy': {
       title: 'Best Buy',
@@ -226,19 +226,19 @@ module.exports = {
         link: 'http://thegrandunion.com',
       },
       description:
-        'Part of a 5 person team building the frontend for Best Buy’s UK site, with a particular focus on performance, object oriented CSS, and asynchronous JavaScript&nbsp;loading.',
+        'Part of a 5 person team building the front end for Best Buy’s UK site, with a particular focus on performance, object-oriented CSS, and asynchronous JavaScript&nbsp;loading.',
     },
     'dow-jones': {
       title: 'Dow Jones',
       date: '2009',
-      link: 'http://www.efinancialnews.com',
+      link: '',
       client: {
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
       description:
         '### Financial News\n\n' +
-        'Complete frontend templates for redesign of eFinancialNews.com. Semantically rich HTML and an object-oriented approach to CSS, combine to produce a lightweight, accessible and SEO friendly&nbsp;site.',
+        'Complete front-end templates for redesign of efinancialnews.com. Semantically rich HTML and an object-oriented approach to CSS, combine to produce a lightweight, accessible and SEO friendly&nbsp;site.',
     },
     'tweet-250': {
       title: 'Tweet 250',
@@ -282,7 +282,7 @@ module.exports = {
         link: 'https://profitfromplay.com',
       },
       description:
-        'Consulting and advising on the transition of this global site from legacy table-based layouts to a modern Web Standards frontend. Also responsible for coding static HTML / CSS templates for the redesigned editorial&nbsp;section.',
+        'Consulting and advising on the transition of this global site from legacy table-based layouts to a modern Web Standards front end. Also responsible for coding static HTML/CSS templates for the redesigned editorial&nbsp;section.',
     },
     'house-of-fraser': {
       title: 'House of Fraser',
@@ -293,7 +293,7 @@ module.exports = {
         link: 'http://www.digitaslbi.com/uk/',
       },
       description:
-        'Responsible for developing advanced functionality for this new online store: AJAX, animation (mootools library), Adobe Scene7 API and Demandware (server-side)&nbsp;integration.',
+        'Responsible for developing advanced functionality for this new online store: AJAX, animation (mootools), Adobe Scene7 API and Demandware (server-side)&nbsp;integration.',
     },
     'usc': {
       title: 'USC',
@@ -312,8 +312,8 @@ module.exports = {
       link: '',
       client: null,
       description:
-        'Technical lead on an accessible web standards retrofit of key areas of national-lottery.co.uk, including the Lotto and EuroMillions purchase processes, user registration and account&nbsp;management.\n\n' +
-        'Responsible for frontend architecture and all frontend development. Authored company Web Accessibility Guidelines, and conducted usability testing with screen-reader&nbsp;users.',
+        'Technical lead on an accessible Web Standards retrofit of key areas of national-lottery.co.uk, including the Lotto and EuroMillions purchase processes, user registration and account&nbsp;management.\n\n' +
+        'Responsible for front-end architecture and all front-end development. Authored company Web Accessibility Guidelines, and conducted usability testing with screen-reader&nbsp;users.',
     },
     'age-concern': {
       title: 'Age Concern',
