@@ -9,7 +9,7 @@ const Avatar = () => {
         alt="About Scott"
         width="94"
         height="94"
-        src={`/assets/avatar.png?v=${version}`}
+        src={`/assets/avatar.jpg?v=${version}`}
       />
     </h2>
   );

@@ -12,14 +12,14 @@ class Screenshot extends Component {
   }
   render() {
     const {slug, project: {link, title}} = this.props;
-    const image = require(`../../assets/${slug}.png`);
+    const image = require(`../../assets/${slug}.jpg`);
     const img = (
       <img
         className={`Screenshot ${!this.state.loaded ? 'is-loading' : ''}`}
         alt={title}
         width="398"
         height={`${image.width === 796 ? image.height / 2 : image.height}`}
-        src={`/assets/${slug}.png?v=${version}`}
+        src={`/assets/${slug}.jpg?v=${version}`}
       />
     );
     if (link) {
@@ -46,7 +46,7 @@ class Screenshot extends Component {
     img.onload = () => {
       this.setState({loaded: true});
     };
-    img.src = `/assets/${slug}.png?v=${version}`;
+    img.src = `/assets/${slug}.jpg?v=${version}`;
   }
 }
 
