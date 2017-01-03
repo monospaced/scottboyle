@@ -57,6 +57,11 @@ a:active {
   color: var(--theme-color);
 }
 
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3 {

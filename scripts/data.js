@@ -33,7 +33,7 @@ module.exports = {
       },
       description:
         'Lead developer for this subscription-based data service, from inception to&nbsp;launch.\n\n' +
-        'Technical specifications, complete Angular 1 front-end build, Stripe payments integration, CI and AWS infrastructure management, PCI compliance. Working closely with .NET API developers and the product&nbsp;team.',
+        'Technical specifications, complete Angular 1 front-end build, Stripe payments integration, <abbr title="Continuous Integration">CI</abbr> and AWS infrastructure management, PCI compliance; working closely with .NET API developers and the product team. ',
     },
     'nhs': {
       title: 'NHS',
@@ -111,7 +111,7 @@ module.exports = {
         link: 'https://monospaced.com',
       },
       description:
-        'Full website build from design composites: responsive front end, customised WordPress&nbsp;CMS.',
+        'Full website build, front end and CMS&nbsp;(WordPress).',
     },
     'silu': {
       title: 'Silu',
@@ -122,7 +122,7 @@ module.exports = {
         link: 'https://profitfromplay.com',
       },
       description:
-        'Responsible for everything front-end for this portal site aimed at the global Chinese professional community. Working closely with Ruby on Rails developers and the product&nbsp;team.',
+        'Lead front-end developer for a portal site aimed at the global Chinese professional community. Working closely with Ruby on Rails developers and the product&nbsp;team.',
     },
     'stordis': {
       title: 'Stordis',
@@ -215,7 +215,7 @@ module.exports = {
       },
       description:
         '### OneRiot\n\n' +
-        'Front-end templating for this successful redesign, taking OneRiot out of beta. Object-oriented CSS and custom jQuery&nbsp;animations.',
+        'Front-end templating for a successful redesign, taking OneRiot out of beta. Object-oriented CSS and  JavaScript&nbsp;animations.',
     },
     'best-buy': {
       title: 'Best Buy',
@@ -282,7 +282,7 @@ module.exports = {
         link: 'https://profitfromplay.com',
       },
       description:
-        'Consulting and advising on the transition of this global site from legacy table-based layouts to a modern Web Standards front end. Also responsible for coding static HTML/CSS templates for the redesigned editorial&nbsp;section.',
+        'Consulting and advising on the transition of a global site from legacy table-based layouts to a modern Web Standards front end. Also responsible for coding static HTML/CSS templates for the redesigned editorial&nbsp;section.',
     },
     'house-of-fraser': {
       title: 'House of Fraser',
@@ -293,7 +293,7 @@ module.exports = {
         link: 'http://www.digitaslbi.com/uk/',
       },
       description:
-        'Responsible for developing advanced functionality for this new online store: AJAX, animation (mootools), Adobe Scene7 API and Demandware (server-side)&nbsp;integration.',
+        'Developed advanced functionality for a new online store: JavaScript animations, AJAX and server-side&nbsp;integration.',
     },
     'usc': {
       title: 'USC',
@@ -304,7 +304,7 @@ module.exports = {
         link: 'http://www.digitaslbi.com/uk/',
       },
       description:
-        'Developed AJAX functionality and animated UI behaviours for this redesigned online store. Accessible and unobtrusive integration of complex Flash elements and Adobe Scene7&nbsp;API.',
+        'Developed AJAX functionality and animated UI behaviours for a redesigned online store. Accessible and unobtrusive integration of complex Flash elements and Adobe Scene7&nbsp;API.',
     },
     'the-national-lottery': {
       title: 'The National Lottery',
@@ -325,7 +325,7 @@ module.exports = {
       },
       description:
         '### Age Concern Southwark\n\n' +
-        'Responsible for designing and developing this accessible DDA compliant website for older&nbsp;users.',
+        'Responsible for designing and developing an accessible <abbr title="Disability Discrimination Act">DDA</abbr> compliant website for older&nbsp;users.',
     },
     'snooze': {
       title: 'Snooze',
