@@ -6,7 +6,9 @@ import webpack from 'webpack';
 require.extensions['.css'] = () => { return; };
 const routes = ReactRouterToArray(require('./scripts/routes'));
 
-module.exports = {
+const production = process.env.NODE_ENV === 'production';
+
+const config = {
   entry: './scripts/entry.js',
 
   output: {
@@ -51,9 +53,15 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('styles.css'),
     new StaticSiteGeneratorPlugin('bundle.js', routes),
+  ],
+};
+
+if (production) {
+  config.plugins = [
+    ...config.plugins,
     new webpack.DefinePlugin({
       'process.env': {
-         NODE_ENV: JSON.stringify('production') ,
+         NODE_ENV: `'production'`,
        },
     }),
     new webpack.optimize.UglifyJsPlugin({
@@ -64,5 +72,7 @@ module.exports = {
         comments: false,
       },
     }),
-  ],
-};
+  ];
+}
+
+module.exports = config;
