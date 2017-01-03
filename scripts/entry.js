@@ -8,7 +8,8 @@ import Root from '../components/Root/Root.js';
 
 if (typeof document !== 'undefined') {
   const app = document.getElementById('app');
-  ReactDOM.render(<Router history={browserHistory} routes={Routes}/>, app);
+  ReactDOM.render(
+    <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory} routes={Routes}/>, app);
 }
 
 export default (locals, callback) => {
