@@ -20,9 +20,10 @@ const Routes = (
 function forceTrailingSlash(nextState, replace) {
   const path = nextState.location.pathname;
   if (path.slice(-1) !== '/') {
-    replace(Object.assign({}, nextState.location, {
+    replace({
+      ...nextState.location,
       pathname: path + '/',
-    }));
+    });
   }
 }
 
