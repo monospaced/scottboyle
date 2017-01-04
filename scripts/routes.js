@@ -9,7 +9,7 @@ import data from './data.js';
 const Routes = (
   <Route onEnter={forceTrailingSlash} onChange={forceTrailingSlashOnChange}>
     <Route path="/" component={App} data={data}>
-      <IndexRoute component={Index} />
+      <IndexRoute component={Index}/>
       {Object.keys(data.projects).map((key) => <Route path={key} component={Project} key={key}/>)}
       <Route path="404" component={NotFound}/>
       <Route path="*" component={NotFound}/>
