@@ -5,13 +5,21 @@ module.exports = {
   about: `
 Scott Boyle is a web professional specialising in modern front-end development. Scott currently lives in London UK and has a company called [Monospaced Ltd](https://monospaced.com), a freelance web development consultancy working with regular clients in the London&nbsp;area.
 
-* [Flickr](https://www.flickr.com/photos/scottboyle/)
-* [Github](https://github.com/monospaced)
-* [Instagram](https://www.instagram.com/mono_spaced/)
-* [Pinboard](https://pinboard.in/u:monospaced/?per_page=80)
-* [Twitter](https://twitter.com/mono_spaced)
+### View source
 
-Contents may have settled during shipment — websites change over time, so if you’d like to see a sample of my work then please get in touch — [scott@monospaced.com](mailto://scott@monospaced.com).
+[github.com/monospaced/scottboyle](https://github.com/monospaced/scottboyle)
+
+### Contact
+
+[scott@monospaced.com](mailto://scott@monospaced.com)
+
+### Elsewhere
+
+* [Github](https://github.com/monospaced)
+* [Pinboard](https://pinboard.in/u:monospaced/?per_page=80)
+* [Flickr](https://www.flickr.com/photos/scottboyle/)
+* [Instagram](https://www.instagram.com/mono_spaced/)
+* [Twitter](https://twitter.com/mono_spaced)
   `,
   projects: {
     'freeform': {

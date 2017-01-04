@@ -6,6 +6,7 @@ const Nav = ({projects, routes}) => {
   const path = routes[routes.length - 1].path;
   return (
     <nav className="Nav">
+      <h2 className="Nav-heading">Work</h2>
       <ul className="Nav-list">
         {Object.keys(projects).map((key) => {
           const title = projects[key].title;

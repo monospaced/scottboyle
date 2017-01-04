@@ -7,6 +7,11 @@
 }
 
 .Nav-list {
-  margin-left: 0;
-  list-style: none;
+  margin-top: 0;
+}
+
+.Nav-heading {
+  font-size: var(--pica);
+  line-height: 1.5;
+  margin-bottom: 0;
 }
