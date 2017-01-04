@@ -17,7 +17,7 @@ class Index extends Component {
           title={`${data.title} ${data.subtitle}`}
         />
         <section
-          dangerouslySetInnerHTML={{__html: avatar + marked(data.about)}}
+          dangerouslySetInnerHTML={{__html: avatar + marked(data.about.trim())}}
         />
       </main>
     );
