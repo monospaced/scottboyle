@@ -10,13 +10,11 @@ const production = process.env.NODE_ENV === 'production';
 
 const config = {
   entry: './scripts/entry.js',
-
   output: {
     filename: 'bundle.js',
     path: __dirname + '/build',
     libraryTarget: 'umd',
   },
-
   module: {
     loaders: [
       {
@@ -49,7 +47,6 @@ const config = {
       },
     ],
   },
-
   plugins: [
     new ExtractTextPlugin('styles.css'),
     new StaticSiteGeneratorPlugin('bundle.js', routes),
