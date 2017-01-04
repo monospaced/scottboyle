@@ -15,6 +15,7 @@ class Index extends Component {
       <main className="Main">
         <DocumentMeta
           title={`${data.title} ${data.subtitle}`}
+          description={data.description}
         />
         <section
           dangerouslySetInnerHTML={{__html: avatar + marked(data.about.trim())}}

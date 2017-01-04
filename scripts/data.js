@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Scott Boyle',
   subtitle: 'Portfolio',
+  description: 'Web professional specialising in modern front-end development.',
   about: `
 Scott Boyle is a web professional specialising in modern front-end development. Scott currently lives in London UK and has a company called [Monospaced Ltd](https://monospaced.com), a freelance web development consultancy working with regular clients in the London&nbsp;area.
 
@@ -21,7 +22,7 @@ Contents may have settled during shipment — websites change over time, so if y
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 Creative developer, part of 5 person product lab&nbsp;team.
 
 Building full stack prototypes and technical experiments utilising a variety of technologies: Node.js, Angular 1 and 2, Ionic, React, OpenCV, Leap Motion, Alexa Skills, Facebook Messenger Platform,&nbsp;etc.
@@ -35,7 +36,7 @@ Building full stack prototypes and technical experiments utilising a variety of 
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 Lead developer for this subscription-based data service, from inception to&nbsp;launch.
 
 Technical specifications, complete Angular 1 front-end build, Stripe payments integration, <abbr title="Continuous Integration">CI</abbr> and AWS infrastructure management, PCI compliance; working closely with .NET API developers and the product team.
@@ -49,7 +50,7 @@ Technical specifications, complete Angular 1 front-end build, Stripe payments in
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 ### Islington GP Hubs
 
 Managed the delivery of this content&nbsp;website.
@@ -63,7 +64,7 @@ Managed the delivery of this content&nbsp;website.
         title: 'Monospaced',
         link: 'https://monospaced.com',
       },
-      description: `
+      content: `
 Full website build, front end and CMS&nbsp;(Perch).
       `,
     },
@@ -75,7 +76,7 @@ Full website build, front end and CMS&nbsp;(Perch).
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 Front-end template builds for responsive homepage project, mobile app prototypes, and website&nbsp;refresh.
       `,
     },
@@ -87,7 +88,7 @@ Front-end template builds for responsive homepage project, mobile app prototypes
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 Front-end design and build for a family tree web app built in AngularJS. Complex diagram views built entirely in&nbsp;CSS.
       `,
     },
@@ -99,7 +100,7 @@ Front-end design and build for a family tree web app built in AngularJS. Complex
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 Prototype web e-book reader for digital library startup. Lives on as an open source project:&nbsp;[Paperback](https://monospaced.github.io/paperback/).
       `,
     },
@@ -111,7 +112,7 @@ Prototype web e-book reader for digital library startup. Lives on as an open sou
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 Consulting and advising on a site-wide design refresh. Created indicative templates and assisted with&nbsp;integration.
       `,
     },
@@ -123,7 +124,7 @@ Consulting and advising on a site-wide design refresh. Created indicative templa
         title: 'Monospaced',
         link: 'https://monospaced.com',
       },
-      description: `
+      content: `
 Full website build, front end and CMS&nbsp;(WordPress).
       `,
     },
@@ -135,7 +136,7 @@ Full website build, front end and CMS&nbsp;(WordPress).
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 Lead front-end developer for a portal site aimed at the global Chinese professional community. Working closely with Ruby on Rails developers and the product&nbsp;team.
       `,
     },
@@ -147,7 +148,7 @@ Lead front-end developer for a portal site aimed at the global Chinese professio
         title: 'Monospaced',
         link: 'https://monospaced.com',
       },
-      description: `
+      content: `
 Requirements gathering, front-end development, back-end design and development (PHP/MySQL), bespoke CMS, search integration, deployment, search engine and performance&nbsp;optimisation.
       `,
     },
@@ -159,7 +160,7 @@ Requirements gathering, front-end development, back-end design and development (
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 Responsible for all aspects of site development, from static templates to form functionality, CMS integration, and site&nbsp;deployment.
       `,
     },
@@ -171,7 +172,7 @@ Responsible for all aspects of site development, from static templates to form f
         title: 'Pirata',
         link: '',
       },
-      description: `
+      content: `
 ### Spots v Stripes
 
 JavaScript animations and data integration: counters, odometers, tickers and sound&nbsp;fx!
@@ -185,7 +186,7 @@ JavaScript animations and data integration: counters, odometers, tickers and sou
         title: 'Suburb',
         link: 'http://wearesuburb.com/',
       },
-      description: `
+      content: `
 ### British Weather Photographer of the Year
 
 Front-end templates for this competition microsite.
@@ -199,7 +200,7 @@ Front-end templates for this competition microsite.
         title: 'OgilvyOne',
         link: 'https://ogilvy.co.uk/agency/ogilvyone',
       },
-      description: `
+      content: `
 ### Tools Not Rules Wiki
 
 Skinning and configuring&nbsp;MediaWiki.
@@ -213,7 +214,7 @@ Skinning and configuring&nbsp;MediaWiki.
         title: 'Pirata',
         link: '',
       },
-      description: `
+      content: `
 ### Sharp Quattron
 
 Responsible for Google Maps API search and display&nbsp;functionality.
@@ -227,7 +228,7 @@ Responsible for Google Maps API search and display&nbsp;functionality.
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 Rapid prototyping of experimental JavaScript search interface concepts for user acceptance&nbsp;testing.
       `,
     },
@@ -239,7 +240,7 @@ Rapid prototyping of experimental JavaScript search interface concepts for user 
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 ### OneRiot
 
 Front-end templating for a successful redesign, taking OneRiot out of beta. Object-oriented CSS and  JavaScript&nbsp;animations.
@@ -253,7 +254,7 @@ Front-end templating for a successful redesign, taking OneRiot out of beta. Obje
         title: 'Grand Union',
         link: 'http://thegrandunion.com',
       },
-      description: `
+      content: `
 Part of a 5 person team building the front end for Best Buy’s UK site, with a particular focus on performance, object-oriented CSS, and asynchronous JavaScript&nbsp;loading.
       `,
     },
@@ -265,7 +266,7 @@ Part of a 5 person team building the front end for Best Buy’s UK site, with a 
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 ### Financial News
 
 Complete front-end templates for redesign of efinancialnews.com. Semantically rich HTML and an object-oriented approach to CSS, combine to produce a lightweight, accessible and SEO friendly&nbsp;site.
@@ -279,7 +280,7 @@ Complete front-end templates for redesign of efinancialnews.com. Semantically ri
         title: 'Grand Union',
         link: 'http://thegrandunion.com',
       },
-      description: ``,
+      content: ``,
     },
     'ask': {
       title: 'Ask',
@@ -289,7 +290,7 @@ Complete front-end templates for redesign of efinancialnews.com. Semantically ri
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 Rapid agile prototyping of interactive behaviours and animations, adaptive/elastic layouts, visual design candidates and user&nbsp;skins.
       `,
     },
@@ -301,7 +302,7 @@ Rapid agile prototyping of interactive behaviours and animations, adaptive/elast
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 ### Pepsi MaxCast
       `,
     },
@@ -313,7 +314,7 @@ Rapid agile prototyping of interactive behaviours and animations, adaptive/elast
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
-      description: `
+      content: `
 Consulting and advising on the transition of a global site from legacy table-based layouts to a modern Web Standards front end. Also responsible for coding static HTML/CSS templates for the redesigned editorial&nbsp;section.
       `,
     },
@@ -325,7 +326,7 @@ Consulting and advising on the transition of a global site from legacy table-bas
         title: 'LBI',
         link: 'http://www.digitaslbi.com/uk/',
       },
-      description: `
+      content: `
 Developed advanced functionality for a new online store: JavaScript animations, AJAX and server-side&nbsp;integration.
       `,
     },
@@ -337,7 +338,7 @@ Developed advanced functionality for a new online store: JavaScript animations, 
         title: 'LBI',
         link: 'http://www.digitaslbi.com/uk/',
       },
-      description: `
+      content: `
 Developed AJAX functionality and animated UI behaviours for a redesigned online store. Accessible and unobtrusive integration of complex Flash elements and Adobe Scene7&nbsp;API.
       `,
     },
@@ -346,7 +347,7 @@ Developed AJAX functionality and animated UI behaviours for a redesigned online 
       date: '2006',
       link: '',
       client: null,
-      description: `
+      content: `
 Technical lead on an accessible Web Standards retrofit of key areas of national-lottery.co.uk, including the Lotto and EuroMillions purchase processes, user registration and account&nbsp;management.
 
 Responsible for front-end architecture and all front-end development. Authored company Web Accessibility Guidelines, and conducted usability testing with screen-reader&nbsp;users.
@@ -360,7 +361,7 @@ Responsible for front-end architecture and all front-end development. Authored c
         title: 'Two Plus Four',
         link: '',
       },
-      description: `
+      content: `
 ### Age Concern Southwark
 
 Responsible for designing and developing an accessible <abbr title="Disability Discrimination Act">DDA</abbr> compliant website for older&nbsp;users.
@@ -374,7 +375,7 @@ Responsible for designing and developing an accessible <abbr title="Disability D
         title: 'Two Plus Four',
         link: '',
       },
-      description: ``,
+      content: ``,
     },
   },
 };

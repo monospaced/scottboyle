@@ -16,10 +16,11 @@ class Project extends Component {
       <main className="Main">
         <DocumentMeta
           title={`${project.title} | ${data.title} ${data.subtitle}`}
+          description={data.description}
         />
         <section>
           <h2>{project.title} <small>({project.date})</small></h2>
-          <div dangerouslySetInnerHTML={{__html: marked(project.description.trim())}}/>
+          <div dangerouslySetInnerHTML={{__html: marked(project.content.trim())}}/>
           {project.client && <Client client={project.client}/>}
           {project.link && <Visit project={project}/>}
           <Screenshot slug={path} project={project}/>
