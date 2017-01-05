@@ -1,6 +1,6 @@
 @import url('../../theme/vars.css');
 
-@media (min-width: 639px) {
+@media (--larger-viewport) {
   .Nav {
     float: left;
   }

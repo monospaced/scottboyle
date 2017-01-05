@@ -4,7 +4,7 @@
   margin: 1.5rem 0;
 }
 
-@media (min-width: 639px) {
+@media (--larger-viewport) {
   .Header {
     margin: 3rem 0 0;
   }

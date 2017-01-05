@@ -4,18 +4,11 @@
 html {
   font-family: theme-font, sans-serif;
   line-height: 1.5;
-  box-sizing: border-box;
   color: color(var(--background-color) contrast(0%));
   background: var(--background-color);
   text-rendering: optimizeLegibilty;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
 }
 
 body {
@@ -112,7 +105,6 @@ small {
 
 img {
   display: block;
-  box-sizing: content-box;
   transition: box-shadow .15s;
   border: 1px solid color(var(--background-color) contrast(100%) lightness(85%));
   box-shadow: 0 4px 8px color(var(--background-color) contrast(100%) a(20%));
@@ -124,13 +116,13 @@ a:hover img {
 }
 
 .App {
-  max-width: 439px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-@media (min-width: 639px) {
+@media (--larger-viewport) {
   .App {
-    max-width: 639px;
+    max-width: 600px;
   }
 }
