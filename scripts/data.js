@@ -197,7 +197,7 @@ JavaScript animations and data integration: counters, odometers, tickers and sou
       content: `
 ### British Weather Photographer of the Year
 
-Front-end templates for this competition microsite.
+Front-end templates for this competition&nbsp;microsite.
       `,
     },
     'ogilvy': {
