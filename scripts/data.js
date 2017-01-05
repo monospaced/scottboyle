@@ -277,7 +277,7 @@ Part of a 5 person team building the front end for Best Buy’s UK site, with a 
       content: `
 ### Financial News
 
-Complete front-end templates for redesign of efinancialnews.com. Semantically rich HTML and an object-oriented approach to CSS, combine to produce a lightweight, accessible and SEO friendly&nbsp;site.
+Complete front-end templates for redesign of efinancialnews.com. Semantically rich HTML and an object-oriented approach to CSS, combined to produce a lightweight, accessible and SEO friendly&nbsp;site.
       `,
     },
     'tweet-250': {
