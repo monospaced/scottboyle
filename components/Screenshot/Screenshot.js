@@ -15,7 +15,7 @@ class Screenshot extends Component {
     const image = require(`../../assets/${slug}.jpg`);
     const img = (
       <img
-        className={`Screenshot ${!this.state.loaded ? 'is-loading' : ''}`}
+        className={`Screenshot${!this.state.loaded ? ' is-loading' : ''}`}
         alt={title}
         width="398"
         height={`${image.width === 796 ? image.height / 2 : image.height}`}
