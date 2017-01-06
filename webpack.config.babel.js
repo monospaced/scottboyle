@@ -3,10 +3,12 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import ReactRouterToArray from 'react-router-to-array';
 import webpack from 'webpack';
 
-require.extensions['.css'] = () => { return; };
-const routes = ReactRouterToArray(require('./scripts/routes'));
-
 const production = process.env.NODE_ENV === 'production';
+
+// Prevent webpack from attempting to process css before loaders are configured
+require.extensions['.css'] = () => { return; };
+// Routes array is required in config.plugins
+const routes = ReactRouterToArray(require('./scripts/routes'));
 
 const config = {
   entry: './scripts/entry.js',
@@ -34,9 +36,9 @@ const config = {
       },
       {
         test: /\.woff$/,
-        loader: 'url?limit=100000&&mimetype=application/font-woff',
+        loader: 'url?mimetype=application/font-woff',
       },
-      { test: /\.(png|jpg)$/,
+      { test: /\.(jpg)$/,
         loader: 'image-size?name=/assets/[name].[ext]',
       },
       { test: /\.(ico|txt|htaccess)$/,
@@ -56,6 +58,7 @@ const config = {
 if (production) {
   config.plugins = [
     ...config.plugins,
+    // Put react into production mode
     new webpack.DefinePlugin({
       'process.env': {
          NODE_ENV: `'production'`,
