@@ -1,19 +1,14 @@
 :root {
-  font-size: 81.25%;
+  --theme-color: #ec118f; /* red violet */
+  --link-color: color(var(--theme-color) hue(+240deg)); /* triad */
+  --background-color: white;
 
-  --triple-canon: 25.629rem;
-  --double-canon: 17.086rem;
-  --canon: 11.391rem;
-  --double-great-primer: 7.594rem;
-  --double-english: 5.063rem;
-  --double-pica: 3.375rem;
+  font-size: 81.25%;  /* 13px */
+
+  /* modular scale 1.5 */
   --great-primer: 2.25rem;
   --english: 1.5rem;
   --pica: 1rem;
-
-  --background-color: white;
-  --theme-color: #ec118f;
-  --link-color: #118feb;
 }
 
-@custom-media --larger-viewport (min-width: 639px);
+@custom-media --larger-viewport (min-width: 639px); /* 600px + (1.5rem * 2) */
