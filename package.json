@@ -16,7 +16,6 @@
     "image-size-loader": "^0.7.0",
     "json-loader": "^0.5.4",
     "marked": "^0.3.6",
-    "normalize.css": "^5.0.0",
     "postcss-cssnext": "^2.9.0",
     "postcss-import": "^9.0.0",
     "postcss-loader": "^1.2.0",
