@@ -3,8 +3,6 @@
   --link-color: color(var(--theme-color) hue(+240deg)); /* triad */
   --background-color: white;
 
-  font-size: 81.25%;  /* 13px */
-
   /* modular scale 1.5 */
   --great-primer: 2.25rem;
   --english: 1.5rem;
