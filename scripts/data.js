@@ -25,7 +25,7 @@ Scott Boyle is a web professional specialising in modern front-end development. 
     'freeform': {
       title: 'Freeform',
       date: '2015–2016',
-      link: '',
+      link: 'https://frfrm.com',
       client: {
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
