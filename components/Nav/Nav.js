@@ -15,7 +15,6 @@ const Nav = ({projects, routes}) => {
               {key === path ? title : <Link to={`/${key}`}>{title}</Link>}
             </li>
           );
-
         })}
         <li><Link to={`/link-blog/`}>Link Blog</Link></li>
       </ul>
