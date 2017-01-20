@@ -23,17 +23,16 @@ class LinkBlog extends Component {
           <h2>Link blog</h2>
           {!this.state.spa ?
           <div className="LinkBlog" dangerouslySetInnerHTML={{__html: `
-            <?php
-              $ch = curl_init();
-              $timeout = 2;
-              curl_setopt($ch, CURLOPT_URL,
-              "https://feed.informer.com/widgets/2JILLJFOJU.html");
-              curl_setopt($ch, CURLOPT_HEADER, 0);
-              curl_exec($ch);
-              curl_close($ch);
-            ?>
-          `.trim()}}
-          /> :
+<?php
+  $ch = curl_init();
+  $timeout = 2;
+  curl_setopt($ch, CURLOPT_URL,
+  "https://feed.informer.com/widgets/2JILLJFOJU.html");
+  curl_setopt($ch, CURLOPT_HEADER, 0);
+  curl_exec($ch);
+  curl_close($ch);
+?>
+          `.trim()}}/> :
           <div className="LinkBlog">
             {/*
               <script src="https://feed.informer.com/widgets/JDTPAOKUAA.js"/>
