@@ -27,7 +27,7 @@ class LinkBlog extends Component {
               $ch = curl_init();
               $timeout = 2;
               curl_setopt($ch, CURLOPT_URL,
-              "http://app.feed.informer.com/digest3/JDTPAOKUAA.html");
+              "https://feed.informer.com/widgets/2JILLJFOJU.html");
               curl_setopt($ch, CURLOPT_HEADER, 0);
               curl_exec($ch);
               curl_close($ch);
@@ -35,9 +35,10 @@ class LinkBlog extends Component {
           `.trim()}}
           /> :
           <div className="LinkBlog">
-            <ul>
-              <li>Links here</li>
-            </ul>
+            {/*
+              <script src="https://feed.informer.com/widgets/JDTPAOKUAA.js"/>
+              https://feed.informer.com/digests/4TVQEYQXTS/feeder.rss
+            */}
           </div>
         }
         </section>
