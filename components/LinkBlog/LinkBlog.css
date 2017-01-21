@@ -1,9 +1,2 @@
 @import url('../../theme/vars.css');
 
-.LinkBlog .meta {
-  font-size: 80%;
-}
-
-.LinkBlog .fipoweredby {
-  display: none !important;
-}
