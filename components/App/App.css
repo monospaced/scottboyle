@@ -52,8 +52,8 @@ a:active {
 }
 
 abbr[title] {
-  border-bottom: none;
   text-decoration: none;
+  border-bottom: none;
 }
 
 h1,
@@ -106,6 +106,7 @@ small {
 
 time {
   font-size: 80%;
+  white-space: nowrap;
 }
 
 img {
