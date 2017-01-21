@@ -104,6 +104,10 @@ small {
   color: color(var(--background-color) contrast(0%));
 }
 
+time {
+  font-size: 80%;
+}
+
 img {
   display: block;
   transition: box-shadow .15s;

@@ -16,7 +16,9 @@ const Nav = ({projects, routes}) => {
             </li>
           );
         })}
-        <li><Link to={`/link-blog/`}>Link Blog</Link></li>
+        <li>
+          {`linklog` === path ? `Linklog` : <Link to={`/linklog/`}>Linklog</Link>}
+        </li>
       </ul>
     </nav>
   );
