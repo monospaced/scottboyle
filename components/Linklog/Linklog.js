@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOMServer from'react-dom/server';
 import DocumentMeta from 'react-document-meta';
 import TimeAgo from 'timeago-react';
 import fetchJsonp from 'fetch-jsonp';
