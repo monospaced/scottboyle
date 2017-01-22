@@ -11,6 +11,7 @@ class NotFound extends Component {
       <main className="Main">
         <DocumentMeta
           title={`Page not found | ${data.title} | ${data.subtitle}`}
+          meta={{ name: { robots: 'noindex' } }}
         />
         <section>
           <h2>404 <small>Page not found</small></h2>
