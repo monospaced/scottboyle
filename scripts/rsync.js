@@ -7,6 +7,7 @@ rsync({
   dest: dest,
   exclude: [
     '.well-known',
+    'google26897385c23df8ed.html',
   ],
   host: host,
   recursive: true,
