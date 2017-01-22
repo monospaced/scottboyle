@@ -16,7 +16,6 @@ class Project extends Component {
       <main className="Main">
         <DocumentMeta
           title={`${data.title} | ${data.subtitle} | ${project.title}`}
-          description={data.description}
         />
         <section>
           <h2>{project.title} <small>({project.date})</small></h2>
