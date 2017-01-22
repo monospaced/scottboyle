@@ -676,3 +676,4 @@ Redirect 301 /efc/ https://scottboyle.co.uk/financial-careers/
 Redirect 301 /house_of_fraser/ https://scottboyle.co.uk/house-of-fraser/
 Redirect 301 /national_lottery/ https://scottboyle.co.uk/national-lottery/
 Redirect 301 /age_concern_southwark/ https://scottboyle.co.uk/age-concern/
+Redirect 410 /heinz.html
