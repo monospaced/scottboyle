@@ -36,7 +36,7 @@ class Linklog extends Component {
     return (
       <main className="Main">
         <DocumentMeta
-          title={`Linklog | ${data.title} ${data.subtitle}`}
+          title={`${data.title} | ${data.subtitle} | Linklog`}
           description={data.description}
         />
         <section>

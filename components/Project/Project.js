@@ -15,7 +15,7 @@ class Project extends Component {
     return (
       <main className="Main">
         <DocumentMeta
-          title={`${project.title} | ${data.title} ${data.subtitle}`}
+          title={`${data.title} | ${data.subtitle} | ${project.title}`}
           description={data.description}
         />
         <section>

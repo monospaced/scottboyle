@@ -10,7 +10,7 @@ class NotFound extends Component {
     return (
       <main className="Main">
         <DocumentMeta
-          title={`Page not found | ${data.title} ${data.subtitle}`}
+          title={`Page not found | ${data.title} | ${data.subtitle}`}
         />
         <section>
           <h2>404 <small>Page not found</small></h2>

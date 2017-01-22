@@ -14,7 +14,7 @@ class Index extends Component {
     return (
       <main className="Main">
         <DocumentMeta
-          title={`${data.title} ${data.subtitle}`}
+          title={`${data.title} | ${data.subtitle}`}
           description={data.description}
         />
         <section
