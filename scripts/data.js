@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Scott Boyle',
   subtitle: 'Portfolio',
-  description: 'Web professional specialising in modern front-end development.',
+  description: 'Online portfolio for Scott Boyle, freelance web developer based in London, UK.',
   about: `
 <span class="fn">Scott Boyle</span> is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>. Scott currently lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and has a company called <a href="https://monospaced.com" class="org">Monospaced Ltd</a>, a freelance web development consultancy working with regular clients in the London&nbsp;area.
 
