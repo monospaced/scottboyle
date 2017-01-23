@@ -12,7 +12,7 @@ class Index extends Component {
     const {data} = this.props;
     const avatar = ReactDOMServer.renderToStaticMarkup(<Avatar/>);
     return (
-      <main className="Main">
+      <main className="Main vcard">
         <DocumentMeta
           title={`${data.title} | ${data.subtitle}`}
           description={data.description}

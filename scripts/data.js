@@ -3,23 +3,23 @@ module.exports = {
   subtitle: 'Portfolio',
   description: 'Web professional specialising in modern front-end development.',
   about: `
-Scott Boyle is a web professional specialising in modern front-end development. Scott currently lives in London UK and has a company called [Monospaced Ltd](https://monospaced.com), a freelance web development consultancy working with regular clients in the London&nbsp;area.
+<span class="fn">Scott Boyle</span> is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>. Scott currently lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and has a company called <a href="https://monospaced.com" class="org">Monospaced Ltd</a>, a freelance web development consultancy working with regular clients in the London&nbsp;area.
 
 ### View source
 
-[github.com/monospaced/scottboyle](https://github.com/monospaced/scottboyle)
+<a href="https://github.com/monospaced/scottboyle" rel="source">github.com/monospaced/scottboyle</a>
 
 ### Contact
 
-[scott@monospaced.com](mailto://scott@monospaced.com)
+<a href="mailto://scott@monospaced.com" class="email">scott@monospaced.com</a>
 
 ### Elsewhere
 
-* [Github](https://github.com/monospaced)
-* [Pinboard](https://pinboard.in/u:monospaced/?per_page=80)
-* [Flickr](https://www.flickr.com/photos/scottboyle/)
-* [Instagram](https://www.instagram.com/mono_spaced/)
-* [Twitter](https://twitter.com/mono_spaced)
+* <a href="https://github.com/monospaced" rel="me">Github</a>
+* <a href="https://pinboard.in/u:monospaced/?per_page=80" rel="me">Pinboard</a>
+* <a href="https://www.flickr.com/photos/scottboyle/" rel="me">Flickr</a>
+* <a href="https://www.instagram.com/mono_spaced/" rel="me">Instagram</a>
+* <a href="https://twitter.com/mono_spaced" rel="me">Twitter</a>
   `,
   projects: {
     'freeform': {
