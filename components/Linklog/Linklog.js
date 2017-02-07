@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import DocumentMeta from 'react-document-meta';
 import TimeAgo from 'timeago-react';
 import fetchJsonp from 'fetch-jsonp';
+import 'es6-promise/auto';
 
 const feed = 'https://feeds.pinboard.in/json/v1/u:monospaced/?count=31&cb=pinboard';
 
