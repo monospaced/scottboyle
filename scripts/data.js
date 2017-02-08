@@ -22,6 +22,18 @@ module.exports = {
 * <a href="https://twitter.com/mono_spaced" rel="me">Twitter</a>
   `,
   projects: {
+    'passionflix': {
+      title: 'Passionflix',
+      date: '2017',
+      link: 'https://www.passionflix.com',
+      client: {
+        title: 'Freeform',
+        link: 'https://frfrm.com',
+      },
+      content: `
+Complete front-end build, React/Webpack static site&nbsp;generator.
+      `,
+    },
     'freeform': {
       title: 'Freeform',
       date: '2015–2016',
