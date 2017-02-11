@@ -1,14 +1,10 @@
 import React, {Component} from 'react';
 import './Screenshot.css';
-import {version} from '../../package.json';
 
 class Screenshot extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      loaded: true,
-    };
-    this.imageWillLoad = this.imageWillLoad.bind(this);
+    this.state = { loaded: true };
   }
   render() {
     const {slug, project: {link, title}} = this.props;
@@ -19,7 +15,8 @@ class Screenshot extends Component {
         alt={title}
         width="398"
         height={`${image.width === 796 ? image.height / 2 : image.height}`}
-        src={`/assets/${slug}.jpg?v=${version}`}
+        src={`/assets/${slug}.jpg`}
+        onLoad={this.handleImageLoaded.bind(this)}
       />
     );
     if (link) {
@@ -31,22 +28,13 @@ class Screenshot extends Component {
     }
     return img;
   }
-  componentDidMount() {
-    this.imageWillLoad();
-  }
   componentWillReceiveProps(nextProps) {
     if (nextProps !== this.props) {
-      this.imageWillLoad(nextProps);
+      this.setState({ loaded: false });
     }
   }
-  imageWillLoad(nextProps) {
-    const {slug} = nextProps || this.props;
-    const img = document.createElement('img');
-    this.setState({loaded: false});
-    img.onload = () => {
-      this.setState({loaded: true});
-    };
-    img.src = `/assets/${slug}.jpg?v=${version}`;
+  handleImageLoaded() {
+    this.setState({ loaded: true });
   }
 }
 
