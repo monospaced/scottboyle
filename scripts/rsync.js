@@ -1,5 +1,5 @@
 var rsync = require('rsyncwrapper');
-var host = 'mnspcd';
+var host = 'monospaced';
 var dest = '~/webapps/static_scottboyle';
 
 rsync({
