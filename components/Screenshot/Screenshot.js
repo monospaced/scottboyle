@@ -11,6 +11,7 @@ class Screenshot extends Component {
     const image = require(`../../assets/${slug}.jpg`);
     const img = (
       <div style={{
+        maxWidth: '100%',
         width: `${(image.width / 2) + 2}px`,
         height: `${(image.height / 2) + 2}px`,
       }}>
