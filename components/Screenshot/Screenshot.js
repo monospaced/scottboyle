@@ -10,14 +10,19 @@ class Screenshot extends Component {
     const {slug, project: {link, title}} = this.props;
     const image = require(`../../assets/${slug}.jpg`);
     const img = (
-      <img
-        className={`Screenshot${!this.state.loaded ? ' is-loading' : ''}`}
-        alt={title}
-        width="398"
-        height={`${image.width === 796 ? image.height / 2 : image.height}`}
-        src={`/assets/${slug}.jpg`}
-        onLoad={this.handleImageLoaded.bind(this)}
-      />
+      <div style={{
+        width: `${(image.width / 2) + 2}px`,
+        height: `${(image.height / 2) + 2}px`,
+      }}>
+        <img
+          className={`Screenshot${!this.state.loaded ? ' is-loading' : ''}`}
+          alt={title}
+          width={`${image.width / 2}`}
+          height={`${image.height / 2}`}
+          src={`/assets/${slug}.jpg`}
+          onLoad={this.handleImageLoaded.bind(this)}
+        />
+      </div>
     );
     if (link) {
       return (

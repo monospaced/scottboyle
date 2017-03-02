@@ -111,14 +111,7 @@ time {
 
 img {
   display: block;
-  transition: box-shadow .15s;
-  border: 1px solid color(var(--background-color) contrast(100%) lightness(85%));
-  box-shadow: 0 4px 8px color(var(--background-color) contrast(100%) a(20%));
-}
-
-a:focus img,
-a:hover img {
-  box-shadow: 0 4px 8px color(var(--background-color) contrast(100%) a(10%));
+  border: 1px solid color(var(--background-color) contrast(100%) lightness(90%));
 }
 
 .App {
