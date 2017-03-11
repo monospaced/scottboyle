@@ -7,17 +7,24 @@ class Screenshot extends Component {
     this.state = { loaded: true };
   }
   render() {
-    const {slug, project: {link, title}} = this.props;
-    const image = require(`../../assets/${slug}.jpg`);
+    const {slug, project: {link, title, image}} = this.props;
     const img = (
-      <img
-        className={`Screenshot${!this.state.loaded ? ' is-loading' : ''}`}
-        alt={title}
-        width={`${image.width / 2}`}
-        height={`${image.height / 2}`}
-        src={`/assets/${slug}.jpg`}
-        onLoad={this.handleImageLoaded.bind(this)}
-      />
+      <div className="Screenshot" style={{ width: `${image.width}px` }}>
+        <div
+          className="Screenshot-shim"
+          style={{
+            paddingTop: `${(image.height / image.width) * 100}%`,
+          }}
+        ></div>
+        <img
+          className={`Screenshot-image${!this.state.loaded ? ' is-loading' : ''}`}
+          alt={title}
+          width={image.width}
+          height={image.height}
+          src={require(`../../assets/${slug}.jpg`)}
+          onLoad={this.handleImageLoaded.bind(this)}
+        />
+      </div>
     );
     if (link) {
       return (

@@ -111,7 +111,6 @@ time {
 
 img {
   display: block;
-  border: 1px solid color(var(--background-color) contrast(100%) lightness(90%));
 }
 
 .App {

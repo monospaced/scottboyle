@@ -30,6 +30,10 @@ module.exports = {
         title: 'Freeform',
         link: 'https://frfrm.com',
       },
+      image: {
+        width: 398,
+        height: 246,
+      },
       content: `
 Complete front-end build, React/Webpack static site&nbsp;generator.
       `,
@@ -42,9 +46,11 @@ Complete front-end build, React/Webpack static site&nbsp;generator.
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
+      image: {
+        width: 398,
+        height: 241,
+      },
       content: `
-Creative developer, part of 5 person product lab&nbsp;team.
-
 Building full stack prototypes and technical experiments utilising a variety of technologies: Node.js, Angular 1 and 2, Ionic, React, OpenCV, Leap Motion, Alexa Skills, Facebook Messenger Platform,&nbsp;etc.
       `,
     },
@@ -56,9 +62,11 @@ Building full stack prototypes and technical experiments utilising a variety of 
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
+      image: {
+        width: 398,
+        height: 308,
+      },
       content: `
-Lead developer for this subscription-based data service, from inception to&nbsp;launch.
-
 Technical specifications, complete Angular 1 front-end build, Stripe payments integration, <abbr title="Continuous Integration">CI</abbr> and AWS infrastructure management, PCI compliance; working closely with .NET API developers and the product team.
       `,
     },
@@ -69,6 +77,10 @@ Technical specifications, complete Angular 1 front-end build, Stripe payments in
       client: {
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
+      },
+      image: {
+        width: 398,
+        height: 351,
       },
       content: `
 ### Islington GP Hubs
@@ -84,6 +96,10 @@ Managed the delivery of this content&nbsp;website.
         title: 'Monospaced',
         link: 'https://monospaced.com',
       },
+      image: {
+        width: 398,
+        height: 310,
+      },
       content: `
 Full website build, front end and CMS&nbsp;(Perch).
       `,
@@ -95,6 +111,10 @@ Full website build, front end and CMS&nbsp;(Perch).
       client: {
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
+      },
+      image: {
+        width: 398,
+        height: 311,
       },
       content: `
 Front-end template builds for responsive homepage project, mobile app prototypes, and website&nbsp;refresh.
@@ -108,6 +128,10 @@ Front-end template builds for responsive homepage project, mobile app prototypes
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
+      image: {
+        width: 398,
+        height: 321,
+      },
       content: `
 Front-end design and build for a family tree web app built in AngularJS. Complex diagram views built entirely in&nbsp;CSS.
       `,
@@ -119,6 +143,10 @@ Front-end design and build for a family tree web app built in AngularJS. Complex
       client: {
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
+      },
+      image: {
+        width: 199,
+        height: 190,
       },
       content: `
 Prototype web e-book reader for digital library startup. Lives on as an open source project:&nbsp;[Paperback](https://monospaced.github.io/paperback/).
@@ -132,6 +160,10 @@ Prototype web e-book reader for digital library startup. Lives on as an open sou
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
+      image: {
+        width: 199,
+        height: 143,
+      },
       content: `
 Consulting and advising on a site-wide design refresh. Created indicative templates and assisted with&nbsp;integration.
       `,
@@ -143,6 +175,10 @@ Consulting and advising on a site-wide design refresh. Created indicative templa
       client: {
         title: 'Monospaced',
         link: 'https://monospaced.com',
+      },
+      image: {
+        width: 199,
+        height: 252,
       },
       content: `
 Full website build, front end and CMS&nbsp;(WordPress).
@@ -156,6 +192,10 @@ Full website build, front end and CMS&nbsp;(WordPress).
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
+      image: {
+        width: 199,
+        height: 369,
+      },
       content: `
 Lead front-end developer for a portal site aimed at the global Chinese professional community. Working closely with Ruby on Rails developers and the product&nbsp;team.
       `,
@@ -167,6 +207,10 @@ Lead front-end developer for a portal site aimed at the global Chinese professio
       client: {
         title: 'Monospaced',
         link: 'https://monospaced.com',
+      },
+      image: {
+        width: 199,
+        height: 231,
       },
       content: `
 Requirements gathering, front-end development, back-end design and development (PHP/MySQL), bespoke CMS, search integration, deployment, search engine and performance&nbsp;optimisation.
@@ -180,6 +224,10 @@ Requirements gathering, front-end development, back-end design and development (
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
+      image: {
+        width: 199,
+        height: 185,
+      },
       content: `
 Responsible for all aspects of site development, from static templates to form functionality, CMS integration, and site&nbsp;deployment.
       `,
@@ -191,6 +239,10 @@ Responsible for all aspects of site development, from static templates to form f
       client: {
         title: 'Pirata',
         link: '',
+      },
+      image: {
+        width: 199,
+        height: 252,
       },
       content: `
 ### Spots v Stripes
@@ -206,6 +258,10 @@ JavaScript animations and data integration: counters, odometers, tickers and sou
         title: 'Suburb',
         link: 'http://wearesuburb.com/',
       },
+      image: {
+        width: 199,
+        height: 232,
+      },
       content: `
 ### British Weather Photographer of the Year
 
@@ -219,6 +275,10 @@ Front-end templates for this competition&nbsp;microsite.
       client: {
         title: 'OgilvyOne',
         link: 'https://ogilvy.co.uk/agency/ogilvyone',
+      },
+      image: {
+        width: 199,
+        height: 153,
       },
       content: `
 ### Tools Not Rules Wiki
@@ -234,6 +294,10 @@ Skinning and configuring&nbsp;MediaWiki.
         title: 'Pirata',
         link: '',
       },
+      image: {
+        width: 199,
+        height: 128,
+      },
       content: `
 ### Sharp Quattron
 
@@ -248,6 +312,10 @@ Responsible for Google Maps API search and display&nbsp;functionality.
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
+      image: {
+        width: 199,
+        height: 139,
+      },
       content: `
 Rapid prototyping of experimental JavaScript search interface concepts for user acceptance&nbsp;testing.
       `,
@@ -259,6 +327,10 @@ Rapid prototyping of experimental JavaScript search interface concepts for user 
       client: {
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
+      },
+      image: {
+        width: 199,
+        height: 270,
       },
       content: `
 ### OneRiot
@@ -274,6 +346,10 @@ Front-end templating for a successful redesign, taking OneRiot out of beta. Obje
         title: 'Grand Union',
         link: 'http://thegrandunion.com',
       },
+      image: {
+        width: 199,
+        height: 288,
+      },
       content: `
 Part of a 5 person team building the front end for Best Buy’s UK site, with a particular focus on performance, object-oriented CSS, and asynchronous JavaScript&nbsp;loading.
       `,
@@ -285,6 +361,10 @@ Part of a 5 person team building the front end for Best Buy’s UK site, with a 
       client: {
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
+      },
+      image: {
+        width: 199,
+        height: 383,
       },
       content: `
 ### Financial News
@@ -300,6 +380,10 @@ Complete front-end templates for redesign of efinancialnews.com. Semantically ri
         title: 'Grand Union',
         link: 'http://thegrandunion.com',
       },
+      image: {
+        width: 199,
+        height: 153,
+      },
       content: ``,
     },
     'ask': {
@@ -309,6 +393,10 @@ Complete front-end templates for redesign of efinancialnews.com. Semantically ri
       client: {
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
+      },
+      image: {
+        width: 199,
+        height: 112,
       },
       content: `
 Rapid agile prototyping of interactive behaviours and animations, adaptive/elastic layouts, visual design candidates and user&nbsp;skins.
@@ -322,6 +410,10 @@ Rapid agile prototyping of interactive behaviours and animations, adaptive/elast
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
       },
+      image: {
+        width: 199,
+        height: 151,
+      },
       content: `
 ### Pepsi MaxCast
       `,
@@ -333,6 +425,10 @@ Rapid agile prototyping of interactive behaviours and animations, adaptive/elast
       client: {
         title: 'Profit From Play',
         link: 'https://profitfromplay.com',
+      },
+      image: {
+        width: 199,
+        height: 185,
       },
       content: `
 Consulting and advising on the transition of a global site from legacy table-based layouts to a modern Web Standards front end. Also responsible for coding static HTML/CSS templates for the redesigned editorial&nbsp;section.
@@ -346,6 +442,10 @@ Consulting and advising on the transition of a global site from legacy table-bas
         title: 'LBI',
         link: 'http://www.digitaslbi.com/uk/',
       },
+      image: {
+        width: 199,
+        height: 194,
+      },
       content: `
 Developed advanced functionality for a new online store: JavaScript animations, AJAX and server-side&nbsp;integration.
       `,
@@ -358,6 +458,10 @@ Developed advanced functionality for a new online store: JavaScript animations, 
         title: 'LBI',
         link: 'http://www.digitaslbi.com/uk/',
       },
+      image: {
+        width: 199,
+        height: 209,
+      },
       content: `
 Developed AJAX functionality and animated UI behaviours for a redesigned online store. Accessible and unobtrusive integration of complex Flash elements and Adobe Scene7&nbsp;API.
       `,
@@ -367,6 +471,10 @@ Developed AJAX functionality and animated UI behaviours for a redesigned online 
       date: '2006',
       link: '',
       client: null,
+      image: {
+        width: 199,
+        height: 284,
+      },
       content: `
 Technical lead on an accessible Web Standards retrofit of key areas of national-lottery.co.uk, including the Lotto and EuroMillions purchase processes, user registration and account&nbsp;management.
 
@@ -381,6 +489,10 @@ Responsible for front-end architecture and all front-end development. Authored c
         title: 'Two Plus Four',
         link: '',
       },
+      image: {
+        width: 199,
+        height: 305,
+      },
       content: `
 ### Age Concern Southwark
 
@@ -394,6 +506,10 @@ Responsible for designing and developing an accessible <abbr title="Disability D
       client: {
         title: 'Two Plus Four',
         link: '',
+      },
+      image: {
+        width: 199,
+        height: 117,
       },
       content: ``,
     },

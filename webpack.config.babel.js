@@ -39,7 +39,7 @@ const config = {
         loader: 'url?mimetype=application/font-woff',
       },
       { test: /\.(jpg)$/,
-        loader: 'image-size?name=/assets/[name].[ext]',
+        loader: 'file?name=/assets/[name].[ext]',
       },
       { test: /\.(ico|txt|htaccess)$/,
         loader: 'file?name=/[name].[ext]',

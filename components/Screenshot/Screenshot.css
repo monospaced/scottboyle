@@ -1,15 +1,30 @@
 @import url('../../theme/vars.css');
 
 .Screenshot {
+  position: relative;
+  margin: 1.5rem 0;
+  max-width: 100%;
+  border: 1px solid color(var(--background-color) contrast(100%) lightness(90%));
+}
+
+.Screenshot-shim {
+  width: 100%;
+}
+
+.Screenshot-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   visibility: visible;
   max-width: 100%;
   height: auto !important;
-  margin: 1.5rem 0;
-  transition: filter .2s;
+  transition: filter 0.2s;
   filter: blur(0);
 }
 
-.Screenshot.is-loading {
+.Screenshot-image.is-loading {
   visibility: hidden;
   transition: none;
   filter: blur(2px);

@@ -6,7 +6,7 @@ const Avatar = () => {
   return (
     <h2 className="Avatar">
       <img
-        className="photo"
+        className="Avatar-image photo"
         alt="About"
         width="94"
         height="94"
