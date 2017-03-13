@@ -4,7 +4,7 @@
   position: relative;
   margin: 1.5rem 0;
   max-width: 100%;
-  border: 1px solid color(var(--background-color) contrast(100%) lightness(90%));
+  border-left: 1px solid transparent;
 }
 
 .Screenshot-shim {

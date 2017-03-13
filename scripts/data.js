@@ -372,20 +372,6 @@ Part of a 5 person team building the front end for Best Buy’s UK site, with a 
 Complete front-end templates for redesign of efinancialnews.com. Semantically rich HTML and an object-oriented approach to CSS, combined to produce a lightweight, accessible and SEO friendly&nbsp;site.
       `,
     },
-    'tweet-250': {
-      title: 'Tweet 250',
-      date: '2009',
-      link: '',
-      client: {
-        title: 'Grand Union',
-        link: 'http://thegrandunion.com',
-      },
-      image: {
-        width: 199,
-        height: 153,
-      },
-      content: ``,
-    },
     'ask': {
       title: 'Ask',
       date: '2008',
@@ -498,20 +484,6 @@ Responsible for front-end architecture and all front-end development. Authored c
 
 Responsible for designing and developing an accessible <abbr title="Disability Discrimination Act">DDA</abbr> compliant website for older&nbsp;users.
       `,
-    },
-    'snooze': {
-      title: 'Snooze',
-      date: '2004',
-      link: '',
-      client: {
-        title: 'Two Plus Four',
-        link: '',
-      },
-      image: {
-        width: 199,
-        height: 117,
-      },
-      content: ``,
     },
   },
 };
