@@ -4,7 +4,11 @@
   position: relative;
   margin: 1.5rem 0;
   max-width: 100%;
-  border-left: 1px solid transparent;
+  border: 1px solid transparent;
+}
+
+.Screenshot.is-loading {
+  border-color: #e6e6e6;
 }
 
 .Screenshot-shim {
@@ -24,7 +28,7 @@
   filter: blur(0);
 }
 
-.Screenshot-image.is-loading {
+.Screenshot.is-loading .Screenshot-image {
   visibility: hidden;
   transition: none;
   filter: blur(2px);

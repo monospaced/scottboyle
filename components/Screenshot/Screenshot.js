@@ -9,7 +9,7 @@ class Screenshot extends Component {
   render() {
     const {slug, project: {link, title, image}} = this.props;
     const img = (
-      <div className="Screenshot" style={{ width: `${image.width}px` }}>
+      <div className={`Screenshot${!this.state.loaded ? ' is-loading' : ''}`} style={{ width: `${image.width}px` }}>
         <div
           className="Screenshot-shim"
           style={{
@@ -17,7 +17,7 @@ class Screenshot extends Component {
           }}
         ></div>
         <img
-          className={`Screenshot-image${!this.state.loaded ? ' is-loading' : ''}`}
+          className="Screenshot-image"
           alt={title}
           width={image.width}
           height={image.height}
