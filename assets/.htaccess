@@ -162,7 +162,7 @@ Options -MultiViews
     AddType text/vnd.rim.location.xloc                  xloc
     AddType text/vtt                                    vtt
     AddType text/x-component                            htc
-    AddType application/x-httpd-php                     html
+    AddHandler application/x-httpd-php                  html
 
 </IfModule>
 
