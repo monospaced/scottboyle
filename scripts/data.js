@@ -22,6 +22,24 @@ module.exports = {
 * <a href="https://twitter.com/mono_spaced" rel="me">Twitter</a>
   `,
   projects: {
+    'compass-group': {
+      title: 'Compass Group',
+      date: '2017',
+      link: '',
+      client: {
+        title: 'Monospaced',
+        link: 'https://monospaced.com',
+      },
+      image: {
+        width: 398,
+        height: 244,
+      },
+      content: `
+### Retail Pricing Portal
+
+UI design and complete front-end build, Angular NgRx web app.
+      `,
+    },
     'passionflix': {
       title: 'Passionflix',
       date: '2017',
