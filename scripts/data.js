@@ -43,7 +43,7 @@ UI design and complete front-end build, Angular NgRx web app.
     'passionflix': {
       title: 'Passionflix',
       date: '2017',
-      link: 'https://www.passionflix.com',
+      link: '',
       client: {
         title: 'Freeform',
         link: 'https://frfrm.com',
