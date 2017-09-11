@@ -1,6 +1,6 @@
 :root {
-  --theme-color: #ec118f; /* red violet */
-  --link-color: color(var(--theme-color) hue(+240deg)); /* triad */
+  --theme-color: #e01089; /* red violet */
+  --link-color: color(color(var(--theme-color) hue(+240deg)) lightness(41%)); /* triad */
   --background-color: white;
 
   /* modular scale 1.5 */
