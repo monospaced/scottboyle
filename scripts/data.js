@@ -22,6 +22,22 @@ module.exports = {
 * <a href="https://twitter.com/mono_spaced" rel="me">Twitter</a>
   `,
   projects: {
+    'omron': {
+      title: 'Omron',
+      date: '2017',
+      link: 'https://www.omron-healthcare.com/en/evolv',
+      client: {
+        title: 'Hanno',
+        link: 'https://hanno.co/work/omron/',
+      },
+      image: {
+        width: 398,
+        height: 215,
+      },
+      content: `
+Assisted Hanno with front-end development of Evolv microsite.
+      `,
+    },
     'compass-group': {
       title: 'Compass Group',
       date: '2017',
