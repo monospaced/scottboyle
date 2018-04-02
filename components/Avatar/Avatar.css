@@ -1,11 +1,10 @@
-@import url('../../theme/vars.css');
+@import url("../../theme/vars.css");
 
 .Avatar {
-  float: left;
-  height: calc(((var(--pica) * 1.5) * 5) + 0.01);
-  margin: 0 1.5rem 0 0;
+  height: calc(((var(--pica) * 1.5) * 4) + 0.01);
+  margin: 1.5rem 1.5rem 0 0;
 }
 
 .Avatar-image {
-  border: 1px solid color(var(--background-color) contrast(100%) lightness(90%));
+  border: calc(1rem / 16) solid var(--border-color);
 }

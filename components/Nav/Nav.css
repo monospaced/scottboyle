@@ -1,14 +1,16 @@
-@import url('../../theme/vars.css');
+@import url("../../theme/vars.css");
 
 @media (--larger-viewport) {
   .Nav {
     float: left;
+    text-align: right;
+    width: 12.5rem;
   }
 }
 
 .Nav-list {
-  margin-top: 0;
   margin-bottom: 1.5rem;
+  margin-top: 0;
 }
 
 .Nav-heading {

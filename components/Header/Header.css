@@ -1,4 +1,4 @@
-@import url('../../theme/vars.css');
+@import url("../../theme/vars.css");
 
 .Header {
   margin-top: 1.5rem;
@@ -6,6 +6,9 @@
 
 @media (--larger-viewport) {
   .Header {
-    margin-top: 3rem;
+    float: left;
+    margin-top: 2.25rem;
+    text-align: right;
+    width: 12.5rem;
   }
 }

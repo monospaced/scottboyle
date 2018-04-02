@@ -1,6 +1,6 @@
-import React from 'react';
-import './Avatar.css';
-import {version} from '../../package.json';
+import React from "react";
+import "./Avatar.css";
+import { version } from "../../package.json";
 
 const Avatar = () => {
   return (

@@ -1,12 +1,16 @@
 :root {
-  --theme-color: #e01089; /* red violet */
-  --link-color: color(color(var(--theme-color) hue(+240deg)) lightness(41%)); /* triad */
-  --background-color: white;
+  --background-color: #fefefe;
+  --theme-color: #e01074;
 
-  /* modular scale 1.5 */
-  --great-primer: 2.25rem;
-  --english: 1.5rem;
+  --border-color: color(var(--background-color) shade(10%));
+  --link-color: color(var(--theme-color) hue(-120deg) saturation(-30%));
+  --text-color: color(var(--background-color) contrast(0%));
+  --text-emphasis-color: color(var(--background-color) contrast(97%));
+
+  --long-primer: 0.875rem;
   --pica: 1rem;
+  --english: 1.5rem;
+  --great-primer: 2.25rem;
 }
 
-@custom-media --larger-viewport (min-width: 639px); /* 600px + (1.5rem * 2) */
+@custom-media --larger-viewport (min-width: 43.75em);

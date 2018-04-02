@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router';
-import './Nav.css';
+import React, { Component } from "react";
+import { Link } from "react-router";
+import "./Nav.css";
 
-const Nav = ({projects, routes}) => {
+const Nav = ({ projects, routes }) => {
   const path = routes[routes.length - 1].path;
   return (
     <nav className="Nav">
       <h2 className="Nav-heading">Work</h2>
       <ul className="Nav-list">
-        {Object.keys(projects).map((key) => {
+        {Object.keys(projects).map(key => {
           const title = projects[key].title;
           return (
             <li key={key}>
@@ -17,7 +17,11 @@ const Nav = ({projects, routes}) => {
           );
         })}
         <li>
-          {`linklog` === path ? `Linklog` : <Link to={`/linklog/`}>Linklog</Link>}
+          {`linklog` === path ? (
+            `Linklog`
+          ) : (
+            <Link to={`/linklog/`}>Linklog</Link>
+          )}
         </li>
       </ul>
     </nav>

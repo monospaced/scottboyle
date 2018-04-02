@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
-import DocumentMeta from 'react-document-meta';
-import TimeAgo from 'timeago-react';
-import fetchJsonp from 'fetch-jsonp';
-import 'es6-promise/auto';
+import React, { Component } from "react";
+import DocumentMeta from "react-document-meta";
+import TimeAgo from "timeago-react";
+import fetchJsonp from "fetch-jsonp";
+import "es6-promise/auto";
 
-const feed = 'https://feeds.pinboard.in/json/v1/u:monospaced/?count=29&cb=pinboard';
+const feed =
+  "https://feeds.pinboard.in/json/v1/u:monospaced/?count=33&cb=pinboard";
 
 class Linklog extends Component {
   constructor(props) {
@@ -14,26 +15,27 @@ class Linklog extends Component {
     };
   }
   componentDidMount() {
+    window.scrollTo(0, 0);
     fetchJsonp(feed, {
-      jsonpCallback: 'cb',
+      jsonpCallback: "cb",
     })
-    .then(res => {
-      return res.json();
-    })
-    .then(json => {
-      return this.setState({
-        links: json,
+      .then(res => {
+        return res.json();
+      })
+      .then(json => {
+        return this.setState({
+          links: json,
+        });
+      })
+      .catch(err => {
+        console.error(err);
+        return this.setState({
+          links: false,
+        });
       });
-    })
-    .catch(err => {
-      console.error(err);
-      return this.setState({
-        links: false,
-      });
-    });
   }
   render() {
-    const {data} = this.props;
+    const { data } = this.props;
     return (
       <main className="Main">
         <DocumentMeta
@@ -43,15 +45,19 @@ class Linklog extends Component {
         <section>
           <h2>Linklog</h2>
           {this.state.links ? (
-            <ul>{this.state.links.map((item) => {
-              return (
-                <li key={item.dt}>
-                  <a href={item.u}>{item.d}</a> <TimeAgo datetime={item.dt}/>
-                </li>
-              );
-            })}</ul>
+            <ul>
+              {this.state.links.map(item => {
+                return (
+                  <li key={item.dt}>
+                    <a href={item.u}>{item.d}</a> <TimeAgo datetime={item.dt} />
+                  </li>
+                );
+              })}
+            </ul>
           ) : (
-            <ul dangerouslySetInnerHTML={{__html: `
+            <ul
+              dangerouslySetInnerHTML={{
+                __html: `
               <?php
                 function jsonp_decode($jsonp, $assoc = false) {
                   if($jsonp[0] !== '[' && $jsonp[0] !== '{') {
@@ -77,7 +83,9 @@ class Linklog extends Component {
               ?>"></time></li><?php
                 }
               ?>
-            `.trim()}}/>
+            `.trim(),
+              }}
+            />
           )}
         </section>
       </main>

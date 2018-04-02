@@ -1,15 +1,13 @@
-@import url('../../theme/vars.css');
-@import url('../../theme/fonts.css');
+@import url("../../theme/fonts.css");
+@import url("../../theme/vars.css");
 
 html {
-  font-family: theme-font, sans-serif;
-  font-size: 81.25%;  /* 13px */
-  line-height: 1.5;
-  color: color(var(--background-color) contrast(0%));
   background: var(--background-color);
+  color: var(--text-color);
+  font-family: theme-font, sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
   text-rendering: optimizeLegibilty;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -24,44 +22,36 @@ section {
 }
 
 a {
-  transition: color .15s;
-  text-decoration: none;
-  color: var(--link-color);
-  outline: 0;
   background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
-
-a:visited {
   color: var(--link-color);
-}
-
-a:focus {
-  transition: none;
-  color: color(var(--link-color) lightness(-15%));
+  text-decoration: none;
+  text-decoration-skip: ink;
+  transition: color 0.15s;
 }
 
 a:hover {
-  transition: none;
-  color: color(var(--link-color) lightness(-15%));
+  outline: 0;
+  text-decoration: underline;
 }
 
 a:active {
-  transition: none;
   color: var(--theme-color);
+  outline: 0;
+  text-decoration: none;
+  transition: none;
 }
 
 abbr[title] {
-  text-decoration: none;
   border-bottom: none;
+  text-decoration: none;
 }
 
 h1,
 h2,
 h3 {
+  color: var(--text-emphasis-color);
   font-weight: normal;
   margin: 1.5rem 0;
-  color: color(var(--background-color) contrast(100%));
 }
 
 h1 {
@@ -89,23 +79,23 @@ h3 + ul {
 }
 
 ul {
+  list-style: none;
   margin: 1.5rem 0;
   padding: 0;
-  list-style: none;
 }
 
 strong {
+  color: var(--text-emphasis-color);
   font-weight: normal;
-  color: color(var(--background-color) contrast(100%));
 }
 
 small {
-  font-size: 80%;
-  color: color(var(--background-color) contrast(0%));
+  color: var(--text-color);
+  font-size: var(--long-primer);
 }
 
 time {
-  font-size: 80%;
+  font-size: var(--long-primer);
   white-space: nowrap;
 }
 
@@ -114,13 +104,19 @@ img {
 }
 
 .App {
-  max-width: 400px;
   margin: 0 auto;
+  max-width: 25rem;
   padding: 0 1.5rem;
 }
 
 @media (--larger-viewport) {
   .App {
-    max-width: 600px;
+    max-width: 40.5rem;
+  }
+
+  .App > div:first-child::after {
+    clear: both;
+    content: "";
+    display: table;
   }
 }

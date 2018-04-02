@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const Visit = ({project: {link, title}}) => {
+const Visit = ({ project: { link, title } }) => {
   return (
     <p>
       <strong>Visit:</strong> <a href={link}>{title}</a>

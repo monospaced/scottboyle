@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import './Screenshot.css';
+import React, { Component } from "react";
+import "./Screenshot.css";
 
 class Screenshot extends Component {
   constructor(props) {
@@ -7,15 +7,18 @@ class Screenshot extends Component {
     this.state = { loaded: true };
   }
   render() {
-    const {slug, project: {link, title, image}} = this.props;
+    const { slug, project: { link, title, image } } = this.props;
     const img = (
-      <div className={`Screenshot${!this.state.loaded ? ' is-loading' : ''}`} style={{ width: `${image.width}px` }}>
+      <div
+        className={`Screenshot${!this.state.loaded ? " is-loading" : ""}`}
+        style={{ width: `${image.width}px` }}
+      >
         <div
           className="Screenshot-shim"
           style={{
-            paddingTop: `${(image.height / image.width) * 100}%`,
+            paddingTop: `${image.height / image.width * 100}%`,
           }}
-        ></div>
+        />
         <img
           className="Screenshot-image"
           alt={title}
@@ -27,11 +30,7 @@ class Screenshot extends Component {
       </div>
     );
     if (link) {
-      return (
-        <a href={link}>
-          {img}
-        </a>
-      );
+      return <a href={link}>{img}</a>;
     }
     return img;
   }

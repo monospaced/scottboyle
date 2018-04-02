@@ -1,16 +1,29 @@
-@import url('../../theme/vars.css');
+@import url("../../theme/vars.css");
 
 .Logotype {
   margin: 0;
+  position: relative;
+  top: calc(2rem / 16);
 }
 
-.Logotype-link,
-.Logotype-link:visited,
+.Logotype-link {
+  color: var(--text-emphasis-color);
+  display: block;
+}
+
+.Logotype-link:focus {
+  outline: 0;
+}
+
+.Logotype-link:hover {
+  text-decoration: none;
+}
+
 .Logotype-link:active {
-  color: color(var(--background-color) contrast(100%));
+  color: var(--text-emphasis-color);
 }
 
 .Logotype-subtitle {
-  display: block;
   color: var(--theme-color);
+  display: block;
 }
