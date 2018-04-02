@@ -1,0 +1,99 @@
+@import url("../../theme/fonts.css");
+@import url("../../theme/vars.css");
+
+html {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: theme-font, sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibilty;
+}
+
+body {
+  margin: 0;
+}
+
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  text-decoration-skip: ink;
+  transition: color 0.15s;
+}
+
+a:hover {
+  outline: 0;
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--theme-color);
+  outline: 0;
+  text-decoration: none;
+  transition: none;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-emphasis-color);
+  font-weight: normal;
+  margin: 1.5rem 0;
+}
+
+h1 {
+  font-size: var(--great-primer);
+  line-height: 1;
+}
+
+h2 {
+  font-size: var(--english);
+  line-height: 1;
+}
+
+h3 {
+  font-size: var(--pica);
+  margin-bottom: 0;
+}
+
+p {
+  margin: 1.5rem 0;
+}
+
+h3 + p,
+h3 + ul {
+  margin-top: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+small {
+  color: var(--text-color);
+  font-size: var(--long-primer);
+}
+
+strong {
+  color: var(--text-emphasis-color);
+  font-weight: normal;
+}
+
+time {
+  font-size: var(--long-primer);
+  white-space: nowrap;
+}

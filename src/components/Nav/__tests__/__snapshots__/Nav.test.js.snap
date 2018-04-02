@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav component should render a project as the active item 1`] = `
+<nav
+  class="Nav"
+>
+  <h2
+    class="Nav-heading"
+  >
+    Work
+  </h2>
+  <ul
+    class="Nav-list"
+  >
+    <li>
+      Thomson Reuters
+    </li>
+    <li>
+      <a>
+        Compass Group
+      </a>
+    </li>
+    <li>
+      <a>
+        Bilbary
+      </a>
+    </li>
+    <li>
+      <a>
+        Genes Reunited
+      </a>
+    </li>
+    <li>
+      <a>
+        The National Lottery
+      </a>
+    </li>
+    <li>
+      <a>
+        Age Concern
+      </a>
+    </li>
+    <li>
+      <a>
+        Linklog
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Nav component should render correctly 1`] = `
+<nav
+  class="Nav"
+>
+  <h2
+    class="Nav-heading"
+  >
+    Work
+  </h2>
+  <ul
+    class="Nav-list"
+  >
+    <li>
+      <a>
+        Thomson Reuters
+      </a>
+    </li>
+    <li>
+      <a>
+        Compass Group
+      </a>
+    </li>
+    <li>
+      <a>
+        Bilbary
+      </a>
+    </li>
+    <li>
+      <a>
+        Genes Reunited
+      </a>
+    </li>
+    <li>
+      <a>
+        The National Lottery
+      </a>
+    </li>
+    <li>
+      <a>
+        Age Concern
+      </a>
+    </li>
+    <li>
+      <a>
+        Linklog
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Nav component should render linklog as the active item 1`] = `
+<nav
+  class="Nav"
+>
+  <h2
+    class="Nav-heading"
+  >
+    Work
+  </h2>
+  <ul
+    class="Nav-list"
+  >
+    <li>
+      <a>
+        Thomson Reuters
+      </a>
+    </li>
+    <li>
+      <a>
+        Compass Group
+      </a>
+    </li>
+    <li>
+      <a>
+        Bilbary
+      </a>
+    </li>
+    <li>
+      <a>
+        Genes Reunited
+      </a>
+    </li>
+    <li>
+      <a>
+        The National Lottery
+      </a>
+    </li>
+    <li>
+      <a>
+        Age Concern
+      </a>
+    </li>
+    <li>
+      Linklog
+    </li>
+  </ul>
+</nav>
+`;

@@ -1,0 +1,279 @@
+[
+  {
+    "u": "http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/",
+    "d": "React lifecycle methods diagram",
+    "n": "",
+    "dt": "2018-04-06T21:20:55Z",
+    "a": "monospaced",
+    "t": ["react", "java"]
+  },
+  {
+    "u": "https://realfavicongenerator.net/",
+    "d": "Real Favicon Generator",
+    "n": "",
+    "dt": "2018-04-04T21:16:19Z",
+    "a": "monospaced",
+    "t": ["icons"]
+  },
+  {
+    "u":
+      "https://medium.com/@firt/progressive-web-apps-on-ios-are-here-d00430dee3a7",
+    "d": "Progressive Web Apps on iOS",
+    "n": "",
+    "dt": "2018-04-04T20:12:43Z",
+    "a": "monospaced",
+    "t": ["apple", "ios", "pwa"]
+  },
+  {
+    "u": "http://fela.js.org/",
+    "d": "Fela",
+    "n":
+      "A small, high-performant and framework-agnostic toolbelt to handle state-driven styling in JavaScript.",
+    "dt": "2018-04-02T10:01:36Z",
+    "a": "monospaced",
+    "t": ["css", "javascript"]
+  },
+  {
+    "u":
+      "https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886",
+    "d": "7 Practical Design Tips",
+    "n": "",
+    "dt": "2018-03-27T19:34:39Z",
+    "a": "monospaced",
+    "t": ["design"]
+  },
+  {
+    "u": "https://www.supremo.tv/typeterms/",
+    "d": "Type Terms",
+    "n": "",
+    "dt": "2018-03-25T21:51:42Z",
+    "a": "monospaced",
+    "t": ["typography", "design"]
+  },
+  {
+    "u": "https://babel-time-travel.boopathi.in/",
+    "d": "Babel time travel",
+    "n": "",
+    "dt": "2018-03-24T20:33:15Z",
+    "a": "monospaced",
+    "t": ["javascript", "babel"]
+  },
+  {
+    "u":
+      "https://hackernoon.com/how-to-snapshot-test-everything-in-your-redux-app-with-jest-fde305ebedea",
+    "d": "Snapshot Test Redux With Jest",
+    "n": "",
+    "dt": "2018-03-19T11:33:57Z",
+    "a": "monospaced",
+    "t": ["jest", "redux", "testing"]
+  },
+  {
+    "u":
+      "https://medium.com/@netxm/testing-redux-reducers-with-jest-6653abbfe3e1",
+    "d": "Testing redux reducers with Jest",
+    "n": "",
+    "dt": "2018-03-18T00:48:56Z",
+    "a": "monospaced",
+    "t": ["testing", "redux", "jest"]
+  },
+  {
+    "u":
+      "https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md",
+    "d": "Writing Redux Tests",
+    "n": "",
+    "dt": "2018-03-18T00:46:42Z",
+    "a": "monospaced",
+    "t": ["jest", "redux", "testing"]
+  },
+  {
+    "u": "https://github.com/mawrkus/js-unit-testing-guide",
+    "d": "JavaScript unit testing guide",
+    "n": "",
+    "dt": "2018-03-17T19:52:51Z",
+    "a": "monospaced",
+    "t": ["testing", "javascript"]
+  },
+  {
+    "u": "http://accessibility.voxmedia.com/",
+    "d": "Vox Product Accessibility Guidelines",
+    "n": "",
+    "dt": "2018-03-09T21:31:57Z",
+    "a": "monospaced",
+    "t": ["accessibility", "design"]
+  },
+  {
+    "u": "http://stratejos.ai/blog/naming-task-bug-user-story-titles/",
+    "d": "Naming Guide for Issues",
+    "n": "",
+    "dt": "2018-03-08T01:01:36Z",
+    "a": "monospaced",
+    "t": ["git", "project"]
+  },
+  {
+    "u": "https://pbs.twimg.com/media/DNIqyJPXkAAxbnH.jpg",
+    "d": "GitHub priority labels",
+    "n": "",
+    "dt": "2018-03-07T17:13:24Z",
+    "a": "monospaced",
+    "t": ["git", "project"]
+  },
+  {
+    "u": "https://jakearchibald.com/2018/third-party-css-is-not-safe/",
+    "d": "Third party CSS is not safe",
+    "n": "",
+    "dt": "2018-03-02T11:34:37Z",
+    "a": "monospaced",
+    "t": ["css", "security"]
+  },
+  {
+    "u": "https://www.typography.com/blog/fonts-for-complex-data",
+    "d": "Fonts for Complex Data",
+    "n": "",
+    "dt": "2018-02-24T22:30:24Z",
+    "a": "monospaced",
+    "t": ["design", "typography"]
+  },
+  {
+    "u":
+      "https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/",
+    "d": "Organize GitHub Issues",
+    "n": "",
+    "dt": "2018-02-17T21:47:38Z",
+    "a": "monospaced",
+    "t": ["git", "project"]
+  },
+  {
+    "u": "http://spencermortensen.com/articles/typographic-scale/",
+    "d": "The typographic scale",
+    "n": "",
+    "dt": "2018-02-16T17:23:12Z",
+    "a": "monospaced",
+    "t": ["typography", "css"]
+  },
+  {
+    "u":
+      "https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align",
+    "d": "Font metrics, line-height & vertical-align",
+    "n": "",
+    "dt": "2018-02-16T17:22:26Z",
+    "a": "monospaced",
+    "t": ["css", "typography"]
+  },
+  {
+    "u":
+      "https://github.com/jmm/gfm-lang-ids/wiki/GitHub-Flavored-Markdown-(GFM)-language-IDs",
+    "d": "Github markdown language IDs",
+    "n": "",
+    "dt": "2018-02-12T20:11:35Z",
+    "a": "monospaced",
+    "t": ["git", "markdown"]
+  },
+  {
+    "u":
+      "https://medium.com/@u_glow/making-sense-of-semantic-versioning-for-end-user-software-applications-a3049d97478b",
+    "d": "Semver for end-user applications",
+    "n": null,
+    "dt": "2018-02-10T11:14:07Z",
+    "a": "monospaced",
+    "t": ["semver", "programming"]
+  },
+  {
+    "u": "https://blog.haroen.me/json-ld-with-react",
+    "d": "JSON-LD with React",
+    "n": "",
+    "dt": "2018-01-29T17:09:13Z",
+    "a": "monospaced",
+    "t": ["react", "javascript", "json", "schema.org"]
+  },
+  {
+    "u": "https://lab.iamvdo.me/houdini/",
+    "d": "CSS Houdini Experiments",
+    "n": "",
+    "dt": "2018-01-22T20:33:38Z",
+    "a": "monospaced",
+    "t": ["css", "houdini"]
+  },
+  {
+    "u": "https://gist.github.com/davidhund/564331193e1085208d7e",
+    "d": "Accessible markup for SVG icons",
+    "n": "",
+    "dt": "2018-01-15T13:42:27Z",
+    "a": "monospaced",
+    "t": ["svg", "accessibility"]
+  },
+  {
+    "u": "https://font-display.glitch.me/",
+    "d": "Font-display playground",
+    "n": "",
+    "dt": "2018-01-03T13:30:22Z",
+    "a": "monospaced",
+    "t": ["css", "font", "performance"]
+  },
+  {
+    "u":
+      "https://medium.com/@aureliojota/the-anatomy-of-a-cta-button-in-2017-voice-tone-style-and-component-best-practices-1861c4d2167e",
+    "d": "Anatomy of a CTA button",
+    "n": "",
+    "dt": "2017-11-16T23:10:07Z",
+    "a": "monospaced",
+    "t": ["design-systems", "design"]
+  },
+  {
+    "u":
+      "https://medium.com/fed-or-dead/handling-spacing-in-a-ui-component-library-70f3b22ec89",
+    "d": "Spacing in UI component libraries",
+    "n": "",
+    "dt": "2017-11-15T12:23:09Z",
+    "a": "monospaced",
+    "t": ["css", "design-systems"]
+  },
+  {
+    "u": "http://www.pwabuilder.com",
+    "d": "PWABuilder",
+    "n": "",
+    "dt": "2017-11-13T19:59:02Z",
+    "a": "monospaced",
+    "t": ["pwa"]
+  },
+  {
+    "u":
+      "https://www.smashingmagazine.com/2017/11/right-to-left-mobile-design/",
+    "d": "RTL Development In Mobile Design",
+    "n": "",
+    "dt": "2017-11-06T12:30:04Z",
+    "a": "monospaced",
+    "t": ["css", "I18n"]
+  },
+  {
+    "u": "https://www.w3.org/International/tutorials/bidi-xhtml/",
+    "d": "HTML Pages in Right-to-left Scripts",
+    "n": "",
+    "dt": "2017-11-02T19:34:01Z",
+    "a": "monospaced",
+    "t": ["html", "I18n"]
+  },
+  {
+    "u": "https://24ways.org/2016/css-writing-modes/",
+    "d": "CSS Writing Modes",
+    "n": "",
+    "dt": "2017-10-31T00:08:13Z",
+    "a": "monospaced",
+    "t": ["css", "I18n"]
+  },
+  {
+    "u": "http://jensimmons.com/post/sep-27-2016/six-layout-myths-busted",
+    "d": "Six Layout Myths Busted",
+    "n": "",
+    "dt": "2017-10-31T00:04:03Z",
+    "a": "monospaced",
+    "t": ["css"]
+  },
+  {
+    "u": "https://inclusive-components.design/",
+    "d": "Inclusive Components",
+    "n": "",
+    "dt": "2017-10-26T23:24:52Z",
+    "a": "monospaced",
+    "t": ["accessibility", "css", "html", "javascript"]
+  }
+]

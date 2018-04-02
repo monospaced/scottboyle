@@ -1,0 +1,19 @@
+@import url("../../theme/vars.css");
+
+.App {
+  margin: 0 auto;
+  max-width: 25rem;
+  padding: 0 1.5rem;
+}
+
+@media (--larger-viewport) {
+  .App {
+    max-width: 40.5rem;
+  }
+
+  .App:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}

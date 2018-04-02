@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "theme-font";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../theme/theme-font.woff") format("woff");
+}

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component should render correctly 1`] = `
+<main
+  className="Main vcard"
+>
+  <SideEffect(DocumentMeta)
+    description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    title="Scott Boyle | Portfolio"
+  />
+  <section>
+    <Avatar />
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p><span class=\\"fn\\">Scott Boyle</span> is a <span class=\\"category\\">web professional</span> <span class=\\"note\\">specialising in modern front-end development</span>. Scott currently lives in <span class=\\"adr\\"><span class=\\"locality\\">London</span> <span class=\\"country-name\\">UK</span></span> and has a company called <a href=\\"https://monospaced.com\\" class=\\"org\\">Monospaced&nbsp;Ltd</a>, a freelance web development consultancy working with regular clients in London and around the&nbsp;world.</p>
+<h3 id=\\"view-source\\">View source</h3>
+<p><a href=\\"https://github.com/monospaced/scottboyle\\" rel=\\"source\\">github.com/monospaced/scottboyle</a></p>
+",
+        }
+      }
+    />
+  </section>
+</main>
+`;

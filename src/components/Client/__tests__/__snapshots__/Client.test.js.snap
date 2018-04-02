@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Client component should render a link 1`] = `
+<p>
+  <strong>
+    For:
+  </strong>
+   
+  <a
+    href="https://client.com"
+  >
+    Client
+  </a>
+</p>
+`;
+
+exports[`Client component should render a name 1`] = `
+<p>
+  <strong>
+    For:
+  </strong>
+   Client
+</p>
+`;
+
+exports[`Client component should render correctly 1`] = `null`;

@@ -1,0 +1,336 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screenshot component should render correctly 1`] = `
+<Screenshot
+  project={
+    Object {
+      "client": Object {
+        "link": "https://monospaced.com",
+        "title": "Monospaced",
+      },
+      "content": "
+Building a design system and React component&nbsp;library.
+      ",
+      "date": "2018",
+      "image": Object {
+        "height": 275,
+        "width": 398,
+      },
+      "link": "https://www.thomsonreuters.com/en.html",
+      "title": "Thomson Reuters",
+    }
+  }
+  slug="thomson-reuters"
+>
+  <a
+    href="https://www.thomsonreuters.com/en.html"
+  >
+    <div
+      className="Screenshot"
+      style={
+        Object {
+          "width": "398px",
+        }
+      }
+    >
+      <div
+        className="Screenshot-shim"
+        style={
+          Object {
+            "paddingTop": "69.09547738693468%",
+          }
+        }
+      />
+      <img
+        alt="Thomson Reuters"
+        className="Screenshot-image"
+        height={275}
+        onLoad={[Function]}
+        src={
+          Object {
+            "default": "test-file-stub",
+          }
+        }
+        width={398}
+      />
+    </div>
+  </a>
+</Screenshot>
+`;
+
+exports[`Screenshot component should render correctly 2`] = `
+<Screenshot
+  project={
+    Object {
+      "client": Object {
+        "link": "https://monospaced.com",
+        "title": "Monospaced",
+      },
+      "content": "
+### Retail Pricing Portal
+
+UI design and complete front-end build, Angular NgRx web&nbsp;app.
+      ",
+      "date": "2017",
+      "image": Object {
+        "height": 244,
+        "width": 398,
+      },
+      "link": "",
+      "title": "Compass Group",
+    }
+  }
+  slug="compass-group"
+>
+  <div
+    className="Screenshot"
+    style={
+      Object {
+        "width": "398px",
+      }
+    }
+  >
+    <div
+      className="Screenshot-shim"
+      style={
+        Object {
+          "paddingTop": "61.30653266331658%",
+        }
+      }
+    />
+    <img
+      alt="Compass Group"
+      className="Screenshot-image"
+      height={244}
+      onLoad={[Function]}
+      src={
+        Object {
+          "default": "test-file-stub",
+        }
+      }
+      width={398}
+    />
+  </div>
+</Screenshot>
+`;
+
+exports[`Screenshot component should render correctly 3`] = `
+<Screenshot
+  project={
+    Object {
+      "client": Object {
+        "link": "https://profitfromplay.com",
+        "title": "Profit From Play",
+      },
+      "content": "
+Prototype web e-book reader for digital library startup. Lives on as an open source project:&nbsp;[Paperback](https://monospaced.github.io/paperback/).
+      ",
+      "date": "2012",
+      "image": Object {
+        "height": 190,
+        "width": 199,
+      },
+      "link": "",
+      "title": "Bilbary",
+    }
+  }
+  slug="bilbary"
+>
+  <div
+    className="Screenshot"
+    style={
+      Object {
+        "width": "199px",
+      }
+    }
+  >
+    <div
+      className="Screenshot-shim"
+      style={
+        Object {
+          "paddingTop": "95.47738693467338%",
+        }
+      }
+    />
+    <img
+      alt="Bilbary"
+      className="Screenshot-image"
+      height={190}
+      onLoad={[Function]}
+      src={
+        Object {
+          "default": "test-file-stub",
+        }
+      }
+      width={199}
+    />
+  </div>
+</Screenshot>
+`;
+
+exports[`Screenshot component should render correctly 4`] = `
+<Screenshot
+  project={
+    Object {
+      "client": Object {
+        "link": "https://profitfromplay.com",
+        "title": "Profit From Play",
+      },
+      "content": "
+Consulting and advising on a site-wide design refresh. Created indicative templates and assisted with&nbsp;integration.
+      ",
+      "date": "2012",
+      "image": Object {
+        "height": 143,
+        "width": 199,
+      },
+      "link": "http://genesreunited.co.uk",
+      "title": "Genes Reunited",
+    }
+  }
+  slug="genes-reunited"
+>
+  <a
+    href="http://genesreunited.co.uk"
+  >
+    <div
+      className="Screenshot"
+      style={
+        Object {
+          "width": "199px",
+        }
+      }
+    >
+      <div
+        className="Screenshot-shim"
+        style={
+          Object {
+            "paddingTop": "71.85929648241206%",
+          }
+        }
+      />
+      <img
+        alt="Genes Reunited"
+        className="Screenshot-image"
+        height={143}
+        onLoad={[Function]}
+        src={
+          Object {
+            "default": "test-file-stub",
+          }
+        }
+        width={199}
+      />
+    </div>
+  </a>
+</Screenshot>
+`;
+
+exports[`Screenshot component should render correctly 5`] = `
+<Screenshot
+  project={
+    Object {
+      "client": null,
+      "content": "
+Technical lead on an accessible Web Standards retrofit of key areas of national-lottery.co.uk, including the Lotto and EuroMillions purchase processes, user registration and account&nbsp;management.
+
+Responsible for front-end architecture and all front-end development. Authored company Web Accessibility Guidelines, and conducted usability testing with screen-reader&nbsp;users.
+      ",
+      "date": "2006",
+      "image": Object {
+        "height": 284,
+        "width": 199,
+      },
+      "link": "",
+      "title": "The National Lottery",
+    }
+  }
+  slug="the-national-lottery"
+>
+  <div
+    className="Screenshot"
+    style={
+      Object {
+        "width": "199px",
+      }
+    }
+  >
+    <div
+      className="Screenshot-shim"
+      style={
+        Object {
+          "paddingTop": "142.71356783919597%",
+        }
+      }
+    />
+    <img
+      alt="The National Lottery"
+      className="Screenshot-image"
+      height={284}
+      onLoad={[Function]}
+      src={
+        Object {
+          "default": "test-file-stub",
+        }
+      }
+      width={199}
+    />
+  </div>
+</Screenshot>
+`;
+
+exports[`Screenshot component should render correctly 6`] = `
+<Screenshot
+  project={
+    Object {
+      "client": Object {
+        "link": "",
+        "title": "Two Plus Four",
+      },
+      "content": "
+### Age Concern Southwark
+
+Responsible for designing and developing an accessible <abbr title=\\"Disability Discrimination Act\\">DDA</abbr> compliant website for older&nbsp;users.
+      ",
+      "date": "2005",
+      "image": Object {
+        "height": 305,
+        "width": 199,
+      },
+      "link": "",
+      "title": "Age Concern",
+    }
+  }
+  slug="age-concern"
+>
+  <div
+    className="Screenshot"
+    style={
+      Object {
+        "width": "199px",
+      }
+    }
+  >
+    <div
+      className="Screenshot-shim"
+      style={
+        Object {
+          "paddingTop": "153.26633165829148%",
+        }
+      }
+    />
+    <img
+      alt="Age Concern"
+      className="Screenshot-image"
+      height={305}
+      onLoad={[Function]}
+      src={
+        Object {
+          "default": "test-file-stub",
+        }
+      }
+      width={199}
+    />
+  </div>
+</Screenshot>
+`;

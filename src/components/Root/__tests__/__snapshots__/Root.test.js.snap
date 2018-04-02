@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Root component should render correctly 1`] = `
+<html
+  lang="en-gb"
+>
+  <Head
+    meta={Array []}
+  />
+  <body
+    className="no-js"
+  >
+    <script
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "document.body.className = \\"\\"",
+        }
+      }
+    />
+    <div
+      dangerouslySetInnerHTML={
+        <div
+          class="App"
+        />
+      }
+      id="router"
+    />
+    <script
+      src="/bundle.js?v=0.0.0"
+    />
+  </body>
+</html>
+`;

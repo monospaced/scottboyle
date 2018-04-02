@@ -1,0 +1,14 @@
+@import url("../../theme/vars.css");
+
+.Avatar {
+  margin: 1.5rem 1.5rem 0 0;
+}
+
+.Avatar-image {
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+  color: var(--theme-color);
+  display: block;
+  height: calc(96rem / 16);
+  width: calc(96rem / 16);
+}

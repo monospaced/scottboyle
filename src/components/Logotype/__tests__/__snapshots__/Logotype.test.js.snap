@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logotype component should render correctly 1`] = `
+<h1
+  class="Logotype"
+>
+  <a
+    class="Logotype-link"
+  >
+    Title 
+    <strong
+      class="Logotype-subtitle"
+    >
+      Subtitle
+    </strong>
+  </a>
+</h1>
+`;

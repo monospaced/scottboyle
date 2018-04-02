@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Visit component should render a link 1`] = `
+<p>
+  <strong>
+    Visit:
+  </strong>
+   
+  <a
+    href="https://site.com"
+  >
+    Site
+  </a>
+</p>
+`;
+
+exports[`Visit component should render correctly 1`] = `null`;

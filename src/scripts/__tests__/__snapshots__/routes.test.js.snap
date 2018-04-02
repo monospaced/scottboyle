@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Routes should convert correctly to an array 1`] = `
+Array [
+  "/",
+  "/thomson-reuters",
+  "/compass-group",
+  "/bilbary",
+  "/genes-reunited",
+  "/the-national-lottery",
+  "/age-concern",
+  "/linklog",
+  "/404",
+]
+`;

@@ -1,0 +1,11 @@
+@import url("../../theme/vars.css");
+
+@media (--larger-viewport) {
+  .Main {
+    float: right;
+    margin-top: 3.75rem;
+    position: sticky;
+    top: 0;
+    width: 25rem;
+  }
+}
