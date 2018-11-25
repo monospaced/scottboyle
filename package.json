@@ -23,7 +23,7 @@
     "husky": "^0.14.3",
     "jest": "^22.4.3",
     "json-loader": "^0.5.7",
-    "lighthouse": "^2.9.4",
+    "lighthouse": "^3.2.1",
     "marked": "^0.3.19",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",
@@ -59,12 +59,12 @@
     "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "scripts": {
-    "audit":
+    "lighthouse":
       "lighthouse https://scottboyle.co.uk/ --chrome-flags=--headless --output=json",
-    "audit:build": "yarn audit --output=html --output-path=build/lighthouse",
-    "audit:deploy": "yarn audit:build --quiet && bin/deploy-audit.sh",
+    "lighthouse:build": "yarn lighthouse --output=html --output-path=build/lighthouse",
+    "lighthouse:deploy": "yarn lighthouse:build --quiet && bin/deploy-lighthouse.sh",
     "build": "webpack -p --progress",
-    "deploy": "yarn test && yarn build && bin/deploy.sh && yarn audit:deploy",
+    "deploy": "yarn test && yarn build && bin/deploy.sh && yarn lighthouse:deploy",
     "format": "prettier --write 'src/**/*.@(css|js)'",
     "prepush": "yarn test:coverage && cat coverage/lcov.info | coveralls",
     "start": "webpack-dev-server --progress",
