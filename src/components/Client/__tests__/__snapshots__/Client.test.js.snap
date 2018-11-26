@@ -3,7 +3,7 @@
 exports[`Client component should render a link 1`] = `
 <p>
   <strong>
-    For:
+    With:
   </strong>
    
   <a
@@ -17,7 +17,7 @@ exports[`Client component should render a link 1`] = `
 exports[`Client component should render a name 1`] = `
 <p>
   <strong>
-    For:
+    With:
   </strong>
    Client
 </p>
