@@ -7,7 +7,7 @@ const Avatar = () => {
     <h2 className="Avatar">
       <svg
         aria-label="About"
-        className="Avatar-image"
+        className="Avatar-image photo"
         height="94"
         role="img"
         viewBox="0 0 94 94"

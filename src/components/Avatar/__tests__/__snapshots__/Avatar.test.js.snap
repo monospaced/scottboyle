@@ -6,7 +6,7 @@ exports[`Avatar component should render correctly 1`] = `
 >
   <svg
     aria-label="About"
-    class="Avatar-image"
+    class="Avatar-image photo"
     height="94"
     role="img"
     viewBox="0 0 94 94"

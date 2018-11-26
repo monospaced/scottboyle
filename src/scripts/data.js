@@ -4,7 +4,7 @@ module.exports = {
   description:
     "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
   about: `
-<span class="fn">Scott Boyle</span> is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>. Scott currently lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and has a company called <a href="https://monospaced.com" class="org">Monospaced&nbsp;Ltd</a>, a freelance web development consultancy working with regular clients in London and around the&nbsp;world.
+<a class="fn uid url" href="https://scottboyle.co.uk">Scott Boyle</a> is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>. Scott lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and runs <span class="vcard"><a href="https://monospaced.com" class="fn org url">Monospaced</a></span>, a web software consultancy working with clients in London and around the&nbsp;world.
 
 ### View source
 
@@ -17,8 +17,7 @@ module.exports = {
 ### Elsewhere
 
 * <a href="https://github.com/monospaced" rel="me">Github</a>
-* <a href="https://pinboard.in/u:monospaced/?per_page=80" rel="me">Pinboard</a>
-* <a href="https://www.flickr.com/photos/scottboyle/" rel="me">Flickr</a>
+* <a href="https://www.flickr.com/photos/scottboyle/">Flickr</a>
 * <a href="https://www.instagram.com/mono_spaced/" rel="me">Instagram</a>
 * <a href="https://twitter.com/mono_spaced" rel="me">Twitter</a>
   `,
