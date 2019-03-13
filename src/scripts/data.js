@@ -22,9 +22,22 @@ module.exports = {
 * <a href="https://twitter.com/mono_spaced" rel="me">Twitter</a>
   `,
   projects: {
+    refinitiv: {
+      title: "Refinitiv",
+      date: "2019",
+      link: "https://ww.refinitiv.com",
+      client: null,
+      image: {
+        width: 398,
+        height: 260,
+      },
+      content: `
+Created a CSS webpack build solution to rebrand the Thomson Reuters web platform for Refinitiv. The solution produced significant cost savings for both&nbsp;businesses.
+      `,
+    },
     "thomson-reuters": {
       title: "Thomson Reuters",
-      date: "2018",
+      date: "2018–2019",
       link: "https://www.thomsonreuters.com/en.html",
       client: {
         title: "Bear and Rocket",
@@ -32,7 +45,7 @@ module.exports = {
       },
       image: {
         width: 398,
-        height: 275,
+        height: 301,
       },
       content: `
 Building a design system and React component&nbsp;library.
@@ -53,7 +66,7 @@ Building a design system and React component&nbsp;library.
       content: `
 Complete build and project delivery of complex single-page web app. Highcharts data visualisation, Redux state management and Jest unit&nbsp;testing.
 
-Full website build, front end and CMS&nbsp;(Perch).
+Also full marketing website build, front end and CMS&nbsp;(Perch).
       `,
     },
     omron: {
