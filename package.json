@@ -46,9 +46,9 @@
     "webpack-dev-server": "^3.1.8"
   },
   "engines": {
-    "node": ">=8.11.1",
-    "npm": ">=5.8.0",
-    "yarn": ">=1.5.1"
+    "node": ">=11.10.1",
+    "npm": ">=6.7.0",
+    "yarn": ">=1.13.0"
   },
   "jest": {
     "collectCoverageFrom": ["src/**/*.js", "!src/scripts/(data|entry).js"],
