@@ -39,15 +39,4 @@ describe("Linklog component", () => {
         expect(component.state("links")).toEqual(feed);
       });
   });
-
-  it("should set state correctly when fetch fails", () => {
-    const component = shallow(<Linklog {...props} />);
-    component.setState({ links: feed });
-    component
-      .instance()
-      .fetchLinks(null)
-      .then(() => {
-        expect(component.state("links")).toEqual(false);
-      });
-  });
 });
