@@ -25,7 +25,7 @@ module.exports = {
     refinitiv: {
       title: "Refinitiv",
       date: "2019",
-      link: "https://ww.refinitiv.com",
+      link: "https://www.refinitiv.com",
       client: null,
       image: {
         width: 398,
