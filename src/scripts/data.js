@@ -22,6 +22,19 @@ module.exports = {
 * <a href="https://twitter.com/mono_spaced" rel="me">Twitter</a>
   `,
   projects: {
+    hubble: {
+      title: "Hubble",
+      date: "2019–2020",
+      link: "https://www.hubblehq.com",
+      client: null,
+      image: {
+        width: 398,
+        height: 222,
+      },
+      content: `
+Migrated Hubble’s site from AngularJS to React and architected a UI system to support their new brand.
+      `,
+    },
     refinitiv: {
       title: "Refinitiv",
       date: "2019",
