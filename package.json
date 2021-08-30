@@ -52,19 +52,28 @@
     "yarn": ">=1.13.0"
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.js", "!src/scripts/(data|entry).js"],
-    "coverageReporters": ["lcov", "text", "text-summary"],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/scripts/(data|entry).js"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "text-summary"
+    ],
     "moduleNameMapper": {
-      "\\.(htaccess|ico|jpg|png|svg|webmanifest|woff|xml)$":
-        "<rootDir>/test/__mocks__/file.mock.js",
+      "\\.(htaccess|ico|jpg|png|svg|webmanifest|woff|xml)$": "<rootDir>/test/__mocks__/file.mock.js",
       "\\.(css)$": "<rootDir>/test/__mocks__/style.mock.js"
     },
-    "setupFiles": ["<rootDir>/test/setup.js"],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "setupFiles": [
+      "<rootDir>/test/setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "scripts": {
-    "lighthouse":
-      "lighthouse https://scottboyle.co.uk/ --chrome-flags=--headless --output=json",
+    "lighthouse": "lighthouse https://scottboyle.co.uk/ --chrome-flags=--headless --output=json",
     "lighthouse:build": "yarn lighthouse --output=html --output-path=build/lighthouse",
     "lighthouse:deploy": "yarn lighthouse:build --quiet && bin/deploy-lighthouse.sh",
     "build": "webpack -p --progress",
