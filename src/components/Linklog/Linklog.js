@@ -37,39 +37,7 @@ class Linklog extends Component {
                 );
               })}
             </ul>
-          ) : (
-            <ul
-              dangerouslySetInnerHTML={{
-                __html: `
-                  <?php
-                    function jsonp_decode($jsonp, $assoc = false) {
-                      if($jsonp[0] !== '[' && $jsonp[0] !== '{') {
-                        $jsonp = substr($jsonp, strpos($jsonp, '('));
-                      }
-                      return json_decode(trim($jsonp,'();'), $assoc);
-                    }
-                    $ch = curl_init();
-                    curl_setopt($ch, CURLOPT_URL,
-                    "${feed}");
-                    curl_setopt($ch, CURLOPT_HEADER, 0);
-                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-                    $res = curl_exec($ch);
-                    curl_close($ch);
-                    $links = jsonp_decode($res, true);
-                    foreach($links as $item) {
-                  ?><li><a href="<?php
-                    echo $item[u]
-                  ?>"><?php
-                    echo $item[d]
-                  ?></a> <time datetime="<?php
-                    echo $item[dt]
-                  ?>"></time></li><?php
-                    }
-                  ?>
-                `.trim(),
-              }}
-            />
-          )}
+          ) : null}
         </section>
       </main>
     );
