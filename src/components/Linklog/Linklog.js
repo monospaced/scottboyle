@@ -16,7 +16,9 @@ class Linklog extends Component {
   }
 
   render() {
-    const { data: { description, subtitle, title } } = this.props;
+    const {
+      data: { description, subtitle, title },
+    } = this.props;
     const { links } = this.state;
 
     return (
