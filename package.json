@@ -73,7 +73,7 @@
     ]
   },
   "scripts": {
-    "lighthouse": "lighthouse https://scottboyle.co.uk/ --chrome-flags=--headless --output=json",
+    "lighthouse": "lighthouse https://scottboyle.uk/ --chrome-flags=--headless --output=json",
     "lighthouse:build": "yarn lighthouse --output=html --output-path=build/lighthouse",
     "lighthouse:deploy": "yarn lighthouse:build --quiet && bin/deploy-lighthouse.sh",
     "build": "webpack -p --progress",

@@ -4,7 +4,7 @@ module.exports = {
   description:
     "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
   about: `
-<a class="fn uid url" href="https://scottboyle.co.uk">Scott Boyle</a> is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>. Scott lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and runs <span class="vcard"><a href="https://monospaced.com" class="fn org url">Monospaced</a></span>, a web software consultancy working with clients in London and around the&nbsp;world.
+<a class="fn uid url" href="https://scottboyle.uk">Scott Boyle</a> is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>. Scott lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and runs <span class="vcard"><a href="https://monospaced.com" class="fn org url">Monospaced</a></span>, a web software consultancy working with clients in London and around the&nbsp;world.
 
 ### View source
 
