@@ -19,7 +19,11 @@ class Screenshot extends Component {
   render() {
     const { loaded } = this.state;
     const {
-      project: { image: { height, width }, link, title },
+      project: {
+        image: { height, width },
+        link,
+        title,
+      },
       slug,
     } = this.props;
     const img = (
@@ -29,7 +33,7 @@ class Screenshot extends Component {
       >
         <div
           className="Screenshot-shim"
-          style={{ paddingTop: `${height / width * 100}%` }}
+          style={{ paddingTop: `${(height / width) * 100}%` }}
         />
         <img
           alt={title}
