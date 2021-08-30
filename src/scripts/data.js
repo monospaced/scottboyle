@@ -85,7 +85,7 @@ Also full marketing website build, front end and CMS&nbsp;(Perch).
     omron: {
       title: "Omron",
       date: "2017",
-      link: "https://www.omron-healthcare.com/en/evolv",
+      link: "",
       client: {
         title: "Hanno",
         link: "https://hanno.co/work/omron/",
@@ -122,7 +122,7 @@ UI design and complete front-end build, Angular NgRx web&nbsp;app.
       link: "",
       client: {
         title: "Freeform",
-        link: "https://frfrm.com",
+        link: "",
       },
       image: {
         width: 398,
@@ -135,7 +135,7 @@ Complete front-end build, React/Webpack static site&nbsp;generator.
     freeform: {
       title: "Freeform",
       date: "2015–2016",
-      link: "https://frfrm.com",
+      link: "",
       client: {
         title: "Profit From Play",
         link: "https://profitfromplay.com",
@@ -201,7 +201,7 @@ Front-end template builds for responsive homepage project, mobile app prototypes
     "find-my-past": {
       title: "Find My Past",
       date: "2013",
-      link: "https://www.findmypast.com/tree",
+      link: "",
       client: {
         title: "Profit From Play",
         link: "https://profitfromplay.com",
@@ -233,7 +233,7 @@ Prototype web e-book reader for digital library startup. Lives on as an open sou
     "genes-reunited": {
       title: "Genes Reunited",
       date: "2012",
-      link: "http://genesreunited.co.uk",
+      link: "",
       client: {
         title: "Profit From Play",
         link: "https://profitfromplay.com",
@@ -331,7 +331,7 @@ JavaScript animations and data integration: counters, odometers, tickers and sou
       link: "",
       client: {
         title: "Suburb",
-        link: "http://wearesuburb.com/",
+        link: "",
       },
       image: {
         width: 199,
@@ -349,7 +349,7 @@ Front-end templates for this competition&nbsp;microsite.
       link: "",
       client: {
         title: "OgilvyOne",
-        link: "https://ogilvy.co.uk/agency/ogilvyone",
+        link: "https://ogilvy.com/uk/",
       },
       image: {
         width: 199,
@@ -419,7 +419,7 @@ Front-end templating for a successful redesign, taking OneRiot out of beta. Obje
       link: "",
       client: {
         title: "Grand Union",
-        link: "http://thegrandunion.com",
+        link: "",
       },
       image: {
         width: 199,
