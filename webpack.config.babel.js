@@ -41,7 +41,7 @@ module.exports = () => {
           options: { name: "assets/[name].[ext]" },
         },
         {
-          test: /\.htaccess$/,
+          test: /\_redirects$/,
           loader: "file-loader",
           options: { name: "[name]" },
         },
