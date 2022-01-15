@@ -24,7 +24,7 @@
     "jest": "^23.6.0",
     "kleur": "^3.0.0",
     "lighthouse": "^3.2.1",
-    "marked": "^0.3.19",
+    "marked": "^4.0.10",
     "mini-css-extract-plugin": "^0.5.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-cssnext": "^3.1.0",
