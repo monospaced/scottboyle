@@ -3,22 +3,18 @@ module.exports = {
   subtitle: "Portfolio",
   description: "Portfolio for Scott Boyle, web developer based in London, UK.",
   about: `
-<a class="fn uid url" href="https://scottboyle.uk">Scott Boyle</a> is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>. Scott lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and runs <span class="vcard"><a href="https://monospaced.com" class="fn org url">Monospaced</a></span>, a web software consultancy working with clients in London and around the&nbsp;world.
-
-### View source
-
-<a href="https://github.com/monospaced/scottboyle" rel="source">github.com/monospaced/scottboyle</a>
+<a class="fn uid url" href="https://scottboyle.uk">Scott Boyle</a> is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>. Scott lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and is a co-founder of <span class="vcard"><a href="https://measured.co" class="fn org url">Measured</a></span>, a web software consultancy working with clients from the UK and around the&nbsp;world.
 
 ### Contact
 
-<a href="mailto://scott@monospaced.com" class="email">scott@monospaced.com</a>
+<a href="mailto://scott@measured.co" class="email">scott@measured.co</a>
 
 ### Elsewhere
 
-* <a href="https://github.com/monospaced" rel="me">Github</a>
-* <a href="https://www.flickr.com/photos/scottboyle/">Flickr</a>
-* <a href="https://www.instagram.com/mono_spaced/" rel="me">Instagram</a>
 * <a href="https://www.linkedin.com/in/scottboyle/" rel="me">LinkedIn</a>
+* <a href="https://github.com/monospaced" rel="me">GitHub</a>
+* <a href="https://www.instagram.com/mono_spaced/" rel="me">Instagram</a>
+* <a href="https://www.flickr.com/photos/scottboyle/" rel="me">Flickr</a>
 * <a href="https://twitter.com/mono_spaced" rel="me">Twitter</a>
   `,
   projects: {
