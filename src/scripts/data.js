@@ -22,6 +22,19 @@ module.exports = {
 * <a href="https://twitter.com/mono_spaced" rel="me">Twitter</a>
   `,
   projects: {
+    bt: {
+      title: "BT",
+      date: "2020–2022",
+      link: "https://ui.digital-ent-int.bt.com/latest/",
+      client: null,
+      image: {
+        width: 398,
+        height: 222,
+      },
+      content: `
+Developing the Arc UI System for BT Enterprise.
+      `,
+    },
     hubble: {
       title: "Hubble",
       date: "2019–2020",
