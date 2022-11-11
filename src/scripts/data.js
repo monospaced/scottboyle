@@ -16,6 +16,7 @@ module.exports = {
 * <a href="https://www.instagram.com/mono_spaced/" rel="me">Instagram</a>
 * <a href="https://www.flickr.com/photos/scottboyle/" rel="me">Flickr</a>
 * <a href="https://twitter.com/mono_spaced" rel="me">Twitter</a>
+* <a href="https://indieweb.social/@monospaced" rel="me">Mastodon</a>
   `,
   projects: {
     bt: {
