@@ -14,7 +14,7 @@ const Home = ({ data: { about, description, subtitle, title } }) => {
       />
       <section>
         <Avatar />
-        <div dangerouslySetInnerHTML={{ __html: marked(about.trim()) }} />
+        <div dangerouslySetInnerHTML={{ __html: marked.parse(about.trim()) }} />
       </section>
     </main>
   );

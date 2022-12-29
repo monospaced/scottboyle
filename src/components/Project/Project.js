@@ -24,7 +24,9 @@ const Project = ({
         <h2>
           {projectTitle} <small>({date})</small>
         </h2>
-        <div dangerouslySetInnerHTML={{ __html: marked(content.trim()) }} />
+        <div
+          dangerouslySetInnerHTML={{ __html: marked.parse(content.trim()) }}
+        />
         {client && <Client client={client} />}
         {link && <Visit project={project} />}
         <Screenshot project={project} slug={path} />
