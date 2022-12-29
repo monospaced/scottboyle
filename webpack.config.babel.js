@@ -9,6 +9,12 @@ module.exports = () => {
   // Prevent webpack from attempting to process css before loaders are configured
   require.extensions[".css"] = () => {};
 
+  // Workaround for legacy SSL removal in Node 17+
+  const crypto = require("crypto");
+  const cryptoOrigCreateHash = crypto.createHash;
+  crypto.createHash = algorithm =>
+    cryptoOrigCreateHash(algorithm === "md4" ? "sha256" : algorithm);
+
   // Routes array is required in config.plugins
   const routes = ReactRouterToArray(require("./src/scripts/routes"));
 
