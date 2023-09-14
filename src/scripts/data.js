@@ -3,7 +3,11 @@ module.exports = {
   subtitle: "Portfolio",
   description: "Portfolio for Scott Boyle, web developer based in London, UK.",
   about: `
-<a class="fn uid url" href="https://scottboyle.uk">Scott Boyle</a> is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>. Scott lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and is a co-founder of <span class="vcard"><a href="https://measured.co" class="fn org url">Measured</a></span>, a web software consultancy working with clients from the UK and around the&nbsp;world.
+<a class="fn uid url" href="https://scottboyle.uk">Scott Boyle</a> is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>.
+
+Scott lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and is a co-founder of <span class="vcard"><a href="https://measured.co" class="fn org url">Measured</a></span>, a web software company working with clients from the UK and around the&nbsp;world.
+
+In his spare time Scott runs <a href="https://monodisco.bandcamp.com">Mono Disco</a>, a record label focused on high-quality physical releases with an eclectic musical output.
 
 ### Contact
 
@@ -11,12 +15,12 @@ module.exports = {
 
 ### Elsewhere
 
-* <a href="https://www.linkedin.com/in/scottboyle/" rel="me">LinkedIn</a>
 * <a href="https://github.com/monospaced" rel="me">GitHub</a>
 * <a href="https://www.instagram.com/mono_spaced/" rel="me">Instagram</a>
-* <a href="https://www.flickr.com/photos/scottboyle/" rel="me">Flickr</a>
-* <a href="https://twitter.com/mono_spaced" rel="me">Twitter</a>
+* <a href="https://www.linkedin.com/in/scottboyle/" rel="me">LinkedIn</a>
 * <a href="https://indieweb.social/@monospaced" rel="me">Mastodon</a>
+* <a href="https://twitter.com/mono_spaced" rel="me">Twitter</a>
+* <a href="https://soundcloud.com/monodisco" rel="me">SoundCloud</a>
   `,
   projects: {
     bt: {
