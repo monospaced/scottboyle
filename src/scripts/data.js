@@ -23,6 +23,19 @@ In his spare time Scott runs <a href="https://monodisco.bandcamp.com">Mono Disco
 * <a href="https://soundcloud.com/monodisco" rel="me">SoundCloud</a>
   `,
   projects: {
+    hubble: {
+      title: "Hubble",
+      date: "2019–2023",
+      link: "https://www.hubblehq.com",
+      client: null,
+      image: {
+        width: 398,
+        height: 222,
+      },
+      content: `
+Migrated Hubble’s site from AngularJS to React and architected a UI system to support their new brand.
+      `,
+    },
     bt: {
       title: "BT",
       date: "2020–2022",
@@ -34,19 +47,6 @@ In his spare time Scott runs <a href="https://monodisco.bandcamp.com">Mono Disco
       },
       content: `
 Developing the Arc UI System for BT Enterprise.
-      `,
-    },
-    hubble: {
-      title: "Hubble",
-      date: "2019–2020",
-      link: "https://www.hubblehq.com",
-      client: null,
-      image: {
-        width: 398,
-        height: 222,
-      },
-      content: `
-Migrated Hubble’s site from AngularJS to React and architected a UI system to support their new brand.
       `,
     },
     refinitiv: {
