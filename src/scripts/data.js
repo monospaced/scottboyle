@@ -3,11 +3,9 @@ module.exports = {
   subtitle: "Portfolio",
   description: "Portfolio for Scott Boyle, web developer based in London, UK.",
   about: `
-<a class="fn uid url" href="https://scottboyle.uk">Scott Boyle</a> is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>.
+<a class="fn uid url" href="https://scottboyle.uk">Scott Boyle</a> (monospaced) is a <span class="category">web professional</span> <span class="note">specialising in design engineering and modern front-end development</span>.
 
-Scott lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and is a co-founder of <span class="vcard"><a href="https://measured.co" class="fn org url">Measured</a></span>, a web software company working with clients from the UK and around the&nbsp;world.
-
-In his spare time Scott runs <a href="https://monodisco.bandcamp.com">Mono Disco</a>, a record label focused on high-quality physical releases with an eclectic musical output.
+Scott lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and is a director of <span class="vcard"><a href="https://measured.co" class="fn org url">Measured</a></span>, a web UI consultancy working with clients from the UK and around the&nbsp;world.
 
 ### Contact
 
@@ -16,18 +14,25 @@ In his spare time Scott runs <a href="https://monodisco.bandcamp.com">Mono Disco
 ### Elsewhere
 
 * <a href="https://github.com/monospaced" rel="me">GitHub</a>
-* <a href="https://www.instagram.com/mono_spaced/" rel="me">Instagram</a>
 * <a href="https://www.linkedin.com/in/scottboyle/" rel="me">LinkedIn</a>
-* <a href="https://indieweb.social/@monospaced" rel="me">Mastodon</a>
-* <a href="https://twitter.com/mono_spaced" rel="me">Twitter</a>
-* <a href="https://soundcloud.com/monodisco" rel="me">SoundCloud</a>
   `,
   projects: {
+    hilton: {
+      title: "Hilton",
+      date: "2022–2025",
+      link: "https://www.hilton.com",
+      image: {
+        width: 398,
+        height: 222,
+      },
+      content: `
+Multi-brand design system.
+      `,
+    },
     hubble: {
       title: "Hubble",
       date: "2019–2023",
       link: "https://www.hubblehq.com",
-      client: null,
       image: {
         width: 398,
         height: 222,
@@ -40,10 +45,9 @@ Migrated Hubble’s site from AngularJS to React and architected a UI system to 
       title: "BT",
       date: "2020–2022",
       link: "https://ui.digital-ent-int.bt.com/latest/",
-      client: null,
       image: {
         width: 398,
-        height: 222,
+        height: 267,
       },
       content: `
 Developing the Arc UI System for BT Enterprise.
@@ -53,7 +57,6 @@ Developing the Arc UI System for BT Enterprise.
       title: "Refinitiv",
       date: "2018–2019",
       link: "https://forge.refinitiv.com",
-      client: null,
       image: {
         width: 398,
         height: 260,
