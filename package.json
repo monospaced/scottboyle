@@ -77,6 +77,7 @@
     "lighthouse:build": "yarn lighthouse --output=html --output-path=build/lighthouse",
     "lighthouse:deploy": "yarn lighthouse:build --quiet && bin/deploy-lighthouse.sh",
     "build": "webpack -p --progress",
+    "postbuild": "node src/scripts/template.js",
     "deploy": "yarn test && yarn build && bin/deploy.sh && yarn lighthouse:deploy",
     "format": "prettier --write 'src/**/*.@(css|js)'",
     "prepush": "yarn test:coverage && cat coverage/lcov.info | coveralls",

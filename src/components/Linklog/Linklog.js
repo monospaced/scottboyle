@@ -1,18 +1,17 @@
 import "core-js/es6/promise";
 import DocumentMeta from "react-document-meta";
-import fetchJsonp from "fetch-jsonp";
 import React, { Component } from "react";
 import TimeAgo from "timeago-react";
 
 import "../Main/Main.css";
+import { safeHref } from "../../scripts/href";
 
-const feed =
-  "https://feeds.pinboard.in/json/v1/u:monospaced/?count=33&cb=pinboard";
+const api = "/api/linklog";
 
 class Linklog extends Component {
   constructor(props) {
     super(props);
-    this.state = { links: false };
+    this.state = { links: [] };
   }
 
   render() {
@@ -20,6 +19,11 @@ class Linklog extends Component {
       data: { description, subtitle, title },
     } = this.props;
     const { links } = this.state;
+    /* istanbul ignore next */
+    const base =
+      typeof window !== "undefined" && window.location
+        ? window.location.origin
+        : "http://localhost";
 
     return (
       <main className="Main">
@@ -29,17 +33,24 @@ class Linklog extends Component {
         />
         <section>
           <h2>Linklog</h2>
-          {links ? (
-            <ul>
-              {links.map(item => {
-                return (
-                  <li key={item.dt}>
-                    <a href={item.u}>{item.d}</a> <TimeAgo datetime={item.dt} />
-                  </li>
-                );
-              })}
-            </ul>
-          ) : null}
+          <div data-linklog-list>
+            {links ? (
+              <ul>
+                {links.map(item => {
+                  const href = safeHref(item.u, base);
+                  if (!href) {
+                    return null;
+                  }
+                  return (
+                    <li key={item.dt}>
+                      <a href={href}>{item.d}</a>{" "}
+                      <TimeAgo datetime={item.dt} />
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : null}
+          </div>
         </section>
       </main>
     );
@@ -47,14 +58,26 @@ class Linklog extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
-    this.fetchLinks(feed);
-  }
 
-  fetchLinks(url) {
-    return fetchJsonp(url, { jsonpCallback: "cb" })
-      .then(res => res.json())
-      .then(json => this.setState({ links: json }))
-      .catch(err => this.setState({ links: false }));
+    if (typeof fetch !== "function") {
+      return;
+    }
+
+    fetch(api)
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch");
+        }
+        return res.json();
+      })
+      .then(json => {
+        if (Array.isArray(json)) {
+          this.setState({ links: json });
+        }
+      })
+      .catch(() => {
+        // Keep bundled links on failure
+      });
   }
 }
 
