@@ -1,0 +1,23 @@
+[build]
+  command = "yarn build && yarn postbuild"
+  publish = "build"
+  functions = "netlify/functions"
+
+[functions]
+  included_files = ["netlify/functions/templates/**"]
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/linklog/"
+  to = "/.netlify/functions/linklog-page"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/linklog"
+  to = "/linklog/"
+  status = 301
