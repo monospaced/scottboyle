@@ -23,6 +23,7 @@
     "jest": "^23.6.0",
     "marked": "^4.0.10",
     "mini-css-extract-plugin": "^0.5.0",
+    "netlify-cli": "^17.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",
@@ -71,11 +72,13 @@
   },
   "scripts": {
     "build": "webpack -p --progress",
-    "postbuild": "node src/scripts/template.js",
+    "dev": "netlify dev --dir build",
+    "dev:fast": "webpack-dev-server --progress",
     "format": "prettier --write 'src/**/*.@(css|js)'",
+    "postbuild": "node src/scripts/template.js && node src/scripts/sitemap.js",
+    "predev": "yarn build",
     "prepush": "yarn test:coverage && cat coverage/lcov.info | coveralls",
-    "start": "webpack-dev-server --progress",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "test": "jest"
   }
 }
