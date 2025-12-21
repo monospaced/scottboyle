@@ -1,6 +1,8 @@
+const MAX_LINKS = 20;
+
 const FEED_URL =
   process.env.PINBOARD_FEED_URL ||
-  "https://feeds.pinboard.in/json/v1/u:monospaced/?count=33";
+  `https://feeds.pinboard.in/json/v1/u:monospaced/?count=${MAX_LINKS}`;
 
 const parseAllowedOrigins = value =>
   value
@@ -21,12 +23,15 @@ const corsHeadersFor = origin => {
 
 exports.handler = async event => {
   const origin =
-    (event && event.headers && (event.headers.origin || event.headers.Origin)) ||
+    (event &&
+      event.headers &&
+      (event.headers.origin || event.headers.Origin)) ||
     "";
   const corsHeaders = corsHeadersFor(origin);
 
   try {
     const res = await fetch(FEED_URL);
+
     if (!res.ok) {
       return {
         statusCode: res.status,
@@ -36,13 +41,15 @@ exports.handler = async event => {
     }
 
     const json = await res.json();
+    const links = Array.isArray(json) ? json.slice(0, MAX_LINKS) : json;
+
     return {
       statusCode: 200,
       headers: {
         ...corsHeaders,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(json),
+      body: JSON.stringify(links),
     };
   } catch (err) {
     return {

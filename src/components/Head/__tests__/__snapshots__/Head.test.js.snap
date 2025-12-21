@@ -44,6 +44,12 @@ Array [
     rel="mask-icon"
   />,
   <link
+    href="https://feeds.pinboard.in/rss/secret:408c7b80a1d865c97e0a/u:monospaced/"
+    rel="alternate"
+    title="Pinboard (monospaced)"
+    type="application/rss+xml"
+  />,
+  <link
     href="/styles.css?v=0.0.0"
     rel="stylesheet"
   />,

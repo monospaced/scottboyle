@@ -3,15 +3,21 @@
 @media (--larger-viewport) {
   .Nav {
     float: left;
+    margin-top: 1.5rem;
     text-align: right;
     width: 12.5rem;
   }
+}
+
+.Nav-linklog {
+  margin-top: 0;
 }
 
 .Nav-heading {
   font-size: var(--pica);
   line-height: 1.5;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .Nav-list {

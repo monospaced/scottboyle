@@ -42,6 +42,12 @@ const Head = ({ meta }) => {
       />
       <link rel="manifest" href="/manifest.webmanifest" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color={themeColor} />
+      <link
+        rel="alternate"
+        type="application/rss+xml"
+        title="Pinboard (monospaced)"
+        href="https://feeds.pinboard.in/rss/secret:408c7b80a1d865c97e0a/u:monospaced/"
+      />
       <link rel="stylesheet" href={`/styles.css?v=${version}`} />
     </head>
   );

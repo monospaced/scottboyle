@@ -1,6 +1,7 @@
-const safeHref = (value, base) => {
+const safeHref = value => {
   try {
-    const url = base ? new URL(String(value), base) : new URL(String(value));
+    const url = new URL(String(value));
+
     if (url.protocol === "http:" || url.protocol === "https:") {
       return url.toString();
     }

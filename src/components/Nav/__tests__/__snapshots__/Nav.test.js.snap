@@ -7,6 +7,18 @@ exports[`Nav component should render a project as the active item 1`] = `
   <h2
     class="Nav-heading"
   >
+    Blog
+  </h2>
+  <p
+    class="Nav-linklog"
+  >
+    <a>
+      Linklog
+    </a>
+  </p>
+  <h2
+    class="Nav-heading"
+  >
     Work
   </h2>
   <ul
@@ -40,12 +52,10 @@ exports[`Nav component should render a project as the active item 1`] = `
         Age Concern
       </a>
     </li>
-    <li>
-      <a>
-        Linklog
-      </a>
-    </li>
   </ul>
+  <p>
+    © 2025
+  </p>
 </nav>
 `;
 
@@ -56,54 +66,15 @@ exports[`Nav component should render correctly 1`] = `
   <h2
     class="Nav-heading"
   >
-    Work
+    Blog
   </h2>
-  <ul
-    class="Nav-list"
+  <p
+    class="Nav-linklog"
   >
-    <li>
-      <a>
-        Thomson Reuters
-      </a>
-    </li>
-    <li>
-      <a>
-        Compass Group
-      </a>
-    </li>
-    <li>
-      <a>
-        Bilbary
-      </a>
-    </li>
-    <li>
-      <a>
-        Genes Reunited
-      </a>
-    </li>
-    <li>
-      <a>
-        The National Lottery
-      </a>
-    </li>
-    <li>
-      <a>
-        Age Concern
-      </a>
-    </li>
-    <li>
-      <a>
-        Linklog
-      </a>
-    </li>
-  </ul>
-</nav>
-`;
-
-exports[`Nav component should render linklog as the active item 1`] = `
-<nav
-  class="Nav"
->
+    <a>
+      Linklog
+    </a>
+  </p>
   <h2
     class="Nav-heading"
   >
@@ -142,9 +113,68 @@ exports[`Nav component should render linklog as the active item 1`] = `
         Age Concern
       </a>
     </li>
+  </ul>
+  <p>
+    © 2025
+  </p>
+</nav>
+`;
+
+exports[`Nav component should render linklog as the active item 1`] = `
+<nav
+  class="Nav"
+>
+  <h2
+    class="Nav-heading"
+  >
+    Blog
+  </h2>
+  <p
+    class="Nav-linklog"
+  >
+    Linklog
+  </p>
+  <h2
+    class="Nav-heading"
+  >
+    Work
+  </h2>
+  <ul
+    class="Nav-list"
+  >
     <li>
-      Linklog
+      <a>
+        Thomson Reuters
+      </a>
+    </li>
+    <li>
+      <a>
+        Compass Group
+      </a>
+    </li>
+    <li>
+      <a>
+        Bilbary
+      </a>
+    </li>
+    <li>
+      <a>
+        Genes Reunited
+      </a>
+    </li>
+    <li>
+      <a>
+        The National Lottery
+      </a>
+    </li>
+    <li>
+      <a>
+        Age Concern
+      </a>
     </li>
   </ul>
+  <p>
+    © 2025
+  </p>
 </nav>
 `;
