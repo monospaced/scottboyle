@@ -70,6 +70,7 @@ h3 {
 
 p {
   margin: 1.5rem 0;
+  text-wrap: pretty;
 }
 
 h3 + p,

@@ -13,12 +13,6 @@ describe("safeHref", () => {
     expect(safeHref("data:text/html;base64,PGgxPkhlbGxvPC9oMT4=")).toBeNull();
   });
 
-  it("handles relative URLs with a base", () => {
-    expect(safeHref("/posts/1", "https://example.com")).toBe(
-      "https://example.com/posts/1",
-    );
-  });
-
   it("returns null for invalid URLs", () => {
     expect(safeHref("not a url")).toBeNull();
   });

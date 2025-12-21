@@ -1,29 +1,55 @@
 import "core-js/es6/promise";
-import DocumentMeta from "react-document-meta";
 import React, { Component } from "react";
+import DocumentMeta from "react-document-meta";
 import TimeAgo from "timeago-react";
 
 import "../Main/Main.css";
 import { safeHref } from "../../scripts/href";
+
+import "./Linklog.css";
 
 const api = "/api/linklog";
 
 class Linklog extends Component {
   constructor(props) {
     super(props);
-    this.state = { links: [] };
+    this.state = { links: [], status: "loading" };
   }
 
   render() {
     const {
       data: { description, subtitle, title },
     } = this.props;
-    const { links } = this.state;
-    /* istanbul ignore next */
-    const base =
-      typeof window !== "undefined" && window.location
-        ? window.location.origin
-        : "http://localhost";
+    const { links, status } = this.state;
+    const hasLinks = Array.isArray(links) && links.length > 0;
+    const showError = !hasLinks && status === "error";
+    const showLoading = !hasLinks && status === "loading";
+    let content = null;
+
+    if (hasLinks) {
+      content = (
+        <ul>
+          {links.map(item => {
+            const href = safeHref(item.u);
+
+            if (!href) {
+              return null;
+            }
+
+            return (
+              <li className="Linklog-item" key={item.dt}>
+                <a href={href}>{item.d}</a> <TimeAgo datetime={item.dt} />
+                <span className="Linklog-description">{item.n}</span>
+              </li>
+            );
+          })}
+        </ul>
+      );
+    } else if (showError) {
+      content = "Unable to load linklog.";
+    } else if (showLoading) {
+      content = "Loading…";
+    }
 
     return (
       <main className="Main">
@@ -33,24 +59,14 @@ class Linklog extends Component {
         />
         <section>
           <h2>Linklog</h2>
-          <div data-linklog-list>
-            {links ? (
-              <ul>
-                {links.map(item => {
-                  const href = safeHref(item.u, base);
-                  if (!href) {
-                    return null;
-                  }
-                  return (
-                    <li key={item.dt}>
-                      <a href={href}>{item.d}</a>{" "}
-                      <TimeAgo datetime={item.dt} />
-                    </li>
-                  );
-                })}
-              </ul>
-            ) : null}
-          </div>
+          <div data-linklog-list>{content}</div>
+          <p>
+            Subscribe to{" "}
+            <a href="https://feeds.pinboard.in/rss/secret:408c7b80a1d865c97e0a/u:monospaced">
+              RSS feed
+            </a>
+            .
+          </p>
         </section>
       </main>
     );
@@ -60,6 +76,8 @@ class Linklog extends Component {
     window.scrollTo(0, 0);
 
     if (typeof fetch !== "function") {
+      this.setState({ status: "error" });
+
       return;
     }
 
@@ -68,15 +86,19 @@ class Linklog extends Component {
         if (!res.ok) {
           throw new Error("Failed to fetch");
         }
+
         return res.json();
       })
       .then(json => {
         if (Array.isArray(json)) {
-          this.setState({ links: json });
+          this.setState({ links: json, status: "loaded" });
+
+          return;
         }
+        this.setState({ status: "error" });
       })
       .catch(() => {
-        // Keep bundled links on failure
+        this.setState({ status: "error" });
       });
   }
 }

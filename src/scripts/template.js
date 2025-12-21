@@ -12,26 +12,22 @@ const paths = {
     "templates",
   ),
 };
+
 paths.target = path.join(paths.targetDir, "linklog.html");
 
-/* istanbul ignore next */
-const writeTemplate = (overrides = {}) => {
-  const deps = {
-    fsModule: fs,
-    consoleModule: console,
-    exit: process.exit,
-    ...overrides,
-  };
-  const { fsModule, consoleModule, exit } = deps;
+const writeTemplate = () => {
   try {
-    const html = fsModule.readFileSync(paths.source, "utf8");
-    fsModule.mkdirSync(paths.targetDir, { recursive: true });
-    fsModule.writeFileSync(paths.target, html);
-    consoleModule.log(`Wrote Linklog template to ${paths.target}`);
+    const html = fs.readFileSync(paths.source, "utf8");
+
+    fs.mkdirSync(paths.targetDir, { recursive: true });
+    fs.writeFileSync(paths.target, html);
+    console.log(`Wrote Linklog template to ${paths.target}`);
+
     return true;
   } catch (err) {
-    consoleModule.error(`Failed to export Linklog template: ${err.message}`);
-    exit(1);
+    console.error(`Failed to export Linklog template: ${err.message}`);
+    process.exit(1);
+
     return false;
   }
 };
@@ -41,4 +37,4 @@ if (require.main === module) {
   writeTemplate();
 }
 
-module.exports = { writeTemplate, paths };
+module.exports = { paths, writeTemplate };

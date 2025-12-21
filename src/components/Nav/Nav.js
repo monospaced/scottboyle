@@ -8,6 +8,10 @@ const Nav = ({ projects, routes }) => {
 
   return (
     <nav className="Nav">
+      <h2 className="Nav-heading">Blog</h2>
+      <p className="Nav-linklog">
+        {path === `linklog` ? `Linklog` : <Link to={`/linklog/`}>Linklog</Link>}
+      </p>
       <h2 className="Nav-heading">Work</h2>
       <ul className="Nav-list">
         {Object.keys(projects).map(key => {
@@ -19,14 +23,8 @@ const Nav = ({ projects, routes }) => {
             </li>
           );
         })}
-        <li>
-          {path === `linklog` ? (
-            `Linklog`
-          ) : (
-            <Link to={`/linklog/`}>Linklog</Link>
-          )}
-        </li>
       </ul>
+      <p>© {new Date().getFullYear()}</p>
     </nav>
   );
 };

@@ -7,7 +7,7 @@
   --text-color: color(var(--background-color) contrast(0%));
   --text-emphasis-color: color(var(--background-color) contrast(97%));
 
-  --long-primer: 0.875rem;
+  --long-primer: 0.75rem;
   --pica: 1rem;
   --english: 1.5rem;
   --great-primer: 2.25rem;

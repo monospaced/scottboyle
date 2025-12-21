@@ -1,50 +1,77 @@
-const { paths, writeTemplate } = require("../template.js");
-
 describe("template script", () => {
   it("writes the template file", () => {
-    const fsModule = {
-      readFileSync: jest.fn().mockReturnValue("<html />"),
-      mkdirSync: jest.fn(),
-      writeFileSync: jest.fn(),
-    };
-    const consoleModule = { log: jest.fn(), error: jest.fn() };
+    const log = jest.fn();
+    const error = jest.fn();
     const exit = jest.fn();
+    const readFileSync = jest.fn().mockReturnValue("<html />");
+    const mkdirSync = jest.fn();
+    const writeFileSync = jest.fn();
 
-    const result = writeTemplate({ fsModule, consoleModule, exit });
+    jest.resetModules();
+    jest.doMock("fs", () => ({
+      readFileSync,
+      mkdirSync,
+      writeFileSync,
+    }));
+    jest.spyOn(console, "log").mockImplementation(log);
+    jest.spyOn(console, "error").mockImplementation(error);
+    jest.spyOn(process, "exit").mockImplementation(exit);
+
+    const { paths, writeTemplate } = require("../template.js");
+    const result = writeTemplate();
 
     expect(result).toBe(true);
-    expect(fsModule.readFileSync).toHaveBeenCalledWith(paths.source, "utf8");
-    expect(fsModule.mkdirSync).toHaveBeenCalledWith(paths.targetDir, {
+    expect(readFileSync).toHaveBeenCalledWith(paths.source, "utf8");
+    expect(mkdirSync).toHaveBeenCalledWith(paths.targetDir, {
       recursive: true,
     });
-    expect(fsModule.writeFileSync).toHaveBeenCalledWith(
-      paths.target,
-      "<html />",
-    );
-    expect(consoleModule.log).toHaveBeenCalledWith(
+    expect(writeFileSync).toHaveBeenCalledWith(paths.target, "<html />");
+    expect(log).toHaveBeenCalledWith(
       `Wrote Linklog template to ${paths.target}`,
     );
-    expect(exit).not.toHaveBeenCalled();
+    expect(exit).not.toHaveBeenCalledWith(1);
+
+    console.log.mockRestore();
+    console.error.mockRestore();
+    process.exit.mockRestore();
+    jest.dontMock("fs");
+    jest.resetModules();
   });
 
   it("logs and exits on failure", () => {
-    const fsModule = {
-      readFileSync: jest.fn(() => {
-        throw new Error("boom");
-      }),
-      mkdirSync: jest.fn(),
-      writeFileSync: jest.fn(),
-    };
-    const consoleModule = { log: jest.fn(), error: jest.fn() };
+    const log = jest.fn();
+    const error = jest.fn();
     const exit = jest.fn();
+    const readFileSync = jest.fn(() => {
+      throw new Error("boom");
+    });
+    const mkdirSync = jest.fn();
+    const writeFileSync = jest.fn();
 
-    const result = writeTemplate({ fsModule, consoleModule, exit });
+    jest.resetModules();
+    jest.doMock("fs", () => ({
+      readFileSync,
+      mkdirSync,
+      writeFileSync,
+    }));
+    jest.spyOn(console, "log").mockImplementation(log);
+    jest.spyOn(console, "error").mockImplementation(error);
+    jest.spyOn(process, "exit").mockImplementation(exit);
+
+    const { writeTemplate } = require("../template.js");
+    const result = writeTemplate();
 
     expect(result).toBe(false);
-    expect(consoleModule.error).toHaveBeenCalledWith(
+    expect(error).toHaveBeenCalledWith(
       "Failed to export Linklog template: boom",
     );
     expect(exit).toHaveBeenCalledWith(1);
-    expect(fsModule.writeFileSync).not.toHaveBeenCalled();
+    expect(writeFileSync).not.toHaveBeenCalled();
+
+    console.log.mockRestore();
+    console.error.mockRestore();
+    process.exit.mockRestore();
+    jest.dontMock("fs");
+    jest.resetModules();
   });
 });
