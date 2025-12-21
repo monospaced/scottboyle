@@ -1,16 +1,27 @@
 :root {
+  --avatar-color: #ffffff;
   --background-color: #fefefe;
+  --border-color: #e5e5e5;
+  --link-color: #3476bc;
+  --text-color: #757575;
+  --text-emphasis-color: #050505;
   --theme-color: #e01074;
-
-  --border-color: color(var(--background-color) shade(10%));
-  --link-color: color(var(--theme-color) hue(-120deg) saturation(-30%));
-  --text-color: color(var(--background-color) contrast(0%));
-  --text-emphasis-color: color(var(--background-color) contrast(97%));
 
   --long-primer: 0.75rem;
   --pica: 1rem;
   --english: 1.5rem;
   --great-primer: 2.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --avatar-color: #000000;
+    --background-color: #111111;
+    --border-color: #2a2a2a;
+    --link-color: #86b6ff;
+    --text-color: #b3b3b3;
+    --text-emphasis-color: #f5f5f5;
+  }
 }
 
 @custom-media --larger-viewport (min-width: 43.75em);
