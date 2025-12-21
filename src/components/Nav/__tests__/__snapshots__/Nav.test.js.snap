@@ -11,6 +11,7 @@ exports[`Nav component should render a project as the active item 1`] = `
   </h2>
   <p
     class="Nav-linklog"
+    translate="no"
   >
     <a>
       Linklog
@@ -24,30 +25,42 @@ exports[`Nav component should render a project as the active item 1`] = `
   <ul
     class="Nav-list"
   >
-    <li>
+    <li
+      translate="no"
+    >
       Thomson Reuters
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Compass Group
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Bilbary
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Genes Reunited
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         The National Lottery
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Age Concern
       </a>
@@ -70,6 +83,7 @@ exports[`Nav component should render correctly 1`] = `
   </h2>
   <p
     class="Nav-linklog"
+    translate="no"
   >
     <a>
       Linklog
@@ -83,32 +97,44 @@ exports[`Nav component should render correctly 1`] = `
   <ul
     class="Nav-list"
   >
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Thomson Reuters
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Compass Group
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Bilbary
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Genes Reunited
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         The National Lottery
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Age Concern
       </a>
@@ -131,6 +157,7 @@ exports[`Nav component should render linklog as the active item 1`] = `
   </h2>
   <p
     class="Nav-linklog"
+    translate="no"
   >
     Linklog
   </p>
@@ -142,32 +169,44 @@ exports[`Nav component should render linklog as the active item 1`] = `
   <ul
     class="Nav-list"
   >
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Thomson Reuters
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Compass Group
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Bilbary
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Genes Reunited
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         The National Lottery
       </a>
     </li>
-    <li>
+    <li
+      translate="no"
+    >
       <a>
         Age Concern
       </a>

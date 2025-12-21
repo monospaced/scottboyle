@@ -58,11 +58,14 @@ class Linklog extends Component {
           description={description}
         />
         <section>
-          <h2>Linklog</h2>
+          <h2 translate="no">Linklog</h2>
           <div data-linklog-list>{content}</div>
           <p>
             Subscribe to{" "}
-            <a href="https://feeds.pinboard.in/rss/secret:408c7b80a1d865c97e0a/u:monospaced">
+            <a
+              href="https://feeds.pinboard.in/rss/secret:408c7b80a1d865c97e0a/u:monospaced"
+              translate="no"
+            >
               RSS feed
             </a>
             .

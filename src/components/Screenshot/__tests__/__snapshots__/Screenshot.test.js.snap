@@ -51,6 +51,7 @@ Building a design system and React component&nbsp;library.
             "default": "test-file-stub",
           }
         }
+        translate="no"
         width={398}
       />
     </div>
@@ -108,6 +109,7 @@ UI design and complete front-end build, Angular NgRx web&nbsp;app.
           "default": "test-file-stub",
         }
       }
+      translate="no"
       width={398}
     />
   </div>
@@ -162,6 +164,7 @@ Prototype web e-book reader for digital library startup. Lives on as an open sou
           "default": "test-file-stub",
         }
       }
+      translate="no"
       width={199}
     />
   </div>
@@ -219,6 +222,7 @@ Consulting and advising on a site-wide design refresh. Created indicative templa
             "default": "test-file-stub",
           }
         }
+        translate="no"
         width={199}
       />
     </div>
@@ -273,6 +277,7 @@ Responsible for front-end architecture and all front-end development. Authored c
           "default": "test-file-stub",
         }
       }
+      translate="no"
       width={199}
     />
   </div>
@@ -329,6 +334,7 @@ Responsible for designing and developing an accessible <abbr title=\\"Disability
           "default": "test-file-stub",
         }
       }
+      translate="no"
       width={199}
     />
   </div>

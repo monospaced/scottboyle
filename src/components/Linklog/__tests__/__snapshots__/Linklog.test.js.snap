@@ -9,7 +9,9 @@ exports[`Linklog component should render correctly 1`] = `
     title="Scott Boyle | Portfolio | Linklog"
   />
   <section>
-    <h2>
+    <h2
+      translate="no"
+    >
       Linklog
     </h2>
     <div
@@ -22,6 +24,7 @@ exports[`Linklog component should render correctly 1`] = `
        
       <a
         href="https://feeds.pinboard.in/rss/secret:408c7b80a1d865c97e0a/u:monospaced"
+        translate="no"
       >
         RSS feed
       </a>
@@ -40,7 +43,9 @@ exports[`Linklog component should render feed data correctly 1`] = `
     title="Scott Boyle | Portfolio | Linklog"
   />
   <section>
-    <h2>
+    <h2
+      translate="no"
+    >
       Linklog
     </h2>
     <div
@@ -683,6 +688,7 @@ exports[`Linklog component should render feed data correctly 1`] = `
        
       <a
         href="https://feeds.pinboard.in/rss/secret:408c7b80a1d865c97e0a/u:monospaced"
+        translate="no"
       >
         RSS feed
       </a>

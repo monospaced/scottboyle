@@ -42,6 +42,7 @@ class Screenshot extends Component {
           onLoad={this.imageDidLoad.bind(this)}
           ref={this.image}
           src={require(`../../assets/${slug}.jpg`)}
+          translate="no"
           width={width}
         />
       </div>

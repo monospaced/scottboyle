@@ -1,14 +1,16 @@
 @import url("../../theme/vars.css");
 
 .Avatar {
-  margin: 1.5rem 1.5rem 0 0;
+  margin-block-end: 0;
+  margin-block-start: 1.5rem;
+  margin-inline-end: 1.5rem;
 }
 
 .Avatar-image {
+  block-size: calc(96rem / 16);
   border: 1px solid var(--border-color);
   box-sizing: border-box;
   color: var(--theme-color);
   display: block;
-  height: calc(96rem / 16);
-  width: calc(96rem / 16);
+  inline-size: calc(96rem / 16);
 }

@@ -7,7 +7,12 @@ exports[`Logotype component should render correctly 1`] = `
   <a
     class="Logotype-link"
   >
-    Title 
+    <span
+      translate="no"
+    >
+      Title
+    </span>
+     
     <strong
       class="Logotype-subtitle"
     >

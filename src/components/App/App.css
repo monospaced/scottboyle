@@ -2,13 +2,13 @@
 
 .App {
   margin: 0 auto;
-  max-width: 25rem;
+  max-inline-size: 25rem;
   padding: 0 1.5rem;
 }
 
 @media (--larger-viewport) {
   .App {
-    max-width: 40.5rem;
+    max-inline-size: 40.5rem;
   }
 
   .App:after {

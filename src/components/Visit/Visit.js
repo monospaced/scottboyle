@@ -3,7 +3,10 @@ import React from "react";
 const Visit = ({ project: { link, title } }) => {
   return link && title ? (
     <p>
-      <strong>Visit:</strong> <a href={link}>{title}</a>
+      <strong>Visit:</strong>{" "}
+      <a href={link} translate="no">
+        {title}
+      </a>
     </p>
   ) : null;
 };

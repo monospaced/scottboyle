@@ -3,9 +3,9 @@ module.exports = {
   subtitle: "Portfolio",
   description: "Portfolio for Scott Boyle, web developer based in London, UK.",
   about: `
-<a class="fn uid url" href="https://scottboyle.uk">Scott Boyle</a> (monospaced) is a <span class="category">web professional</span> <span class="note">specialising in design engineering and modern front-end development</span>.
+<a class="fn uid url" href="https://scottboyle.uk" translate="no">Scott Boyle</a>&nbsp;(<span translate="no">monospaced</span>) is a <span class="category">web professional</span> <span class="note">specialising in design engineering and modern front-end development</span>.
 
-Scott lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and is a director of <span class="vcard"><a href="https://measured.co" class="fn org url">Measured</a></span>, a web UI consultancy working with clients from the UK and around the&nbsp;world.
+<span translate="no">Scott</span>&nbsp;lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and is a director of&nbsp;<span class="vcard"><a class="fn org url" href="https://measured.co" translate="no">Measured</a></span>, a web UI consultancy working with clients from the UK and around the world.
 
 ### Contact
 
@@ -13,8 +13,8 @@ Scott lives in <span class="adr"><span class="locality">London</span> <span clas
 
 ### Elsewhere
 
-* <a href="https://github.com/monospaced" rel="me">GitHub</a>
-* <a href="https://www.linkedin.com/in/scottboyle/" rel="me">LinkedIn</a>
+* <a href="https://github.com/monospaced" rel="me" translate="no">GitHub</a>
+* <a href="https://www.linkedin.com/in/scottboyle/" rel="me" translate="no">LinkedIn</a>
   `,
   projects: {
     hilton: {
