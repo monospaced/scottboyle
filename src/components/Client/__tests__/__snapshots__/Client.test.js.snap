@@ -8,6 +8,7 @@ exports[`Client component should render a link 1`] = `
    
   <a
     href="https://client.com"
+    translate="no"
   >
     Client
   </a>
@@ -19,7 +20,12 @@ exports[`Client component should render a name 1`] = `
   <strong>
     With:
   </strong>
-   Client
+   
+  <span
+    translate="no"
+  >
+    Client
+  </span>
 </p>
 `;
 

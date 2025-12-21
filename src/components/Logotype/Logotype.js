@@ -7,7 +7,8 @@ const Logotype = ({ subtitle, title }) => {
   return (
     <h1 className="Logotype">
       <IndexLink className="Logotype-link" to="/">
-        {title} <strong className="Logotype-subtitle">{subtitle}</strong>
+        <span translate="no">{title}</span>{" "}
+        <strong className="Logotype-subtitle">{subtitle}</strong>
       </IndexLink>
     </h1>
   );

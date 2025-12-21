@@ -1,7 +1,7 @@
 @import url("../../theme/vars.css");
 
 .Linklog-item {
-  margin-bottom: 1.5rem;
+  margin-block-end: 1.5rem;
 }
 
 .Linklog-description {

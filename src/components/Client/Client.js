@@ -3,7 +3,14 @@ import React from "react";
 const Client = ({ client: { link, title } }) => {
   return title ? (
     <p>
-      <strong>With:</strong> {!link ? title : <a href={link}>{title}</a>}
+      <strong>With:</strong>{" "}
+      {!link ? (
+        <span translate="no">{title}</span>
+      ) : (
+        <a href={link} translate="no">
+          {title}
+        </a>
+      )}
     </p>
   ) : null;
 };

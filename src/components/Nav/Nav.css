@@ -2,25 +2,24 @@
 
 @media (--larger-viewport) {
   .Nav {
-    float: left;
-    margin-top: 1.5rem;
-    text-align: right;
-    width: 12.5rem;
+    float: inline-start;
+    inline-size: 12.5rem;
+    margin-block-start: 1.5rem;
+    text-align: end;
   }
 }
 
 .Nav-linklog {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 .Nav-heading {
   font-size: var(--pica);
   line-height: 1.5;
-  margin-bottom: 0;
-  margin-top: 0;
+  margin-block: 0;
 }
 
 .Nav-list {
-  margin-bottom: 1.5rem;
-  margin-top: 0;
+  margin-block-end: 1.5rem;
+  margin-block-start: 0;
 }

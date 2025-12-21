@@ -1,9 +1,9 @@
 @import url("../../theme/vars.css");
 
 .Logotype {
+  inset-block-start: calc(2rem / 16);
   margin: 0;
   position: relative;
-  top: calc(2rem / 16);
 }
 
 .Logotype-link {

@@ -22,7 +22,7 @@ const Project = ({
       />
       <section>
         <h2>
-          {projectTitle} <small>({date})</small>
+          <span translate="no">{projectTitle}</span> <small>({date})</small>
         </h2>
         <div
           dangerouslySetInnerHTML={{ __html: marked.parse(content.trim()) }}

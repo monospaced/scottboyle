@@ -8,6 +8,7 @@ exports[`Visit component should render a link 1`] = `
    
   <a
     href="https://site.com"
+    translate="no"
   >
     Site
   </a>

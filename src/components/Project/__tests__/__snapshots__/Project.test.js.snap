@@ -10,7 +10,11 @@ exports[`Project component should render correctly 1`] = `
   />
   <section>
     <h2>
-      Thomson Reuters
+      <span
+        translate="no"
+      >
+        Thomson Reuters
+      </span>
        
       <small>
         (
@@ -89,7 +93,11 @@ exports[`Project component should render correctly 2`] = `
   />
   <section>
     <h2>
-      Compass Group
+      <span
+        translate="no"
+      >
+        Compass Group
+      </span>
        
       <small>
         (
@@ -151,7 +159,11 @@ exports[`Project component should render correctly 3`] = `
   />
   <section>
     <h2>
-      Bilbary
+      <span
+        translate="no"
+      >
+        Bilbary
+      </span>
        
       <small>
         (
@@ -210,7 +222,11 @@ exports[`Project component should render correctly 4`] = `
   />
   <section>
     <h2>
-      Genes Reunited
+      <span
+        translate="no"
+      >
+        Genes Reunited
+      </span>
        
       <small>
         (
@@ -289,7 +305,11 @@ exports[`Project component should render correctly 5`] = `
   />
   <section>
     <h2>
-      The National Lottery
+      <span
+        translate="no"
+      >
+        The National Lottery
+      </span>
        
       <small>
         (
@@ -340,7 +360,11 @@ exports[`Project component should render correctly 6`] = `
   />
   <section>
     <h2>
-      Age Concern
+      <span
+        translate="no"
+      >
+        Age Concern
+      </span>
        
       <small>
         (

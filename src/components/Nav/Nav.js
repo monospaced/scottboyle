@@ -9,7 +9,7 @@ const Nav = ({ projects, routes }) => {
   return (
     <nav className="Nav">
       <h2 className="Nav-heading">Blog</h2>
-      <p className="Nav-linklog">
+      <p className="Nav-linklog" translate="no">
         {path === `linklog` ? `Linklog` : <Link to={`/linklog/`}>Linklog</Link>}
       </p>
       <h2 className="Nav-heading">Work</h2>
@@ -18,7 +18,7 @@ const Nav = ({ projects, routes }) => {
           const title = projects[key].title;
 
           return (
-            <li key={key}>
+            <li key={key} translate="no">
               {path === key ? title : <Link to={`/${key}`}>{title}</Link>}
             </li>
           );

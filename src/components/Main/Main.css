@@ -2,10 +2,10 @@
 
 @media (--larger-viewport) {
   .Main {
-    float: right;
-    margin-top: 3.75rem;
+    float: inline-end;
+    inline-size: 25rem;
+    inset-block-start: 0;
+    margin-block-start: 3.75rem;
     position: sticky;
-    top: 0;
-    width: 25rem;
   }
 }

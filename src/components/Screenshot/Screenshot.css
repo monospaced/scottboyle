@@ -2,26 +2,23 @@
 
 .Screenshot {
   border: 1px solid var(--border-color);
-  margin: 1.5rem 0;
-  max-width: 100%;
+  margin-block: 1.5rem;
+  max-inline-size: 100%;
   position: relative;
 }
 
 .Screenshot-image {
-  bottom: 0;
+  block-size: auto !important;
   filter: blur(2px);
-  height: auto !important;
-  left: 0;
+  inset: 0;
   max-width: 100%;
   position: absolute;
-  right: 0;
-  top: 0;
   transition: none;
   visibility: hidden;
 }
 
 .Screenshot-shim {
-  width: 100%;
+  inline-size: 100%;
 }
 
 .Screenshot.is-loaded,
