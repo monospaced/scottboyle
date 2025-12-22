@@ -5,7 +5,26 @@ exports[`Home component should render correctly 1`] = `
   className="Main vcard"
 >
   <SideEffect(DocumentMeta)
+    canonical="https://scottboyle.uk/"
     description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    meta={
+      Object {
+        "name": Object {
+          "twitter:card": "summary_large_image",
+          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "twitter:image": "https://scottboyle.uk/social.png",
+          "twitter:title": "Scott Boyle | Portfolio",
+        },
+        "property": Object {
+          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "og:image": "https://scottboyle.uk/social.png",
+          "og:site_name": "Scott Boyle | Portfolio",
+          "og:title": "Scott Boyle | Portfolio",
+          "og:type": "website",
+          "og:url": "https://scottboyle.uk/",
+        },
+      }
+    }
     title="Scott Boyle | Portfolio"
   />
   <section>

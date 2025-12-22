@@ -5,11 +5,11 @@ import data from "../../../scripts/__mocks__/data.js";
 import Project from "../Project.js";
 
 describe("Project component", () => {
-  const { description, projects, subtitle, title } = data;
+  const { description, projects, subtitle, title, url } = data;
 
   it("should render correctly", () => {
     const props = {
-      data: { description, projects, subtitle, title },
+      data: { description, projects, subtitle, title, url },
       route: {},
     };
     Object.keys(projects).map(key => {

@@ -2,13 +2,15 @@ import DocumentMeta from "react-document-meta";
 import React from "react";
 
 import "../Main/Main.css";
-
 const NotFound = ({ data: { subtitle, title } }) => {
+  const siteName = `${title} | ${subtitle}`;
+  const pageTitle = `Page not found | ${siteName}`;
+
   return (
     <main className="Main">
       <DocumentMeta
-        title={`Page not found | ${title} | ${subtitle}`}
         meta={{ name: { robots: "noindex" } }}
+        title={pageTitle}
       />
       <section>
         <h2>
