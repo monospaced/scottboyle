@@ -75,9 +75,10 @@
     "dev": "netlify dev --dir build",
     "dev:fast": "webpack-dev-server --progress",
     "format": "prettier --write 'src/**/*.@(css|js)'",
+    "lint": "eslint \"src/**/*.js\" \"netlify/**/*.js\" \"webpack.config.babel.js\"",
     "postbuild": "node src/scripts/template.js && node src/scripts/sitemap.js",
     "predev": "yarn build",
-    "prepush": "yarn test:coverage && cat coverage/lcov.info | coveralls",
+    "prepush": "yarn lint && yarn test:coverage && cat coverage/lcov.info | coveralls",
     "test:coverage": "jest --coverage",
     "test": "jest"
   }
