@@ -1,0 +1,4 @@
+Contact: https://github.com/monospaced
+Expires: 2026-12-31T00:00:00.000Z
+Preferred-Languages: en-GB
+Canonical: https://scottboyle.uk/.well-known/security.txt

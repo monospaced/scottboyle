@@ -1,0 +1,9 @@
+Scott Boyle
+Site: https://scottboyle.uk
+Location: United Kingdom
+
+Credits
+  Design & Development: Scott Boyle
+
+Tech
+  Stack: React, Netlify, Webpack

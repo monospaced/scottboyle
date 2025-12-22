@@ -2,7 +2,7 @@
 
 exports[`Root component should render correctly 1`] = `
 <html
-  lang="en-gb"
+  lang="en-GB"
 >
   <Head
     meta={Array []}

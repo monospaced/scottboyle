@@ -7,7 +7,7 @@ import { version } from "../../../package.json";
 
 const Root = ({ meta, router }) => {
   return (
-    <html lang="en-gb">
+    <html lang="en-GB">
       <Head meta={meta} />
       <body className="no-js">
         <script
