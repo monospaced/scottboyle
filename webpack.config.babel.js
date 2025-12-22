@@ -52,7 +52,7 @@ module.exports = () => {
           options: { name: "[name]" },
         },
         {
-          test: /\.(ico|png|svg|webmanifest|xml)$/,
+          test: /\.(ico|png|svg|txt|webmanifest|xml)$/,
           loader: "file-loader",
           options: { name: "[name].[ext]" },
         },
