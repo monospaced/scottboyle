@@ -65,7 +65,12 @@ class Linklog extends Component {
     });
 
     return (
-      <main className="Main">
+      <main
+        aria-labelledby="page-title"
+        className="Main"
+        id="main"
+        tabIndex="-1"
+      >
         <DocumentMeta
           canonical={canonical}
           description={description}
@@ -73,7 +78,9 @@ class Linklog extends Component {
           title={pageTitle}
         />
         <section>
-          <h2 translate="no">Linklog</h2>
+          <h2 id="page-title" translate="no">
+            Linklog
+          </h2>
           <div data-linklog-list>{content}</div>
           <p>
             Subscribe to{" "}

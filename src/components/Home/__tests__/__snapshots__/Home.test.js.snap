@@ -2,7 +2,10 @@
 
 exports[`Home component should render correctly 1`] = `
 <main
+  aria-labelledby="page-title"
   className="Main vcard"
+  id="main"
+  tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
     canonical="https://scottboyle.uk/"

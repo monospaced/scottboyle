@@ -32,3 +32,13 @@
   transition: filter 0.2s;
   visibility: visible;
 }
+
+.ScreenshotLink:focus-visible {
+  outline: 0;
+}
+
+.ScreenshotLink:focus-visible .Screenshot {
+  border-radius: 0.125rem;
+  outline: 0.125rem solid var(--theme-color);
+  outline-offset: 0.0625rem;
+}

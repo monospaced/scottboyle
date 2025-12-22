@@ -3,6 +3,7 @@
 exports[`Avatar component should render correctly 1`] = `
 <h2
   class="Avatar"
+  id="page-title"
 >
   <svg
     aria-labelledby="avatar"

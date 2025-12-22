@@ -19,7 +19,12 @@ const Home = ({ data: { about, description, subtitle, title, url } }) => {
   });
 
   return (
-    <main className="Main vcard">
+    <main
+      aria-labelledby="page-title"
+      className="Main vcard"
+      id="main"
+      tabIndex="-1"
+    >
       <DocumentMeta
         canonical={canonical}
         description={description}

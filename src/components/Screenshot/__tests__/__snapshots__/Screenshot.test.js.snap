@@ -23,6 +23,7 @@ Building a design system and React component&nbsp;library.
   slug="thomson-reuters"
 >
   <a
+    className="ScreenshotLink"
     href="https://www.thomsonreuters.com/en.html"
   >
     <div
@@ -194,6 +195,7 @@ Consulting and advising on a site-wide design refresh. Created indicative templa
   slug="genes-reunited"
 >
   <a
+    className="ScreenshotLink"
     href="http://genesreunited.co.uk"
   >
     <div

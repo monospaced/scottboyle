@@ -29,7 +29,7 @@ const Project = ({
   });
 
   return (
-    <main className="Main">
+    <main aria-labelledby="page-title" className="Main" id="main" tabIndex="-1">
       <DocumentMeta
         canonical={canonical}
         description={description}
@@ -37,7 +37,7 @@ const Project = ({
         title={pageTitle}
       />
       <section>
-        <h2>
+        <h2 id="page-title">
           <span translate="no">{projectTitle}</span> <small>({date})</small>
         </h2>
         <div

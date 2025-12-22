@@ -1,5 +1,9 @@
 @import url("../../theme/vars.css");
 
+.Main:focus {
+  outline: 0;
+}
+
 @media (--larger-viewport) {
   .Main {
     float: inline-end;

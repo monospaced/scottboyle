@@ -27,7 +27,7 @@ module.exports = {
       link: "https://www.hilton.com",
       image: {
         width: 398,
-        height: 222,
+        height: 224,
       },
       content: `
 Multi-brand design system.
@@ -39,7 +39,7 @@ Multi-brand design system.
       link: "https://www.hubblehq.com",
       image: {
         width: 398,
-        height: 222,
+        height: 230,
       },
       content: `
 Migrated Hubble’s site from AngularJS to React and architected a UI system to support their new brand.
@@ -63,7 +63,7 @@ Developing the Arc UI System for BT Enterprise.
       link: "https://forge.refinitiv.com",
       image: {
         width: 398,
-        height: 260,
+        height: 269,
       },
       content: `
 Created a CSS webpack build solution to rebrand the Thomson Reuters web platform for Refinitiv. The solution produced significant cost savings for both&nbsp;businesses.
@@ -75,7 +75,7 @@ Created a CSS webpack build solution to rebrand the Thomson Reuters web platform
       link: "https://www.thomsonreuters.com/en.html",
       image: {
         width: 398,
-        height: 301,
+        height: 312,
       },
       content: `
 Building a design system and React component&nbsp;library.

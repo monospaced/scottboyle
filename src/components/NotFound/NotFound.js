@@ -7,13 +7,10 @@ const NotFound = ({ data: { subtitle, title } }) => {
   const pageTitle = `Page not found | ${siteName}`;
 
   return (
-    <main className="Main">
-      <DocumentMeta
-        meta={{ name: { robots: "noindex" } }}
-        title={pageTitle}
-      />
+    <main aria-labelledby="page-title" className="Main" id="main" tabIndex="-1">
+      <DocumentMeta meta={{ name: { robots: "noindex" } }} title={pageTitle} />
       <section>
-        <h2>
+        <h2 id="page-title">
           404 <small>Page not found</small>
         </h2>
         <p>The requested URL was not found on this server.</p>

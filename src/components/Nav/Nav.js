@@ -10,7 +10,9 @@ const Nav = ({ projects, routes }) => {
     <nav className="Nav">
       <h2 className="Nav-heading">Blog</h2>
       <p className="Nav-linklog" translate="no">
-        {path === `linklog` ? `Linklog` : <Link to={`/linklog/`}>Linklog</Link>}
+        <Link to={`/linklog/`} aria-current={path === "linklog" ? "page" : null}>
+          Linklog
+        </Link>
       </p>
       <h2 className="Nav-heading">Work</h2>
       <ul className="Nav-list">
@@ -19,7 +21,9 @@ const Nav = ({ projects, routes }) => {
 
           return (
             <li key={key} translate="no">
-              {path === key ? title : <Link to={`/${key}`}>{title}</Link>}
+              <Link to={`/${key}`} aria-current={path === key ? "page" : null}>
+                {title}
+              </Link>
             </li>
           );
         })}

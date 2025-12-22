@@ -8,11 +8,7 @@
 
 .Logotype-link {
   color: var(--text-emphasis-color);
-  display: block;
-}
-
-.Logotype-link:focus {
-  outline: 0;
+  display: inline-block;
 }
 
 .Logotype-link:hover {

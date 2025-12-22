@@ -28,7 +28,11 @@ exports[`Nav component should render a project as the active item 1`] = `
     <li
       translate="no"
     >
-      Thomson Reuters
+      <a
+        aria-current="page"
+      >
+        Thomson Reuters
+      </a>
     </li>
     <li
       translate="no"
@@ -159,7 +163,11 @@ exports[`Nav component should render linklog as the active item 1`] = `
     class="Nav-linklog"
     translate="no"
   >
-    Linklog
+    <a
+      aria-current="page"
+    >
+      Linklog
+    </a>
   </p>
   <h2
     class="Nav-heading"
