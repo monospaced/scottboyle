@@ -1,4 +1,5 @@
 const MAX_LINKS = 20;
+const S_MAX_AGE = 300;
 
 const FEED_URL =
   process.env.PINBOARD_FEED_URL ||
@@ -48,6 +49,7 @@ exports.handler = async event => {
       headers: {
         ...corsHeaders,
         "Content-Type": "application/json",
+        "Cache-Control": `public, max-age=0, s-maxage=${S_MAX_AGE}`,
       },
       body: JSON.stringify(links),
     };

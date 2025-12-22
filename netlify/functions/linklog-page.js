@@ -39,10 +39,10 @@ const renderLinks = links => {
         return "";
       }
 
-      const description = escapeHtml(item.n);
-      const timeText = formatDate(item.dt);
-      const timeValue = escapeHtml(item.dt);
-      const title = escapeHtml(item.d);
+      const description = escapeHtml(item.n || "");
+      const timeText = formatDate(item.dt || "");
+      const timeValue = escapeHtml(item.dt || "");
+      const title = escapeHtml(item.d || "");
 
       return `
         <li class="Linklog-item">
