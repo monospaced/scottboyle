@@ -21,3 +21,8 @@
   from = "/linklog"
   to = "/linklog/"
   status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/404/"
+  status = 404
