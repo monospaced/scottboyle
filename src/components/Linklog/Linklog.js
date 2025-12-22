@@ -5,6 +5,7 @@ import TimeAgo from "timeago-react";
 
 import "../Main/Main.css";
 import { safeHref } from "../../scripts/href";
+import { buildSocialMeta } from "../../scripts/meta";
 
 import "./Linklog.css";
 
@@ -18,7 +19,7 @@ class Linklog extends Component {
 
   render() {
     const {
-      data: { description, subtitle, title },
+      data: { description, subtitle, title, url },
     } = this.props;
     const { links, status } = this.state;
     const hasLinks = Array.isArray(links) && links.length > 0;
@@ -51,11 +52,25 @@ class Linklog extends Component {
       content = "Loading…";
     }
 
+    const siteName = `${title} | ${subtitle}`;
+    const pageTitle = `${siteName} | Linklog`;
+    const pageUrl = `${url}/linklog/`;
+    const socialImage = `${url}/social.png`;
+    const { canonical, meta } = buildSocialMeta({
+      description,
+      image: socialImage,
+      siteName,
+      title: pageTitle,
+      url: pageUrl,
+    });
+
     return (
       <main className="Main">
         <DocumentMeta
-          title={`${title} | ${subtitle} | Linklog`}
+          canonical={canonical}
           description={description}
+          meta={meta}
+          title={pageTitle}
         />
         <section>
           <h2 translate="no">Linklog</h2>

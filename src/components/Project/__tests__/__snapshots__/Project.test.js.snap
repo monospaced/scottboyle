@@ -5,7 +5,26 @@ exports[`Project component should render correctly 1`] = `
   className="Main"
 >
   <SideEffect(DocumentMeta)
+    canonical="https://scottboyle.uk/thomson-reuters/"
     description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    meta={
+      Object {
+        "name": Object {
+          "twitter:card": "summary_large_image",
+          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "twitter:image": "https://scottboyle.uk/social.png",
+          "twitter:title": "Scott Boyle | Portfolio | Thomson Reuters",
+        },
+        "property": Object {
+          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "og:image": "https://scottboyle.uk/social.png",
+          "og:site_name": "Scott Boyle | Portfolio",
+          "og:title": "Scott Boyle | Portfolio | Thomson Reuters",
+          "og:type": "article",
+          "og:url": "https://scottboyle.uk/thomson-reuters/",
+        },
+      }
+    }
     title="Scott Boyle | Portfolio | Thomson Reuters"
   />
   <section>
@@ -88,7 +107,26 @@ exports[`Project component should render correctly 2`] = `
   className="Main"
 >
   <SideEffect(DocumentMeta)
+    canonical="https://scottboyle.uk/compass-group/"
     description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    meta={
+      Object {
+        "name": Object {
+          "twitter:card": "summary_large_image",
+          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "twitter:image": "https://scottboyle.uk/social.png",
+          "twitter:title": "Scott Boyle | Portfolio | Compass Group",
+        },
+        "property": Object {
+          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "og:image": "https://scottboyle.uk/social.png",
+          "og:site_name": "Scott Boyle | Portfolio",
+          "og:title": "Scott Boyle | Portfolio | Compass Group",
+          "og:type": "article",
+          "og:url": "https://scottboyle.uk/compass-group/",
+        },
+      }
+    }
     title="Scott Boyle | Portfolio | Compass Group"
   />
   <section>
@@ -154,7 +192,26 @@ exports[`Project component should render correctly 3`] = `
   className="Main"
 >
   <SideEffect(DocumentMeta)
+    canonical="https://scottboyle.uk/bilbary/"
     description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    meta={
+      Object {
+        "name": Object {
+          "twitter:card": "summary_large_image",
+          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "twitter:image": "https://scottboyle.uk/social.png",
+          "twitter:title": "Scott Boyle | Portfolio | Bilbary",
+        },
+        "property": Object {
+          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "og:image": "https://scottboyle.uk/social.png",
+          "og:site_name": "Scott Boyle | Portfolio",
+          "og:title": "Scott Boyle | Portfolio | Bilbary",
+          "og:type": "article",
+          "og:url": "https://scottboyle.uk/bilbary/",
+        },
+      }
+    }
     title="Scott Boyle | Portfolio | Bilbary"
   />
   <section>
@@ -217,7 +274,26 @@ exports[`Project component should render correctly 4`] = `
   className="Main"
 >
   <SideEffect(DocumentMeta)
+    canonical="https://scottboyle.uk/genes-reunited/"
     description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    meta={
+      Object {
+        "name": Object {
+          "twitter:card": "summary_large_image",
+          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "twitter:image": "https://scottboyle.uk/social.png",
+          "twitter:title": "Scott Boyle | Portfolio | Genes Reunited",
+        },
+        "property": Object {
+          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "og:image": "https://scottboyle.uk/social.png",
+          "og:site_name": "Scott Boyle | Portfolio",
+          "og:title": "Scott Boyle | Portfolio | Genes Reunited",
+          "og:type": "article",
+          "og:url": "https://scottboyle.uk/genes-reunited/",
+        },
+      }
+    }
     title="Scott Boyle | Portfolio | Genes Reunited"
   />
   <section>
@@ -300,7 +376,26 @@ exports[`Project component should render correctly 5`] = `
   className="Main"
 >
   <SideEffect(DocumentMeta)
+    canonical="https://scottboyle.uk/the-national-lottery/"
     description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    meta={
+      Object {
+        "name": Object {
+          "twitter:card": "summary_large_image",
+          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "twitter:image": "https://scottboyle.uk/social.png",
+          "twitter:title": "Scott Boyle | Portfolio | The National Lottery",
+        },
+        "property": Object {
+          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "og:image": "https://scottboyle.uk/social.png",
+          "og:site_name": "Scott Boyle | Portfolio",
+          "og:title": "Scott Boyle | Portfolio | The National Lottery",
+          "og:type": "article",
+          "og:url": "https://scottboyle.uk/the-national-lottery/",
+        },
+      }
+    }
     title="Scott Boyle | Portfolio | The National Lottery"
   />
   <section>
@@ -355,7 +450,26 @@ exports[`Project component should render correctly 6`] = `
   className="Main"
 >
   <SideEffect(DocumentMeta)
+    canonical="https://scottboyle.uk/age-concern/"
     description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    meta={
+      Object {
+        "name": Object {
+          "twitter:card": "summary_large_image",
+          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "twitter:image": "https://scottboyle.uk/social.png",
+          "twitter:title": "Scott Boyle | Portfolio | Age Concern",
+        },
+        "property": Object {
+          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "og:image": "https://scottboyle.uk/social.png",
+          "og:site_name": "Scott Boyle | Portfolio",
+          "og:title": "Scott Boyle | Portfolio | Age Concern",
+          "og:type": "article",
+          "og:url": "https://scottboyle.uk/age-concern/",
+        },
+      }
+    }
     title="Scott Boyle | Portfolio | Age Concern"
   />
   <section>

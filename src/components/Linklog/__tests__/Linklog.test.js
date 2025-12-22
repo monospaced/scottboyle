@@ -6,8 +6,8 @@ import feed from "../__mocks__/feed.mock.json";
 import data from "../../../scripts/__mocks__/data.js";
 
 describe("Linklog component", () => {
-  const { description, subtitle, title } = data;
-  const props = { data: { description, subtitle, title } };
+  const { description, subtitle, title, url } = data;
+  const props = { data: { description, subtitle, title, url } };
   const flushPromises = () => new Promise(resolve => setImmediate(resolve));
 
   let fetchMock;

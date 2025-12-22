@@ -4,13 +4,27 @@ import React from "react";
 
 import "../Main/Main.css";
 import Avatar from "../Avatar/Avatar";
+import { buildSocialMeta } from "../../scripts/meta";
 
-const Home = ({ data: { about, description, subtitle, title } }) => {
+const Home = ({ data: { about, description, subtitle, title, url } }) => {
+  const pageUrl = `${url}/`;
+  const siteName = `${title} | ${subtitle}`;
+  const socialImage = `${url}/social.png`;
+  const { canonical, meta } = buildSocialMeta({
+    description,
+    image: socialImage,
+    siteName,
+    title: siteName,
+    url: pageUrl,
+  });
+
   return (
     <main className="Main vcard">
       <DocumentMeta
-        title={`${title} | ${subtitle}`}
+        canonical={canonical}
         description={description}
+        meta={meta}
+        title={siteName}
       />
       <section>
         <Avatar />

@@ -8,11 +8,14 @@ import "../../assets/icon-512x512.png";
 import "../../assets/humans.txt";
 import "../../assets/manifest.webmanifest";
 import "../../assets/robots.txt";
+import "../../assets/social.png";
 import "../../assets/.well-known/security.txt";
 import { version } from "../../../package.json";
-import { subtitle, title } from "../../scripts/data";
+import { subtitle, title, url } from "../../scripts/data";
 import vars from "!css-variables-loader!../../theme/vars.css";
 
+const siteName = `${title} | ${subtitle}`;
+const siteUrl = url;
 const themeColor = vars["--theme-color"];
 
 const schema = {
@@ -20,9 +23,9 @@ const schema = {
   "@graph": [
     {
       "@type": "WebSite",
-      name: `${title} | ${subtitle}`,
+      name: siteName,
       alternateName: title,
-      url: "https://scottboyle.uk",
+      url: siteUrl,
     },
     {
       "@type": "Person",
@@ -31,7 +34,7 @@ const schema = {
         "https://github.com/monospaced",
         "https://www.linkedin.com/in/scottboyle/",
       ],
-      url: "https://scottboyle.uk",
+      url: siteUrl,
     },
   ],
 };

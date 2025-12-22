@@ -5,7 +5,26 @@ exports[`Linklog component should render correctly 1`] = `
   className="Main"
 >
   <SideEffect(DocumentMeta)
+    canonical="https://scottboyle.uk/linklog/"
     description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    meta={
+      Object {
+        "name": Object {
+          "twitter:card": "summary_large_image",
+          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "twitter:image": "https://scottboyle.uk/social.png",
+          "twitter:title": "Scott Boyle | Portfolio | Linklog",
+        },
+        "property": Object {
+          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "og:image": "https://scottboyle.uk/social.png",
+          "og:site_name": "Scott Boyle | Portfolio",
+          "og:title": "Scott Boyle | Portfolio | Linklog",
+          "og:type": "website",
+          "og:url": "https://scottboyle.uk/linklog/",
+        },
+      }
+    }
     title="Scott Boyle | Portfolio | Linklog"
   />
   <section>
@@ -39,7 +58,26 @@ exports[`Linklog component should render feed data correctly 1`] = `
   className="Main"
 >
   <SideEffect(DocumentMeta)
+    canonical="https://scottboyle.uk/linklog/"
     description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    meta={
+      Object {
+        "name": Object {
+          "twitter:card": "summary_large_image",
+          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "twitter:image": "https://scottboyle.uk/social.png",
+          "twitter:title": "Scott Boyle | Portfolio | Linklog",
+        },
+        "property": Object {
+          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
+          "og:image": "https://scottboyle.uk/social.png",
+          "og:site_name": "Scott Boyle | Portfolio",
+          "og:title": "Scott Boyle | Portfolio | Linklog",
+          "og:type": "website",
+          "og:url": "https://scottboyle.uk/linklog/",
+        },
+      }
+    }
     title="Scott Boyle | Portfolio | Linklog"
   />
   <section>
