@@ -6,6 +6,7 @@ import "../../assets/icon.svg";
 import "../../assets/icon-192x192.png";
 import "../../assets/icon-512x512.png";
 import "../../assets/manifest.webmanifest";
+import "../../assets/robots.txt";
 import { version } from "../../../package.json";
 import { subtitle, title } from "../../scripts/data";
 import vars from "!css-variables-loader!../../theme/vars.css";

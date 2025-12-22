@@ -59,7 +59,7 @@
       "text-summary"
     ],
     "moduleNameMapper": {
-      "\\_redirects|.(htaccess|ico|jpg|png|svg|webmanifest|woff|xml)$": "<rootDir>/test/__mocks__/file.mock.js",
+      "\\_redirects|.(htaccess|ico|jpg|png|svg|webmanifest|woff|xml|txt)$": "<rootDir>/test/__mocks__/file.mock.js",
       "\\.(css)$": "<rootDir>/test/__mocks__/style.mock.js"
     },
     "setupFiles": [
