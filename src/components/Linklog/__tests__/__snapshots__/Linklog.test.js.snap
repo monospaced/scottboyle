@@ -8,27 +8,27 @@ exports[`Linklog component should render correctly 1`] = `
   tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
-    canonical="https://scottboyle.uk/linklog/"
-    description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    canonical="https://example.test/linklog/"
+    description="Short description used in tests."
     meta={
       Object {
         "name": Object {
           "twitter:card": "summary_large_image",
-          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "twitter:image": "https://scottboyle.uk/social.png",
-          "twitter:title": "Scott Boyle | Portfolio | Linklog",
+          "twitter:description": "Short description used in tests.",
+          "twitter:image": "https://example.test/social.png",
+          "twitter:title": "Test Name | Test Subtitle | Linklog",
         },
         "property": Object {
-          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "og:image": "https://scottboyle.uk/social.png",
-          "og:site_name": "Scott Boyle | Portfolio",
-          "og:title": "Scott Boyle | Portfolio | Linklog",
+          "og:description": "Short description used in tests.",
+          "og:image": "https://example.test/social.png",
+          "og:site_name": "Test Name | Test Subtitle",
+          "og:title": "Test Name | Test Subtitle | Linklog",
           "og:type": "website",
-          "og:url": "https://scottboyle.uk/linklog/",
+          "og:url": "https://example.test/linklog/",
         },
       }
     }
-    title="Scott Boyle | Portfolio | Linklog"
+    title="Test Name | Test Subtitle | Linklog"
   />
   <section>
     <h2
@@ -65,27 +65,27 @@ exports[`Linklog component should render feed data correctly 1`] = `
   tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
-    canonical="https://scottboyle.uk/linklog/"
-    description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    canonical="https://example.test/linklog/"
+    description="Short description used in tests."
     meta={
       Object {
         "name": Object {
           "twitter:card": "summary_large_image",
-          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "twitter:image": "https://scottboyle.uk/social.png",
-          "twitter:title": "Scott Boyle | Portfolio | Linklog",
+          "twitter:description": "Short description used in tests.",
+          "twitter:image": "https://example.test/social.png",
+          "twitter:title": "Test Name | Test Subtitle | Linklog",
         },
         "property": Object {
-          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "og:image": "https://scottboyle.uk/social.png",
-          "og:site_name": "Scott Boyle | Portfolio",
-          "og:title": "Scott Boyle | Portfolio | Linklog",
+          "og:description": "Short description used in tests.",
+          "og:image": "https://example.test/social.png",
+          "og:site_name": "Test Name | Test Subtitle",
+          "og:title": "Test Name | Test Subtitle | Linklog",
           "og:type": "website",
-          "og:url": "https://scottboyle.uk/linklog/",
+          "og:url": "https://example.test/linklog/",
         },
       }
     }
-    title="Scott Boyle | Portfolio | Linklog"
+    title="Test Name | Test Subtitle | Linklog"
   />
   <section>
     <h2
@@ -100,94 +100,37 @@ exports[`Linklog component should render feed data correctly 1`] = `
       <ul>
         <li
           className="Linklog-item"
-          key="2018-04-06T21:20:55Z"
+          key="2025-01-01T00:00:00Z"
         >
           <a
-            href="http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/"
+            href="https://example.com/mock-a"
           >
-            React lifecycle methods diagram
+            Mock Link A
           </a>
            
           <TimeAgo
-            datetime="2018-04-06T21:20:55Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-04-04T21:16:19Z"
-        >
-          <a
-            href="https://realfavicongenerator.net/"
-          >
-            Real Favicon Generator
-          </a>
-           
-          <TimeAgo
-            datetime="2018-04-04T21:16:19Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-04-04T20:12:43Z"
-        >
-          <a
-            href="https://medium.com/@firt/progressive-web-apps-on-ios-are-here-d00430dee3a7"
-          >
-            Progressive Web Apps on iOS
-          </a>
-           
-          <TimeAgo
-            datetime="2018-04-04T20:12:43Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-04-02T10:01:36Z"
-        >
-          <a
-            href="http://fela.js.org/"
-          >
-            Fela
-          </a>
-           
-          <TimeAgo
-            datetime="2018-04-02T10:01:36Z"
+            datetime="2025-01-01T00:00:00Z"
             live={true}
             locale="en"
           />
           <span
             className="Linklog-description"
           >
-            A small, high-performant and framework-agnostic toolbelt to handle state-driven styling in JavaScript.
+            Mock note A.
           </span>
         </li>
         <li
           className="Linklog-item"
-          key="2018-03-27T19:34:39Z"
+          key="2025-01-02T00:00:00Z"
         >
           <a
-            href="https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886"
+            href="https://example.com/mock-b"
           >
-            7 Practical Design Tips
+            Mock Link B
           </a>
            
           <TimeAgo
-            datetime="2018-03-27T19:34:39Z"
+            datetime="2025-01-02T00:00:00Z"
             live={true}
             locale="en"
           />
@@ -197,535 +140,24 @@ exports[`Linklog component should render feed data correctly 1`] = `
         </li>
         <li
           className="Linklog-item"
-          key="2018-03-25T21:51:42Z"
+          key="2025-01-03T00:00:00Z"
         >
           <a
-            href="https://www.supremo.tv/typeterms/"
+            href="https://example.com/mock-c"
           >
-            Type Terms
+            Mock Link C
           </a>
            
           <TimeAgo
-            datetime="2018-03-25T21:51:42Z"
+            datetime="2025-01-03T00:00:00Z"
             live={true}
             locale="en"
           />
           <span
             className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-03-24T20:33:15Z"
-        >
-          <a
-            href="https://babel-time-travel.boopathi.in/"
           >
-            Babel time travel
-          </a>
-           
-          <TimeAgo
-            datetime="2018-03-24T20:33:15Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-03-19T11:33:57Z"
-        >
-          <a
-            href="https://hackernoon.com/how-to-snapshot-test-everything-in-your-redux-app-with-jest-fde305ebedea"
-          >
-            Snapshot Test Redux With Jest
-          </a>
-           
-          <TimeAgo
-            datetime="2018-03-19T11:33:57Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-03-18T00:48:56Z"
-        >
-          <a
-            href="https://medium.com/@netxm/testing-redux-reducers-with-jest-6653abbfe3e1"
-          >
-            Testing redux reducers with Jest
-          </a>
-           
-          <TimeAgo
-            datetime="2018-03-18T00:48:56Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-03-18T00:46:42Z"
-        >
-          <a
-            href="https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md"
-          >
-            Writing Redux Tests
-          </a>
-           
-          <TimeAgo
-            datetime="2018-03-18T00:46:42Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-03-17T19:52:51Z"
-        >
-          <a
-            href="https://github.com/mawrkus/js-unit-testing-guide"
-          >
-            JavaScript unit testing guide
-          </a>
-           
-          <TimeAgo
-            datetime="2018-03-17T19:52:51Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-03-09T21:31:57Z"
-        >
-          <a
-            href="http://accessibility.voxmedia.com/"
-          >
-            Vox Product Accessibility Guidelines
-          </a>
-           
-          <TimeAgo
-            datetime="2018-03-09T21:31:57Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-03-08T01:01:36Z"
-        >
-          <a
-            href="http://stratejos.ai/blog/naming-task-bug-user-story-titles/"
-          >
-            Naming Guide for Issues
-          </a>
-           
-          <TimeAgo
-            datetime="2018-03-08T01:01:36Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-03-07T17:13:24Z"
-        >
-          <a
-            href="https://pbs.twimg.com/media/DNIqyJPXkAAxbnH.jpg"
-          >
-            GitHub priority labels
-          </a>
-           
-          <TimeAgo
-            datetime="2018-03-07T17:13:24Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-03-02T11:34:37Z"
-        >
-          <a
-            href="https://jakearchibald.com/2018/third-party-css-is-not-safe/"
-          >
-            Third party CSS is not safe
-          </a>
-           
-          <TimeAgo
-            datetime="2018-03-02T11:34:37Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-02-24T22:30:24Z"
-        >
-          <a
-            href="https://www.typography.com/blog/fonts-for-complex-data"
-          >
-            Fonts for Complex Data
-          </a>
-           
-          <TimeAgo
-            datetime="2018-02-24T22:30:24Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-02-17T21:47:38Z"
-        >
-          <a
-            href="https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/"
-          >
-            Organize GitHub Issues
-          </a>
-           
-          <TimeAgo
-            datetime="2018-02-17T21:47:38Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-02-16T17:23:12Z"
-        >
-          <a
-            href="http://spencermortensen.com/articles/typographic-scale/"
-          >
-            The typographic scale
-          </a>
-           
-          <TimeAgo
-            datetime="2018-02-16T17:23:12Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-02-16T17:22:26Z"
-        >
-          <a
-            href="https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align"
-          >
-            Font metrics, line-height & vertical-align
-          </a>
-           
-          <TimeAgo
-            datetime="2018-02-16T17:22:26Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-02-12T20:11:35Z"
-        >
-          <a
-            href="https://github.com/jmm/gfm-lang-ids/wiki/GitHub-Flavored-Markdown-(GFM)-language-IDs"
-          >
-            Github markdown language IDs
-          </a>
-           
-          <TimeAgo
-            datetime="2018-02-12T20:11:35Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-02-10T11:14:07Z"
-        >
-          <a
-            href="https://medium.com/@u_glow/making-sense-of-semantic-versioning-for-end-user-software-applications-a3049d97478b"
-          >
-            Semver for end-user applications
-          </a>
-           
-          <TimeAgo
-            datetime="2018-02-10T11:14:07Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-01-29T17:09:13Z"
-        >
-          <a
-            href="https://blog.haroen.me/json-ld-with-react"
-          >
-            JSON-LD with React
-          </a>
-           
-          <TimeAgo
-            datetime="2018-01-29T17:09:13Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-01-22T20:33:38Z"
-        >
-          <a
-            href="https://lab.iamvdo.me/houdini/"
-          >
-            CSS Houdini Experiments
-          </a>
-           
-          <TimeAgo
-            datetime="2018-01-22T20:33:38Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-01-15T13:42:27Z"
-        >
-          <a
-            href="https://gist.github.com/davidhund/564331193e1085208d7e"
-          >
-            Accessible markup for SVG icons
-          </a>
-           
-          <TimeAgo
-            datetime="2018-01-15T13:42:27Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2018-01-03T13:30:22Z"
-        >
-          <a
-            href="https://font-display.glitch.me/"
-          >
-            Font-display playground
-          </a>
-           
-          <TimeAgo
-            datetime="2018-01-03T13:30:22Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2017-11-16T23:10:07Z"
-        >
-          <a
-            href="https://medium.com/@aureliojota/the-anatomy-of-a-cta-button-in-2017-voice-tone-style-and-component-best-practices-1861c4d2167e"
-          >
-            Anatomy of a CTA button
-          </a>
-           
-          <TimeAgo
-            datetime="2017-11-16T23:10:07Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2017-11-15T12:23:09Z"
-        >
-          <a
-            href="https://medium.com/fed-or-dead/handling-spacing-in-a-ui-component-library-70f3b22ec89"
-          >
-            Spacing in UI component libraries
-          </a>
-           
-          <TimeAgo
-            datetime="2017-11-15T12:23:09Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2017-11-13T19:59:02Z"
-        >
-          <a
-            href="http://www.pwabuilder.com/"
-          >
-            PWABuilder
-          </a>
-           
-          <TimeAgo
-            datetime="2017-11-13T19:59:02Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2017-11-06T12:30:04Z"
-        >
-          <a
-            href="https://www.smashingmagazine.com/2017/11/right-to-left-mobile-design/"
-          >
-            RTL Development In Mobile Design
-          </a>
-           
-          <TimeAgo
-            datetime="2017-11-06T12:30:04Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2017-11-02T19:34:01Z"
-        >
-          <a
-            href="https://www.w3.org/International/tutorials/bidi-xhtml/"
-          >
-            HTML Pages in Right-to-left Scripts
-          </a>
-           
-          <TimeAgo
-            datetime="2017-11-02T19:34:01Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2017-10-31T00:08:13Z"
-        >
-          <a
-            href="https://24ways.org/2016/css-writing-modes/"
-          >
-            CSS Writing Modes
-          </a>
-           
-          <TimeAgo
-            datetime="2017-10-31T00:08:13Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2017-10-31T00:04:03Z"
-        >
-          <a
-            href="http://jensimmons.com/post/sep-27-2016/six-layout-myths-busted"
-          >
-            Six Layout Myths Busted
-          </a>
-           
-          <TimeAgo
-            datetime="2017-10-31T00:04:03Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
-        </li>
-        <li
-          className="Linklog-item"
-          key="2017-10-26T23:24:52Z"
-        >
-          <a
-            href="https://inclusive-components.design/"
-          >
-            Inclusive Components
-          </a>
-           
-          <TimeAgo
-            datetime="2017-10-26T23:24:52Z"
-            live={true}
-            locale="en"
-          />
-          <span
-            className="Linklog-description"
-          />
+            Short mock note.
+          </span>
         </li>
       </ul>
     </div>

@@ -15,7 +15,7 @@ exports[`NotFound component should render correctly 1`] = `
         },
       }
     }
-    title="Page not found | Scott Boyle | Portfolio"
+    title="Page not found | Test Name | Test Subtitle"
   />
   <section>
     <h2

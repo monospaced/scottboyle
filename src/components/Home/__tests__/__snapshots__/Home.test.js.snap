@@ -8,36 +8,38 @@ exports[`Home component should render correctly 1`] = `
   tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
-    canonical="https://scottboyle.uk/"
-    description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    canonical="https://example.test/"
+    description="Short description used in tests."
     meta={
       Object {
         "name": Object {
           "twitter:card": "summary_large_image",
-          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "twitter:image": "https://scottboyle.uk/social.png",
-          "twitter:title": "Scott Boyle | Portfolio",
+          "twitter:description": "Short description used in tests.",
+          "twitter:image": "https://example.test/social.png",
+          "twitter:title": "Test Name | Test Subtitle",
         },
         "property": Object {
-          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "og:image": "https://scottboyle.uk/social.png",
-          "og:site_name": "Scott Boyle | Portfolio",
-          "og:title": "Scott Boyle | Portfolio",
+          "og:description": "Short description used in tests.",
+          "og:image": "https://example.test/social.png",
+          "og:site_name": "Test Name | Test Subtitle",
+          "og:title": "Test Name | Test Subtitle",
           "og:type": "website",
-          "og:url": "https://scottboyle.uk/",
+          "og:url": "https://example.test/",
         },
       }
     }
-    title="Scott Boyle | Portfolio"
+    title="Test Name | Test Subtitle"
   />
   <section>
     <Avatar />
     <div
       dangerouslySetInnerHTML={
         Object {
-          "__html": "<p><span class=\\"fn\\">Scott Boyle</span> is a <span class=\\"category\\">web professional</span> <span class=\\"note\\">specialising in modern front-end development</span>. Scott currently lives in <span class=\\"adr\\"><span class=\\"locality\\">London</span> <span class=\\"country-name\\">UK</span></span> and has a company called <a href=\\"https://monospaced.com\\" class=\\"org\\">Monospaced&nbsp;Ltd</a>, a freelance web development consultancy working with regular clients in London and around the&nbsp;world.</p>
-<h3 id=\\"view-source\\">View source</h3>
-<p><a href=\\"https://github.com/monospaced/scottboyle\\" rel=\\"source\\">github.com/monospaced/scottboyle</a></p>
+          "__html": "<p>Test bio for mocks.</p>
+<ul>
+<li>Item one</li>
+<li>Item two</li>
+</ul>
 ",
         }
       }

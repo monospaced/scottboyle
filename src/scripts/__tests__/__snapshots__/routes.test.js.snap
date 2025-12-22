@@ -3,12 +3,8 @@
 exports[`Routes should convert correctly to an array 1`] = `
 Array [
   "/",
-  "/thomson-reuters",
-  "/compass-group",
-  "/bilbary",
-  "/genes-reunited",
-  "/the-national-lottery",
-  "/age-concern",
+  "/alpha",
+  "/beta",
   "/linklog",
   "/404",
 ]
