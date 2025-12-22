@@ -2,7 +2,10 @@
 
 exports[`Project component should render correctly 1`] = `
 <main
+  aria-labelledby="page-title"
   className="Main"
+  id="main"
+  tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
     canonical="https://scottboyle.uk/thomson-reuters/"
@@ -28,7 +31,9 @@ exports[`Project component should render correctly 1`] = `
     title="Scott Boyle | Portfolio | Thomson Reuters"
   />
   <section>
-    <h2>
+    <h2
+      id="page-title"
+    >
       <span
         translate="no"
       >
@@ -104,7 +109,10 @@ Building a design system and React component&nbsp;library.
 
 exports[`Project component should render correctly 2`] = `
 <main
+  aria-labelledby="page-title"
   className="Main"
+  id="main"
+  tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
     canonical="https://scottboyle.uk/compass-group/"
@@ -130,7 +138,9 @@ exports[`Project component should render correctly 2`] = `
     title="Scott Boyle | Portfolio | Compass Group"
   />
   <section>
-    <h2>
+    <h2
+      id="page-title"
+    >
       <span
         translate="no"
       >
@@ -189,7 +199,10 @@ UI design and complete front-end build, Angular NgRx web&nbsp;app.
 
 exports[`Project component should render correctly 3`] = `
 <main
+  aria-labelledby="page-title"
   className="Main"
+  id="main"
+  tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
     canonical="https://scottboyle.uk/bilbary/"
@@ -215,7 +228,9 @@ exports[`Project component should render correctly 3`] = `
     title="Scott Boyle | Portfolio | Bilbary"
   />
   <section>
-    <h2>
+    <h2
+      id="page-title"
+    >
       <span
         translate="no"
       >
@@ -271,7 +286,10 @@ Prototype web e-book reader for digital library startup. Lives on as an open sou
 
 exports[`Project component should render correctly 4`] = `
 <main
+  aria-labelledby="page-title"
   className="Main"
+  id="main"
+  tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
     canonical="https://scottboyle.uk/genes-reunited/"
@@ -297,7 +315,9 @@ exports[`Project component should render correctly 4`] = `
     title="Scott Boyle | Portfolio | Genes Reunited"
   />
   <section>
-    <h2>
+    <h2
+      id="page-title"
+    >
       <span
         translate="no"
       >
@@ -373,7 +393,10 @@ Consulting and advising on a site-wide design refresh. Created indicative templa
 
 exports[`Project component should render correctly 5`] = `
 <main
+  aria-labelledby="page-title"
   className="Main"
+  id="main"
+  tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
     canonical="https://scottboyle.uk/the-national-lottery/"
@@ -399,7 +422,9 @@ exports[`Project component should render correctly 5`] = `
     title="Scott Boyle | Portfolio | The National Lottery"
   />
   <section>
-    <h2>
+    <h2
+      id="page-title"
+    >
       <span
         translate="no"
       >
@@ -447,7 +472,10 @@ Responsible for front-end architecture and all front-end development. Authored c
 
 exports[`Project component should render correctly 6`] = `
 <main
+  aria-labelledby="page-title"
   className="Main"
+  id="main"
+  tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
     canonical="https://scottboyle.uk/age-concern/"
@@ -473,7 +501,9 @@ exports[`Project component should render correctly 6`] = `
     title="Scott Boyle | Portfolio | Age Concern"
   />
   <section>
-    <h2>
+    <h2
+      id="page-title"
+    >
       <span
         translate="no"
       >

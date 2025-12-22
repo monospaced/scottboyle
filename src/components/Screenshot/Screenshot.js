@@ -49,7 +49,11 @@ class Screenshot extends Component {
     );
 
     if (link) {
-      return <a href={link}>{img}</a>;
+      return (
+        <a className="ScreenshotLink" href={link}>
+          {img}
+        </a>
+      );
     }
     return img;
   }

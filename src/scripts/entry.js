@@ -13,6 +13,11 @@ if (typeof document !== "undefined") {
   ReactDOM.hydrate(
     <Router
       onUpdate={() => {
+        const main = document.getElementById("main");
+        if (main) {
+          main.focus();
+        }
+
         if (document.documentElement.clientWidth < 700) {
           window.scrollTo(0, 0);
         }

@@ -4,7 +4,7 @@ import "./Avatar.css";
 
 const Avatar = () => {
   return (
-    <h2 className="Avatar">
+    <h2 className="Avatar" id="page-title">
       <svg
         aria-labelledby="avatar"
         className="Avatar-image photo"

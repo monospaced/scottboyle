@@ -2,7 +2,10 @@
 
 exports[`NotFound component should render correctly 1`] = `
 <main
+  aria-labelledby="page-title"
   className="Main"
+  id="main"
+  tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
     meta={
@@ -15,7 +18,9 @@ exports[`NotFound component should render correctly 1`] = `
     title="Page not found | Scott Boyle | Portfolio"
   />
   <section>
-    <h2>
+    <h2
+      id="page-title"
+    >
       404 
       <small>
         Page not found

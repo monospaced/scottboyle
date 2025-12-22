@@ -2,7 +2,10 @@
 
 exports[`Linklog component should render correctly 1`] = `
 <main
+  aria-labelledby="page-title"
   className="Main"
+  id="main"
+  tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
     canonical="https://scottboyle.uk/linklog/"
@@ -29,6 +32,7 @@ exports[`Linklog component should render correctly 1`] = `
   />
   <section>
     <h2
+      id="page-title"
       translate="no"
     >
       Linklog
@@ -55,7 +59,10 @@ exports[`Linklog component should render correctly 1`] = `
 
 exports[`Linklog component should render feed data correctly 1`] = `
 <main
+  aria-labelledby="page-title"
   className="Main"
+  id="main"
+  tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
     canonical="https://scottboyle.uk/linklog/"
@@ -82,6 +89,7 @@ exports[`Linklog component should render feed data correctly 1`] = `
   />
   <section>
     <h2
+      id="page-title"
       translate="no"
     >
       Linklog

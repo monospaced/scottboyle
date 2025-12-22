@@ -11,7 +11,6 @@ html {
   font-family: theme-font, sans-serif;
   line-height: 1.5;
   scroll-behavior: smooth;
-  text-rendering: optimizeLegibilty;
 }
 
 body {
@@ -28,20 +27,30 @@ section {
 a {
   color: var(--link-color);
   text-decoration: none;
-  text-decoration-skip: ink;
-  transition: color 0.15s;
+}
+
+a:focus {
+  outline: 0;
+}
+
+a:focus-visible {
+  border-radius: 0.125rem;
+  outline: 0.125rem solid var(--theme-color);
+  outline-offset: 0.0625rem;
 }
 
 a:hover {
-  outline: 0;
   text-decoration: underline;
 }
 
 a:active {
   color: var(--theme-color);
-  outline: 0;
   text-decoration: none;
-  transition: none;
+}
+
+a[aria-current="page"] {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 abbr[title] {
