@@ -52,7 +52,13 @@ module.exports = () => {
           options: { name: "[name]" },
         },
         {
+          test: /\/\.well-known\/.*\.txt$/,
+          loader: "file-loader",
+          options: { name: ".well-known/[name].[ext]" },
+        },
+        {
           test: /\.(ico|png|svg|txt|webmanifest|xml)$/,
+          exclude: /\/\.well-known\//,
           loader: "file-loader",
           options: { name: "[name].[ext]" },
         },
