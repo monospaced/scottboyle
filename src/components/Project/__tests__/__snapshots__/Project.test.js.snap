@@ -8,27 +8,27 @@ exports[`Project component should render correctly 1`] = `
   tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
-    canonical="https://scottboyle.uk/thomson-reuters/"
-    description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    canonical="https://example.test/alpha/"
+    description="Short description used in tests."
     meta={
       Object {
         "name": Object {
           "twitter:card": "summary_large_image",
-          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "twitter:image": "https://scottboyle.uk/social.png",
-          "twitter:title": "Scott Boyle | Portfolio | Thomson Reuters",
+          "twitter:description": "Short description used in tests.",
+          "twitter:image": "https://example.test/social.png",
+          "twitter:title": "Test Name | Test Subtitle | Project Alpha",
         },
         "property": Object {
-          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "og:image": "https://scottboyle.uk/social.png",
-          "og:site_name": "Scott Boyle | Portfolio",
-          "og:title": "Scott Boyle | Portfolio | Thomson Reuters",
+          "og:description": "Short description used in tests.",
+          "og:image": "https://example.test/social.png",
+          "og:site_name": "Test Name | Test Subtitle",
+          "og:title": "Test Name | Test Subtitle | Project Alpha",
           "og:type": "article",
-          "og:url": "https://scottboyle.uk/thomson-reuters/",
+          "og:url": "https://example.test/alpha/",
         },
       }
     }
-    title="Scott Boyle | Portfolio | Thomson Reuters"
+    title="Test Name | Test Subtitle | Project Alpha"
   />
   <section>
     <h2
@@ -37,19 +37,19 @@ exports[`Project component should render correctly 1`] = `
       <span
         translate="no"
       >
-        Thomson Reuters
+        Project Alpha
       </span>
        
       <small>
         (
-        2018
+        2024
         )
       </small>
     </h2>
     <div
       dangerouslySetInnerHTML={
         Object {
-          "__html": "<p>Building a design system and React component&nbsp;library.</p>
+          "__html": "<p>Alpha project description.</p>
 ",
         }
       }
@@ -57,8 +57,8 @@ exports[`Project component should render correctly 1`] = `
     <Client
       client={
         Object {
-          "link": "https://monospaced.com",
-          "title": "Monospaced",
+          "link": "https://example.com",
+          "title": "Client Co",
         }
       }
     />
@@ -66,19 +66,19 @@ exports[`Project component should render correctly 1`] = `
       project={
         Object {
           "client": Object {
-            "link": "https://monospaced.com",
-            "title": "Monospaced",
+            "link": "https://example.com",
+            "title": "Client Co",
           },
           "content": "
-Building a design system and React component&nbsp;library.
+Alpha project description.
       ",
-          "date": "2018",
+          "date": "2024",
           "image": Object {
-            "height": 275,
-            "width": 398,
+            "height": 300,
+            "width": 400,
           },
-          "link": "https://www.thomsonreuters.com/en.html",
-          "title": "Thomson Reuters",
+          "link": "https://example.com/alpha",
+          "title": "Project Alpha",
         }
       }
     />
@@ -86,22 +86,22 @@ Building a design system and React component&nbsp;library.
       project={
         Object {
           "client": Object {
-            "link": "https://monospaced.com",
-            "title": "Monospaced",
+            "link": "https://example.com",
+            "title": "Client Co",
           },
           "content": "
-Building a design system and React component&nbsp;library.
+Alpha project description.
       ",
-          "date": "2018",
+          "date": "2024",
           "image": Object {
-            "height": 275,
-            "width": 398,
+            "height": 300,
+            "width": 400,
           },
-          "link": "https://www.thomsonreuters.com/en.html",
-          "title": "Thomson Reuters",
+          "link": "https://example.com/alpha",
+          "title": "Project Alpha",
         }
       }
-      slug="thomson-reuters"
+      slug="alpha"
     />
   </section>
 </main>
@@ -115,27 +115,27 @@ exports[`Project component should render correctly 2`] = `
   tabIndex="-1"
 >
   <SideEffect(DocumentMeta)
-    canonical="https://scottboyle.uk/compass-group/"
-    description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
+    canonical="https://example.test/beta/"
+    description="Short description used in tests."
     meta={
       Object {
         "name": Object {
           "twitter:card": "summary_large_image",
-          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "twitter:image": "https://scottboyle.uk/social.png",
-          "twitter:title": "Scott Boyle | Portfolio | Compass Group",
+          "twitter:description": "Short description used in tests.",
+          "twitter:image": "https://example.test/social.png",
+          "twitter:title": "Test Name | Test Subtitle | Project Beta",
         },
         "property": Object {
-          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "og:image": "https://scottboyle.uk/social.png",
-          "og:site_name": "Scott Boyle | Portfolio",
-          "og:title": "Scott Boyle | Portfolio | Compass Group",
+          "og:description": "Short description used in tests.",
+          "og:image": "https://example.test/social.png",
+          "og:site_name": "Test Name | Test Subtitle",
+          "og:title": "Test Name | Test Subtitle | Project Beta",
           "og:type": "article",
-          "og:url": "https://scottboyle.uk/compass-group/",
+          "og:url": "https://example.test/beta/",
         },
       }
     }
-    title="Scott Boyle | Portfolio | Compass Group"
+    title="Test Name | Test Subtitle | Project Beta"
   />
   <section>
     <h2
@@ -144,304 +144,19 @@ exports[`Project component should render correctly 2`] = `
       <span
         translate="no"
       >
-        Compass Group
+        Project Beta
       </span>
        
       <small>
         (
-        2017
+        2023
         )
       </small>
     </h2>
     <div
       dangerouslySetInnerHTML={
         Object {
-          "__html": "<h3 id=\\"retail-pricing-portal\\">Retail Pricing Portal</h3>
-<p>UI design and complete front-end build, Angular NgRx web&nbsp;app.</p>
-",
-        }
-      }
-    />
-    <Client
-      client={
-        Object {
-          "link": "https://monospaced.com",
-          "title": "Monospaced",
-        }
-      }
-    />
-    <Screenshot
-      project={
-        Object {
-          "client": Object {
-            "link": "https://monospaced.com",
-            "title": "Monospaced",
-          },
-          "content": "
-### Retail Pricing Portal
-
-UI design and complete front-end build, Angular NgRx web&nbsp;app.
-      ",
-          "date": "2017",
-          "image": Object {
-            "height": 244,
-            "width": 398,
-          },
-          "link": "",
-          "title": "Compass Group",
-        }
-      }
-      slug="compass-group"
-    />
-  </section>
-</main>
-`;
-
-exports[`Project component should render correctly 3`] = `
-<main
-  aria-labelledby="page-title"
-  className="Main"
-  id="main"
-  tabIndex="-1"
->
-  <SideEffect(DocumentMeta)
-    canonical="https://scottboyle.uk/bilbary/"
-    description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
-    meta={
-      Object {
-        "name": Object {
-          "twitter:card": "summary_large_image",
-          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "twitter:image": "https://scottboyle.uk/social.png",
-          "twitter:title": "Scott Boyle | Portfolio | Bilbary",
-        },
-        "property": Object {
-          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "og:image": "https://scottboyle.uk/social.png",
-          "og:site_name": "Scott Boyle | Portfolio",
-          "og:title": "Scott Boyle | Portfolio | Bilbary",
-          "og:type": "article",
-          "og:url": "https://scottboyle.uk/bilbary/",
-        },
-      }
-    }
-    title="Scott Boyle | Portfolio | Bilbary"
-  />
-  <section>
-    <h2
-      id="page-title"
-    >
-      <span
-        translate="no"
-      >
-        Bilbary
-      </span>
-       
-      <small>
-        (
-        2012
-        )
-      </small>
-    </h2>
-    <div
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<p>Prototype web e-book reader for digital library startup. Lives on as an open source project:&nbsp;<a href=\\"https://monospaced.github.io/paperback/\\">Paperback</a>.</p>
-",
-        }
-      }
-    />
-    <Client
-      client={
-        Object {
-          "link": "https://profitfromplay.com",
-          "title": "Profit From Play",
-        }
-      }
-    />
-    <Screenshot
-      project={
-        Object {
-          "client": Object {
-            "link": "https://profitfromplay.com",
-            "title": "Profit From Play",
-          },
-          "content": "
-Prototype web e-book reader for digital library startup. Lives on as an open source project:&nbsp;[Paperback](https://monospaced.github.io/paperback/).
-      ",
-          "date": "2012",
-          "image": Object {
-            "height": 190,
-            "width": 199,
-          },
-          "link": "",
-          "title": "Bilbary",
-        }
-      }
-      slug="bilbary"
-    />
-  </section>
-</main>
-`;
-
-exports[`Project component should render correctly 4`] = `
-<main
-  aria-labelledby="page-title"
-  className="Main"
-  id="main"
-  tabIndex="-1"
->
-  <SideEffect(DocumentMeta)
-    canonical="https://scottboyle.uk/genes-reunited/"
-    description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
-    meta={
-      Object {
-        "name": Object {
-          "twitter:card": "summary_large_image",
-          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "twitter:image": "https://scottboyle.uk/social.png",
-          "twitter:title": "Scott Boyle | Portfolio | Genes Reunited",
-        },
-        "property": Object {
-          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "og:image": "https://scottboyle.uk/social.png",
-          "og:site_name": "Scott Boyle | Portfolio",
-          "og:title": "Scott Boyle | Portfolio | Genes Reunited",
-          "og:type": "article",
-          "og:url": "https://scottboyle.uk/genes-reunited/",
-        },
-      }
-    }
-    title="Scott Boyle | Portfolio | Genes Reunited"
-  />
-  <section>
-    <h2
-      id="page-title"
-    >
-      <span
-        translate="no"
-      >
-        Genes Reunited
-      </span>
-       
-      <small>
-        (
-        2012
-        )
-      </small>
-    </h2>
-    <div
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<p>Consulting and advising on a site-wide design refresh. Created indicative templates and assisted with&nbsp;integration.</p>
-",
-        }
-      }
-    />
-    <Client
-      client={
-        Object {
-          "link": "https://profitfromplay.com",
-          "title": "Profit From Play",
-        }
-      }
-    />
-    <Visit
-      project={
-        Object {
-          "client": Object {
-            "link": "https://profitfromplay.com",
-            "title": "Profit From Play",
-          },
-          "content": "
-Consulting and advising on a site-wide design refresh. Created indicative templates and assisted with&nbsp;integration.
-      ",
-          "date": "2012",
-          "image": Object {
-            "height": 143,
-            "width": 199,
-          },
-          "link": "http://genesreunited.co.uk",
-          "title": "Genes Reunited",
-        }
-      }
-    />
-    <Screenshot
-      project={
-        Object {
-          "client": Object {
-            "link": "https://profitfromplay.com",
-            "title": "Profit From Play",
-          },
-          "content": "
-Consulting and advising on a site-wide design refresh. Created indicative templates and assisted with&nbsp;integration.
-      ",
-          "date": "2012",
-          "image": Object {
-            "height": 143,
-            "width": 199,
-          },
-          "link": "http://genesreunited.co.uk",
-          "title": "Genes Reunited",
-        }
-      }
-      slug="genes-reunited"
-    />
-  </section>
-</main>
-`;
-
-exports[`Project component should render correctly 5`] = `
-<main
-  aria-labelledby="page-title"
-  className="Main"
-  id="main"
-  tabIndex="-1"
->
-  <SideEffect(DocumentMeta)
-    canonical="https://scottboyle.uk/the-national-lottery/"
-    description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
-    meta={
-      Object {
-        "name": Object {
-          "twitter:card": "summary_large_image",
-          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "twitter:image": "https://scottboyle.uk/social.png",
-          "twitter:title": "Scott Boyle | Portfolio | The National Lottery",
-        },
-        "property": Object {
-          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "og:image": "https://scottboyle.uk/social.png",
-          "og:site_name": "Scott Boyle | Portfolio",
-          "og:title": "Scott Boyle | Portfolio | The National Lottery",
-          "og:type": "article",
-          "og:url": "https://scottboyle.uk/the-national-lottery/",
-        },
-      }
-    }
-    title="Scott Boyle | Portfolio | The National Lottery"
-  />
-  <section>
-    <h2
-      id="page-title"
-    >
-      <span
-        translate="no"
-      >
-        The National Lottery
-      </span>
-       
-      <small>
-        (
-        2006
-        )
-      </small>
-    </h2>
-    <div
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<p>Technical lead on an accessible Web Standards retrofit of key areas of national-lottery.co.uk, including the Lotto and EuroMillions purchase processes, user registration and account&nbsp;management.</p>
-<p>Responsible for front-end architecture and all front-end development. Authored company Web Accessibility Guidelines, and conducted usability testing with screen-reader&nbsp;users.</p>
+          "__html": "<p>Beta project description.</p>
 ",
         }
       }
@@ -451,110 +166,18 @@ exports[`Project component should render correctly 5`] = `
         Object {
           "client": null,
           "content": "
-Technical lead on an accessible Web Standards retrofit of key areas of national-lottery.co.uk, including the Lotto and EuroMillions purchase processes, user registration and account&nbsp;management.
-
-Responsible for front-end architecture and all front-end development. Authored company Web Accessibility Guidelines, and conducted usability testing with screen-reader&nbsp;users.
+Beta project description.
       ",
-          "date": "2006",
+          "date": "2023",
           "image": Object {
-            "height": 284,
-            "width": 199,
+            "height": 200,
+            "width": 320,
           },
           "link": "",
-          "title": "The National Lottery",
+          "title": "Project Beta",
         }
       }
-      slug="the-national-lottery"
-    />
-  </section>
-</main>
-`;
-
-exports[`Project component should render correctly 6`] = `
-<main
-  aria-labelledby="page-title"
-  className="Main"
-  id="main"
-  tabIndex="-1"
->
-  <SideEffect(DocumentMeta)
-    canonical="https://scottboyle.uk/age-concern/"
-    description="Portfolio for Scott Boyle, freelance web developer based in London, UK."
-    meta={
-      Object {
-        "name": Object {
-          "twitter:card": "summary_large_image",
-          "twitter:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "twitter:image": "https://scottboyle.uk/social.png",
-          "twitter:title": "Scott Boyle | Portfolio | Age Concern",
-        },
-        "property": Object {
-          "og:description": "Portfolio for Scott Boyle, freelance web developer based in London, UK.",
-          "og:image": "https://scottboyle.uk/social.png",
-          "og:site_name": "Scott Boyle | Portfolio",
-          "og:title": "Scott Boyle | Portfolio | Age Concern",
-          "og:type": "article",
-          "og:url": "https://scottboyle.uk/age-concern/",
-        },
-      }
-    }
-    title="Scott Boyle | Portfolio | Age Concern"
-  />
-  <section>
-    <h2
-      id="page-title"
-    >
-      <span
-        translate="no"
-      >
-        Age Concern
-      </span>
-       
-      <small>
-        (
-        2005
-        )
-      </small>
-    </h2>
-    <div
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<h3 id=\\"age-concern-southwark\\">Age Concern Southwark</h3>
-<p>Responsible for designing and developing an accessible <abbr title=\\"Disability Discrimination Act\\">DDA</abbr> compliant website for older&nbsp;users.</p>
-",
-        }
-      }
-    />
-    <Client
-      client={
-        Object {
-          "link": "",
-          "title": "Two Plus Four",
-        }
-      }
-    />
-    <Screenshot
-      project={
-        Object {
-          "client": Object {
-            "link": "",
-            "title": "Two Plus Four",
-          },
-          "content": "
-### Age Concern Southwark
-
-Responsible for designing and developing an accessible <abbr title=\\"Disability Discrimination Act\\">DDA</abbr> compliant website for older&nbsp;users.
-      ",
-          "date": "2005",
-          "image": Object {
-            "height": 305,
-            "width": 199,
-          },
-          "link": "",
-          "title": "Age Concern",
-        }
-      }
-      slug="age-concern"
+      slug="beta"
     />
   </section>
 </main>

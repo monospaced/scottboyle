@@ -31,42 +31,14 @@ exports[`Nav component should render a project as the active item 1`] = `
       <a
         aria-current="page"
       >
-        Thomson Reuters
+        Project Alpha
       </a>
     </li>
     <li
       translate="no"
     >
       <a>
-        Compass Group
-      </a>
-    </li>
-    <li
-      translate="no"
-    >
-      <a>
-        Bilbary
-      </a>
-    </li>
-    <li
-      translate="no"
-    >
-      <a>
-        Genes Reunited
-      </a>
-    </li>
-    <li
-      translate="no"
-    >
-      <a>
-        The National Lottery
-      </a>
-    </li>
-    <li
-      translate="no"
-    >
-      <a>
-        Age Concern
+        Project Beta
       </a>
     </li>
   </ul>
@@ -105,42 +77,14 @@ exports[`Nav component should render correctly 1`] = `
       translate="no"
     >
       <a>
-        Thomson Reuters
+        Project Alpha
       </a>
     </li>
     <li
       translate="no"
     >
       <a>
-        Compass Group
-      </a>
-    </li>
-    <li
-      translate="no"
-    >
-      <a>
-        Bilbary
-      </a>
-    </li>
-    <li
-      translate="no"
-    >
-      <a>
-        Genes Reunited
-      </a>
-    </li>
-    <li
-      translate="no"
-    >
-      <a>
-        The National Lottery
-      </a>
-    </li>
-    <li
-      translate="no"
-    >
-      <a>
-        Age Concern
+        Project Beta
       </a>
     </li>
   </ul>
@@ -181,42 +125,14 @@ exports[`Nav component should render linklog as the active item 1`] = `
       translate="no"
     >
       <a>
-        Thomson Reuters
+        Project Alpha
       </a>
     </li>
     <li
       translate="no"
     >
       <a>
-        Compass Group
-      </a>
-    </li>
-    <li
-      translate="no"
-    >
-      <a>
-        Bilbary
-      </a>
-    </li>
-    <li
-      translate="no"
-    >
-      <a>
-        Genes Reunited
-      </a>
-    </li>
-    <li
-      translate="no"
-    >
-      <a>
-        The National Lottery
-      </a>
-    </li>
-    <li
-      translate="no"
-    >
-      <a>
-        Age Concern
+        Project Beta
       </a>
     </li>
   </ul>
