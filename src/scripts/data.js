@@ -1,7 +1,8 @@
 module.exports = {
   title: "Scott Boyle",
   subtitle: "Portfolio",
-  description: "Portfolio for Scott Boyle, web developer based in London, UK.",
+  description:
+    "Web professional specialising in design engineering and modern front-end development.",
   about: `
 <a class="fn uid url" href="https://scottboyle.uk" translate="no">Scott Boyle</a>&nbsp;(<span translate="no">monospaced</span>) is a <span class="category">web professional</span> <span class="note">specialising in design engineering and modern front-end development</span>.
 
