@@ -7,13 +7,13 @@ module.exports = {
   description:
     "Web professional specialising in design engineering and modern front-end development.",
   about: `
-<a class="fn uid url" href="${url}" translate="no">Scott Boyle</a>&nbsp;(<span translate="no">monospaced</span>) is a <span class="category">web professional</span> <span class="note">specialising in design engineering and modern front-end development</span>.
+<a class="fn uid url" href="${url}" translate="no">Scott Boyle</a>&nbsp;(<span class="nickname" translate="no">monospaced</span>) is a <span class="category">web professional</span> <span class="note">specialising in design engineering and modern front-end development</span>.
 
-<span translate="no">Scott</span>&nbsp;lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and is a director of&nbsp;<span class="vcard"><a class="fn org url" href="https://measured.co" translate="no">Measured</a></span>, a web UI consultancy working with clients from the UK and around the world.
+<span translate="no">Scott</span>&nbsp;lives in <span class="adr"><span class="locality">London</span> <span class="country-name">UK</span></span> and is a director of <a class="org" href="https://measured.co" translate="no">Measured</a> a web UI consultancy working with clients from the UK and around the world.
 
 ### Contact
 
-<a href="mailto:scott@measured.co" class="email">scott@measured.co</a>
+* <a href="mailto:scott@measured.co" class="email">scott@measured.co</a>
 
 ### Elsewhere
 
