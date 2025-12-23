@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Client component should render a link 1`] = `
-<p>
+<p
+  class="Client"
+>
   <strong>
     With:
   </strong>
@@ -16,7 +18,9 @@ exports[`Client component should render a link 1`] = `
 `;
 
 exports[`Client component should render a name 1`] = `
-<p>
+<p
+  class="Client"
+>
   <strong>
     With:
   </strong>

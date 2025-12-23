@@ -33,6 +33,7 @@ section {
 a {
   color: var(--link-color);
   text-decoration: none;
+  text-underline-offset: 0.125rem;
 }
 
 a:focus {
@@ -56,6 +57,15 @@ a:active {
 
 a[aria-current="page"] {
   color: var(--text-color);
+  text-decoration: none;
+}
+
+p:not([class]) a {
+  text-decoration: underline;
+}
+
+p:not([class]) a:hover,
+p:not([class]) a:focus-visible {
   text-decoration: none;
 }
 

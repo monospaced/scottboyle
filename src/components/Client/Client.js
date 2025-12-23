@@ -2,7 +2,7 @@ import React from "react";
 
 const Client = ({ client: { link, title } }) => {
   return title ? (
-    <p>
+    <p className="Client">
       <strong>With:</strong>{" "}
       {!link ? (
         <span translate="no">{title}</span>
