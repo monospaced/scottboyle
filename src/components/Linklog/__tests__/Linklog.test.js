@@ -18,8 +18,8 @@ describe("Linklog component", () => {
 
   beforeEach(() => {
     fetchMock = jest.fn().mockResolvedValue({
-      ok: true,
       json: () => Promise.resolve(feed),
+      ok: true,
     });
     global.fetch = fetchMock;
   });
@@ -53,19 +53,19 @@ describe("Linklog component", () => {
     component.setState({
       links: [
         {
-          u: "/relative",
           d: "Relative link",
           dt: "2018-04-05T21:20:55Z",
+          u: "/relative",
         },
         {
-          u: "javascript:alert(1)",
           d: "Bad link",
           dt: "2018-04-06T21:20:55Z",
+          u: "javascript:alert(1)",
         },
         {
-          u: "https://example.com",
           d: "Good link",
           dt: "2018-04-07T21:20:55Z",
+          u: "https://example.com",
         },
       ],
     });
@@ -100,8 +100,8 @@ describe("Linklog component", () => {
 
   it("should ignore non-array responses", async () => {
     fetchMock.mockResolvedValueOnce({
-      ok: true,
       json: () => Promise.resolve({ items: feed }),
+      ok: true,
     });
     const component = shallow(<Linklog {...props} />);
     await flushPromises();
@@ -121,8 +121,8 @@ describe("Linklog component", () => {
 
   it("should keep links empty when response is not ok", async () => {
     fetchMock.mockResolvedValueOnce({
-      ok: false,
       json: jest.fn(),
+      ok: false,
     });
     const component = shallow(<Linklog {...props} />);
     await flushPromises();
