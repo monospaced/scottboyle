@@ -48,9 +48,9 @@ const Head = ({ meta }) => {
       <meta name="viewport" content="width=device-width" />
       <link
         rel="alternate"
-        type="application/rss+xml"
-        title="Pinboard (monospaced)"
         href="https://feeds.pinboard.in/rss/secret:408c7b80a1d865c97e0a/u:monospaced/"
+        title="Pinboard (monospaced)"
+        type="application/rss+xml"
       />
       <link rel="icon" href="/favicon.ico" sizes="32x32" />
       <link rel="icon" href="/icon.svg" type="image/svg+xml" />
@@ -62,8 +62,8 @@ const Head = ({ meta }) => {
       <link rel="manifest" href="/manifest.webmanifest" />
       <link rel="stylesheet" href={`/styles.css?v=${version}`} />
       <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        type="application/ld+json"
       />
     </head>
   );
