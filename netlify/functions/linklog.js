@@ -1,9 +1,4 @@
-const MAX_LINKS = 20;
-const S_MAX_AGE = 300;
-
-const FEED_URL =
-  process.env.PINBOARD_FEED_URL ||
-  `https://feeds.pinboard.in/json/v1/u:monospaced/?count=${MAX_LINKS}`;
+const { FEED_URL, MAX_AGE, MAX_LINKS } = require("./linklog-config");
 
 const parseAllowedOrigins = value =>
   value
@@ -35,9 +30,9 @@ exports.handler = async event => {
 
     if (!res.ok) {
       return {
-        statusCode: res.status,
-        headers: corsHeaders,
         body: res.statusText,
+        headers: corsHeaders,
+        statusCode: res.status,
       };
     }
 
@@ -45,22 +40,22 @@ exports.handler = async event => {
     const links = Array.isArray(json) ? json.slice(0, MAX_LINKS) : json;
 
     return {
-      statusCode: 200,
+      body: JSON.stringify(links),
       headers: {
         ...corsHeaders,
+        "Cache-Control": `public, max-age=0, s-maxage=${MAX_AGE}`,
         "Content-Type": "application/json",
-        "Cache-Control": `public, max-age=0, s-maxage=${S_MAX_AGE}`,
       },
-      body: JSON.stringify(links),
+      statusCode: 200,
     };
   } catch (err) {
     return {
-      statusCode: 500,
-      headers: corsHeaders,
       body: JSON.stringify({
         error: "Failed to fetch feed",
         message: err.message,
       }),
+      headers: corsHeaders,
+      statusCode: 500,
     };
   }
 };

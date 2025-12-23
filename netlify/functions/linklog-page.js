@@ -3,12 +3,7 @@ const path = require("path");
 
 const { safeHref } = require("../../src/scripts/href");
 
-const MAX_LINKS = 20;
-const S_MAX_AGE = 300;
-
-const FEED_URL =
-  process.env.PINBOARD_FEED_URL ||
-  `https://feeds.pinboard.in/json/v1/u:monospaced/?count=${MAX_LINKS}`;
+const { FEED_URL, MAX_AGE, MAX_LINKS } = require("./linklog-config");
 
 const fallbackLinks = [];
 
@@ -75,9 +70,9 @@ exports.handler = async () => {
     template = fs.readFileSync(templatePath, "utf8");
   } catch (err) {
     return {
-      statusCode: 500,
-      headers: { "Content-Type": "text/plain; charset=utf-8" },
       body: "Missing Linklog template. Run the build to generate it.",
+      headers: { "Content-Type": "text/plain; charset=utf-8" },
+      statusCode: 500,
     };
   }
 
@@ -94,21 +89,21 @@ exports.handler = async () => {
       : fallbackLinks;
 
     return {
-      statusCode: 200,
-      headers: {
-        "Content-Type": "text/html; charset=utf-8",
-        "Cache-Control": `public, max-age=0, s-maxage=${S_MAX_AGE}`,
-      },
       body: injectLinks(template, links),
+      headers: {
+        "Cache-Control": `public, max-age=0, s-maxage=${MAX_AGE}`,
+        "Content-Type": "text/html; charset=utf-8",
+      },
+      statusCode: 200,
     };
   } catch (err) {
     return {
-      statusCode: 200,
-      headers: {
-        "Content-Type": "text/html; charset=utf-8",
-        "Cache-Control": `public, max-age=0, s-maxage=${S_MAX_AGE}`,
-      },
       body: template,
+      headers: {
+        "Cache-Control": `public, max-age=0, s-maxage=${MAX_AGE}`,
+        "Content-Type": "text/html; charset=utf-8",
+      },
+      statusCode: 200,
     };
   }
 };
