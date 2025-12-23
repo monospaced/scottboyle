@@ -21,6 +21,13 @@
   inline-size: 100%;
 }
 
+@media (prefers-color-scheme: dark) {
+  .Screenshot.is-loaded .Screenshot-shim,
+  .no-js .Screenshot .Screenshot-shim {
+    outline: 0.75rem solid #1c1c1c;
+  }
+}
+
 .Screenshot.is-loaded,
 .no-js .Screenshot {
   border-color: transparent;
