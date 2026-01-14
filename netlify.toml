@@ -7,6 +7,24 @@
   included_files = ["netlify/functions/templates/**"]
 
 [[redirects]]
+  from = "http://www.scottboyle.uk/*"
+  to = "https://scottboyle.uk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://scottboyle.uk/*"
+  to = "https://scottboyle.uk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.scottboyle.uk/*"
+  to = "https://scottboyle.uk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200

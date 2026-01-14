@@ -21,7 +21,7 @@ const Nav = ({ projects, routes }) => {
 
           return (
             <li key={key} translate="no">
-              <Link to={`/${key}`} aria-current={path === key ? "page" : null}>
+              <Link to={`/${key}/`} aria-current={path === key ? "page" : null}>
                 {title}
               </Link>
             </li>
