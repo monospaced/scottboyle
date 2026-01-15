@@ -19,7 +19,31 @@
   force = true
 
 [[redirects]]
+  from = "http://www.scottboyle.co.uk/*"
+  to = "https://scottboyle.uk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://scottboyle.co.uk/*"
+  to = "https://scottboyle.uk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://www.scottboyle.uk/*"
+  to = "https://scottboyle.uk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.scottboyle.co.uk/*"
+  to = "https://scottboyle.uk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://scottboyle.co.uk/*"
   to = "https://scottboyle.uk/:splat"
   status = 301
   force = true
