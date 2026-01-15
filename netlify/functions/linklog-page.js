@@ -157,7 +157,7 @@ exports.handler = async event => {
     return {
       body: injectData(injectError(template), { error: true }),
       headers: {
-        "Cache-Control": `public, max-age=0, s-maxage=${MAX_AGE_S}`,
+        "Cache-Control": "no-store",
         "Content-Type": "text/html; charset=utf-8",
       },
       statusCode: 200,

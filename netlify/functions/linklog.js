@@ -44,6 +44,7 @@ exports.handler = async event => {
         }),
         headers: {
           ...corsHeaders,
+          "Cache-Control": "no-store",
           "Content-Type": "application/json",
         },
         statusCode: res.status,
@@ -77,7 +78,11 @@ exports.handler = async event => {
         error: "Failed to fetch feed",
         message: err.message,
       }),
-      headers: corsHeaders,
+      headers: {
+        ...corsHeaders,
+        "Cache-Control": "no-store",
+        "Content-Type": "application/json",
+      },
       statusCode: 500,
     };
   }
