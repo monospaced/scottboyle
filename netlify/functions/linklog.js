@@ -1,4 +1,12 @@
-const { FEED_URL, MAX_AGE, MAX_LINKS } = require("./linklog-config");
+const { fetchWithTimeout } = require("../../src/scripts/fetch");
+
+const {
+  FETCH_TIMEOUT_MS,
+  FEED_URL,
+  MAX_AGE_S,
+  MAX_LINKS,
+  USER_AGENT,
+} = require("./linklog-config");
 
 const parseAllowedOrigins = value =>
   value
@@ -26,24 +34,39 @@ exports.handler = async event => {
   const corsHeaders = corsHeadersFor(origin);
 
   try {
-    const res = await fetch(FEED_URL);
+    const res = await fetchWithTimeout(FEED_URL, FETCH_TIMEOUT_MS, USER_AGENT);
 
     if (!res.ok) {
       return {
-        body: res.statusText,
-        headers: corsHeaders,
+        body: JSON.stringify({
+          error: "Failed to fetch feed",
+          message: res.statusText,
+        }),
+        headers: {
+          ...corsHeaders,
+          "Content-Type": "application/json",
+        },
         statusCode: res.status,
       };
     }
 
     const json = await res.json();
-    const links = Array.isArray(json) ? json.slice(0, MAX_LINKS) : json;
+
+    if (!Array.isArray(json)) {
+      throw new Error("Expected JSON array");
+    }
+
+    if (json.length === 0) {
+      throw new Error("Expected non-empty JSON array");
+    }
+
+    const links = json.slice(0, MAX_LINKS);
 
     return {
       body: JSON.stringify(links),
       headers: {
         ...corsHeaders,
-        "Cache-Control": `public, max-age=0, s-maxage=${MAX_AGE}`,
+        "Cache-Control": `public, max-age=0, s-maxage=${MAX_AGE_S}`,
         "Content-Type": "application/json",
       },
       statusCode: 200,

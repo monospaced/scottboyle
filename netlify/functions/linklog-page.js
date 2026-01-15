@@ -1,11 +1,16 @@
 const fs = require("fs");
 const path = require("path");
 
+const { linklogErrorMessage } = require("../../src/scripts/data");
+const { fetchWithTimeout } = require("../../src/scripts/fetch");
 const { safeHref } = require("../../src/scripts/href");
 
-const { FEED_URL, MAX_AGE, MAX_LINKS } = require("./linklog-config");
-
-const fallbackLinks = [];
+const {
+  FETCH_TIMEOUT_MS,
+  MAX_AGE_S,
+  MAX_LINKS,
+  USER_AGENT,
+} = require("./linklog-config");
 
 const escapeHtml = value =>
   String(value)
@@ -52,7 +57,39 @@ const renderLinks = links => {
   return `<ul>${items}</ul>`;
 };
 
+const resolveBaseUrl = event => {
+  if (event && event.headers) {
+    const host = event.headers.host;
+
+    if (host) {
+      const forwardedProto = event.headers["x-forwarded-proto"];
+
+      const protocol =
+        forwardedProto ||
+        (host.startsWith("localhost") || host.startsWith("127.0.0.1")
+          ? "http"
+          : "https");
+
+      return `${protocol}://${host}`;
+    }
+  }
+
+  return (
+    process.env.URL || process.env.DEPLOY_URL || process.env.SITE_URL || ""
+  );
+};
+
 const templatePath = path.join(__dirname, "templates", "linklog.html");
+
+const injectData = (html, payload) => {
+  const json = JSON.stringify(payload)
+    .replace(/</g, "\\u003c")
+    .replace(/\u2028/g, "\\u2028")
+    .replace(/\u2029/g, "\\u2029");
+  const script = `<script id="linklog-data" type="application/json">${json}</script>`;
+
+  return html.replace(/<\/body>/, `${script}</body>`);
+};
 
 const injectLinks = (html, links) => {
   const replacement = `<div data-linklog-list>${renderLinks(links)}</div>`;
@@ -63,7 +100,13 @@ const injectLinks = (html, links) => {
   );
 };
 
-exports.handler = async () => {
+const injectError = html =>
+  html.replace(
+    /<div[^>]*data-linklog-list(?:="[^"]*")?[^>]*>[\s\S]*?<\/div>/,
+    `<div data-linklog-list>${linklogErrorMessage}</div>`,
+  );
+
+exports.handler = async event => {
   let template;
 
   try {
@@ -77,30 +120,44 @@ exports.handler = async () => {
   }
 
   try {
-    const res = await fetch(FEED_URL);
+    const baseUrl = resolveBaseUrl(event);
+    const apiUrl = baseUrl ? `${baseUrl}/api/linklog` : "";
+
+    if (!apiUrl) {
+      throw new Error("Missing base URL for /api/linklog");
+    }
+
+    const res = await fetchWithTimeout(apiUrl, FETCH_TIMEOUT_MS, USER_AGENT);
 
     if (!res.ok) {
       throw new Error(`HTTP ${res.status}`);
     }
 
     const json = await res.json();
-    const links = Array.isArray(json)
-      ? json.slice(0, MAX_LINKS)
-      : fallbackLinks;
+
+    if (!Array.isArray(json)) {
+      throw new Error("Expected JSON array");
+    }
+
+    if (json.length === 0) {
+      throw new Error("Expected non-empty JSON array");
+    }
+
+    const links = json.slice(0, MAX_LINKS);
 
     return {
-      body: injectLinks(template, links),
+      body: injectData(injectLinks(template, links), links),
       headers: {
-        "Cache-Control": `public, max-age=0, s-maxage=${MAX_AGE}`,
+        "Cache-Control": `public, max-age=0, s-maxage=${MAX_AGE_S}`,
         "Content-Type": "text/html; charset=utf-8",
       },
       statusCode: 200,
     };
   } catch (err) {
     return {
-      body: template,
+      body: injectData(injectError(template), { error: true }),
       headers: {
-        "Cache-Control": `public, max-age=0, s-maxage=${MAX_AGE}`,
+        "Cache-Control": `public, max-age=0, s-maxage=${MAX_AGE_S}`,
         "Content-Type": "text/html; charset=utf-8",
       },
       statusCode: 200,

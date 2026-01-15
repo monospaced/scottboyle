@@ -20,6 +20,7 @@ module.exports = {
 * <a href="https://github.com/monospaced" rel="me" translate="no">GitHub</a>
 * <a href="https://www.linkedin.com/in/scottboyle/" rel="me" translate="no">LinkedIn</a>
   `,
+  linklogErrorMessage: "Unable to load linklog.",
   projects: {
     hilton: {
       title: "Hilton",
