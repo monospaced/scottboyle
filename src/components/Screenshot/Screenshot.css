@@ -44,8 +44,8 @@
   outline: 0;
 }
 
-.ScreenshotLink:focus-visible .Screenshot {
+.ScreenshotLink:focus-visible .Screenshot-image {
   border-radius: 0.125rem;
   outline: 0.125rem solid var(--theme-color);
-  outline-offset: 0.0625rem;
+  outline-offset: 0.125rem;
 }
