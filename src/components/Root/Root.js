@@ -1,6 +1,5 @@
 import React from "react";
 
-import "../../assets/_redirects";
 import "./Root.css";
 import Head from "../Head/Head";
 import { version } from "../../../package.json";
