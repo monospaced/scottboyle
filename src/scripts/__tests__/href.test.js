@@ -16,4 +16,21 @@ describe("safeHref", () => {
   it("returns null for invalid URLs", () => {
     expect(safeHref("not a url")).toBeNull();
   });
+
+  it("returns null for empty values", () => {
+    expect(safeHref("")).toBeNull();
+    expect(safeHref()).toBeNull();
+  });
+
+  it("falls back when URL is unavailable", () => {
+    const realURL = global.URL;
+    global.URL = undefined;
+
+    expect(safeHref("https://example.com/path")).toBe(
+      "https://example.com/path",
+    );
+    expect(safeHref("ftp://example.com")).toBeNull();
+
+    global.URL = realURL;
+  });
 });
