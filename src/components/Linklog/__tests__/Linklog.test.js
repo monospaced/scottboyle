@@ -9,6 +9,13 @@ describe("Linklog component", () => {
   const { description, subtitle, title, url } = data;
   const props = { data: { description, subtitle, title, url } };
   const flushPromises = () => new Promise(resolve => setImmediate(resolve));
+  const appendEmbeddedData = payload => {
+    const script = document.createElement("script");
+    script.id = "linklog-data";
+    script.type = "application/json";
+    script.textContent = JSON.stringify(payload);
+    document.body.appendChild(script);
+  };
 
   let fetchMock;
 
@@ -26,6 +33,12 @@ describe("Linklog component", () => {
 
   afterEach(() => {
     delete global.fetch;
+    if (typeof document !== "undefined") {
+      const embedded = document.getElementById("linklog-data");
+      if (embedded) {
+        embedded.remove();
+      }
+    }
   });
 
   it("should render correctly", () => {
@@ -110,6 +123,18 @@ describe("Linklog component", () => {
     expect(component.state("status")).toEqual("error");
   });
 
+  it("should treat empty array responses as errors", async () => {
+    fetchMock.mockResolvedValueOnce({
+      json: () => Promise.resolve([]),
+      ok: true,
+    });
+    const component = shallow(<Linklog {...props} />);
+    await flushPromises();
+
+    expect(component.state("links")).toEqual([]);
+    expect(component.state("status")).toEqual("error");
+  });
+
   it("should keep links empty on fetch failure", async () => {
     fetchMock.mockRejectedValueOnce(new Error("fail"));
     const component = shallow(<Linklog {...props} />);
@@ -137,5 +162,98 @@ describe("Linklog component", () => {
 
     expect(component.state("links")).toEqual([]);
     expect(component.state("status")).toEqual("error");
+  });
+
+  it("hydrates from embedded linklog data", () => {
+    appendEmbeddedData(feed);
+    const component = shallow(<Linklog {...props} />, {
+      disableLifecycleMethods: true,
+    });
+
+    expect(component.state("links")).toEqual(feed);
+    expect(component.state("status")).toEqual("loaded");
+    expect(document.getElementById("linklog-data")).toBeNull();
+  });
+
+  it("ignores embedded payloads that are not arrays or errors", () => {
+    appendEmbeddedData({ foo: "bar" });
+    const component = shallow(<Linklog {...props} />, {
+      disableLifecycleMethods: true,
+    });
+
+    expect(component.state("links")).toEqual([]);
+    expect(component.state("status")).toEqual("loading");
+    expect(document.getElementById("linklog-data")).toBeNull();
+  });
+
+  it("hydrates to error state from embedded error data", () => {
+    appendEmbeddedData({ error: true });
+    const component = shallow(<Linklog {...props} />, {
+      disableLifecycleMethods: true,
+    });
+
+    expect(component.state("links")).toEqual([]);
+    expect(component.state("status")).toEqual("error");
+    expect(document.getElementById("linklog-data")).toBeNull();
+  });
+
+  it("treats embedded empty arrays as errors", () => {
+    appendEmbeddedData([]);
+    const component = shallow(<Linklog {...props} />, {
+      disableLifecycleMethods: true,
+    });
+
+    expect(component.state("links")).toEqual([]);
+    expect(component.state("status")).toEqual("error");
+  });
+
+  it("skips fetching when hydrated with links", () => {
+    appendEmbeddedData(feed);
+    const component = shallow(<Linklog {...props} />, {
+      disableLifecycleMethods: true,
+    });
+
+    component.instance().componentDidMount();
+
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it("ignores embedded data when document is unavailable", () => {
+    const realDocumentDescriptor = Object.getOwnPropertyDescriptor(
+      global,
+      "document",
+    );
+    Object.defineProperty(global, "document", {
+      configurable: true,
+      get: () => undefined,
+    });
+
+    const component = shallow(<Linklog {...props} />, {
+      disableLifecycleMethods: true,
+    });
+
+    expect(component.state("links")).toEqual([]);
+    expect(component.state("status")).toEqual("loading");
+
+    if (realDocumentDescriptor) {
+      Object.defineProperty(global, "document", realDocumentDescriptor);
+    } else {
+      delete global.document;
+    }
+  });
+
+  it("ignores embedded data when JSON is invalid", () => {
+    const script = document.createElement("script");
+    script.id = "linklog-data";
+    script.type = "application/json";
+    script.textContent = "{not-json";
+    document.body.appendChild(script);
+    const component = shallow(<Linklog {...props} />, {
+      disableLifecycleMethods: true,
+    });
+
+    expect(component.state("links")).toEqual([]);
+    expect(component.state("status")).toEqual("loading");
+    expect(document.getElementById("linklog-data")).toBeNull();
   });
 });

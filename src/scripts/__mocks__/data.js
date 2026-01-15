@@ -3,6 +3,7 @@ const data = {
   title: "Test Name",
   subtitle: "Test Subtitle",
   description: "Short description used in tests.",
+  linklogErrorMessage: "Linklog error message.",
   about: `
 Test bio for mocks.
 

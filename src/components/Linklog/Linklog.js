@@ -11,15 +11,60 @@ import "./Linklog.css";
 
 const api = "/api/linklog";
 
+const getEmbeddedState = () => {
+  if (typeof document === "undefined") {
+    return null;
+  }
+
+  const node = document.getElementById("linklog-data");
+
+  if (!node || !node.textContent) {
+    return null;
+  }
+
+  try {
+    const json = JSON.parse(node.textContent);
+
+    node.remove();
+
+    if (Array.isArray(json)) {
+      if (json.length === 0) {
+        return { links: [], status: "error" };
+      }
+
+      return { links: json, status: "loaded" };
+    }
+
+    if (json && json.error) {
+      return { links: [], status: "error" };
+    }
+
+    return null;
+  } catch (err) {
+    node.remove();
+    return null;
+  }
+};
+
 class Linklog extends Component {
   constructor(props) {
     super(props);
-    this.state = { links: [], status: "loading" };
+
+    const embeddedState = getEmbeddedState();
+
+    this.hasEmbeddedLinks = Boolean(
+      embeddedState && embeddedState.status === "loaded",
+    );
+
+    this.state = embeddedState || {
+      links: [],
+      status: "loading",
+    };
   }
 
   render() {
     const {
-      data: { description, subtitle, title, url },
+      data: { description, linklogErrorMessage, subtitle, title, url },
     } = this.props;
     const { links, status } = this.state;
     const hasLinks = Array.isArray(links) && links.length > 0;
@@ -47,7 +92,7 @@ class Linklog extends Component {
         </ul>
       );
     } else if (showError) {
-      content = "Unable to load linklog.";
+      content = linklogErrorMessage;
     } else if (showLoading) {
       content = "Loading…";
     }
@@ -100,11 +145,17 @@ class Linklog extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
 
+    if (this.hasEmbeddedLinks) {
+      return;
+    }
+
     if (typeof fetch !== "function") {
       this.setState({ status: "error" });
 
       return;
     }
+
+    this.setState({ status: "loading" });
 
     fetch(api)
       .then(res => {
@@ -116,6 +167,12 @@ class Linklog extends Component {
       })
       .then(json => {
         if (Array.isArray(json)) {
+          if (json.length === 0) {
+            this.setState({ status: "error" });
+
+            return;
+          }
+
           this.setState({ links: json, status: "loaded" });
 
           return;
