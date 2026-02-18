@@ -15,4 +15,18 @@ describe("Head component", () => {
     expect(html).toContain('href="/manifest.webmanifest"');
     expect(html).toContain('href="/styles.css?v=0.0.0"');
   });
+
+  it("renders provided helmet tags", () => {
+    const helmet = {
+      link: { toComponent: () => <link rel="canonical" href={`${data.url}/`} /> },
+      meta: { toComponent: () => <meta name="description" content={data.description} /> },
+      title: { toComponent: () => <title>{data.title}</title> },
+    };
+
+    const html = renderToStaticMarkup(<Head helmet={helmet} />);
+
+    expect(html).toContain(`<title>${data.title}</title>`);
+    expect(html).toContain(`content="${data.description}"`);
+    expect(html).toContain(`href="${data.url}/"`);
+  });
 });
