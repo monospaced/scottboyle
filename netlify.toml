@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build && yarn postbuild"
+  command = "pnpm build && pnpm postbuild"
   publish = "build"
   functions = "netlify/functions"
 
