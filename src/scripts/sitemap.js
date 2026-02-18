@@ -59,8 +59,9 @@ const buildSitemap = (routes = []) => {
 
 /* istanbul ignore next */
 if (require.main === module) {
-  require("babel-core/register")({
-    presets: ["env", "react"],
+  require("@babel/register")({
+    presets: ["@babel/preset-env", "@babel/preset-react"],
+    plugins: ["@babel/plugin-transform-object-rest-spread"],
   });
 
   const ignoreExtensions = [
@@ -79,7 +80,8 @@ if (require.main === module) {
     require.extensions[ext] = () => {};
   });
 
-  const routes = require("./routes");
+  const routesModule = require("./routes");
+  const routes = routesModule.default || routesModule;
   const { outputPath } = buildSitemap(routes);
   console.log(`Wrote sitemap to ${outputPath}`);
 }
