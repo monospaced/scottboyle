@@ -16,7 +16,7 @@
     "babel-jest": "^30.2.0",
     "babel-loader": "^8.4.1",
     "caniuse-lite": "^1.0.30000697",
-    "core-js": "^2.5.5",
+    "core-js": "^3.0.0",
     "coveralls": "^3.0.0",
     "css-loader": "^7.1.4",
     "css-minimizer-webpack-plugin": "^7.0.4",
