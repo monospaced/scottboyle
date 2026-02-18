@@ -57,19 +57,16 @@ describe("sitemap generator", () => {
     expect(normalizePath()).toBe("/");
   });
 
-  it("uses routerToArray when routes are not an array", () => {
+  it("uses routePaths when routes are provided as an object", () => {
     jest.resetModules();
-    const routerToArray = jest.fn().mockReturnValue(["/linklog"]);
-    jest.doMock("react-router-to-array", () => routerToArray);
     const mkdirSync = jest.spyOn(fs, "mkdirSync").mockImplementation(() => {});
     const writeFileSync = jest
       .spyOn(fs, "writeFileSync")
       .mockImplementation(() => {});
 
     const { buildSitemap: buildSitemapWithMock } = require("../sitemap");
-    const result = buildSitemapWithMock({});
+    const result = buildSitemapWithMock({ routePaths: ["/linklog"] });
 
-    expect(routerToArray).toHaveBeenCalledWith({});
     expect(result.urls).toEqual(["https://scottboyle.uk/linklog/"]);
     expect(mkdirSync).toHaveBeenCalledWith(path.dirname(result.outputPath), {
       recursive: true,
@@ -82,7 +79,6 @@ describe("sitemap generator", () => {
 
     mkdirSync.mockRestore();
     writeFileSync.mockRestore();
-    jest.dontMock("react-router-to-array");
     jest.resetModules();
   });
 

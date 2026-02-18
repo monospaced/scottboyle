@@ -43,6 +43,10 @@ Sandbox issues prevent pnpm install, so when you need to do that, ask me and I w
 
 ## Phase 2: Router Modernization
 
+### Status
+
+- Completed on February 18, 2026.
+
 ### Why second
 
 - `react-router@3` is a major legacy boundary and affects app structure.
@@ -53,12 +57,15 @@ Sandbox issues prevent pnpm install, so when you need to do that, ask me and I w
 - Migrate route definitions from v3 patterns to modern React Router APIs.
 - Update `Link`/`IndexLink` usage and route rendering in app entry/SSR flow.
 - Revalidate redirects/trailing-slash behavior currently handled in routes.
+- Replace `react-router-to-array` usage with explicit static `routePaths` exports.
+- Keep webpack 4 compatibility by transpiling modern router package syntax via `babel-loader` include exceptions.
 
 ### Exit criteria
 
 - Router dependency upgraded from v3 to a current supported version.
 - Route behavior parity validated (including trailing slash behavior).
 - Test suite green with updated route tests.
+- `build` passes with modern router + SSR output.
 
 ## Phase 3: Build Pipeline Modernization
 
@@ -130,4 +137,4 @@ Sandbox issues prevent pnpm install, so when you need to do that, ask me and I w
 
 ## Immediate Next Action
 
-- Start Phase 2 by introducing a modern router entry path in parallel with existing route behavior tests.
+- Start Phase 3 by upgrading webpack and removing compatibility exceptions added for modern router syntax.

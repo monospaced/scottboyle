@@ -7,15 +7,15 @@ jest.mock("../../Header/Header", () => ({ subtitle, title }) => (
   <div data-testid="header">{`${title}|${subtitle}`}</div>
 ));
 
-jest.mock("../../Nav/Nav", () => ({ projects, routes }) => (
-  <div data-testid="nav">{`${Object.keys(projects).length}|${routes.length}`}</div>
+jest.mock("../../Nav/Nav", () => ({ currentPath, projects }) => (
+  <div data-testid="nav">{`${Object.keys(projects).length}|${currentPath}`}</div>
 ));
 
 describe("App component", () => {
   it("renders header, child route content, and nav", () => {
     const props = {
-      route: { data: { subtitle: "Subtitle", title: "Title", projects: { alpha: {} } } },
-      routes: [{ path: "" }],
+      currentPath: "alpha",
+      data: { subtitle: "Subtitle", title: "Title", projects: { alpha: {} } },
     };
 
     const Child = ({ data }) => <main data-testid="child">{data.title}</main>;
@@ -28,6 +28,6 @@ describe("App component", () => {
 
     expect(screen.getByTestId("header").textContent).toBe("Title|Subtitle");
     expect(screen.getByTestId("child").textContent).toBe("Title");
-    expect(screen.getByTestId("nav").textContent).toBe("1|1");
+    expect(screen.getByTestId("nav").textContent).toBe("1|alpha");
   });
 });

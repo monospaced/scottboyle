@@ -1,16 +1,14 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import React from "react";
 
 import "./Nav.css";
 
-const Nav = ({ projects, routes }) => {
-  const path = routes[routes.length - 1].path;
-
+const Nav = ({ currentPath, projects }) => {
   return (
     <nav className="Nav">
       <h2 className="Nav-heading">Blog</h2>
       <p className="Nav-linklog" translate="no">
-        <Link to={`/linklog/`} aria-current={path === "linklog" ? "page" : null}>
+        <Link to="/linklog/" aria-current={currentPath === "linklog" ? "page" : null}>
           Linklog
         </Link>
       </p>
@@ -21,7 +19,7 @@ const Nav = ({ projects, routes }) => {
 
           return (
             <li key={key} translate="no">
-              <Link to={`/${key}/`} aria-current={path === key ? "page" : null}>
+              <Link to={`/${key}/`} aria-current={currentPath === key ? "page" : null}>
                 {title}
               </Link>
             </li>

@@ -11,11 +11,11 @@ describe("Project component", () => {
   it("renders each project with expected content", () => {
     const props = {
       data: { description, projects, subtitle, title, url },
-      route: {},
+      path: "",
     };
 
     Object.keys(projects).forEach(key => {
-      props.route.path = key;
+      props.path = key;
       const { client, content, link, title: projectTitle } = projects[key];
 
       const { unmount } = render(

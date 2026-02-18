@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const ReactRouterToArray = require("react-router-to-array");
 
 const { url: siteUrl } = require("./data");
 
@@ -39,7 +38,9 @@ const buildSitemap = (routes = []) => {
   );
   const routesArray = Array.isArray(routes)
     ? routes
-    : ReactRouterToArray(routes);
+    : Array.isArray(routes.routePaths)
+      ? routes.routePaths
+      : [];
   const urls = unique(routesArray.filter(isPublicRoute).map(normalizePath)).map(
     routePath => `${normalizedSiteUrl}${routePath}`,
   );
@@ -81,7 +82,7 @@ if (require.main === module) {
   });
 
   const routesModule = require("./routes");
-  const routes = routesModule.default || routesModule;
+  const routes = routesModule.routePaths || routesModule.default || routesModule;
   const { outputPath } = buildSitemap(routes);
   console.log(`Wrote sitemap to ${outputPath}`);
 }

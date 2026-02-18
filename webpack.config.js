@@ -1,4 +1,3 @@
-const ReactRouterToArray = require("react-router-to-array");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const StaticSiteGeneratorPlugin = require("static-site-generator-webpack-plugin");
@@ -20,9 +19,9 @@ module.exports = () => {
   crypto.createHash = algorithm =>
     cryptoOrigCreateHash(algorithm === "md4" ? "sha256" : algorithm);
 
-  // Routes array is required in config.plugins
+  // Route list is required in config.plugins
   const routesModule = require("./src/scripts/routes");
-  const routes = ReactRouterToArray(routesModule.default || routesModule);
+  const routes = routesModule.routePaths;
 
   const config = {
     devServer: { historyApiFallback: true, inline: false, stats: "minimal" },
@@ -30,8 +29,10 @@ module.exports = () => {
     module: {
       rules: [
         {
-          test: /\.js$/,
-          exclude: /node_modules/,
+          test: /\.m?js$/,
+          exclude: filePath =>
+            /node_modules/.test(filePath) &&
+            !/react-router-dom|react-router|@remix-run[\\/]router/.test(filePath),
           loader: "babel-loader",
           options: {
             presets: ["@babel/preset-env", "@babel/preset-react"],
