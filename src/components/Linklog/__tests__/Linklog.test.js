@@ -219,4 +219,31 @@ describe("Linklog component", () => {
     expect(screen.getByText("Loading…")).toBeTruthy();
     expect(document.getElementById("linklog-data")).toBeNull();
   });
+
+  it("shows embedded empty-array payload as error without fetching", () => {
+    appendEmbeddedData([]);
+    delete global.fetch;
+    render(
+      <HelmetProvider>
+        <Linklog {...props} />
+      </HelmetProvider>,
+    );
+
+    expect(screen.getByText(linklogErrorMessage)).toBeTruthy();
+    expect(document.getElementById("linklog-data")).toBeNull();
+  });
+
+  it("ignores embedded non-error object and falls back to loading", () => {
+    fetchMock.mockReturnValueOnce(new Promise(() => {}));
+    appendEmbeddedData({ items: [] });
+    render(
+      <HelmetProvider>
+        <Linklog {...props} />
+      </HelmetProvider>,
+    );
+
+    expect(screen.getByText("Loading…")).toBeTruthy();
+    expect(fetchMock).toHaveBeenCalledWith("/api/linklog");
+    expect(document.getElementById("linklog-data")).toBeNull();
+  });
 });
