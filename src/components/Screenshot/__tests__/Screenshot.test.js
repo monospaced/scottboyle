@@ -1,5 +1,5 @@
-import { mount } from "enzyme";
 import React from "react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import data from "../../../scripts/__mocks__/data.js";
 import Screenshot from "../Screenshot.js";
@@ -7,29 +7,38 @@ import Screenshot from "../Screenshot.js";
 describe("Screenshot component", () => {
   const { projects } = data;
 
-  it("should render correctly", () => {
-    Object.keys(projects).map(key => {
-      const component = mount(
-        <Screenshot project={projects[key]} slug={key} />,
-      );
-      expect(component).toMatchSnapshot();
+  it("renders screenshot image for each project", () => {
+    Object.keys(projects).forEach(key => {
+      const { title } = projects[key];
+      const { unmount } = render(<Screenshot project={projects[key]} slug={key} />);
+
+      expect(screen.getByRole("img", { name: title })).toBeTruthy();
+      unmount();
     });
   });
 
-  it("should handle image load event correctly", () => {
-    Object.keys(projects).map(key => {
-      const component = mount(
+  it("applies loaded class after image load", () => {
+    Object.keys(projects).forEach(key => {
+      const { title } = projects[key];
+      const { container, unmount } = render(
         <Screenshot project={projects[key]} slug={key} />,
       );
-      component.instance().imageDidLoad();
-      expect(component.state("loaded")).toBe(true);
+      fireEvent.load(screen.getByRole("img", { name: title }));
+
+      expect(container.querySelector(".Screenshot.is-loaded")).toBeTruthy();
+      unmount();
     });
   });
 
-  it("should handle re-rendering with an identical slug", () => {
+  it("does not reset loaded state when rerendered with the same slug", () => {
     const key = Object.keys(projects)[0];
-    const component = mount(<Screenshot project={projects[key]} slug={key} />);
-    component.setProps({ slug: key });
-    expect(component.state("slug")).toBe(key);
+    const { container, rerender } = render(
+      <Screenshot project={projects[key]} slug={key} />,
+    );
+
+    fireEvent.load(screen.getByRole("img", { name: projects[key].title }));
+    rerender(<Screenshot project={projects[key]} slug={key} />);
+
+    expect(container.querySelector(".Screenshot.is-loaded")).toBeTruthy();
   });
 });

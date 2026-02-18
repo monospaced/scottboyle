@@ -1,23 +1,24 @@
 import React from "react";
-import { render } from "enzyme";
+import { render, screen } from "@testing-library/react";
 
 import Client from "../Client.js";
 
 describe("Client component", () => {
-  it("should render correctly", () => {
-    const component = render(<Client client={{}} />);
-    expect(component).toMatchSnapshot();
+  it("renders nothing when title is missing", () => {
+    const { container } = render(<Client client={{}} />);
+    expect(container.firstChild).toBeNull();
   });
 
-  it("should render a name", () => {
-    const component = render(<Client client={{ title: "Client" }} />);
-    expect(component).toMatchSnapshot();
+  it("renders client title", () => {
+    render(<Client client={{ title: "Client" }} />);
+    expect(screen.getByText("Client")).toBeTruthy();
   });
 
-  it("should render a link", () => {
-    const component = render(
-      <Client client={{ title: "Client", link: "https://client.com" }} />,
+  it("renders client link when link is provided", () => {
+    render(<Client client={{ title: "Client", link: "https://client.com" }} />);
+
+    expect(screen.getByRole("link", { name: "Client" }).getAttribute("href")).toBe(
+      "https://client.com",
     );
-    expect(component).toMatchSnapshot();
   });
 });

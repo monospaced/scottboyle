@@ -1,18 +1,18 @@
 import React from "react";
-import { render } from "enzyme";
+import { render, screen } from "@testing-library/react";
 
 import Visit from "../Visit.js";
 
 describe("Visit component", () => {
-  it("should render correctly", () => {
-    const component = render(<Visit project={{}} />);
-    expect(component).toMatchSnapshot();
+  it("renders nothing when link data is missing", () => {
+    const { container } = render(<Visit project={{}} />);
+    expect(container.firstChild).toBeNull();
   });
 
-  it("should render a link", () => {
-    const component = render(
-      <Visit project={{ link: "https://site.com", title: "Site" }} />,
+  it("renders a project link", () => {
+    render(<Visit project={{ link: "https://site.com", title: "Site" }} />);
+    expect(screen.getByRole("link", { name: "Site" }).getAttribute("href")).toBe(
+      "https://site.com",
     );
-    expect(component).toMatchSnapshot();
   });
 });

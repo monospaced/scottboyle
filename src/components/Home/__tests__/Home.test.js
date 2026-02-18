@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render, screen } from "@testing-library/react";
 
 import data from "../../../scripts/__mocks__/data.js";
 import Home from "../Home.js";
@@ -7,11 +7,15 @@ import Home from "../Home.js";
 describe("Home component", () => {
   const { about, description, subtitle, title, url } = data;
 
-  it("should render correctly", () => {
+  it("renders avatar and about content", () => {
     const props = {
       data: { about, description, subtitle, title, url },
     };
-    const component = shallow(<Home {...props} />);
-    expect(component).toMatchSnapshot();
+
+    render(<Home {...props} />);
+
+    expect(screen.getByRole("img", { name: "About" })).toBeTruthy();
+    expect(screen.getByText("Test bio for mocks.")).toBeTruthy();
+    expect(screen.getByText("Item one")).toBeTruthy();
   });
 });

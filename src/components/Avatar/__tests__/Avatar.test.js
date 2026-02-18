@@ -1,11 +1,13 @@
 import React from "react";
-import { render } from "enzyme";
+import { render, screen } from "@testing-library/react";
 
 import Avatar from "../Avatar.js";
 
 describe("Avatar component", () => {
-  it("should render correctly", () => {
-    const component = render(<Avatar />);
-    expect(component).toMatchSnapshot();
+  it("renders the page title and avatar image", () => {
+    render(<Avatar />);
+
+    expect(screen.getByRole("heading", { level: 2 })).toBeTruthy();
+    expect(screen.getByRole("img", { name: "About" })).toBeTruthy();
   });
 });
