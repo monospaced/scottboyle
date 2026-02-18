@@ -1,19 +1,21 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 
 import data from "../../../scripts/__mocks__/data.js";
 import Nav from "../Nav.js";
-
-jest.mock("react-router", () => ({
-  Link: ({ children, to, ...props }) =>
-    require("react").createElement("a", { href: to, ...props }, children),
-}));
 
 describe("Nav component", () => {
   const { projects } = data;
 
   it("renders navigation headings and project links", () => {
-    render(<Nav projects={projects} routes={[{ path: "" }]} />);
+    render(
+      <MemoryRouter
+        future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
+      >
+        <Nav currentPath="" projects={projects} />
+      </MemoryRouter>,
+    );
 
     expect(screen.getByRole("heading", { name: "Blog" })).toBeTruthy();
     expect(screen.getByRole("heading", { name: "Work" })).toBeTruthy();
@@ -24,10 +26,11 @@ describe("Nav component", () => {
 
   it("marks the active project link", () => {
     render(
-      <Nav
-        projects={projects}
-        routes={[{ path: Object.keys(projects)[0] }]}
-      />,
+      <MemoryRouter
+        future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
+      >
+        <Nav currentPath={Object.keys(projects)[0]} projects={projects} />
+      </MemoryRouter>,
     );
 
     expect(screen.getByRole("link", { name: "Project Alpha" }).getAttribute("aria-current")).toBe(
@@ -36,7 +39,13 @@ describe("Nav component", () => {
   });
 
   it("marks linklog as active when on linklog route", () => {
-    render(<Nav projects={projects} routes={[{ path: "linklog" }]} />);
+    render(
+      <MemoryRouter
+        future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
+      >
+        <Nav currentPath="linklog" projects={projects} />
+      </MemoryRouter>,
+    );
 
     expect(screen.getByRole("link", { name: "Linklog" }).getAttribute("aria-current")).toBe(
       "page",

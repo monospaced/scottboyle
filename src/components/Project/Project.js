@@ -10,7 +10,7 @@ import { buildSocialMeta } from "../../scripts/meta";
 
 const Project = ({
   data: { description, projects, subtitle, title, url },
-  route: { path },
+  path,
 }) => {
   const project = projects[path];
   const { client, content, date, link, title: projectTitle } = project;

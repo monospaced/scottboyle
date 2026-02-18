@@ -1,5 +1,5 @@
-import { IndexRoute, Route } from "react-router";
 import React from "react";
+import { Outlet, Route, Routes, useLocation } from "react-router-dom";
 
 import App from "../components/App/App.js";
 import data from "./data.js";
@@ -8,30 +8,47 @@ import Project from "../components/Project/Project.js";
 import Linklog from "../components/Linklog/Linklog.js";
 import NotFound from "../components/NotFound/NotFound.js";
 
-const Routes = (
-  <Route onChange={forceTrailingSlashOnChange} onEnter={forceTrailingSlash}>
-    <Route component={App} data={data} path="/">
-      <IndexRoute component={Home} />
-      {Object.keys(data.projects).map(key => (
-        <Route component={Project} key={key} path={key} />
+const projectKeys = Object.keys(data.projects);
+
+const toCurrentPath = pathname => {
+  const [segment = ""] = pathname.replace(/^\/+|\/+$/g, "").split("/");
+  return segment;
+};
+
+const AppLayout = () => {
+  const location = useLocation();
+
+  return (
+    <App currentPath={toCurrentPath(location.pathname)} data={data}>
+      <Outlet />
+    </App>
+  );
+};
+
+export const routePaths = ["/"]
+  .concat(projectKeys.map(key => `/${key}/`))
+  .concat(["/linklog/", "/404/"]);
+
+export const ensureTrailingSlashPath = pathname => {
+  if (!pathname || pathname === "/") {
+    return "/";
+  }
+
+  return pathname[pathname.length - 1] === "/" ? pathname : `${pathname}/`;
+};
+
+const AppRoutes = () => (
+  <Routes>
+    <Route element={<AppLayout />} path="/">
+      <Route element={<Home data={data} />} index />
+      {projectKeys.map(key => (
+        <Route element={<Project data={data} path={key} />} key={key} path={key} />
       ))}
-      <Route component={Linklog} path="linklog" />
-      <Route component={NotFound} path="404" />
-      <Route component={NotFound} path="*" />
+      <Route element={<Linklog data={data} />} path="linklog" />
+      <Route element={<NotFound data={data} />} path="404" />
+      <Route element={<NotFound data={data} />} path="*" />
     </Route>
-  </Route>
+  </Routes>
 );
 
-function forceTrailingSlash(nextState, replace) {
-  const path = nextState.location.pathname;
-
-  if (path.slice(-1) !== "/") {
-    replace({ ...nextState.location, pathname: path + "/" });
-  }
-}
-
-function forceTrailingSlashOnChange(prevState, nextState, replace) {
-  forceTrailingSlash(nextState, replace);
-}
-
-export default Routes;
+export default AppRoutes;
