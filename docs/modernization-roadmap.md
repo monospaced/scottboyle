@@ -118,6 +118,10 @@ Sandbox issues prevent pnpm install, so when you need to do that, ask me and I w
 
 ## Phase 5: Polyfill and CSS/PostCSS Cleanup
 
+### Status
+
+- Completed on February 18, 2026.
+
 ### Why fifth
 
 - Final cleanup phase once core runtime/tooling migrations are complete.
@@ -195,4 +199,4 @@ Sandbox issues prevent pnpm install, so when you need to do that, ask me and I w
 
 ## Immediate Next Action
 
-- Begin Phase 5 polyfill and CSS/PostCSS cleanup.
+- Begin Phase 6 reserved work only if needed; otherwise proceed to Phase 7 bundler migration feasibility.
