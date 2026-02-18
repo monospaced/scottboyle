@@ -5,18 +5,15 @@
   "packageManager": "pnpm@10.29.3",
   "devDependencies": {
     "@babel/core": "^7.29.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/plugin-transform-object-rest-spread": "^7.28.4",
     "@babel/preset-env": "^7.29.0",
     "@babel/preset-react": "^7.28.5",
+    "@babel/register": "^7.28.3",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "16.3.2",
-    "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-jest": "^30.2.0",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
+    "babel-loader": "^8.4.1",
     "caniuse-lite": "^1.0.30000697",
     "core-js": "^2.5.5",
     "coveralls": "^3.0.0",
@@ -79,7 +76,7 @@
           "babelrc": false,
           "configFile": false,
           "plugins": [
-            "@babel/plugin-proposal-object-rest-spread"
+            "@babel/plugin-transform-object-rest-spread"
           ],
           "presets": [
             "@babel/preset-env",
@@ -94,7 +91,7 @@
     "dev": "netlify dev --dir build",
     "dev:fast": "webpack-dev-server --progress",
     "format": "prettier --write 'src/**/*.@(css|js)'",
-    "lint": "eslint \"src/**/*.js\" \"netlify/**/*.js\" \"webpack.config.babel.js\"",
+    "lint": "eslint \"src/**/*.js\" \"netlify/**/*.js\" \"webpack.config.js\"",
     "postbuild": "node src/scripts/sitemap.js && node src/scripts/template.js",
     "predev": "pnpm build",
     "prepush": "pnpm lint && pnpm test:coverage && cat coverage/lcov.info | coveralls",

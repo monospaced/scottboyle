@@ -34,4 +34,4 @@ function forceTrailingSlashOnChange(prevState, nextState, replace) {
   forceTrailingSlash(nextState, replace);
 }
 
-module.exports = Routes;
+export default Routes;

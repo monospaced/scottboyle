@@ -1,13 +1,18 @@
-import ReactRouterToArray from "react-router-to-array";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin";
-import StaticSiteGeneratorPlugin from "static-site-generator-webpack-plugin";
-import UglifyJsPlugin from "uglifyjs-webpack-plugin";
-import webpack from "webpack";
+const ReactRouterToArray = require("react-router-to-array");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const StaticSiteGeneratorPlugin = require("static-site-generator-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = () => {
   // Prevent webpack from attempting to process css before loaders are configured
   require.extensions[".css"] = () => {};
+
+  // Allow webpack config-time requires (routes/components) to load ESM/JSX files.
+  require("@babel/register")({
+    presets: ["@babel/preset-env", "@babel/preset-react"],
+    plugins: ["@babel/plugin-transform-object-rest-spread"],
+  });
 
   // Workaround for legacy SSL removal in Node 17+
   const crypto = require("crypto");
@@ -16,7 +21,8 @@ module.exports = () => {
     cryptoOrigCreateHash(algorithm === "md4" ? "sha256" : algorithm);
 
   // Routes array is required in config.plugins
-  const routes = ReactRouterToArray(require("./src/scripts/routes"));
+  const routesModule = require("./src/scripts/routes");
+  const routes = ReactRouterToArray(routesModule.default || routesModule);
 
   const config = {
     devServer: { historyApiFallback: true, inline: false, stats: "minimal" },
@@ -27,7 +33,10 @@ module.exports = () => {
           test: /\.js$/,
           exclude: /node_modules/,
           loader: "babel-loader",
-          query: { presets: ["env", "react"] },
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+            plugins: ["@babel/plugin-transform-object-rest-spread"],
+          },
         },
         {
           test: /\.css$/,
