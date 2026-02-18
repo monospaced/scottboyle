@@ -69,6 +69,10 @@ Sandbox issues prevent pnpm install, so when you need to do that, ask me and I w
 
 ## Phase 3: Build Pipeline Modernization
 
+### Status
+
+- Completed on February 18, 2026.
+
 ### Why third
 
 - Build tooling is still webpack 4 era and includes deprecated plugins/loaders.
@@ -81,11 +85,12 @@ Sandbox issues prevent pnpm install, so when you need to do that, ask me and I w
   - `uglifyjs-webpack-plugin` -> modern minimizer strategy
   - `optimize-css-assets-webpack-plugin` -> modern css minimizer
   - `file-loader`/`url-loader` -> webpack 5 asset modules
+- Adopt `postcss-preset-env` as part of loader compatibility with modern webpack/postcss tooling.
 - Preserve current `dev:fast`, `build`, and Netlify workflows.
 
 ### Exit criteria
 
-- `build`, `dev`, and `dev:fast` all work with modern webpack stack.
+- `build`, `dev` (Netlify-integrated local parity), and `dev:fast` (HMR UI iteration) all work with modern webpack stack.
 - No deprecated webpack-era plugin/loaders remain.
 - Netlify deploy path remains stable.
 
@@ -125,6 +130,54 @@ Sandbox issues prevent pnpm install, so when you need to do that, ask me and I w
 - No deprecated PostCSS plugin usage.
 - CSS build behavior unchanged from user perspective.
 
+## Phase 6: Reserved
+
+- Reserved for additional in-between modernization work before bundler migration.
+
+## Phase 7: Bundler Migration Feasibility (Webpack vs Vite)
+
+### Why seventh
+
+- A modern webpack baseline is still useful first for lower-risk stabilization.
+- A focused feasibility phase avoids committing to Vite without parity evidence.
+
+### Work
+
+- Build a Vite proof-of-concept branch against the modernized app.
+- Validate parity for:
+  - SSR/static generation behavior
+  - Routing behavior (including trailing slash behavior)
+  - Asset loading and output paths
+  - Netlify/deploy compatibility
+- Compare measurable developer experience and performance:
+  - cold start
+  - rebuild/HMR
+  - production build time
+
+### Exit criteria
+
+- Clear decision record: stay on webpack or proceed to Vite migration.
+- Risks, blockers, and required follow-up changes documented.
+
+## Phase 8: Vite Migration (If Approved)
+
+### Why eighth
+
+- Execute only after feasibility results confirm parity and practical benefits.
+
+### Work
+
+- Replace webpack configuration/scripts with Vite equivalents.
+- Migrate SSR/static generation workflow to a Vite-compatible approach.
+- Remove webpack-only dependencies and compatibility shims.
+- Re-validate Netlify workflow and output structure.
+
+### Exit criteria
+
+- `build`, `dev`, and deployment workflows work under Vite.
+- Behavior parity confirmed against pre-migration baseline.
+- Webpack-specific dependencies and config removed.
+
 ## Execution Strategy
 
 - Use one milestone per phase with small sub-commits.
@@ -132,9 +185,10 @@ Sandbox issues prevent pnpm install, so when you need to do that, ask me and I w
   - `pnpm run lint`
   - `CI=true pnpm exec jest --runInBand`
   - `pnpm run build`
-  - `pnpm dev:fast` smoke check
+  - `pnpm dev` smoke check for Netlify/local parity
+  - `pnpm dev:fast` smoke check for HMR/UI iteration
 - Commit after each significant step; squash later if desired.
 
 ## Immediate Next Action
 
-- Start Phase 3 by upgrading webpack and removing compatibility exceptions added for modern router syntax.
+- Begin Phase 4 lint/format stack refresh on top of the Phase 3 baseline.

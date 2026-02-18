@@ -1,4 +1,4 @@
-import marked from "marked";
+import { parse } from "marked";
 import React from "react";
 
 import "../Main/Main.css";
@@ -33,7 +33,7 @@ const Home = ({ data: { about, description, subtitle, title, url } }) => {
       />
       <section>
         <Avatar />
-        <div dangerouslySetInnerHTML={{ __html: marked.parse(about.trim()) }} />
+        <div dangerouslySetInnerHTML={{ __html: parse(about.trim()) }} />
       </section>
     </main>
   );

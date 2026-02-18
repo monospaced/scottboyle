@@ -1,4 +1,4 @@
-import marked from "marked";
+import { parse } from "marked";
 import React from "react";
 
 import "../Main/Main.css";
@@ -41,7 +41,7 @@ const Project = ({
           <span translate="no">{projectTitle}</span> <small>({date})</small>
         </h2>
         <div
-          dangerouslySetInnerHTML={{ __html: marked.parse(content.trim()) }}
+          dangerouslySetInnerHTML={{ __html: parse(content.trim()) }}
         />
         {client && <Client client={client} />}
         {link && <Visit project={project} />}

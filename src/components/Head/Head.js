@@ -10,9 +10,11 @@ import "../../assets/manifest.webmanifest";
 import "../../assets/robots.txt";
 import "../../assets/social.png";
 import "../../assets/.well-known/security.txt";
-import { version } from "../../../package.json";
+import pkg from "../../../package.json";
 import { subtitle, title, url } from "../../scripts/data";
 import vars from "!css-variables-loader!../../theme/vars.css";
+
+const { version } = pkg;
 
 const siteName = `${title} | ${subtitle}`;
 const siteUrl = url;
