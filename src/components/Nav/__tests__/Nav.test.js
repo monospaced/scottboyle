@@ -33,9 +33,11 @@ describe("Nav component", () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByRole("link", { name: "Project Alpha" }).getAttribute("aria-current")).toBe(
-      "page",
-    );
+    expect(
+      screen
+        .getByRole("link", { name: "Project Alpha" })
+        .getAttribute("aria-current"),
+    ).toBe("page");
   });
 
   it("marks linklog as active when on linklog route", () => {
@@ -47,8 +49,10 @@ describe("Nav component", () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByRole("link", { name: "Linklog" }).getAttribute("aria-current")).toBe(
-      "page",
-    );
+    expect(
+      screen
+        .getByRole("link", { name: "Linklog" })
+        .getAttribute("aria-current"),
+    ).toBe("page");
   });
 });

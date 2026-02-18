@@ -96,6 +96,10 @@ Sandbox issues prevent pnpm install, so when you need to do that, ask me and I w
 
 ## Phase 4: Lint/Format Stack Refresh
 
+### Status
+
+- Completed on February 18, 2026.
+
 ### Why fourth
 
 - Current lint stack (`eslint@4`, `babel-eslint`) is obsolete and noisy.
@@ -191,4 +195,4 @@ Sandbox issues prevent pnpm install, so when you need to do that, ask me and I w
 
 ## Immediate Next Action
 
-- Begin Phase 4 lint/format stack refresh on top of the Phase 3 baseline.
+- Begin Phase 5 polyfill and CSS/PostCSS cleanup.

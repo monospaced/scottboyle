@@ -1,4 +1,4 @@
-const safeHref = value => {
+const safeHref = (value) => {
   const text = String(value || "");
 
   if (!text) {
