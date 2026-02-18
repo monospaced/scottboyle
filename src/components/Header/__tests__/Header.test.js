@@ -1,11 +1,12 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render, screen } from "@testing-library/react";
 
 import Header from "../Header.js";
 
 describe("Header component", () => {
-  it("should render correctly", () => {
-    const component = shallow(<Header />);
-    expect(component).toMatchSnapshot();
+  it("renders a banner landmark", () => {
+    render(<Header />);
+
+    expect(screen.getByRole("banner")).toBeTruthy();
   });
 });

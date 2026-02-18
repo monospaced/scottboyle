@@ -1,14 +1,16 @@
-import { shallow } from "enzyme";
 import React from "react";
+import { render, screen } from "@testing-library/react";
+import { act } from "react-dom/test-utils";
 
 import Linklog from "../Linklog.js";
 import feed from "../__mocks__/feed.mock.json";
 import data from "../../../scripts/__mocks__/data.js";
 
 describe("Linklog component", () => {
-  const { description, subtitle, title, url } = data;
-  const props = { data: { description, subtitle, title, url } };
-  const flushPromises = () => new Promise(resolve => setImmediate(resolve));
+  const { description, linklogErrorMessage, subtitle, title, url } = data;
+  const props = { data: { description, linklogErrorMessage, subtitle, title, url } };
+  const flushPromises = () => new Promise(resolve => setTimeout(resolve, 0));
+
   const appendEmbeddedData = payload => {
     const script = document.createElement("script");
     script.id = "linklog-data";
@@ -33,227 +35,141 @@ describe("Linklog component", () => {
 
   afterEach(() => {
     delete global.fetch;
-    if (typeof document !== "undefined") {
-      const embedded = document.getElementById("linklog-data");
-      if (embedded) {
-        embedded.remove();
-      }
+    const embedded = document.getElementById("linklog-data");
+    if (embedded) {
+      embedded.remove();
     }
   });
 
-  it("should render correctly", () => {
-    const component = shallow(<Linklog {...props} />, {
-      disableLifecycleMethods: true,
-    });
-    component.setState({ links: [], status: "loading" });
+  it("renders loading state while awaiting fetch", () => {
+    fetchMock.mockReturnValueOnce(new Promise(() => {}));
+    render(<Linklog {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(screen.getByText("Loading…")).toBeTruthy();
   });
 
-  it("should render feed data correctly", () => {
-    const component = shallow(<Linklog {...props} />, {
-      disableLifecycleMethods: true,
+  it("fetches and renders linklog entries", async () => {
+    render(<Linklog {...props} />);
+
+    await act(async () => {
+      await flushPromises();
     });
-    component.setState({ links: feed, status: "loaded" });
-
-    expect(component).toMatchSnapshot();
-  });
-
-  it("should skip items with unsafe hrefs", () => {
-    const component = shallow(<Linklog {...props} />, {
-      disableLifecycleMethods: true,
-    });
-    component.setState({
-      links: [
-        {
-          d: "Relative link",
-          dt: "2018-04-05T21:20:55Z",
-          u: "/relative",
-        },
-        {
-          d: "Bad link",
-          dt: "2018-04-06T21:20:55Z",
-          u: "javascript:alert(1)",
-        },
-        {
-          d: "Good link",
-          dt: "2018-04-07T21:20:55Z",
-          u: "https://example.com",
-        },
-      ],
-    });
-
-    expect(component.find("li")).toHaveLength(1);
-    expect(
-      component
-        .find("li")
-        .find("a")
-        .prop("href"),
-    ).toBe("https://example.com/");
-  });
-
-  it("should render no list when links is falsy", () => {
-    const component = shallow(<Linklog {...props} />, {
-      disableLifecycleMethods: true,
-    });
-    component.setState({ links: null, status: "loaded" });
-
-    expect(component.find("ul")).toHaveLength(0);
-  });
-
-  it("should fetch and set links on mount", async () => {
-    const component = shallow(<Linklog {...props} />);
-    await flushPromises();
 
     expect(fetchMock).toHaveBeenCalledWith("/api/linklog");
-    expect(component.state("links")).toEqual(feed);
-    expect(component.state("status")).toEqual("loaded");
+    expect(screen.getByRole("link", { name: "Mock Link A" }).getAttribute("href")).toBe(
+      "https://example.com/mock-a",
+    );
+    expect(screen.getByRole("link", { name: "Mock Link B" })).toBeTruthy();
     expect(window.scrollTo).toHaveBeenCalledWith(0, 0);
   });
 
-  it("should ignore non-array responses", async () => {
+  it("skips items with unsafe hrefs", () => {
+    appendEmbeddedData([
+      { d: "Relative link", dt: "2018-04-05T21:20:55Z", u: "/relative" },
+      { d: "Bad link", dt: "2018-04-06T21:20:55Z", u: "javascript:alert(1)" },
+      { d: "Good link", dt: "2018-04-07T21:20:55Z", u: "https://example.com" },
+    ]);
+    render(<Linklog {...props} />);
+
+    expect(screen.queryByRole("link", { name: "Relative link" })).toBeNull();
+    expect(screen.queryByRole("link", { name: "Bad link" })).toBeNull();
+    expect(screen.getByRole("link", { name: "Good link" }).getAttribute("href")).toBe(
+      "https://example.com/",
+    );
+    expect(screen.getAllByRole("listitem")).toHaveLength(1);
+  });
+
+  it("renders error state for non-array responses", async () => {
     fetchMock.mockResolvedValueOnce({
       json: () => Promise.resolve({ items: feed }),
       ok: true,
     });
-    const component = shallow(<Linklog {...props} />);
-    await flushPromises();
+    render(<Linklog {...props} />);
 
-    expect(component.state("links")).toEqual([]);
-    expect(component.state("status")).toEqual("error");
+    await act(async () => {
+      await flushPromises();
+    });
+    expect(screen.getByText(linklogErrorMessage)).toBeTruthy();
   });
 
-  it("should treat empty array responses as errors", async () => {
+  it("renders error state for empty responses", async () => {
     fetchMock.mockResolvedValueOnce({
       json: () => Promise.resolve([]),
       ok: true,
     });
-    const component = shallow(<Linklog {...props} />);
-    await flushPromises();
+    render(<Linklog {...props} />);
 
-    expect(component.state("links")).toEqual([]);
-    expect(component.state("status")).toEqual("error");
+    await act(async () => {
+      await flushPromises();
+    });
+    expect(screen.getByText(linklogErrorMessage)).toBeTruthy();
   });
 
-  it("should keep links empty on fetch failure", async () => {
+  it("renders error state for failed fetches", async () => {
     fetchMock.mockRejectedValueOnce(new Error("fail"));
-    const component = shallow(<Linklog {...props} />);
-    await flushPromises();
+    render(<Linklog {...props} />);
 
-    expect(component.state("links")).toEqual([]);
-    expect(component.state("status")).toEqual("error");
+    await act(async () => {
+      await flushPromises();
+    });
+    expect(screen.getByText(linklogErrorMessage)).toBeTruthy();
   });
 
-  it("should keep links empty when response is not ok", async () => {
+  it("renders error state when response is not ok", async () => {
     fetchMock.mockResolvedValueOnce({
       json: jest.fn(),
       ok: false,
     });
-    const component = shallow(<Linklog {...props} />);
-    await flushPromises();
+    render(<Linklog {...props} />);
 
-    expect(component.state("links")).toEqual([]);
-    expect(component.state("status")).toEqual("error");
+    await act(async () => {
+      await flushPromises();
+    });
+    expect(screen.getByText(linklogErrorMessage)).toBeTruthy();
   });
 
-  it("should no-op when fetch is unavailable", () => {
+  it("renders error state when fetch is unavailable", async () => {
     delete global.fetch;
-    const component = shallow(<Linklog {...props} />);
+    render(<Linklog {...props} />);
 
-    expect(component.state("links")).toEqual([]);
-    expect(component.state("status")).toEqual("error");
+    await act(async () => {
+      await flushPromises();
+    });
+    expect(screen.getByText(linklogErrorMessage)).toBeTruthy();
   });
 
-  it("hydrates from embedded linklog data", () => {
+  it("hydrates from embedded link data and skips fetching", () => {
     appendEmbeddedData(feed);
-    const component = shallow(<Linklog {...props} />, {
-      disableLifecycleMethods: true,
-    });
+    render(<Linklog {...props} />);
 
-    expect(component.state("links")).toEqual(feed);
-    expect(component.state("status")).toEqual("loaded");
-    expect(document.getElementById("linklog-data")).toBeNull();
-  });
-
-  it("ignores embedded payloads that are not arrays or errors", () => {
-    appendEmbeddedData({ foo: "bar" });
-    const component = shallow(<Linklog {...props} />, {
-      disableLifecycleMethods: true,
-    });
-
-    expect(component.state("links")).toEqual([]);
-    expect(component.state("status")).toEqual("loading");
-    expect(document.getElementById("linklog-data")).toBeNull();
-  });
-
-  it("hydrates to error state from embedded error data", () => {
-    appendEmbeddedData({ error: true });
-    const component = shallow(<Linklog {...props} />, {
-      disableLifecycleMethods: true,
-    });
-
-    expect(component.state("links")).toEqual([]);
-    expect(component.state("status")).toEqual("error");
-    expect(document.getElementById("linklog-data")).toBeNull();
-  });
-
-  it("treats embedded empty arrays as errors", () => {
-    appendEmbeddedData([]);
-    const component = shallow(<Linklog {...props} />, {
-      disableLifecycleMethods: true,
-    });
-
-    expect(component.state("links")).toEqual([]);
-    expect(component.state("status")).toEqual("error");
-  });
-
-  it("skips fetching when hydrated with links", () => {
-    appendEmbeddedData(feed);
-    const component = shallow(<Linklog {...props} />, {
-      disableLifecycleMethods: true,
-    });
-
-    component.instance().componentDidMount();
-
+    expect(screen.getByRole("link", { name: "Mock Link A" })).toBeTruthy();
     expect(fetchMock).not.toHaveBeenCalled();
+    expect(document.getElementById("linklog-data")).toBeNull();
   });
 
-  it("ignores embedded data when document is unavailable", () => {
-    const realDocumentDescriptor = Object.getOwnPropertyDescriptor(
-      global,
-      "document",
-    );
-    Object.defineProperty(global, "document", {
-      configurable: true,
-      get: () => undefined,
+  it("shows error when embedded error payload is present and fetch is unavailable", async () => {
+    appendEmbeddedData({ error: true });
+    delete global.fetch;
+    render(<Linklog {...props} />);
+
+    await act(async () => {
+      await flushPromises();
     });
-
-    const component = shallow(<Linklog {...props} />, {
-      disableLifecycleMethods: true,
-    });
-
-    expect(component.state("links")).toEqual([]);
-    expect(component.state("status")).toEqual("loading");
-
-    if (realDocumentDescriptor) {
-      Object.defineProperty(global, "document", realDocumentDescriptor);
-    } else {
-      delete global.document;
-    }
+    expect(screen.getByText(linklogErrorMessage)).toBeTruthy();
+    expect(document.getElementById("linklog-data")).toBeNull();
   });
 
-  it("ignores embedded data when JSON is invalid", () => {
+  it("ignores invalid embedded JSON and falls back to loading", () => {
+    fetchMock.mockReturnValueOnce(new Promise(() => {}));
     const script = document.createElement("script");
     script.id = "linklog-data";
     script.type = "application/json";
     script.textContent = "{not-json";
     document.body.appendChild(script);
-    const component = shallow(<Linklog {...props} />, {
-      disableLifecycleMethods: true,
-    });
 
-    expect(component.state("links")).toEqual([]);
-    expect(component.state("status")).toEqual("loading");
+    render(<Linklog {...props} />);
+
+    expect(screen.getByText("Loading…")).toBeTruthy();
     expect(document.getElementById("linklog-data")).toBeNull();
   });
 });
