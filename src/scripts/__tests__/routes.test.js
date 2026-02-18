@@ -1,5 +1,6 @@
 import { createMemoryHistory, Router } from "react-router";
 import React from "react";
+import { HelmetProvider } from "react-helmet-async";
 import ReactRouterToArray from "react-router-to-array";
 import renderer from "react-test-renderer";
 
@@ -16,7 +17,9 @@ describe("Routes", () => {
   it("should force trailing slashes on urls", () => {
     const history = createMemoryHistory("/foo");
     const router = renderer.create(
-      <Router history={history} routes={routes} />,
+      <HelmetProvider>
+        <Router history={history} routes={routes} />
+      </HelmetProvider>,
     );
     expect(history.getCurrentLocation().pathname).toBe("/foo/");
     history.push("/bar");

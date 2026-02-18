@@ -1,5 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import { HelmetProvider } from "react-helmet-async";
 
 import data from "../../../scripts/__mocks__/data.js";
 import Project from "../Project.js";
@@ -17,7 +18,11 @@ describe("Project component", () => {
       props.route.path = key;
       const { client, content, link, title: projectTitle } = projects[key];
 
-      const { unmount } = render(<Project {...props} />);
+      const { unmount } = render(
+        <HelmetProvider>
+          <Project {...props} />
+        </HelmetProvider>,
+      );
 
       expect(screen.getByRole("heading", { name: new RegExp(projectTitle) })).toBeTruthy();
       expect(screen.getByText(content.trim())).toBeTruthy();

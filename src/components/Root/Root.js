@@ -4,10 +4,10 @@ import "./Root.css";
 import Head from "../Head/Head";
 import { version } from "../../../package.json";
 
-const Root = ({ meta, router }) => {
+const Root = ({ helmet, router }) => {
   return (
     <html lang="en-GB">
-      <Head meta={meta} />
+      <Head helmet={helmet} />
       <body className="no-js">
         <script
           dangerouslySetInnerHTML={{ __html: `document.body.className = ""` }}

@@ -1,6 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
+import { HelmetProvider } from "react-helmet-async";
 
 import Linklog from "../Linklog.js";
 import feed from "../__mocks__/feed.mock.json";
@@ -43,13 +44,21 @@ describe("Linklog component", () => {
 
   it("renders loading state while awaiting fetch", () => {
     fetchMock.mockReturnValueOnce(new Promise(() => {}));
-    render(<Linklog {...props} />);
+    render(
+      <HelmetProvider>
+        <Linklog {...props} />
+      </HelmetProvider>,
+    );
 
     expect(screen.getByText("Loading…")).toBeTruthy();
   });
 
   it("fetches and renders linklog entries", async () => {
-    render(<Linklog {...props} />);
+    render(
+      <HelmetProvider>
+        <Linklog {...props} />
+      </HelmetProvider>,
+    );
 
     await act(async () => {
       await flushPromises();
@@ -69,7 +78,11 @@ describe("Linklog component", () => {
       { d: "Bad link", dt: "2018-04-06T21:20:55Z", u: "javascript:alert(1)" },
       { d: "Good link", dt: "2018-04-07T21:20:55Z", u: "https://example.com" },
     ]);
-    render(<Linklog {...props} />);
+    render(
+      <HelmetProvider>
+        <Linklog {...props} />
+      </HelmetProvider>,
+    );
 
     expect(screen.queryByRole("link", { name: "Relative link" })).toBeNull();
     expect(screen.queryByRole("link", { name: "Bad link" })).toBeNull();
@@ -84,7 +97,11 @@ describe("Linklog component", () => {
       json: () => Promise.resolve({ items: feed }),
       ok: true,
     });
-    render(<Linklog {...props} />);
+    render(
+      <HelmetProvider>
+        <Linklog {...props} />
+      </HelmetProvider>,
+    );
 
     await act(async () => {
       await flushPromises();
@@ -97,7 +114,11 @@ describe("Linklog component", () => {
       json: () => Promise.resolve([]),
       ok: true,
     });
-    render(<Linklog {...props} />);
+    render(
+      <HelmetProvider>
+        <Linklog {...props} />
+      </HelmetProvider>,
+    );
 
     await act(async () => {
       await flushPromises();
@@ -107,7 +128,11 @@ describe("Linklog component", () => {
 
   it("renders error state for failed fetches", async () => {
     fetchMock.mockRejectedValueOnce(new Error("fail"));
-    render(<Linklog {...props} />);
+    render(
+      <HelmetProvider>
+        <Linklog {...props} />
+      </HelmetProvider>,
+    );
 
     await act(async () => {
       await flushPromises();
@@ -120,7 +145,11 @@ describe("Linklog component", () => {
       json: jest.fn(),
       ok: false,
     });
-    render(<Linklog {...props} />);
+    render(
+      <HelmetProvider>
+        <Linklog {...props} />
+      </HelmetProvider>,
+    );
 
     await act(async () => {
       await flushPromises();
@@ -130,7 +159,11 @@ describe("Linklog component", () => {
 
   it("renders error state when fetch is unavailable", async () => {
     delete global.fetch;
-    render(<Linklog {...props} />);
+    render(
+      <HelmetProvider>
+        <Linklog {...props} />
+      </HelmetProvider>,
+    );
 
     await act(async () => {
       await flushPromises();
@@ -140,7 +173,11 @@ describe("Linklog component", () => {
 
   it("hydrates from embedded link data and skips fetching", () => {
     appendEmbeddedData(feed);
-    render(<Linklog {...props} />);
+    render(
+      <HelmetProvider>
+        <Linklog {...props} />
+      </HelmetProvider>,
+    );
 
     expect(screen.getByRole("link", { name: "Mock Link A" })).toBeTruthy();
     expect(fetchMock).not.toHaveBeenCalled();
@@ -150,7 +187,11 @@ describe("Linklog component", () => {
   it("shows error when embedded error payload is present and fetch is unavailable", async () => {
     appendEmbeddedData({ error: true });
     delete global.fetch;
-    render(<Linklog {...props} />);
+    render(
+      <HelmetProvider>
+        <Linklog {...props} />
+      </HelmetProvider>,
+    );
 
     await act(async () => {
       await flushPromises();
@@ -167,7 +208,11 @@ describe("Linklog component", () => {
     script.textContent = "{not-json";
     document.body.appendChild(script);
 
-    render(<Linklog {...props} />);
+    render(
+      <HelmetProvider>
+        <Linklog {...props} />
+      </HelmetProvider>,
+    );
 
     expect(screen.getByText("Loading…")).toBeTruthy();
     expect(document.getElementById("linklog-data")).toBeNull();
