@@ -1,14 +1,14 @@
-import DocumentMeta from "react-document-meta";
 import React from "react";
 
 import "../Main/Main.css";
+import PageMeta from "../PageMeta/PageMeta";
 const NotFound = ({ data: { subtitle, title } }) => {
   const siteName = `${title} | ${subtitle}`;
   const pageTitle = `Page not found | ${siteName}`;
 
   return (
     <main aria-labelledby="page-title" className="Main" id="main" tabIndex="-1">
-      <DocumentMeta meta={{ name: { robots: "noindex" } }} title={pageTitle} />
+      <PageMeta noIndex title={pageTitle} />
       <section>
         <h2 id="page-title">
           404 <small>Page not found</small>

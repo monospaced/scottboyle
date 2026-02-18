@@ -1,5 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import { HelmetProvider } from "react-helmet-async";
 
 import data from "../../../scripts/__mocks__/data.js";
 import Home from "../Home.js";
@@ -12,7 +13,11 @@ describe("Home component", () => {
       data: { about, description, subtitle, title, url },
     };
 
-    render(<Home {...props} />);
+    render(
+      <HelmetProvider>
+        <Home {...props} />
+      </HelmetProvider>,
+    );
 
     expect(screen.getByRole("img", { name: "About" })).toBeTruthy();
     expect(screen.getByText("Test bio for mocks.")).toBeTruthy();

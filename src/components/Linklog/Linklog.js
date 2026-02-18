@@ -1,9 +1,9 @@
 import "core-js/es6/promise";
 import React, { Component } from "react";
-import DocumentMeta from "react-document-meta";
 import TimeAgo from "timeago-react";
 
 import "../Main/Main.css";
+import PageMeta from "../PageMeta/PageMeta";
 import { safeHref } from "../../scripts/href";
 import { buildSocialMeta } from "../../scripts/meta";
 
@@ -116,7 +116,7 @@ class Linklog extends Component {
         id="main"
         tabIndex="-1"
       >
-        <DocumentMeta
+        <PageMeta
           canonical={canonical}
           description={description}
           meta={meta}

@@ -1,9 +1,9 @@
-import DocumentMeta from "react-document-meta";
 import marked from "marked";
 import React from "react";
 
 import "../Main/Main.css";
 import Client from "../Client/Client";
+import PageMeta from "../PageMeta/PageMeta";
 import Screenshot from "../Screenshot/Screenshot";
 import Visit from "../Visit/Visit";
 import { buildSocialMeta } from "../../scripts/meta";
@@ -30,7 +30,7 @@ const Project = ({
 
   return (
     <main aria-labelledby="page-title" className="Main" id="main" tabIndex="-1">
-      <DocumentMeta
+      <PageMeta
         canonical={canonical}
         description={description}
         meta={meta}

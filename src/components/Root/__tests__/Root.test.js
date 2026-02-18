@@ -9,7 +9,7 @@ jest.mock("../../Head/Head", () => () => <head data-testid="head" />);
 describe("Root component", () => {
   it("renders document shell and router markup", () => {
     const router = { __html: '<div class="App"></div>' };
-    const html = renderToStaticMarkup(<Root meta={[]} router={router} />);
+    const html = renderToStaticMarkup(<Root helmet={null} router={router} />);
 
     expect(html).toContain('<html lang="en-GB">');
     expect(html).toContain('<head data-testid="head"></head>');

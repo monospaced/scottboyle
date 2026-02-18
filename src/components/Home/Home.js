@@ -1,9 +1,9 @@
-import DocumentMeta from "react-document-meta";
 import marked from "marked";
 import React from "react";
 
 import "../Main/Main.css";
 import Avatar from "../Avatar/Avatar";
+import PageMeta from "../PageMeta/PageMeta";
 import { buildSocialMeta } from "../../scripts/meta";
 
 const Home = ({ data: { about, description, subtitle, title, url } }) => {
@@ -25,7 +25,7 @@ const Home = ({ data: { about, description, subtitle, title, url } }) => {
       id="main"
       tabIndex="-1"
     >
-      <DocumentMeta
+      <PageMeta
         canonical={canonical}
         description={description}
         meta={meta}
