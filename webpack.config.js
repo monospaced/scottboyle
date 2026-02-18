@@ -1,7 +1,7 @@
+const path = require("path");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const StaticSiteGeneratorPlugin = require("static-site-generator-webpack-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = () => {
   // Prevent webpack from attempting to process css before loaders are configured
@@ -13,18 +13,18 @@ module.exports = () => {
     plugins: ["@babel/plugin-transform-object-rest-spread"],
   });
 
-  // Workaround for legacy SSL removal in Node 17+
-  const crypto = require("crypto");
-  const cryptoOrigCreateHash = crypto.createHash;
-  crypto.createHash = algorithm =>
-    cryptoOrigCreateHash(algorithm === "md4" ? "sha256" : algorithm);
-
   // Route list is required in config.plugins
   const routesModule = require("./src/scripts/routes");
   const routes = routesModule.routePaths;
 
   const config = {
-    devServer: { historyApiFallback: true, inline: false, stats: "minimal" },
+    devServer: {
+      client: false,
+      historyApiFallback: true,
+      hot: false,
+      liveReload: false,
+      static: { directory: path.resolve(__dirname, "build"), watch: true },
+    },
     entry: "./src/scripts/entry.js",
     module: {
       rules: [
@@ -49,43 +49,42 @@ module.exports = () => {
         },
         {
           test: /\.woff$/,
-          loader: "url-loader?mimetype=application/font-woff",
+          type: "asset/resource",
+          generator: { filename: "[name][ext]" },
         },
         {
           test: /\.(jpg)$/,
-          loader: "file-loader",
-          options: { name: "assets/[name].[ext]" },
+          type: "asset/resource",
+          generator: { filename: "assets/[name][ext]" },
         },
         {
-          test: /\_redirects$/,
-          loader: "file-loader",
-          options: { name: "[name]" },
+          test: /_redirects$/,
+          type: "asset/resource",
+          generator: { filename: "[name][ext]" },
         },
         {
           test: /\/\.well-known\/.*\.txt$/,
-          loader: "file-loader",
-          options: { name: ".well-known/[name].[ext]" },
+          type: "asset/resource",
+          generator: { filename: ".well-known/[name][ext]" },
         },
         {
           test: /\.(ico|png|svg|txt|webmanifest|xml)$/,
           exclude: /\/\.well-known\//,
-          loader: "file-loader",
-          options: { name: "[name].[ext]" },
+          type: "asset/resource",
+          generator: { filename: "[name][ext]" },
         },
       ],
     },
     optimization: {
-      minimizer: [
-        new UglifyJsPlugin({ cache: true, parallel: true }),
-        new OptimizeCSSAssetsPlugin(),
-      ],
+      minimizer: ["...", new CssMinimizerPlugin()],
     },
     output: {
       filename: "bundle.js",
       globalObject: "this",
-      libraryTarget: "umd",
-      path: __dirname + "/build",
+      library: { type: "umd" },
+      path: path.resolve(__dirname, "build"),
       publicPath: "/",
+      clean: true,
     },
     plugins: [
       new MiniCssExtractPlugin({ filename: "styles.css" }),

@@ -1,10 +1,12 @@
 module.exports = {
   plugins: [
     require("postcss-import")(),
-    require("postcss-cssnext")({
+    require("postcss-preset-env")({
       features: {
-        customProperties: { preserve: true },
+        "custom-properties": { preserve: true },
+        "custom-media-queries": true,
       },
+      stage: 3,
     }),
   ],
 };

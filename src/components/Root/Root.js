@@ -2,7 +2,9 @@ import React from "react";
 
 import "./Root.css";
 import Head from "../Head/Head";
-import { version } from "../../../package.json";
+import pkg from "../../../package.json";
+
+const { version } = pkg;
 
 const Root = ({ helmet, router }) => {
   return (
