@@ -14,7 +14,7 @@ describe("Project component", () => {
       path: "",
     };
 
-    Object.keys(projects).forEach(key => {
+    Object.keys(projects).forEach((key) => {
       props.path = key;
       const { client, content, link, title: projectTitle } = projects[key];
 
@@ -24,7 +24,9 @@ describe("Project component", () => {
         </HelmetProvider>,
       );
 
-      expect(screen.getByRole("heading", { name: new RegExp(projectTitle) })).toBeTruthy();
+      expect(
+        screen.getByRole("heading", { name: new RegExp(projectTitle) }),
+      ).toBeTruthy();
       expect(screen.getByText(content.trim())).toBeTruthy();
 
       if (client && client.title) {
@@ -32,10 +34,14 @@ describe("Project component", () => {
       }
 
       if (link && projectTitle) {
-        const projectLinks = screen.getAllByRole("link", { name: projectTitle });
-        expect(projectLinks.some(projectLink => projectLink.getAttribute("href") === link)).toBe(
-          true,
-        );
+        const projectLinks = screen.getAllByRole("link", {
+          name: projectTitle,
+        });
+        expect(
+          projectLinks.some(
+            (projectLink) => projectLink.getAttribute("href") === link,
+          ),
+        ).toBe(true);
       }
 
       unmount();

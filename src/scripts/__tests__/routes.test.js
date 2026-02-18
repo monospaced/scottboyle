@@ -4,7 +4,13 @@ jest.mock("../data");
 
 describe("Routes", () => {
   it("exports static site route paths", () => {
-    expect(routePaths).toEqual(["/", "/alpha/", "/beta/", "/linklog/", "/404/"]);
+    expect(routePaths).toEqual([
+      "/",
+      "/alpha/",
+      "/beta/",
+      "/linklog/",
+      "/404/",
+    ]);
   });
 
   it("normalizes trailing slashes on urls", () => {

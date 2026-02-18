@@ -16,7 +16,11 @@ describe("NotFound component", () => {
       </HelmetProvider>,
     );
 
-    expect(screen.getByRole("heading", { name: /page not found/i })).toBeTruthy();
-    expect(screen.getByText(/requested url was not found on this server/i)).toBeTruthy();
+    expect(
+      screen.getByRole("heading", { name: /page not found/i }),
+    ).toBeTruthy();
+    expect(
+      screen.getByText(/requested url was not found on this server/i),
+    ).toBeTruthy();
   });
 });

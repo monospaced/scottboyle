@@ -11,8 +11,8 @@ describe("Visit component", () => {
 
   it("renders a project link", () => {
     render(<Visit project={{ link: "https://site.com", title: "Site" }} />);
-    expect(screen.getByRole("link", { name: "Site" }).getAttribute("href")).toBe(
-      "https://site.com",
-    );
+    expect(
+      screen.getByRole("link", { name: "Site" }).getAttribute("href"),
+    ).toBe("https://site.com");
   });
 });

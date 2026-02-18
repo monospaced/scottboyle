@@ -10,7 +10,7 @@ import NotFound from "../components/NotFound/NotFound.js";
 
 const projectKeys = Object.keys(data.projects);
 
-const toCurrentPath = pathname => {
+const toCurrentPath = (pathname) => {
   const [segment = ""] = pathname.replace(/^\/+|\/+$/g, "").split("/");
   return segment;
 };
@@ -26,10 +26,10 @@ const AppLayout = () => {
 };
 
 export const routePaths = ["/"]
-  .concat(projectKeys.map(key => `/${key}/`))
+  .concat(projectKeys.map((key) => `/${key}/`))
   .concat(["/linklog/", "/404/"]);
 
-export const ensureTrailingSlashPath = pathname => {
+export const ensureTrailingSlashPath = (pathname) => {
   if (!pathname || pathname === "/") {
     return "/";
   }
@@ -41,8 +41,12 @@ const AppRoutes = () => (
   <Routes>
     <Route element={<AppLayout />} path="/">
       <Route element={<Home data={data} />} index />
-      {projectKeys.map(key => (
-        <Route element={<Project data={data} path={key} />} key={key} path={key} />
+      {projectKeys.map((key) => (
+        <Route
+          element={<Project data={data} path={key} />}
+          key={key}
+          path={key}
+        />
       ))}
       <Route element={<Linklog data={data} />} path="linklog" />
       <Route element={<NotFound data={data} />} path="404" />

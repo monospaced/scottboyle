@@ -75,7 +75,7 @@ class Linklog extends Component {
     if (hasLinks) {
       content = (
         <ul>
-          {links.map(item => {
+          {links.map((item) => {
             const href = safeHref(item.u);
 
             if (!href) {
@@ -158,14 +158,14 @@ class Linklog extends Component {
     this.setState({ status: "loading" });
 
     fetch(api)
-      .then(res => {
+      .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch");
         }
 
         return res.json();
       })
-      .then(json => {
+      .then((json) => {
         if (Array.isArray(json)) {
           if (json.length === 0) {
             this.setState({ status: "error" });

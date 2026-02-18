@@ -8,9 +8,11 @@ describe("Screenshot component", () => {
   const { projects } = data;
 
   it("renders screenshot image for each project", () => {
-    Object.keys(projects).forEach(key => {
+    Object.keys(projects).forEach((key) => {
       const { title } = projects[key];
-      const { unmount } = render(<Screenshot project={projects[key]} slug={key} />);
+      const { unmount } = render(
+        <Screenshot project={projects[key]} slug={key} />,
+      );
 
       expect(screen.getByRole("img", { name: title })).toBeTruthy();
       unmount();
@@ -18,7 +20,7 @@ describe("Screenshot component", () => {
   });
 
   it("applies loaded class after image load", () => {
-    Object.keys(projects).forEach(key => {
+    Object.keys(projects).forEach((key) => {
       const { title } = projects[key];
       const { container, unmount } = render(
         <Screenshot project={projects[key]} slug={key} />,

@@ -17,8 +17,8 @@ describe("Client component", () => {
   it("renders client link when link is provided", () => {
     render(<Client client={{ title: "Client", link: "https://client.com" }} />);
 
-    expect(screen.getByRole("link", { name: "Client" }).getAttribute("href")).toBe(
-      "https://client.com",
-    );
+    expect(
+      screen.getByRole("link", { name: "Client" }).getAttribute("href"),
+    ).toBe("https://client.com");
   });
 });

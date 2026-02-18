@@ -9,10 +9,12 @@ import data from "../../../scripts/__mocks__/data.js";
 
 describe("Linklog component", () => {
   const { description, linklogErrorMessage, subtitle, title, url } = data;
-  const props = { data: { description, linklogErrorMessage, subtitle, title, url } };
-  const flushPromises = () => new Promise(resolve => setTimeout(resolve, 0));
+  const props = {
+    data: { description, linklogErrorMessage, subtitle, title, url },
+  };
+  const flushPromises = () => new Promise((resolve) => setTimeout(resolve, 0));
 
-  const appendEmbeddedData = payload => {
+  const appendEmbeddedData = (payload) => {
     const script = document.createElement("script");
     script.id = "linklog-data";
     script.type = "application/json";
@@ -65,9 +67,9 @@ describe("Linklog component", () => {
     });
 
     expect(fetchMock).toHaveBeenCalledWith("/api/linklog");
-    expect(screen.getByRole("link", { name: "Mock Link A" }).getAttribute("href")).toBe(
-      "https://example.com/mock-a",
-    );
+    expect(
+      screen.getByRole("link", { name: "Mock Link A" }).getAttribute("href"),
+    ).toBe("https://example.com/mock-a");
     expect(screen.getByRole("link", { name: "Mock Link B" })).toBeTruthy();
     expect(window.scrollTo).toHaveBeenCalledWith(0, 0);
   });
@@ -86,9 +88,9 @@ describe("Linklog component", () => {
 
     expect(screen.queryByRole("link", { name: "Relative link" })).toBeNull();
     expect(screen.queryByRole("link", { name: "Bad link" })).toBeNull();
-    expect(screen.getByRole("link", { name: "Good link" }).getAttribute("href")).toBe(
-      "https://example.com/",
-    );
+    expect(
+      screen.getByRole("link", { name: "Good link" }).getAttribute("href"),
+    ).toBe("https://example.com/");
     expect(screen.getAllByRole("listitem")).toHaveLength(1);
   });
 

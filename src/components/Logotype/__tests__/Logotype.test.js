@@ -15,6 +15,10 @@ describe("Logotype component", () => {
     );
 
     expect(screen.getByRole("heading", { level: 1 })).toBeTruthy();
-    expect(screen.getByRole("link", { name: /title subtitle/i }).getAttribute("href")).toBe("/");
+    expect(
+      screen
+        .getByRole("link", { name: /title subtitle/i })
+        .getAttribute("href"),
+    ).toBe("/");
   });
 });
