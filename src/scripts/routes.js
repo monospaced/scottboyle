@@ -11,6 +11,8 @@ import NotFound from "../components/NotFound/NotFound.js";
 const projectKeys = Object.keys(data.projects);
 
 const toCurrentPath = (pathname) => {
+  // Trim outer slashes and take only the first segment:
+  // "/alpha/" -> "alpha", "/alpha/beta/" -> "alpha".
   const [segment = ""] = pathname.replace(/^\/+|\/+$/g, "").split("/");
   return segment;
 };

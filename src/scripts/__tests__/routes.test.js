@@ -7,6 +7,11 @@ import AppRoutes, { ensureTrailingSlashPath, routePaths } from "../routes";
 
 jest.mock("../data");
 
+const routerFuture = {
+  v7_relativeSplatPath: true,
+  v7_startTransition: true,
+};
+
 describe("Routes", () => {
   it("exports static site route paths", () => {
     expect(routePaths).toEqual([
@@ -27,7 +32,7 @@ describe("Routes", () => {
   it("renders home route", () => {
     render(
       <HelmetProvider>
-        <MemoryRouter initialEntries={["/"]}>
+        <MemoryRouter future={routerFuture} initialEntries={["/"]}>
           <AppRoutes />
         </MemoryRouter>
       </HelmetProvider>,
@@ -39,7 +44,7 @@ describe("Routes", () => {
   it("renders project route with current nav state", () => {
     render(
       <HelmetProvider>
-        <MemoryRouter initialEntries={["/alpha/"]}>
+        <MemoryRouter future={routerFuture} initialEntries={["/alpha/"]}>
           <AppRoutes />
         </MemoryRouter>
       </HelmetProvider>,
@@ -56,7 +61,7 @@ describe("Routes", () => {
   it("renders not found route for unknown paths", () => {
     render(
       <HelmetProvider>
-        <MemoryRouter initialEntries={["/missing/"]}>
+        <MemoryRouter future={routerFuture} initialEntries={["/missing/"]}>
           <AppRoutes />
         </MemoryRouter>
       </HelmetProvider>,

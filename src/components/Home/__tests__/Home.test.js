@@ -19,6 +19,7 @@ describe("Home component", () => {
       </HelmetProvider>,
     );
 
+    expect(screen.getByRole("heading", { level: 2, name: "About" })).toBeTruthy();
     expect(screen.getByRole("img", { name: "About" })).toBeTruthy();
     expect(screen.getByText("Test bio for mocks.")).toBeTruthy();
     expect(screen.getByText("Item one")).toBeTruthy();

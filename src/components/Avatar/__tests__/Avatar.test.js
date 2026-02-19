@@ -7,7 +7,7 @@ describe("Avatar component", () => {
   it("renders the page title and avatar image", () => {
     render(<Avatar />);
 
-    expect(screen.getByRole("heading", { level: 2 })).toBeTruthy();
+    expect(screen.getByRole("heading", { level: 2, name: "About" })).toBeTruthy();
     expect(screen.getByRole("img", { name: "About" })).toBeTruthy();
   });
 });

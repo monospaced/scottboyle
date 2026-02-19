@@ -14,7 +14,7 @@ describe("Logotype component", () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByRole("heading", { level: 1 })).toBeTruthy();
+    expect(screen.getByRole("heading", { level: 1, name: /title subtitle/i })).toBeTruthy();
     expect(
       screen
         .getByRole("link", { name: /title subtitle/i })

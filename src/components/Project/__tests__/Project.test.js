@@ -25,7 +25,7 @@ describe("Project component", () => {
       );
 
       expect(
-        screen.getByRole("heading", { name: new RegExp(projectTitle) }),
+        screen.getByRole("heading", { level: 2, name: new RegExp(projectTitle) }),
       ).toBeTruthy();
       expect(screen.getByText(content.trim())).toBeTruthy();
 

@@ -17,8 +17,8 @@ describe("Nav component", () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByRole("heading", { name: "Blog" })).toBeTruthy();
-    expect(screen.getByRole("heading", { name: "Work" })).toBeTruthy();
+    expect(screen.getByRole("heading", { level: 2, name: "Blog" })).toBeTruthy();
+    expect(screen.getByRole("heading", { level: 2, name: "Work" })).toBeTruthy();
     expect(screen.getByRole("link", { name: "Linklog" })).toBeTruthy();
     expect(screen.getByRole("link", { name: "Project Alpha" })).toBeTruthy();
     expect(screen.getByRole("link", { name: "Project Beta" })).toBeTruthy();
