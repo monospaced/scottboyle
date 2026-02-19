@@ -17,7 +17,7 @@ describe("NotFound component", () => {
     );
 
     expect(
-      screen.getByRole("heading", { name: /page not found/i }),
+      screen.getByRole("heading", { level: 2, name: /page not found/i }),
     ).toBeTruthy();
     expect(
       screen.getByText(/requested url was not found on this server/i),

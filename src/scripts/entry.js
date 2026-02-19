@@ -8,6 +8,11 @@ import { HelmetProvider } from "react-helmet-async";
 import Root from "../components/Root/Root.js";
 import AppRoutes, { ensureTrailingSlashPath } from "./routes";
 
+const routerFuture = {
+  v7_relativeSplatPath: true,
+  v7_startTransition: true,
+};
+
 const RouteEffects = () => {
   const location = useLocation();
 
@@ -36,7 +41,7 @@ if (typeof document !== "undefined") {
 
   ReactDOM.hydrate(
     <HelmetProvider>
-      <BrowserRouter>
+      <BrowserRouter future={routerFuture}>
         <RouteEffects />
         <AppRoutes />
       </BrowserRouter>
@@ -51,7 +56,7 @@ export default ({ path }, callback) => {
   const router = {
     __html: ReactDOMServer.renderToString(
       <HelmetProvider context={helmetContext}>
-        <StaticRouter location={normalizedPath}>
+        <StaticRouter future={routerFuture} location={normalizedPath}>
           <AppRoutes />
         </StaticRouter>
       </HelmetProvider>,
