@@ -49,27 +49,32 @@ module.exports = () => {
         },
         {
           test: /\.woff$/,
+          sideEffects: true,
           type: "asset/resource",
           generator: { filename: "[name][ext]" },
         },
         {
           test: /\.(jpg)$/,
+          sideEffects: true,
           type: "asset/resource",
           generator: { filename: "assets/[name][ext]" },
         },
         {
           test: /_redirects$/,
+          sideEffects: true,
           type: "asset/resource",
           generator: { filename: "[name][ext]" },
         },
         {
           test: /\/\.well-known\/.*\.txt$/,
+          sideEffects: true,
           type: "asset/resource",
           generator: { filename: ".well-known/[name][ext]" },
         },
         {
           test: /\.(ico|png|svg|txt|webmanifest|xml)$/,
           exclude: /\/\.well-known\//,
+          sideEffects: true,
           type: "asset/resource",
           generator: { filename: "[name][ext]" },
         },
