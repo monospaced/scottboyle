@@ -15,6 +15,5 @@ Thumbs.db
 /node_modules
 /build
 /coverage
-.coveralls.yml
 netlify/functions/templates/
 .netlify
