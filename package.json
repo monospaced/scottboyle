@@ -60,7 +60,7 @@
     },
     "testEnvironment": "jsdom",
     "transform": {
-      "^.+\\.js$": [
+      "^.+\\.[cm]?js$": [
         "babel-jest",
         {
           "babelrc": false,
@@ -81,13 +81,14 @@
     "dev": "netlify dev --dir build",
     "dev:fast": "webpack serve --mode development --progress",
     "format": "prettier --write \"src/**/*.{css,js}\"",
-    "lint": "eslint \"src/**/*.js\" \"netlify/**/*.js\" \"webpack.config.js\"",
+    "lint": "eslint \"src/**/*.js\" \"netlify/**/*.mjs\" \"webpack.config.js\"",
     "postbuild": "node src/scripts/sitemap.js && node src/scripts/template.js",
     "predev": "pnpm build",
     "test:coverage": "jest --coverage",
     "test": "jest"
   },
   "dependencies": {
+    "@netlify/blobs": "^10.7.8",
     "core-js": "^3.0.0",
     "marked": "^4.0.10",
     "react": "^18.2.0",

@@ -1,16 +1,11 @@
-const fs = require("fs");
-const path = require("path");
+import dataModule from "../../src/scripts/data.js";
+import hrefModule from "../../src/scripts/href.js";
 
-const { linklogErrorMessage } = require("../../src/scripts/data");
-const { fetchWithTimeout } = require("../../src/scripts/fetch");
-const { safeHref } = require("../../src/scripts/href");
+import { MAX_AGE_S, SNAPSHOT_MAX_AGE_S } from "./linklog-config.mjs";
+import { loadLinklogData as defaultLoadLinklogData } from "./linklog-data.mjs";
 
-const {
-  FETCH_TIMEOUT_MS,
-  MAX_AGE_S,
-  MAX_LINKS,
-  USER_AGENT,
-} = require("./linklog-config");
+const { linklogErrorMessage } = dataModule;
+const { safeHref } = hrefModule;
 
 const escapeHtml = value =>
   String(value)
@@ -57,30 +52,6 @@ const renderLinks = links => {
   return `<ul>${items}</ul>`;
 };
 
-const resolveBaseUrl = event => {
-  if (event && event.headers) {
-    const host = event.headers.host;
-
-    if (host) {
-      const forwardedProto = event.headers["x-forwarded-proto"];
-
-      const protocol =
-        forwardedProto ||
-        (host.startsWith("localhost") || host.startsWith("127.0.0.1")
-          ? "http"
-          : "https");
-
-      return `${protocol}://${host}`;
-    }
-  }
-
-  return (
-    process.env.URL || process.env.DEPLOY_URL || process.env.SITE_URL || ""
-  );
-};
-
-const templatePath = path.join(__dirname, "templates", "linklog.html");
-
 const injectData = (html, payload) => {
   const json = JSON.stringify(payload)
     .replace(/</g, "\\u003c")
@@ -106,61 +77,43 @@ const injectError = html =>
     `<div data-linklog-list>${linklogErrorMessage}</div>`,
   );
 
-exports.handler = async event => {
+const createLinklogPageHandler = ({
+  loadLinklogData = defaultLoadLinklogData,
+  readTemplate,
+} = {}) => async () => {
   let template;
 
   try {
-    template = fs.readFileSync(templatePath, "utf8");
+    template = readTemplate();
   } catch (err) {
-    return {
-      body: "Missing Linklog template. Run the build to generate it.",
+    return new Response("Missing Linklog template. Run the build to generate it.", {
       headers: { "Content-Type": "text/plain; charset=utf-8" },
-      statusCode: 500,
-    };
+      status: 500,
+    });
   }
 
   try {
-    const baseUrl = resolveBaseUrl(event);
-    const apiUrl = baseUrl ? `${baseUrl}/api/linklog` : "";
+    const { links, source } = await loadLinklogData();
+    const maxAge = source === "snapshot" ? SNAPSHOT_MAX_AGE_S : MAX_AGE_S;
 
-    if (!apiUrl) {
-      throw new Error("Missing base URL for /api/linklog");
-    }
-
-    const res = await fetchWithTimeout(apiUrl, FETCH_TIMEOUT_MS, USER_AGENT);
-
-    if (!res.ok) {
-      throw new Error(`HTTP ${res.status}`);
-    }
-
-    const json = await res.json();
-
-    if (!Array.isArray(json)) {
-      throw new Error("Expected JSON array");
-    }
-
-    if (json.length === 0) {
-      throw new Error("Expected non-empty JSON array");
-    }
-
-    const links = json.slice(0, MAX_LINKS);
-
-    return {
-      body: injectData(injectLinks(template, links), links),
+    return new Response(injectData(injectLinks(template, links), links), {
       headers: {
-        "Cache-Control": `public, max-age=0, s-maxage=${MAX_AGE_S}`,
+        "Cache-Control": `public, max-age=0, s-maxage=${maxAge}`,
         "Content-Type": "text/html; charset=utf-8",
       },
-      statusCode: 200,
-    };
+      status: 200,
+    });
   } catch (err) {
-    return {
-      body: injectData(injectError(template), { error: true }),
+    console.error(`Failed to render Linklog page: ${err.message}`);
+
+    return new Response(injectData(injectError(template), { error: true }), {
       headers: {
         "Cache-Control": "no-store",
         "Content-Type": "text/html; charset=utf-8",
       },
-      statusCode: 200,
-    };
+      status: 503,
+    });
   }
 };
+
+export { createLinklogPageHandler };

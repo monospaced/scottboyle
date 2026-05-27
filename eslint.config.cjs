@@ -6,7 +6,11 @@ module.exports = [
     ignores: ["build/**", "coverage/**", "node_modules/**"],
   },
   {
-    files: ["src/**/*.js", "netlify/**/*.js", "webpack.config.js"],
+    files: [
+      "src/**/*.js",
+      "netlify/**/*.mjs",
+      "webpack.config.js",
+    ],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
