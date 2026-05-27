@@ -8,7 +8,6 @@ module.exports = [
   {
     files: [
       "src/**/*.js",
-      "netlify/**/*.js",
       "netlify/**/*.mjs",
       "webpack.config.js",
     ],

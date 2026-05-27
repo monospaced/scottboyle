@@ -56,8 +56,8 @@ const renderLinks = links => {
   return `<ul>${items}</ul>`;
 };
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const templatePath = path.join(__dirname, "templates", "linklog.html");
+const moduleDir = path.dirname(fileURLToPath(import.meta.url));
+const templatePath = path.join(moduleDir, "templates", "linklog.html");
 
 const injectData = (html, payload) => {
   const json = JSON.stringify(payload)
