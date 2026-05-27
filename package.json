@@ -88,6 +88,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@netlify/blobs": "^10.7.8",
     "core-js": "^3.0.0",
     "marked": "^4.0.10",
     "react": "^18.2.0",

@@ -2,15 +2,13 @@ const fs = require("fs");
 const path = require("path");
 
 const { linklogErrorMessage } = require("../../src/scripts/data");
-const { fetchWithTimeout } = require("../../src/scripts/fetch");
 const { safeHref } = require("../../src/scripts/href");
 
 const {
-  FETCH_TIMEOUT_MS,
   MAX_AGE_S,
-  MAX_LINKS,
-  USER_AGENT,
+  SNAPSHOT_MAX_AGE_S,
 } = require("./linklog-config");
+const { loadLinklogData } = require("./linklog-data");
 
 const escapeHtml = value =>
   String(value)
@@ -57,28 +55,6 @@ const renderLinks = links => {
   return `<ul>${items}</ul>`;
 };
 
-const resolveBaseUrl = event => {
-  if (event && event.headers) {
-    const host = event.headers.host;
-
-    if (host) {
-      const forwardedProto = event.headers["x-forwarded-proto"];
-
-      const protocol =
-        forwardedProto ||
-        (host.startsWith("localhost") || host.startsWith("127.0.0.1")
-          ? "http"
-          : "https");
-
-      return `${protocol}://${host}`;
-    }
-  }
-
-  return (
-    process.env.URL || process.env.DEPLOY_URL || process.env.SITE_URL || ""
-  );
-};
-
 const templatePath = path.join(__dirname, "templates", "linklog.html");
 
 const injectData = (html, payload) => {
@@ -120,35 +96,13 @@ exports.handler = async event => {
   }
 
   try {
-    const baseUrl = resolveBaseUrl(event);
-    const apiUrl = baseUrl ? `${baseUrl}/api/linklog` : "";
-
-    if (!apiUrl) {
-      throw new Error("Missing base URL for /api/linklog");
-    }
-
-    const res = await fetchWithTimeout(apiUrl, FETCH_TIMEOUT_MS, USER_AGENT);
-
-    if (!res.ok) {
-      throw new Error(`HTTP ${res.status}`);
-    }
-
-    const json = await res.json();
-
-    if (!Array.isArray(json)) {
-      throw new Error("Expected JSON array");
-    }
-
-    if (json.length === 0) {
-      throw new Error("Expected non-empty JSON array");
-    }
-
-    const links = json.slice(0, MAX_LINKS);
+    const { links, source } = await loadLinklogData(event);
+    const maxAge = source === "snapshot" ? SNAPSHOT_MAX_AGE_S : MAX_AGE_S;
 
     return {
       body: injectData(injectLinks(template, links), links),
       headers: {
-        "Cache-Control": `public, max-age=0, s-maxage=${MAX_AGE_S}`,
+        "Cache-Control": `public, max-age=0, s-maxage=${maxAge}`,
         "Content-Type": "text/html; charset=utf-8",
       },
       statusCode: 200,
@@ -160,7 +114,7 @@ exports.handler = async event => {
         "Cache-Control": "no-store",
         "Content-Type": "text/html; charset=utf-8",
       },
-      statusCode: 200,
+      statusCode: 503,
     };
   }
 };
