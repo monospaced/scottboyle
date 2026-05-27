@@ -60,7 +60,7 @@
     },
     "testEnvironment": "jsdom",
     "transform": {
-      "^.+\\.js$": [
+      "^.+\\.[cm]?js$": [
         "babel-jest",
         {
           "babelrc": false,

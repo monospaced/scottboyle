@@ -10,59 +10,82 @@ import { readLinklogSnapshot, writeLinklogSnapshot } from "./linklog-store.mjs";
 
 const { fetchWithTimeout } = fetchModule;
 
-const normalizeLinks = json => {
-  if (!Array.isArray(json)) {
-    throw new Error("Expected JSON array");
-  }
+const createLinklogDataLoader = ({
+  delay = FETCH_TIMEOUT_MS,
+  feedUrl = FEED_URL,
+  maxLinks = MAX_LINKS,
+  now = () => new Date().toISOString(),
+  readSnapshot = readLinklogSnapshot,
+  request = fetchWithTimeout,
+  userAgent = USER_AGENT,
+  writeSnapshot = writeLinklogSnapshot,
+} = {}) => {
+  const normalizeLinks = json => {
+    if (!Array.isArray(json)) {
+      throw new Error("Expected JSON array");
+    }
 
-  if (json.length === 0) {
-    throw new Error("Expected non-empty JSON array");
-  }
+    if (json.length === 0) {
+      throw new Error("Expected non-empty JSON array");
+    }
 
-  return json.slice(0, MAX_LINKS);
-};
+    return json.slice(0, maxLinks);
+  };
 
-const fetchPinboardLinks = async () => {
-  const res = await fetchWithTimeout(FEED_URL, FETCH_TIMEOUT_MS, USER_AGENT);
+  const fetchPinboardLinks = async () => {
+    const res = await request(feedUrl, delay, userAgent);
 
-  if (!res.ok) {
-    throw new Error(res.statusText || `HTTP ${res.status}`);
-  }
+    if (!res.ok) {
+      throw new Error(res.statusText || `HTTP ${res.status}`);
+    }
 
-  const json = await res.json();
+    const json = await res.json();
 
-  return normalizeLinks(json);
-};
+    return normalizeLinks(json);
+  };
 
-const loadLinklogData = async () => {
-  try {
-    const links = await fetchPinboardLinks();
-    const fetchedAt = new Date().toISOString();
-
+  const loadLinklogData = async () => {
     try {
-      await writeLinklogSnapshot({ fetchedAt, links });
-    } catch (err) {
-      // Live data should still be served even if snapshot persistence fails.
-    }
+      const links = await fetchPinboardLinks();
+      const fetchedAt = now();
 
-    return {
-      fetchedAt,
-      links,
-      source: "live",
-    };
-  } catch (liveError) {
-    const snapshot = await readLinklogSnapshot();
+      void writeSnapshot({ fetchedAt, links }).catch(err => {
+        console.warn(`Failed to write Linklog snapshot: ${err.message}`);
+      });
 
-    if (snapshot) {
       return {
-        fetchedAt: snapshot.fetchedAt,
-        links: snapshot.links,
-        source: "snapshot",
+        fetchedAt,
+        links,
+        source: "live",
       };
-    }
+    } catch (liveError) {
+      const snapshot = await readSnapshot();
 
-    throw liveError;
-  }
+      if (snapshot) {
+        console.warn(
+          `Serving Linklog snapshot after live fetch failure: ${liveError.message}`,
+        );
+
+        return {
+          fetchedAt: snapshot.fetchedAt,
+          links: snapshot.links,
+          source: "snapshot",
+        };
+      }
+
+      throw liveError;
+    }
+  };
+
+  return { fetchPinboardLinks, loadLinklogData, normalizeLinks };
 };
 
-export { fetchPinboardLinks, loadLinklogData, normalizeLinks };
+const { fetchPinboardLinks, loadLinklogData, normalizeLinks } =
+  createLinklogDataLoader();
+
+export {
+  createLinklogDataLoader,
+  fetchPinboardLinks,
+  loadLinklogData,
+  normalizeLinks,
+};

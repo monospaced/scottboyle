@@ -17,8 +17,18 @@ const readLinklogSnapshot = async () => {
     const store = getLinklogStore();
     const snapshot = await store.get(SNAPSHOT_KEY, { type: "json" });
 
-    return isValidSnapshot(snapshot) ? snapshot : null;
+    if (snapshot === null) {
+      return null;
+    }
+
+    if (isValidSnapshot(snapshot)) {
+      return snapshot;
+    }
+
+    console.warn("Linklog snapshot was invalid and has been ignored.");
+    return null;
   } catch (err) {
+    console.warn(`Failed to read Linklog snapshot: ${err.message}`);
     return null;
   }
 };

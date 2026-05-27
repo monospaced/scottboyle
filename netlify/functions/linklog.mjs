@@ -36,6 +36,8 @@ export default async request => {
       status: 200,
     });
   } catch (err) {
+    console.error(`Failed to serve Linklog API: ${err.message}`);
+
     return new Response(
       JSON.stringify({
         error: "Failed to fetch feed",
@@ -47,7 +49,7 @@ export default async request => {
           "Cache-Control": "no-store",
           "Content-Type": "application/json",
         },
-        status: 500,
+        status: 503,
       },
     );
   }
