@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Client.css";
+
 const Client = ({ client: { link, title } }) => {
   return title ? (
     <p className="Client">

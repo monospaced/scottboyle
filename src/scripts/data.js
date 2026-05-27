@@ -7,13 +7,13 @@ module.exports = {
   description:
     "Web professional specialising in design engineering and modern front-end development.",
   about: `
-<a class="fn uid url" href="${url}" translate="no">Scott Boyle</a>&nbsp;(<span class="nickname" translate="no">monospaced</span>) is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>.
+<a class="fn uid url" href="${url}" translate="no">Scott Boyle</a> (<span class="nickname" translate="no">monospaced</span>) is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>.
 
-<span translate="no">Scott</span>&nbsp;lives in <span class="adr"><span class="locality">London</span>, <span class="country-name">UK</span></span>, and is the Principal Design Engineer at <a class="org" href="https://measured.co" translate="no">Measured</a>, a web UI consultancy working with clients across the UK and around the world.
+<span translate="no">Scott</span> lives in <span class="adr"><span class="locality">London</span>, <span class="country-name">UK</span></span>, and is the Principal Design Engineer at <a class="org" href="https://measured.co" translate="no">Measured</a>, a web UI consultancy working with clients across the UK and around the world.
 
 ### Contact
 
-* <a href="mailto:scott@measured.co" class="email">scott@measured.co</a>
+* <a href="mailto:scott@monospaced.com" class="email">scott@monospaced.com</a>
 
 ### Elsewhere
 
@@ -22,64 +22,94 @@ module.exports = {
   `,
   linklogErrorMessage: "Unable to load linklog.",
   projects: {
+    dunnhumby: {
+      title: "dunnhumby",
+      date: "2024–2026",
+      client: {
+        title: "Measured",
+        link: "https://measured.co",
+      },
+      image: {
+        width: 398,
+        height: 216,
+      },
+      content: `
+Advised on a new design system, then led its integration into a legacy application stack.
+      `,
+    },
     hilton: {
       title: "Hilton",
       date: "2022–2025",
       link: "https://www.hilton.com",
+      client: {
+        title: "Measured",
+        link: "https://measured.co",
+      },
       image: {
         width: 398,
-        height: 224,
+        height: 209,
       },
       content: `
-Multi-brand design system.
+Consulted on the development of a multi-brand design system.
       `,
     },
     hubble: {
       title: "Hubble",
       date: "2019–2023",
       link: "https://www.hubblehq.com",
+      client: {
+        title: "Measured",
+        link: "https://measured.co",
+      },
       image: {
         width: 398,
-        height: 230,
+        height: 216,
       },
       content: `
 Migrated Hubble’s site from AngularJS to React and architected a UI system to support their new brand.
+
+Also led a project to expand and refine their On-Demand product.
       `,
     },
     bt: {
       title: "BT",
       date: "2020–2022",
-      link: "https://ui.digital-ent-int.bt.com/latest/",
+      link: "https://business.bt.com",
+      client: {
+        title: "Measured",
+        link: "https://measured.co",
+      },
       image: {
         width: 398,
-        height: 267,
+        height: 175,
       },
       content: `
-Developing the Arc UI System for BT Enterprise.
+Developed and launched the Arc design system for BT Buisness.
       `,
     },
     refinitiv: {
       title: "Refinitiv",
       date: "2018–2019",
-      link: "https://forge.refinitiv.com",
+      link: "https://www.lseg.com",
       image: {
         width: 398,
         height: 269,
       },
       content: `
-Created a CSS webpack build solution to rebrand the Thomson Reuters web platform for Refinitiv. The solution produced significant cost savings for both&nbsp;businesses.
+Rebranded WEL (the Thomson Reuters design system) for Refinitiv, producing significant cost savings for both businesses.
+
+WEL lives on at LSEG, which acquired Refinitiv in 2021.
       `,
     },
     "thomson-reuters": {
       title: "Thomson Reuters",
       date: "2017–2019",
-      link: "https://www.thomsonreuters.com/en.html",
       image: {
         width: 398,
         height: 312,
       },
       content: `
-Building a design system and React component&nbsp;library.
+Worked as part of a team building WEL, a design system and React component library that integrated with AEM to power thomsonreuters.com.
       `,
     },
     "social-360": {
@@ -95,9 +125,9 @@ Building a design system and React component&nbsp;library.
         height: 310,
       },
       content: `
-Complete build and project delivery of a complex single-page web application. Highcharts data visualisation, Redux state management and Jest unit&nbsp;testing.
+Led the build and delivery of a complex single-page web application, including Highcharts data visualisation, Redux state management, and Jest unit testing.
 
-Also a full marketing website build, front end and CMS&nbsp;(Perch).
+Also delivered a full marketing website, including front end and CMS (Perch).
       `,
     },
     omron: {
@@ -113,7 +143,7 @@ Also a full marketing website build, front end and CMS&nbsp;(Perch).
         height: 209,
       },
       content: `
-Assisted Hanno with front-end development of Evolv&nbsp;microsite.
+Assisted Hanno with front-end development of the Evolv microsite.
       `,
     },
     "compass-group": {
@@ -127,7 +157,7 @@ Assisted Hanno with front-end development of Evolv&nbsp;microsite.
       content: `
 ### Retail Pricing Portal
 
-UI design and complete front-end build, Angular NgRx web&nbsp;app.
+Designed the UI and delivered the complete front-end build for an Angular NgRx web app.
       `,
     },
     passionflix: {
@@ -143,7 +173,7 @@ UI design and complete front-end build, Angular NgRx web&nbsp;app.
         height: 246,
       },
       content: `
-Complete front-end build, React/Webpack static site&nbsp;generator.
+Delivered the complete front-end build for a React/webpack static site generator.
       `,
     },
     traq: {
@@ -159,7 +189,7 @@ Complete front-end build, React/Webpack static site&nbsp;generator.
         height: 308,
       },
       content: `
-Technical specifications and complete AngularJS front-end build. Stripe payments integration, CI and AWS infrastructure management, PCI compliance. Working in close collaboration with .NET API developers and the product&nbsp;team.
+Produced technical specifications and led the AngularJS front-end build. Integrated Stripe payments, managed CI and AWS infrastructure, and ensured PCI compliance in close collaboration with the product team and .NET API developers.
       `,
     },
     freeform: {
@@ -175,7 +205,7 @@ Technical specifications and complete AngularJS front-end build. Stripe payments
         height: 241,
       },
       content: `
-Building full stack  prototypes and technical experiments utilising a variety of  technologies. Node.js, React, AngularJS and Angular, Ionic. OpenCV, Leap Motion, Alexa Skills, Facebook Messenger Platform,&nbsp;etc.
+Built full-stack prototypes and technical experiments using a range of technologies, including Node.js, React, AngularJS, Angular, Ionic, OpenCV, Leap Motion, Alexa Skills, and the Facebook Messenger Platform.
       `,
     },
     "just-eat": {
@@ -191,7 +221,7 @@ Building full stack  prototypes and technical experiments utilising a variety of
         height: 311,
       },
       content: `
-Front-end template builds for responsive homepage project, mobile app prototypes, and website&nbsp;refresh.
+Built front-end templates for a responsive homepage, mobile app prototypes, and a website refresh.
       `,
     },
     nhs: {
@@ -209,7 +239,7 @@ Front-end template builds for responsive homepage project, mobile app prototypes
       content: `
 ### Islington GP Hubs
 
-Managed the delivery of this content&nbsp;website.
+Managed the delivery of this content website.
       `,
     },
     "find-my-past": {
@@ -225,7 +255,7 @@ Managed the delivery of this content&nbsp;website.
         height: 321,
       },
       content: `
-Front-end design and build for a family tree web app built in AngularJS. Complex diagram views built completely in&nbsp;CSS.
+Designed and built the front end for a family tree web app in AngularJS, with its complex diagram views constructed entirely in CSS.
       `,
     },
     "dow-jones": {
@@ -243,7 +273,7 @@ Front-end design and build for a family tree web app built in AngularJS. Complex
       content: `
 ### Financial News
 
-Complete front-end templates for redesign of efinancialnews.com. Semantic HTML and object-oriented CSS produced a lightweight, accessible and SEO friendly&nbsp;site.
+Delivered complete front-end templates for the redesign of efinancialnews.com. Semantic HTML and object-oriented CSS produced a lightweight, accessible, and SEO-friendly site.
       `,
     },
     bilbary: {
@@ -259,7 +289,7 @@ Complete front-end templates for redesign of efinancialnews.com. Semantic HTML a
         height: 190,
       },
       content: `
-Prototype web e-book reader for digital library startup. Lives on as an open source project:&nbsp;[Paperback](https://monospaced.github.io/paperback/).
+Built a prototype web e-book reader for a digital library startup. It lives on as [Paperback](https://monospaced.github.io/paperback/), an open-source project.
       `,
     },
     "genes-reunited": {
@@ -275,7 +305,7 @@ Prototype web e-book reader for digital library startup. Lives on as an open sou
         height: 143,
       },
       content: `
-Consulting and advising on a site-wide design refresh. Created indicative templates and assisted with&nbsp;integration.
+Consulted on a site-wide design refresh, created indicative templates, and assisted with integration.
       `,
     },
     "bladud-flies": {
@@ -288,7 +318,7 @@ Consulting and advising on a site-wide design refresh. Created indicative templa
         height: 252,
       },
       content: `
-Full website build, front end and CMS&nbsp;(WordPress).
+Delivered the full website build, including front end and CMS (WordPress).
       `,
     },
     silu: {
@@ -304,7 +334,7 @@ Full website build, front end and CMS&nbsp;(WordPress).
         height: 369,
       },
       content: `
-Lead front-end developer for portal website aimed at the global Chinese professional community. Working in close collaboration with Ruby on Rails developers and the product&nbsp;team.
+Led front-end development for a portal website aimed at the global Chinese professional community, working closely with Ruby on Rails developers and the product team.
       `,
     },
     stordis: {
@@ -316,7 +346,7 @@ Lead front-end developer for portal website aimed at the global Chinese professi
         height: 231,
       },
       content: `
-Requirements gathering, front-end development, back-end design and development (PHP/MySQL). Bespoke CMS, search integration, deployment, search engine and performance&nbsp;optimisation.
+Designed and built the full site end-to-end, including a bespoke CMS and search integration in PHP/MySQL. Also handled requirements gathering, deployment, and SEO and performance optimisation.
       `,
     },
     amberlight: {
@@ -332,7 +362,7 @@ Requirements gathering, front-end development, back-end design and development (
         height: 185,
       },
       content: `
-Responsible for all aspects of site development. From static templates to form functionality, CMS integration, and site&nbsp;deployment.
+Led all aspects of site development, from static templates to form functionality, CMS integration, and site deployment.
       `,
     },
     cadbury: {
@@ -350,7 +380,7 @@ Responsible for all aspects of site development. From static templates to form f
       content: `
 ### Spots v Stripes
 
-JavaScript animations and data integration: counters, odometers, tickers and sound&nbsp;fx!
+Delivered JavaScript animations and data integration, including counters, odometers, tickers, and sound fx.
       `,
     },
     lloyds: {
@@ -368,7 +398,7 @@ JavaScript animations and data integration: counters, odometers, tickers and sou
       content: `
 ### British Weather Photographer of the Year
 
-Front-end templates for this competition&nbsp;microsite.
+Built front-end templates for this competition microsite.
       `,
     },
     ogilvy: {
@@ -386,7 +416,7 @@ Front-end templates for this competition&nbsp;microsite.
       content: `
 ### Tools Not Rules Wiki
 
-Skinning and configuring&nbsp;MediaWiki.
+Skinned and configured MediaWiki.
       `,
     },
     sharp: {
@@ -404,7 +434,7 @@ Skinning and configuring&nbsp;MediaWiki.
       content: `
 ### Sharp Quattron
 
-Responsible for Google Maps API search and display&nbsp;functionality.
+Delivered Google Maps API search and display functionality.
       `,
     },
     travelmatch: {
@@ -420,7 +450,7 @@ Responsible for Google Maps API search and display&nbsp;functionality.
         height: 139,
       },
       content: `
-Rapid prototyping of experimental JavaScript search interface concepts for user acceptance&nbsp;testing.
+Rapidly prototyped experimental JavaScript search interface concepts for user acceptance testing.
       `,
     },
     "walmart-labs": {
@@ -438,7 +468,7 @@ Rapid prototyping of experimental JavaScript search interface concepts for user 
       content: `
 ### OneRiot
 
-Front-end templating for a successful redesign, taking OneRiot out of beta. Object-oriented CSS and  JavaScript&nbsp;animations.
+Delivered front-end templates for a successful redesign that took OneRiot out of beta.
       `,
     },
     "best-buy": {
@@ -454,7 +484,7 @@ Front-end templating for a successful redesign, taking OneRiot out of beta. Obje
         height: 288,
       },
       content: `
-Part of a 5 person team building the front end for Best Buy’s UK site. Particular focus on performance, object-oriented CSS, and asynchronous JavaScript&nbsp;loading.
+Worked as part of a five-person team building the front end for Best Buy’s UK site, with a particular focus on performance, object-oriented CSS, and asynchronous JavaScript loading.
       `,
     },
     pepsi: {
@@ -486,7 +516,7 @@ Part of a 5 person team building the front end for Best Buy’s UK site. Particu
         height: 112,
       },
       content: `
-Rapid prototyping of interactive behaviours and animations. Adaptive/elastic layouts, visual design candidates and user&nbsp;skins.
+Rapidly prototyped interactive behaviours and animations, adaptive and elastic layouts, visual design candidates, and user skins.
       `,
     },
     "financial-careers": {
@@ -502,7 +532,7 @@ Rapid prototyping of interactive behaviours and animations. Adaptive/elastic lay
         height: 185,
       },
       content: `
-Consulting on transition from legacy table-based layouts to modern Web Standards front end. Also responsible for coding static HTML/CSS templates for the redesigned editorial&nbsp;section.
+Consulted on the transition from legacy table-based layouts to a modern Web Standards front end. Also coded static HTML/CSS templates for the redesigned editorial section.
       `,
     },
     "house-of-fraser": {
@@ -518,7 +548,7 @@ Consulting on transition from legacy table-based layouts to modern Web Standards
         height: 194,
       },
       content: `
-Developed advanced functionality for a new online store. JavaScript animations, AJAX and server-side&nbsp;integration.
+Developed advanced functionality for a new online store, including JavaScript animations, AJAX, and server-side integration.
       `,
     },
     usc: {
@@ -534,7 +564,7 @@ Developed advanced functionality for a new online store. JavaScript animations, 
         height: 209,
       },
       content: `
-Developed AJAX functionality and animated UI behaviours for a redesigned online store. Accessible and unobtrusive integration of complex Flash elements and Adobe Scene7&nbsp;API.
+Developed AJAX functionality and animated UI behaviours for a redesigned online store.
       `,
     },
     "the-national-lottery": {
@@ -547,9 +577,9 @@ Developed AJAX functionality and animated UI behaviours for a redesigned online 
         height: 284,
       },
       content: `
-Technical lead on an accessible Web Standards retrofit of national-lottery.co.uk. Lotto and EuroMillions gameplay, user registration and account&nbsp;management.
+Served as technical lead on an accessible Web Standards retrofit of national-lottery.co.uk, covering Lotto and EuroMillions gameplay, user registration, and account management.
 
-Responsible for front-end architecture and all front-end development. Authored company Web Accessibility Guidelines, and conducted usability testing with screen-reader&nbsp;users.
+Led front-end architecture and development, authored company Web Accessibility Guidelines, and conducted usability testing with screen-reader users.
       `,
     },
     "age-concern": {
@@ -564,7 +594,7 @@ Responsible for front-end architecture and all front-end development. Authored c
       content: `
 ### Age Concern Southwark
 
-Responsible for designing and developing an accessible <abbr title="Disability Discrimination Act">DDA</abbr> compliant website for older&nbsp;users.
+Designed and developed an accessible <abbr title="Disability Discrimination Act">DDA</abbr>-compliant website for older users.
       `,
     },
   },
