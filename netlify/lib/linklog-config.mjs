@@ -10,7 +10,7 @@ const FEED_URL =
   process.env.PINBOARD_FEED_URL ||
   `https://feeds.pinboard.in/json/v1/u:monospaced/?count=${MAX_LINKS}`;
 
-module.exports = {
+export {
   FETCH_TIMEOUT_MS,
   FEED_URL,
   MAX_AGE_S,

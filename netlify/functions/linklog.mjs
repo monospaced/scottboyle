@@ -1,8 +1,5 @@
-const {
-  MAX_AGE_S,
-  SNAPSHOT_MAX_AGE_S,
-} = require("./linklog-config");
-const { loadLinklogData } = require("./linklog-data");
+import { MAX_AGE_S, SNAPSHOT_MAX_AGE_S } from "../lib/linklog-config.mjs";
+import { loadLinklogData } from "../lib/linklog-data.mjs";
 
 const parseAllowedOrigins = value =>
   value
@@ -18,42 +15,40 @@ const corsHeadersFor = origin => {
   if (origin && allowedOrigins.includes(origin)) {
     return { "Access-Control-Allow-Origin": origin };
   }
+
   return {};
 };
 
-exports.handler = async event => {
-  const origin =
-    (event &&
-      event.headers &&
-      (event.headers.origin || event.headers.Origin)) ||
-    "";
+export default async request => {
+  const origin = request.headers.get("origin") || "";
   const corsHeaders = corsHeadersFor(origin);
 
   try {
-    const { links, source } = await loadLinklogData(event);
+    const { links, source } = await loadLinklogData();
     const maxAge = source === "snapshot" ? SNAPSHOT_MAX_AGE_S : MAX_AGE_S;
 
-    return {
-      body: JSON.stringify(links),
+    return new Response(JSON.stringify(links), {
       headers: {
         ...corsHeaders,
         "Cache-Control": `public, max-age=0, s-maxage=${maxAge}`,
         "Content-Type": "application/json",
       },
-      statusCode: 200,
-    };
+      status: 200,
+    });
   } catch (err) {
-    return {
-      body: JSON.stringify({
+    return new Response(
+      JSON.stringify({
         error: "Failed to fetch feed",
         message: err.message,
       }),
-      headers: {
-        ...corsHeaders,
-        "Cache-Control": "no-store",
-        "Content-Type": "application/json",
+      {
+        headers: {
+          ...corsHeaders,
+          "Cache-Control": "no-store",
+          "Content-Type": "application/json",
+        },
+        status: 500,
       },
-      statusCode: 500,
-    };
+    );
   }
 };

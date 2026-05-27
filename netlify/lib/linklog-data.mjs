@@ -1,15 +1,14 @@
-const { fetchWithTimeout } = require("../../src/scripts/fetch");
+import fetchModule from "../../src/scripts/fetch.js";
 
-const {
+import {
   FETCH_TIMEOUT_MS,
   FEED_URL,
   MAX_LINKS,
   USER_AGENT,
-} = require("./linklog-config");
-const {
-  readLinklogSnapshot,
-  writeLinklogSnapshot,
-} = require("./linklog-store");
+} from "./linklog-config.mjs";
+import { readLinklogSnapshot, writeLinklogSnapshot } from "./linklog-store.mjs";
+
+const { fetchWithTimeout } = fetchModule;
 
 const normalizeLinks = json => {
   if (!Array.isArray(json)) {
@@ -35,13 +34,13 @@ const fetchPinboardLinks = async () => {
   return normalizeLinks(json);
 };
 
-const loadLinklogData = async event => {
+const loadLinklogData = async () => {
   try {
     const links = await fetchPinboardLinks();
     const fetchedAt = new Date().toISOString();
 
     try {
-      await writeLinklogSnapshot(event, { fetchedAt, links });
+      await writeLinklogSnapshot({ fetchedAt, links });
     } catch (err) {
       // Live data should still be served even if snapshot persistence fails.
     }
@@ -52,7 +51,7 @@ const loadLinklogData = async event => {
       source: "live",
     };
   } catch (liveError) {
-    const snapshot = await readLinklogSnapshot(event);
+    const snapshot = await readLinklogSnapshot();
 
     if (snapshot) {
       return {
@@ -66,8 +65,4 @@ const loadLinklogData = async event => {
   }
 };
 
-module.exports = {
-  fetchPinboardLinks,
-  loadLinklogData,
-  normalizeLinks,
-};
+export { fetchPinboardLinks, loadLinklogData, normalizeLinks };

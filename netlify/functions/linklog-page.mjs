@@ -1,14 +1,15 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const { linklogErrorMessage } = require("../../src/scripts/data");
-const { safeHref } = require("../../src/scripts/href");
+import dataModule from "../../src/scripts/data.js";
+import hrefModule from "../../src/scripts/href.js";
 
-const {
-  MAX_AGE_S,
-  SNAPSHOT_MAX_AGE_S,
-} = require("./linklog-config");
-const { loadLinklogData } = require("./linklog-data");
+import { MAX_AGE_S, SNAPSHOT_MAX_AGE_S } from "../lib/linklog-config.mjs";
+import { loadLinklogData } from "../lib/linklog-data.mjs";
+
+const { linklogErrorMessage } = dataModule;
+const { safeHref } = hrefModule;
 
 const escapeHtml = value =>
   String(value)
@@ -55,6 +56,7 @@ const renderLinks = links => {
   return `<ul>${items}</ul>`;
 };
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const templatePath = path.join(__dirname, "templates", "linklog.html");
 
 const injectData = (html, payload) => {
@@ -82,39 +84,36 @@ const injectError = html =>
     `<div data-linklog-list>${linklogErrorMessage}</div>`,
   );
 
-exports.handler = async event => {
+export default async () => {
   let template;
 
   try {
     template = fs.readFileSync(templatePath, "utf8");
   } catch (err) {
-    return {
-      body: "Missing Linklog template. Run the build to generate it.",
+    return new Response("Missing Linklog template. Run the build to generate it.", {
       headers: { "Content-Type": "text/plain; charset=utf-8" },
-      statusCode: 500,
-    };
+      status: 500,
+    });
   }
 
   try {
-    const { links, source } = await loadLinklogData(event);
+    const { links, source } = await loadLinklogData();
     const maxAge = source === "snapshot" ? SNAPSHOT_MAX_AGE_S : MAX_AGE_S;
 
-    return {
-      body: injectData(injectLinks(template, links), links),
+    return new Response(injectData(injectLinks(template, links), links), {
       headers: {
         "Cache-Control": `public, max-age=0, s-maxage=${maxAge}`,
         "Content-Type": "text/html; charset=utf-8",
       },
-      statusCode: 200,
-    };
+      status: 200,
+    });
   } catch (err) {
-    return {
-      body: injectData(injectError(template), { error: true }),
+    return new Response(injectData(injectError(template), { error: true }), {
       headers: {
         "Cache-Control": "no-store",
         "Content-Type": "text/html; charset=utf-8",
       },
-      statusCode: 503,
-    };
+      status: 503,
+    });
   }
 };

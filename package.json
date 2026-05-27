@@ -81,7 +81,7 @@
     "dev": "netlify dev --dir build",
     "dev:fast": "webpack serve --mode development --progress",
     "format": "prettier --write \"src/**/*.{css,js}\"",
-    "lint": "eslint \"src/**/*.js\" \"netlify/**/*.js\" \"webpack.config.js\"",
+    "lint": "eslint \"src/**/*.js\" \"netlify/**/*.{js,mjs}\" \"webpack.config.js\"",
     "postbuild": "node src/scripts/sitemap.js && node src/scripts/template.js",
     "predev": "pnpm build",
     "test:coverage": "jest --coverage",
@@ -89,7 +89,6 @@
   },
   "dependencies": {
     "@netlify/blobs": "^10.7.8",
-    "@netlify/dev-utils": "4.4.5",
     "core-js": "^3.0.0",
     "marked": "^4.0.10",
     "react": "^18.2.0",

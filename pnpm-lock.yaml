@@ -11,9 +11,6 @@ importers:
       '@netlify/blobs':
         specifier: ^10.7.8
         version: 10.7.8
-      '@netlify/dev-utils':
-        specifier: 4.4.5
-        version: 4.4.5
       core-js:
         specifier: ^3.0.0
         version: 3.48.0
