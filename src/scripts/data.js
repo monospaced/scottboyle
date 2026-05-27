@@ -17,6 +17,7 @@ module.exports = {
 
 ### Elsewhere
 
+* <a href="https://www.are.na/mono-spaced" rel="me">Are.na</a>
 * <a href="https://github.com/monospaced" rel="me" translate="no">GitHub</a>
 * <a href="https://www.linkedin.com/in/scottboyle/" rel="me" translate="no">LinkedIn</a>
   `,
