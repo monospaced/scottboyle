@@ -49,9 +49,11 @@ const createLinklogDataLoader = ({
       const links = await fetchPinboardLinks();
       const fetchedAt = now();
 
-      void writeSnapshot({ fetchedAt, links }).catch(err => {
+      try {
+        await writeSnapshot({ fetchedAt, links });
+      } catch (err) {
         console.warn(`Failed to write Linklog snapshot: ${err.message}`);
-      });
+      }
 
       return {
         fetchedAt,

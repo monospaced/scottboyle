@@ -3,6 +3,15 @@
  */
 
 describe("linklog data loader", () => {
+  const createDeferred = () => {
+    let resolve;
+    const promise = new Promise(res => {
+      resolve = res;
+    });
+
+    return { promise, resolve };
+  };
+
   it("writes a snapshot when the live fetch succeeds", async () => {
     const { createLinklogDataLoader } = await import(
       "../../netlify/lib/linklog-data.mjs"
@@ -49,6 +58,57 @@ describe("linklog data loader", () => {
           u: "https://example.com/live",
         },
       ],
+    });
+  });
+
+  it("waits for the snapshot write to finish before resolving live data", async () => {
+    const { createLinklogDataLoader } = await import(
+      "../../netlify/lib/linklog-data.mjs"
+    );
+    const deferred = createDeferred();
+    const request = jest.fn().mockResolvedValue({
+      json: () =>
+        Promise.resolve([
+          {
+            d: "Live Link",
+            dt: "2025-01-01T00:00:00Z",
+            u: "https://example.com/live",
+          },
+        ]),
+      ok: true,
+    });
+    const writeSnapshot = jest.fn().mockImplementation(() => deferred.promise);
+
+    const { loadLinklogData } = createLinklogDataLoader({
+      now: () => "2025-01-02T00:00:00.000Z",
+      readSnapshot: jest.fn(),
+      request,
+      writeSnapshot,
+    });
+
+    let resolved = false;
+    const resultPromise = loadLinklogData().then(result => {
+      resolved = true;
+      return result;
+    });
+
+    await Promise.resolve();
+    await Promise.resolve();
+
+    expect(resolved).toBe(false);
+
+    deferred.resolve();
+
+    await expect(resultPromise).resolves.toEqual({
+      fetchedAt: "2025-01-02T00:00:00.000Z",
+      links: [
+        {
+          d: "Live Link",
+          dt: "2025-01-01T00:00:00Z",
+          u: "https://example.com/live",
+        },
+      ],
+      source: "live",
     });
   });
 
