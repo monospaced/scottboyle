@@ -35,12 +35,12 @@ module.exports = {
         height: 216,
       },
       content: `
-Advised on a new design system, then led its integration into a legacy application stack.
+Helped dunnhumby define a digital brand expression, and build a design system practice from scratch. Also drove the system’s initial integration into new platforms.
       `,
     },
     hilton: {
       title: "Hilton",
-      date: "2022–2025",
+      date: "2023–2025",
       link: "https://www.hilton.com",
       client: {
         title: "Measured",
@@ -206,7 +206,7 @@ Produced technical specifications and led the AngularJS front-end build. Integra
         height: 241,
       },
       content: `
-Built full-stack prototypes and technical experiments using a range of technologies, including Node.js, React, AngularJS, Angular, Ionic, OpenCV, Leap Motion, Alexa Skills, and the Facebook Messenger Platform.
+Developed full-stack prototypes and technical experiments using a range of technologies, including Node.js, React, AngularJS, Angular, Ionic, OpenCV, Leap Motion, Alexa Skills, and the Facebook Messenger Platform.
       `,
     },
     "just-eat": {
