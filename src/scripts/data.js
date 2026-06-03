@@ -5,11 +5,10 @@ module.exports = {
   title: "Scott Boyle",
   subtitle: "Portfolio",
   description:
-    "Web professional specialising in design engineering and modern front-end development.",
-  about: `
-<a class="fn uid url" href="${url}" translate="no">Scott Boyle</a> (<span class="nickname" translate="no">monospaced</span>) is a <span class="category">web professional</span> <span class="note">specialising in modern front-end development</span>.
+    "Web professional specialising in UI systems and modern front-end development.",
+  about: `<a class="fn uid url" href="${url}" translate="no">Scott Boyle</a> (<span class="nickname" translate="no">monospaced</span>) is a <span class="category">web professional</span> <span class="note">specialising in UI systems and modern front-end development</span>.
 
-<span translate="no">Scott</span> lives in <span class="adr"><span class="locality">London</span>, <span class="country-name">UK</span></span>, and is the Principal Design Engineer at <a class="org" href="https://measured.co" translate="no">Measured</a>, a web UI consultancy working with clients across the UK and around the world.
+<span translate="no">Scott</span> lives in <span class="adr"><span class="locality">London</span>, <span class="country-name">UK</span></span>, and is the Principal Design Engineer at <a class="org" href="https://measured.co" translate="no">Measured</a>, a UI consultancy working with clients in the UK and internationally.
 
 ### Contact
 
@@ -23,6 +22,20 @@ module.exports = {
   `,
   linklogErrorMessage: "Unable to load linklog.",
   projects: {
+    measured: {
+      title: "Measured",
+      date: "2020–present",
+      link: "https://measured.co",
+      image: {
+        width: 398,
+        height: 216,
+      },
+      content: `Wrote the brief for Measured’s visual identity refresh, commissioned and directed the design process, then designed and built measured.co from the resulting visual system.
+
+Designed and built [Calibrate](https://calibrate.measured.co), Measured’s brand design system for digital experiences and a reference implementation for its design systems practice.
+
+Created [Facet](https://measured.co/blog/introducing-facet), a procedural brand-image tool built using agentic coding workflows.`,
+    },
     dunnhumby: {
       title: "dunnhumby",
       date: "2024–2026",
@@ -35,7 +48,7 @@ module.exports = {
         height: 216,
       },
       content: `
-Helped dunnhumby define a digital brand expression, and build a design system practice from scratch. Also drove the system’s initial integration into new platforms.
+Helped define the digital brand expression and establish a design systems practice from scratch; used agentic engineering workflows to accelerate early platform integration without compromising UI quality or accessibility.
       `,
     },
     hilton: {
@@ -110,7 +123,7 @@ WEL lives on at LSEG, which acquired Refinitiv in 2021.
         height: 312,
       },
       content: `
-Worked as part of a team building WEL, a design system and React component library that integrated with AEM to power thomsonreuters.com.
+Worked on WEL, a design system and React component library that integrated with AEM to power thomsonreuters.com.
       `,
     },
     "social-360": {
@@ -256,7 +269,7 @@ Managed the delivery of this content website.
         height: 321,
       },
       content: `
-Designed and built the front end for a family tree web app in AngularJS, with its complex diagram views constructed entirely in CSS.
+Designed and built the front end for a family tree web app in AngularJS, with complex diagram views constructed entirely in CSS.
       `,
     },
     "dow-jones": {
@@ -274,7 +287,7 @@ Designed and built the front end for a family tree web app in AngularJS, with it
       content: `
 ### Financial News
 
-Delivered complete front-end templates for the redesign of efinancialnews.com. Semantic HTML and object-oriented CSS produced a lightweight, accessible, and SEO-friendly site.
+Delivered complete front-end templates for the efinancialnews.com redesign, producing a lightweight, accessible, SEO-friendly site with semantic HTML and structured CSS.
       `,
     },
     bilbary: {
@@ -580,7 +593,7 @@ Developed AJAX functionality and animated UI behaviours for a redesigned online 
       content: `
 Served as technical lead on an accessible Web Standards retrofit of national-lottery.co.uk, covering Lotto and EuroMillions gameplay, user registration, and account management.
 
-Led front-end architecture and development, authored company Web Accessibility Guidelines, and conducted usability testing with screen-reader users.
+Led front-end architecture and development, authored Web Accessibility Guidelines, and ran usability testing with screen-reader users..
       `,
     },
     "age-concern": {
