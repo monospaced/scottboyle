@@ -67,6 +67,16 @@ Helped define the digital brand expression and establish a design systems practi
 Consulted on the development of a multi-brand design system.
       `,
     },
+    "mono-disco": {
+      title: "Mono Disco",
+      date: "2023–2024",
+      link: "https://monodisco.bandcamp.com/merch",
+      image: {
+        width: 398,
+        height: 256,
+      },
+      content: `Directed creative for a vinyl record label, and designed the cover for [RSPTN - Night Time](https://monodisco.bandcamp.com/album/night-time).`,
+    },
     hubble: {
       title: "Hubble",
       date: "2019–2023",
