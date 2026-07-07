@@ -6,9 +6,9 @@ module.exports = {
   subtitle: "Portfolio",
   description:
     "Web professional specialising in UI systems and modern front-end development.",
-  about: `<a class="fn uid url" href="${url}" translate="no">Scott Boyle</a> (<span class="nickname" translate="no">monospaced</span>) is a <span class="category">web professional</span> <span class="note">specialising in UI systems and modern front-end development</span>.
+  about: `<a class="fn uid url" href="${url}" translate="no">Scott Boyle</a> is a <span class="category">web professional</span> <span class="note">specialising in UI systems and modern front-end development</span>.
 
-<span translate="no">Scott</span> lives in <span class="adr"><span class="locality">London</span>, <span class="country-name">UK</span></span>, and is the Principal Design Engineer at <a class="org" href="https://measured.co" translate="no">Measured</a>, a UI consultancy working with clients in the UK and internationally.
+<span translate="no">Scott</span> lives in <span class="adr"><span class="locality">London</span>, <span class="country-name">UK</span></span>, and works through <a class="org" href="https://monospaced.com" translate="no">Monospaced</a>, an independent UI consultancy with clients in the UK and internationally.
 
 ### Contact
 
@@ -24,7 +24,7 @@ module.exports = {
   projects: {
     measured: {
       title: "Measured",
-      date: "2020–present",
+      date: "2020–2026",
       link: "https://measured.co",
       image: {
         width: 398,
@@ -98,7 +98,7 @@ Also led a project to expand and refine their On-Demand product.
     bt: {
       title: "BT",
       date: "2020–2022",
-      link: "https://business.bt.com",
+      link: "",
       client: {
         title: "Measured",
         link: "https://measured.co",
