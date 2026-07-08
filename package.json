@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "pnpm@10.29.3",
   "devDependencies": {
-    "@babel/core": "^7.29.0",
+    "@babel/core": "^7.29.6",
     "@babel/eslint-parser": "^7.28.6",
     "@babel/plugin-transform-object-rest-spread": "^7.28.4",
     "@babel/preset-env": "^7.29.0",
