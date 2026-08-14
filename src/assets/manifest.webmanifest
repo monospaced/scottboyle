@@ -1,5 +1,5 @@
 {
-  "background_color": "#fefefe",
+  "background_color": "#f8fbfb",
   "display": "standalone",
   "icons": [
     {
@@ -19,5 +19,5 @@
   "scope": "/",
   "short_name": "Scott Boyle",
   "start_url": "/",
-  "theme_color": "#e01074"
+  "theme_color": "#b14b7d"
 }
