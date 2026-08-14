@@ -1,10 +1,6 @@
 @import url("../../theme/vars.css");
 
 .Avatar {
-  background-image: url("../../assets/scott.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   block-size: calc(96rem / 16);
   border: calc(1rem / 16) solid var(--border-color);
   box-sizing: border-box;
@@ -13,20 +9,4 @@
   margin-block-end: 0;
   margin-block-start: 1.5rem;
   margin-inline-end: 1.5rem;
-
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
-}
-
-.Avatar-image {
-  transition: opacity 0.05s linear 0.2s;
-
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
-
-  .Avatar:hover & {
-    opacity: 0;
-  }
 }
