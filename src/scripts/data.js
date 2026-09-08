@@ -28,7 +28,7 @@ module.exports = {
       link: "https://measured.co",
       image: {
         width: 398,
-        height: 216,
+        height: 224,
       },
       content: `Wrote the brief for Measured’s visual identity refresh, commissioned and directed the design process, then designed and built measured.co from the resulting visual system.
 
@@ -45,7 +45,7 @@ Created [Facet](https://measured.co/blog/introducing-facet), a procedural brand-
       },
       image: {
         width: 398,
-        height: 216,
+        height: 224,
       },
       content: `
 Helped define the digital brand expression and establish a design systems practice from scratch; used agentic engineering workflows to accelerate early platform integration without compromising UI quality or accessibility.
@@ -61,7 +61,7 @@ Helped define the digital brand expression and establish a design systems practi
       },
       image: {
         width: 398,
-        height: 209,
+        height: 216,
       },
       content: `
 Consulted on the development of a multi-brand design system.
@@ -73,7 +73,7 @@ Consulted on the development of a multi-brand design system.
       link: "https://monodisco.bandcamp.com/merch",
       image: {
         width: 398,
-        height: 256,
+        height: 265,
       },
       content: `Directed creative for a vinyl record label, and designed the cover for [RSPTN - Night Time](https://monodisco.bandcamp.com/album/night-time).`,
     },
@@ -87,7 +87,7 @@ Consulted on the development of a multi-brand design system.
       },
       image: {
         width: 398,
-        height: 216,
+        height: 224,
       },
       content: `
 Migrated Hubble’s site from AngularJS to React and architected a UI system to support their new brand.
@@ -105,7 +105,7 @@ Also led a project to expand and refine their On-Demand product.
       },
       image: {
         width: 398,
-        height: 175,
+        height: 181,
       },
       content: `
 Developed and launched the Arc design system for BT Buisness.
