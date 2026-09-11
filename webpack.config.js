@@ -30,9 +30,11 @@ module.exports = () => {
       rules: [
         {
           test: /\.m?js$/,
-          exclude: filePath =>
+          exclude: (filePath) =>
             /node_modules/.test(filePath) &&
-            !/react-router-dom|react-router|@remix-run[\\/]router/.test(filePath),
+            !/react-router-dom|react-router|@remix-run[\\/]router/.test(
+              filePath,
+            ),
           loader: "babel-loader",
           options: {
             presets: ["@babel/preset-env", "@babel/preset-react"],
@@ -55,6 +57,12 @@ module.exports = () => {
         },
         {
           test: /\.(jpg)$/,
+          sideEffects: true,
+          type: "asset/resource",
+          generator: { filename: "assets/[name][ext]" },
+        },
+        {
+          test: /\.(mp4)$/,
           sideEffects: true,
           type: "asset/resource",
           generator: { filename: "assets/[name][ext]" },

@@ -1,38 +1,39 @@
 @import url("../../theme/vars.css");
 
-.Screenshot {
+.Video {
   border: 1px solid var(--border-color);
   margin-block: 1.5rem;
   max-inline-size: 100%;
   position: relative;
 }
 
-.Screenshot-image {
+.Video-media {
   block-size: auto !important;
   filter: blur(2px);
   inset: 0;
   max-width: 100%;
+  object-fit: cover;
   position: absolute;
   transition: none;
   visibility: hidden;
 }
 
-.Screenshot-shim {
-  inline-size: 100%;
-}
-
-.Screenshot.is-loaded .Screenshot-image,
-.no-js .Screenshot-image {
+.Video.is-loaded .Video-media,
+.no-js .Video-media {
   filter: blur(0);
   transition: filter 0.2s;
   visibility: visible;
 }
 
-.ScreenshotLink:focus-visible {
+.Video-shim {
+  inline-size: 100%;
+}
+
+.VideoLink:focus-visible {
   outline: 0;
 }
 
-.ScreenshotLink:focus-visible .Screenshot-image {
+.VideoLink:focus-visible .Video-media {
   border-radius: 0.125rem;
   outline: 0.125rem solid var(--theme-color);
   outline-offset: 0.125rem;

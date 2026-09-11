@@ -55,7 +55,7 @@
       "text-summary"
     ],
     "moduleNameMapper": {
-      "\\_redirects|.(ico|jpg|png|svg|txt|webmanifest|woff|xml)$": "<rootDir>/test/__mocks__/file.mock.js",
+      "\\_redirects|.(ico|jpg|png|svg|txt|webmanifest|woff|xml|mp4)$": "<rootDir>/test/__mocks__/file.mock.js",
       "\\.(css)$": "<rootDir>/test/__mocks__/style.mock.js"
     },
     "testEnvironment": "jsdom",

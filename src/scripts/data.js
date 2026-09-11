@@ -22,6 +22,17 @@ module.exports = {
   `,
   linklogErrorMessage: "Unable to load linklog.",
   projects: {
+    // "hackney-showroom": {
+    //   title: "Hackney Showroom",
+    //   date: "2026",
+    //   link: "https://hackneyshowroom.com",
+    //   image: {
+    //     width: 398,
+    //     height: 280,
+    //   },
+    //   video: true,
+    //   content: `Lorem ipsum dolor sit amet.`,
+    // },
     measured: {
       title: "Measured",
       date: "2020–2026",

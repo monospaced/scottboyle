@@ -5,6 +5,7 @@ import "../Main/Main.css";
 import Client from "../Client/Client";
 import PageMeta from "../PageMeta/PageMeta";
 import Screenshot from "../Screenshot/Screenshot";
+import Video from "../Video/Video";
 import Visit from "../Visit/Visit";
 import { buildSocialMeta } from "../../scripts/meta";
 
@@ -13,7 +14,7 @@ const Project = ({
   path,
 }) => {
   const project = projects[path];
-  const { client, content, date, link, title: projectTitle } = project;
+  const { client, content, date, link, title: projectTitle, video } = project;
 
   const siteName = `${title} | ${subtitle}`;
   const pageTitle = `${siteName} | ${projectTitle}`;
@@ -43,7 +44,11 @@ const Project = ({
         <div dangerouslySetInnerHTML={{ __html: parse(content.trim()) }} />
         {client && <Client client={client} />}
         {link && <Visit project={project} />}
-        <Screenshot project={project} slug={path} />
+        {video ? (
+          <Video project={project} slug={path} />
+        ) : (
+          <Screenshot project={project} slug={path} />
+        )}
       </section>
     </main>
   );
