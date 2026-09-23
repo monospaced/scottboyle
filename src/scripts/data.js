@@ -119,7 +119,7 @@ Also led a project to expand and refine their On-Demand product.
         height: 181,
       },
       content: `
-Developed and launched the Arc design system for BT Buisness.
+Developed and launched the Arc design system for BT Business.
       `,
     },
     refinitiv: {
