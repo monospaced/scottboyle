@@ -4,9 +4,8 @@ module.exports = {
   url,
   title: "Scott Boyle",
   subtitle: "Portfolio",
-  description:
-    "Web professional specialising in UI systems and modern front-end development.",
-  about: `<a class="fn uid url" href="${url}" translate="no">Scott Boyle</a> is a <span class="category">web professional</span> <span class="note">specialising in UI systems and modern front-end development</span>.
+  description: "Design systems consultant and front-end engineer.",
+  about: `<a class="fn uid url" href="${url}" translate="no">Scott Boyle</a> is a <span class="category">web professional</span> <span class="note">specialising in design systems and modern front-end development</span>.
 
 <span translate="no">Scott</span> lives in <span class="adr"><span class="locality">London</span>, <span class="country-name">UK</span></span>, and works through <a class="org" href="https://monospaced.com" translate="no">Monospaced</a>, an independent UI consultancy with clients in the UK and internationally.
 
@@ -22,6 +21,19 @@ module.exports = {
   `,
   linklogErrorMessage: "Unable to load linklog.",
   projects: {
+    monospaced: {
+      title: "Monospaced",
+      date: "2026–present",
+      link: "https://monospaced.com",
+      image: {
+        width: 398,
+        height: 288,
+      },
+      content: `
+Designed the Monospaced visual identity, then built [Set](https://set.monospaced.com/), a code-first design system, around it.
+
+Created [Screen](https://screen.monospaced.com/), a tool for generating the Monospaced brand photo treatment, built as a consumer of Set.`,
+    },
     // "hackney-showroom": {
     //   title: "Hackney Showroom",
     //   date: "2026",
@@ -41,11 +53,11 @@ module.exports = {
         width: 398,
         height: 224,
       },
-      content: `Wrote the brief for Measured’s visual identity refresh, commissioned and directed the design process, then designed and built measured.co from the resulting visual system.
+      content: `
+Co-owned and ran Measured, a digital product consultancy specialising in design systems and product engineering.
 
-Designed and built [Calibrate](https://calibrate.measured.co), Measured’s brand design system for digital experiences and a reference implementation for its design systems practice.
-
-Created [Facet](https://measured.co/blog/introducing-facet), a procedural brand-image tool built using agentic coding workflows.`,
+Wrote the brief for Measured’s visual identity refresh, commissioned and directed the design process, then designed and built measured.co from the resulting visual system.
+      `,
     },
     dunnhumby: {
       title: "dunnhumby",
@@ -59,7 +71,9 @@ Created [Facet](https://measured.co/blog/introducing-facet), a procedural brand-
         height: 224,
       },
       content: `
-Helped define the digital brand expression and establish a design systems practice from scratch; used agentic engineering workflows to accelerate early platform integration without compromising UI quality or accessibility.
+Helped establish the design systems practice from scratch, including the digital brand expression, design token schema and Figma-to-code workflow.
+
+Led integration of the new system into the existing tech stack, using agentic engineering workflows to accelerate delivery without compromising UI quality or accessibility.
       `,
     },
     hilton: {
@@ -101,9 +115,9 @@ Consulted on the development of a multi-brand design system.
         height: 224,
       },
       content: `
-Migrated Hubble’s site from AngularJS to React and architected a UI system to support their new brand.
+Via Monspaced, Migrated Hubble’s site from AngularJS to React and architected a UI system to support their new brand.
 
-Also led a project to expand and refine their On-Demand product.
+Later, via Measured, led a project to expand and refine their On-Demand product.
       `,
     },
     bt: {
@@ -614,7 +628,7 @@ Developed AJAX functionality and animated UI behaviours for a redesigned online 
       content: `
 Served as technical lead on an accessible Web Standards retrofit of national-lottery.co.uk, covering Lotto and EuroMillions gameplay, user registration, and account management.
 
-Led front-end architecture and development, authored Web Accessibility Guidelines, and ran usability testing with screen-reader users..
+Led front-end architecture and development, authored Web Accessibility Guidelines, and ran usability testing with screen-reader users.
       `,
     },
     "age-concern": {
